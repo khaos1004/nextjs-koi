@@ -3,6 +3,13 @@ import 'jquery-migrate';
 import 'slick-carousel/slick/slick.min.js';
 
 export default function Test(){
+    $('.fade').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+      });
     return(
         <>
 <section id="wrap" data-device="mobile">
