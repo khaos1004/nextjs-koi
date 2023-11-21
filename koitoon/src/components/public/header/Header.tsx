@@ -37,42 +37,48 @@ export default function App() {
             </span>
           </button>
           <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mB5jFPMzg0CvPGs_tSgQLKSh-DDmtX_R4w&usqp=CAU" className="h-8" alt="companyLogo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ToonKoi</span>
+            {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mB5jFPMzg0CvPGs_tSgQLKSh-DDmtX_R4w&usqp=CAU" className="h-8" alt="companyLogo" /> */}
+            <span className="self-center font-semibold whitespace-nowrap dark:text-white font-['RubikPuddles-Regular'] text-[2rem] textRainbow animate-pulse">ToonKoi</span>
           </a>
-          <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <div className="flex w-[30%] pl-5">
-              <button onClick={() => handleButtonClick("KO")} className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO" ? "font-bold" : "opacity-25"}`}>KO</button>
-              <p className="text-gray-600 text-center text-lg font-bold w-auto px-2">|</p>
-              <button onClick={() => handleButtonClick("EN")} className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN" ? "font-bold" : "opacity-25"}`}>EN</button>
-            </div>
-          </div>
-          <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+         
+          <div className="items-center flex justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a href="#" className="block py-2 px-3 text-white hover:text-blue-700 rounded md:bg-transparent md:text-black md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+                <a href="#" className="block py-2 px-3 text-white hover:text-blue-700 rounded md:bg-transparent md:text-black md:p-0 md:dark:text-blue-500 font-['SundayLemon']" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">About</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contents</a>
+                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Contents</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PR</a>
+                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">PR</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Contact</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">정산관리</a>
+                <a href="#" className="block py-2 px-3 bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Management</a>
               </li>
+              <li>
+              <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <div className="flex w-[30%] pl-5">
+                  <button onClick={() => handleButtonClick("KO")} className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO" ? "font-bold" : "opacity-25"}`}>KO</button>
+                  <p className="text-gray-600 text-center text-lg font-bold w-auto px-2">|</p>
+                  <button onClick={() => handleButtonClick("EN")} className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN" ? "font-bold" : "opacity-25"}`}>EN</button>
+                </div>
+                </div>
+              </li>            
             </ul>
           </div>
         </div>
 
       </nav>
-      <hr className="animate-pulse mt-2" />
+      <hr className="animate-pulse mt-2 shadow" />
     </>
   );
 }
+
+
+

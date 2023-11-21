@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'RubikPuddles-Regular';
+    src: url('/fonts/RubikPuddles-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'SundayLemon';
+    src: url('/fonts/SundayLemon.ttf');
+}
+
+.textRainbow {
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, navy, purple);
+    -webkit-background-clip: text;
+    color: transparent;
+  
+    font-weight: bold;
+    font-size: 40px;
+  }
