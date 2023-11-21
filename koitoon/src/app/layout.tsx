@@ -15,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en">      
+      <body className={inter.className}>
+        {children}
+        <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js"></script>
+      </body>
     </html>
   )
 }
