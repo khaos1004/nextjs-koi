@@ -5,13 +5,13 @@ import Footer from "@/components/public/footer/Footer"
 
 
 const RootLayout = () => {
-    return(
+    return (
         <>
             <Header />
-            {/* <div className="flex"> */}
             <Side />
-            <Content />
-            {/* </div> */}
+            <div className="mx-auto px-4 md:px-8 lg:px-16">
+                <Content />
+            </div>
             <Footer />
         </>
     )
