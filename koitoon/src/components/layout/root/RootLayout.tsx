@@ -6,14 +6,20 @@ import Footer from "@/components/public/footer/Footer"
 
 const RootLayout = () => {
     return (
-        <>
-            <Header />
-            <Side />
-            <div className="mx-auto px-4 md:px-8 lg:px-16">
-                <Content />
+        <div className="flex flex-col">
+             <div className="h-16"> {/* 네비게이션 바 */}
+        <Header />
+        </div>
+        <div className="flex-grow">
+            <div className="flex-grow flex justify-center items-center">
+                <Side />
+                <div className="w-full"> {/* 콘텐츠의 최대 너비를 제한 */}
+                    <Content />
+                </div>
             </div>
-            <Footer />
-        </>
+        </div>
+        <Footer />
+    </div>
     )
 }
 

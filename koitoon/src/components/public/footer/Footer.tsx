@@ -23,9 +23,9 @@ const Footer = () => {
                         </ul>
                     </div>
                     <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />                                        
-                    <span className="block text-sm text-white  dark:text-gray-800 text-center">© 2023 <a href="" className="hover:underline">Koi</a>. 본사 : 경남 김해시 관동로 14, 경남콘텐츠기업육성센터 3층 대표번호 : 055-337-3487 (서울지사 02-322-2900) 사업자등록번호 : 105-88-10325
+                    <span className="block text-sm text-white  dark:text-gray-800 text-center font-['SundayLemon']">© 2023 <a href="" className=" font-['SundayLemon'] hover:underline">Koi</a>. 본사 : 경남 김해시 관동로 14, 경남콘텐츠기업육성센터 3층 대표번호 : 055-337-3487 (서울지사 02-322-2900) 사업자등록번호 : 105-88-10325
                         서울지사 : 서울특별시 마포구 월드컵북로 19 대상빌딩 4층 부산지사 : 부산광역시 해운대구 재송동 1210 벽산e센텀클래스원 1408호 E-mail : help@pnstory.kr</span>
-                        <span className="block text-sm text-white sm:text-center dark:text-gray-800 my-2">© 2023 <a href="" className="hover:underline">Koi</a>. All Rights Reserved.</span>
+                        <span className="block text-sm text-white sm:text-center dark:text-gray-800 my-2 font-['SundayLemon']">© 2023 <a href="" className="hover:underline font-['SundayLemon']">Koi</a>. All Rights Reserved.</span>
                 </div>
             </footer>
 

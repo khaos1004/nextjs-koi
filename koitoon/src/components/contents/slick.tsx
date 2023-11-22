@@ -4,35 +4,38 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import dynamic from 'next/dynamic';
 import Image from "next/image";
-import We from '@/../../public/images/we.jpeg'
+import We from '@/../../public/images/3.jpg'
+import { Component } from "react";
 
-const Slider = dynamic(() => import('react-slick'), { ssr: false });
+
+// Dynamically import the Slider component to avoid SSR issues
+const Slider = dynamic(() => import('react-slick'), {
+  ssr: false, // This line is important. It's what prevents server-side render
+});
 
 
-export default function Page() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 2000,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
+export default class SimpleSlider extends Component {
+  render() {
+    const settings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 3
+    };
 
-  return (
-    <>
-      {/* <div className="">         */}
-        <Slider className="bg-blue-200 justify-center my-8"{...settings}>
-          <div><Image src={We} width={200} height={200} alt="image" /></div>
-          <div><Image src={We} width={200} height={200} alt="image" /><h3>2</h3></div>
-          <div><Image src={We} width={200} height={200} alt="image" /><h3>3</h3></div>
-          <div><Image src={We} width={200} height={200} alt="image" /><h3>4</h3></div>
-          <div><Image src={We} width={200} height={200} alt="image" /><h3>5</h3></div>
-          <div><Image src={We} width={200} height={200} alt="image" /><h3>6</h3></div>
-          <div><Image src={We} width={200} height={200} alt="image" /><h3>7</h3></div>
-          <div><Image src={We} width={200} height={200} alt="image" /><h3>8</h3></div>
-          <div><Image src={We} width={200} height={200} alt="image" /><h3>9</h3></div>
-        </Slider>
-      {/* </div> */}
-    </>
-  );
+    return (
+      <div className="flex justify-center items-center my-[5rem]"> {/* 전체 화면 높이와 flex 중앙 정렬 */}
+        <div className="w-auto h-auto"> {/* 최대 너비를 md 사이즈로 설정하고, 양쪽 마진 자동 */}
+          <Slider {...settings}>
+            <div>
+              <Image src={We} width={300} height={500} alt="ad" layout="responsive" />
+            </div>                      
+            {/* 여기에 다른 슬라이드들을 추가하세요 */}
+          </Slider>
+        </div>
+      </div>
+    );
+    
+  }
 }
