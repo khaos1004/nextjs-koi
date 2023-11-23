@@ -23,7 +23,7 @@ export default class SimpleSlider extends Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 4
     };
 
@@ -31,6 +31,7 @@ export default class SimpleSlider extends Component {
       <div>
           <Slider {...settings}>
             <div>
+              <Image src={We1} alt="ad" /> 
               <Image src={We1} alt="ad" /> 
             </div>            
           </Slider>                   

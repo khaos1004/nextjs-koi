@@ -5,7 +5,8 @@ import Footer from "@/components/public/footer/Footer"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import Slider from "react-slick";
-
+import Slick from "@/components/contents/slick";
+import We1 from '@/../../public/images/3.jpg'
 
 const RootLayout = () => {
     return (
@@ -14,10 +15,11 @@ const RootLayout = () => {
                 <Header />
             </div>
             <Side />
-            
-                <div className="grid grid-rows-12 grid-flow-col max-2xl">
-                    <Content  />        
-            
+            <div className="grid grid-rows-3 grid-flow-col gap-4 mx-60 my-[3rem]">
+                <div className="row-span-3 bg-slate-500 max-w-3xl h-9">
+                    <Slick />                    
+                </div>                
+                <div className="row-span-3 bg-slate-500 col-span-2 ...">03</div>
             </div>
         <Footer />
     </div>
