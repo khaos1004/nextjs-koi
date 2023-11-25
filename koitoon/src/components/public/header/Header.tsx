@@ -1,18 +1,40 @@
 'use client'
 
-import React, { useState } from "react";
+import { devNull } from "os";
+import React, { useState, useEffect } from "react";
 
 
 export default function App() {
-  // 현재 메뉴 상태를 추적하는 useState 훅
 
   const [colorChange, setcolorChange] = useState("KO");
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [menuHovered, setMenuHovered] = useState(false);
 
-  const handleButtonClick = (menuType: string) => {
-    // 상태 업데이트        
+  const handleButtonClick = (menuType : string) => {
     setcolorChange(menuType);
   };
+
+  const handleMenuHover = (menuName : string) => {
+    setMenuHovered(true);
+    setActiveMenu(menuName);
+  };
+
+  const handleMenuLeave = () => {
+    setMenuHovered(false);
+  };
+
+  useEffect(() => {
+    if (!menuHovered) {
+      const timer = setTimeout(() => {
+        setActiveMenu(null);
+      }, 300); // 300ms 지연 시간 후에 드롭다운 메뉴를 닫습니다.
+
+      return () => clearTimeout(timer);
+    }
+  }, [menuHovered]);
+
   return (
+    
     <>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
 
@@ -44,29 +66,82 @@ export default function App() {
           <div className="items-center flex justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a href="#" className="block py-2 px-3 text-white hover:text-blue-700 rounded md:bg-transparent md:text-black md:p-0 md:dark:text-blue-500 font-['SundayLemon']" aria-current="page">Home</a>
+                <a href="#" className="block py-2 px-3 text-white hover:text-blue-700 rounded md:bg-transparent 
+                md:text-black md:p-0 md:dark:text-blue-500 font-['SundayLemon']" aria-current="page">Home</a>                
+              </li>              
+
+              <li onMouseOver={() => handleMenuHover("About")} 
+                onMouseLeave={handleMenuLeave} className="relative">
+                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700
+                  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">About</a>
+                   {activeMenu === "About" && (
+                  <div  onMouseOver={() => setMenuHovered(true)} 
+                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl ">
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
+                  </div>
+                )}
               </li>
-              <li>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">About</a>
+
+              <li onMouseOver={() => handleMenuHover("Contents")} 
+                onMouseLeave={handleMenuLeave} className="relative">
+                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700
+                  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Contents</a>
+                   {activeMenu === "Contents" && (
+                  <div  onMouseOver={() => setMenuHovered(true)} 
+                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
+                  </div>
+                )}
               </li>
-              <li>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Contents</a>
+              <li  onMouseOver={() => handleMenuHover("PR")} 
+                onMouseLeave={handleMenuLeave} className="relative">
+                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700
+                  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">PR</a>
+                   {activeMenu === "PR" && (
+                  <div  onMouseOver={() => setMenuHovered(true)} 
+                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
+                  </div>
+                )}
               </li>
-              <li>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">PR</a>
+              <li  onMouseOver={() => handleMenuHover("Contact")} 
+                onMouseLeave={handleMenuLeave} className="relative">
+                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700
+                  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Contact</a>
+                   {activeMenu === "Contact" && (
+                  <div  onMouseOver={() => setMenuHovered(true)} 
+                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                    <a href="#" className="block px-4 py-2 text-gray-800  font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
+                  </div>
+                )}
               </li>
-              <li>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Contact</a>
-              </li>
-              <li>
-                <a href="#" className="block py-2 px-3 bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Management</a>
+              <li  onMouseOver={() => handleMenuHover("Management")} 
+                onMouseLeave={handleMenuLeave} className="relative">
+                <a href="#" className="block py-2 px-3 bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700
+                  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Management</a>
+                   {activeMenu === "Management" && (
+                  <div  onMouseOver={() => setMenuHovered(true)} 
+                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                    <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 font-['SundayLemon'] hover:text-blue-500">Submenu 1</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 font-['SundayLemon'] hover:text-blue-500">Submenu 2</a>
+                  </div>
+                )}
               </li>
               <li>
               <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 <div className="flex w-[30%] pl-5">
-                  <button onClick={() => handleButtonClick("KO")} className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO" ? "font-bold" : "opacity-25"}`}>KO</button>
+                  <button onClick={() => handleButtonClick("KO")} className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO" ? "font-bold underline decoration-gray-600" : "opacity-25"}`}>KO</button>
                   <p className="text-gray-600 text-center text-lg font-bold w-auto px-2">|</p>
-                  <button onClick={() => handleButtonClick("EN")} className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN" ? "font-bold" : "opacity-25"}`}>EN</button>
+                  <button onClick={() => handleButtonClick("EN")} className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN" ? "font-bold underline decoration-gray-600" : "opacity-25"}`}>EN</button>
                 </div>
                 </div>
               </li>            

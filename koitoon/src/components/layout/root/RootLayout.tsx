@@ -17,7 +17,8 @@ const RootLayout = () => {
             <Side />
             <div className="grid grid-rows-3 grid-flow-col gap-4 mx-60 my-[3rem]">
                 <div className="row-span-3 bg-slate-500 max-w-3xl h-9">
-                    <Slick />                    
+                
+                                     
                 </div>                
                 <div className="row-span-3 bg-slate-500 col-span-2 ...">03</div>
             </div>

@@ -20,11 +20,11 @@ const Slider = dynamic(() => import('react-slick'), {
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: true,
-      infinite: true,
+      dots: false,
+      infinite: false,
       speed: 500,
-      slidesToShow: 2,
-      slidesToScroll: 4
+      slidesToShow: 1,
+      slidesToScroll: 1
     };
 
     return (
@@ -32,7 +32,7 @@ export default class SimpleSlider extends Component {
           <Slider {...settings}>
             <div>
               <Image src={We1} alt="ad" /> 
-              <Image src={We1} alt="ad" /> 
+              <Image src={We2} alt="ad" /> 
             </div>            
           </Slider>                   
       </div>
