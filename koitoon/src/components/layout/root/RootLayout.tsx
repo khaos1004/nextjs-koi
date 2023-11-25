@@ -5,7 +5,8 @@ import Footer from "@/components/public/footer/Footer"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import Slider from "react-slick";
-import Slick from "@/components/contents/slick";
+import Slick from "@/components/contents/Slick";
+import Slick2 from "@/components/contents/Sick2";
 import We1 from '@/../../public/images/3.jpg'
 
 const RootLayout = () => {
@@ -15,13 +16,15 @@ const RootLayout = () => {
                 <Header />
             </div>
             <Side />
-            <div className="grid grid-rows-3 grid-flow-col gap-4 mx-60 my-[3rem]">
-                <div className="row-span-3 bg-slate-500 max-w-3xl h-9">
-                
-                                     
-                </div>                
-                <div className="row-span-3 bg-slate-500 col-span-2 ...">03</div>
+            <div className="flex flex-row min-h-screen w-screen my-[4rem]">
+                <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
+                <div className="flex-3 w-3/5"> {/* 중앙 컨텐츠 영역 (3/5) */}
+                    <Slick />    
+                    <Slick2 />                
+                </div>
+                <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
             </div>
+    
         <Footer />
     </div>
     )

@@ -1,4 +1,4 @@
-import Slick1 from '@/components/contents/slick'
+import Slick1 from '@/components/contents/Slick'
 import Slick2 from '@/components/contents/Sick2'
 import Slick3 from '@/components/contents/Slick3'
 
