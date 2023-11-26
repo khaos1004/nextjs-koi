@@ -60,7 +60,7 @@ export default function App() {
           </button>
           <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
             {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mB5jFPMzg0CvPGs_tSgQLKSh-DDmtX_R4w&usqp=CAU" className="h-8" alt="companyLogo" /> */}
-            <span className="self-center font-semibold whitespace-nowrap dark:text-white font-['RubikPuddles-Regular'] text-[2rem] textRainbow animate-pulse">ToonKoi</span>
+            <span className="self-center font-semibold whitespace-nowrap text-sky-600 dark:text-white font-['RubikPuddles-Regular'] text-[2rem]">ToonKoi</span>
           </a>
          
           <div className="items-center flex justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
@@ -77,7 +77,7 @@ export default function App() {
                   dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">About</a>
                    {activeMenu === "About" && (
                   <div  onMouseOver={() => setMenuHovered(true)} 
-                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl ">
+                  onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl ">
                     <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
                     <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
                   </div>
@@ -91,7 +91,7 @@ export default function App() {
                   dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Contents</a>
                    {activeMenu === "Contents" && (
                   <div  onMouseOver={() => setMenuHovered(true)} 
-                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                  onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
                     <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
                     <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
                   </div>
@@ -104,7 +104,7 @@ export default function App() {
                   dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">PR</a>
                    {activeMenu === "PR" && (
                   <div  onMouseOver={() => setMenuHovered(true)} 
-                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                  onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
                     <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
                     <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
                   </div>
@@ -117,7 +117,7 @@ export default function App() {
                   dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Contact</a>
                    {activeMenu === "Contact" && (
                   <div  onMouseOver={() => setMenuHovered(true)} 
-                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                  onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
                     <a href="#" className="block px-4 py-2 text-gray-800  font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
                     <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
                   </div>
@@ -130,7 +130,7 @@ export default function App() {
                   dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">Management</a>
                    {activeMenu === "Management" && (
                   <div  onMouseOver={() => setMenuHovered(true)} 
-                  onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+                  onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
                     <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 font-['SundayLemon'] hover:text-blue-500">Submenu 1</a>
                     <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 font-['SundayLemon'] hover:text-blue-500">Submenu 2</a>
                   </div>

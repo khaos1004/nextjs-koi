@@ -6,7 +6,8 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     "./src/**/*.{html,js}",
-    "./node_modules/tw-elements/dist/js/**/*.js"
+    "./node_modules/tw-elements/dist/js/**/*.js",
+    './src/**/*.{html,js,jsx,ts,tsx}', // 타입스크립트와 JSX 파일 포함
   ],
   theme: {
     extend: {
@@ -20,7 +21,13 @@ const config: Config = {
       },      
     },
   },
-  plugins: [require("tw-elements/dist/plugin.cjs")],
-  darkMode: "class"
+  plugins: [require("tw-elements/dist/plugin.cjs"), require('taos/plugin'),],
+  darkMode: "class",
+  safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))',
+    // 다른 safelist 항목들이 있다면 여기에 추가
+  ],
 }
 export default config

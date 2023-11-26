@@ -63,7 +63,7 @@ const SimpleSlider = () => {
   }, []);
 
   return (
-    <div className='mt-10'>
+    <div className='mt-10 '>
       <Slider ref={slickRef} {...settings}>
         <div>        
           <Image src={We1} alt="ad" className='object-cover object-center w-full h-[35rem]' />               
