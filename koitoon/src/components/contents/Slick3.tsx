@@ -6,6 +6,7 @@ import We1 from '@/../../public/images/3.jpg';
 import We2 from '@/../../public/images/4.jpg';
 import We4 from '@/../../public/images/6.jpeg';
 import Arrowbutton from '@/../public/svg/right-arrow-7_icon-icons.com_69946'
+import Slick2 from '@/components/contents/Sick2'
 
 
 const SimpleSlider1 = () => {
@@ -68,44 +69,26 @@ const SimpleSlider1 = () => {
 <>
 <div className='flex mt-52' data-aos="fade-up"
      data-aos-duration="3000" >
-      <div className="text-area">
-          <div className="hGroup aos-init aos-animate" data-aos="fade-up">
-            <p className="title text-[6rem] italic text-sky-400 text-bold font-['SundayLemon']"><span className='text-sky-600' f-point="">Toon</span>Koi</p>
-          </div>
-
-          <div className="about-text aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <p className="font-['SundayLemon'] pb-4">스토리의 힘을 믿는 사람들</p>
-            <p className="title text-3xl mb-2">Toon Koi!</p>
-
-            <p className="text text-sky-400 mt-2">
-            <div className="w-[30%] my-[1%] border-[1px] border-lightGray/30"></div>
-               웹소설과 웹툰을 제작·유통하고, 확보된 IP를 기반으로 영화·드라마·게임·뮤지컬 등 다양한 분야로 확장해 나가고 있는 콘텐츠 전문 기업입니다.
-            </p>
-
-            <div className='flex items-center mt-8'>
-            <p className="btn"><a href="" className="mr-4">VIEW MORE </a>     </p>
-            <Arrowbutton className='animate-bounce w-4 h-4' />
-            </div>         
-          </div>
-        </div>
-    <div className='w-[35rem]'>
-      <Slider ref={slickRef} {...settings}>
-        <div className=''>        
-          <Image src={We1} alt="ad" className='object-cover object-center w-full h-80 rounded-3xl pl-2' />               
-        </div>    
-        <div className=''>
-          <Image src={We2} alt="ad" className='object-cover object-center w-full h-80 rounded-3xl pl-2' />               
-        </div>
-        <div className=''>          
-          <Image src={We4} alt="ad" className='object-cover object-center w-full h-80 rounded-3xl pl-2' />               
-        </div> 
-        <div className=''>          
-          <Image src={We4} alt="ad" className='object-cover object-center w-full h-80 rounded-3xl pl-2' />               
-        </div>        
-      </Slider>
-      <button onClick={previous}></button>
-      <button onClick={next}></button>
-      </div>
+    <div className="diff aspect-[40/10]">
+  <div className="diff-item-1">
+  <div className="carousel rounded-box">
+  <div className="carousel-item">
+    <Image src={We1} alt='aa' className='w-[26rem]' />
+  </div> 
+  <div className="carousel-item">
+  <Image src={We2} alt='aa' className='w-[26rem]' />
+  </div> 
+  <div className="carousel-item">
+  <Image src={We4} alt='aa' className='w-[26rem]' />
+  </div> 
+</div>
+    {/* <Image src={We1} alt='aa' /> */}
+  </div>  
+  <div className="diff-item-2">
+    <div className="bg-base-200 text-9xl font-black grid place-content-center">ToonKoi 신작소개</div>
+  </div>
+  <div className="diff-resizer"></div>
+</div>
       </div>
     </>
   );

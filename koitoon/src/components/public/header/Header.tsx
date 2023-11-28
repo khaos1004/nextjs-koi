@@ -60,7 +60,7 @@ export default function App() {
           </button>
           <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
             {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mB5jFPMzg0CvPGs_tSgQLKSh-DDmtX_R4w&usqp=CAU" className="h-8" alt="companyLogo" /> */}
-            <span className="self-center font-semibold whitespace-nowrap text-sky-600 dark:text-white font-['SundayLemon'] text-[2rem]">ToonKoi</span>
+            <span className="self-center font-semibold whitespace-nowrap text-sky-800 dark:text-white font-['SundayLemon'] text-[2rem]">T o o n  K o i</span>
           </a>
          
           <div className="items-center flex justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
@@ -144,7 +144,14 @@ export default function App() {
                   <button onClick={() => handleButtonClick("EN")} className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN" ? "font-bold underline decoration-gray-600" : "opacity-25"}`}>EN</button>
                 </div>
                 </div>
-              </li>            
+              </li>  
+                        <li className="pt-1">
+              <label className="flex cursor-pointer gap-2">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+  <input type="checkbox" value="dark" className="toggle theme-controller"/>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</label>      
+</li>    
             </ul>
           </div>
         </div>

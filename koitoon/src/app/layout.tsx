@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">  
+    <html lang="en" data-theme="light">  
     <head>
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
