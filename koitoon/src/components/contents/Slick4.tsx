@@ -70,7 +70,7 @@ const SimpleSlider1 = () => {
      data-aos-duration="3000" >          
     <div className='w-[35rem]'>
     <div className="card w-96 bg-base-100 shadow-xl">
-        <figure><Image src={We1} alt={'aa'}  /></figure>
+        <figure><Image src={We1} alt={'aa'} className='hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500'  /></figure>
         <div className="card-body">
             <h2 className="card-title">
             Toon!
@@ -87,7 +87,7 @@ const SimpleSlider1 = () => {
       </div>
       <div className='w-[35rem]'>
     <div className="card w-96 bg-base-100 shadow-xl">
-        <figure><figure><Image src={We2} alt={'aa'}  /></figure></figure>
+        <figure><figure><Image src={We2} alt={'aa'} className='hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500'  /></figure></figure>
         <div className="card-body">
             <h2 className="card-title">
             Toon!
@@ -104,7 +104,7 @@ const SimpleSlider1 = () => {
       </div>
       <div className='w-[35rem]'>
     <div className="card w-96 bg-base-100 shadow-xl">
-        <figure><figure><Image src={We4} alt={'aa'}  /></figure></figure>
+        <figure><figure><Image src={We4} alt={'aa'} className='hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500'  /></figure></figure>
         <div className="card-body">
             <h2 className="card-title">
             Toon!

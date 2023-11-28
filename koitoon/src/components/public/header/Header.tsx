@@ -40,7 +40,7 @@ export default function App() {
 
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <button
-            className="bg-yellow-400 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-yellow-600 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg"
+            className="bg-blue-400 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-800 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-1000 active:shadow-lg"
             data-te-sidenav-toggle-ref
             data-te-target="#sidenav-5"
             aria-controls="#sidenav-5"
@@ -58,6 +58,7 @@ export default function App() {
               </svg>
             </span>
           </button>
+          
           <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
             {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mB5jFPMzg0CvPGs_tSgQLKSh-DDmtX_R4w&usqp=CAU" className="h-8" alt="companyLogo" /> */}
             <span className="self-center font-semibold whitespace-nowrap text-sky-800 dark:text-white font-['SundayLemon'] text-[2rem]">T o o n  K o i</span>
