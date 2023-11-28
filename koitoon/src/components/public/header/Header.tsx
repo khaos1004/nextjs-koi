@@ -60,7 +60,7 @@ export default function App() {
           </button>
           <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
             {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mB5jFPMzg0CvPGs_tSgQLKSh-DDmtX_R4w&usqp=CAU" className="h-8" alt="companyLogo" /> */}
-            <span className="self-center font-semibold whitespace-nowrap text-sky-600 dark:text-white font-['RubikPuddles-Regular'] text-[2rem]">ToonKoi</span>
+            <span className="self-center font-semibold whitespace-nowrap text-sky-600 dark:text-white font-['SundayLemon'] text-[2rem]">ToonKoi</span>
           </a>
          
           <div className="items-center flex justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">

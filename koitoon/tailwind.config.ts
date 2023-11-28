@@ -21,7 +21,7 @@ const config: Config = {
       },      
     },
   },
-  plugins: [require("tw-elements/dist/plugin.cjs"), require('taos/plugin'),],
+  plugins: [require("tw-elements/dist/plugin.cjs"), require('taos/plugin'), require("daisyui")],
   darkMode: "class",
   safelist: [
     '!duration-[0ms]',

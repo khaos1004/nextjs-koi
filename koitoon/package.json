@@ -30,6 +30,7 @@
     "@types/react-slick": "^0.23.12",
     "@types/slick-carousel": "^1.6.40",
     "autoprefixer": "^10.0.1",
+    "daisyui": "^4.4.12",
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "postcss": "^8",

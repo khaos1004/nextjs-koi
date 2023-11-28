@@ -67,51 +67,60 @@ const SimpleSlider1 = () => {
   return (    
 <>
 <div className='flex mt-52' data-aos="fade-up"
-     data-aos-duration="3000" >     
-        
+     data-aos-duration="3000" >          
     <div className='w-[35rem]'>
-    <div className="card w-96 glass">
-  <figure><Image src={We1} alt="ad"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">이달의Top3</h2>
-    <p>베스트!!!</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">구매하기</button>
-    </div>
-  </div>
-</div>
-
-
-      </div>
-      <div className='w-[35rem]'>
-    <div className="card w-96 glass">
-  <figure><Image src={We2} alt="ad"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">이달의Top3</h2>
-    <p>베스트!!!</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">구매하기</button>
-    </div>
-  </div>
-</div>
-
+    <div className="card w-96 bg-base-100 shadow-xl">
+        <figure><Image src={We1} alt={'aa'}  /></figure>
+        <div className="card-body">
+            <h2 className="card-title">
+            Toon!
+            <div className="badge badge-secondary">작품소개</div>
+            </h2>
+            <p>히트!?</p>
+            <div className="card-actions justify-end">
+            <div className="badge badge-outline">Toon</div> 
+            <div className="badge badge-outline">Koi</div>
+            </div>
+        </div>
+        </div>
 
       </div>
       <div className='w-[35rem]'>
-    <div className="card w-96 glass">
-  <figure><Image src={We4} alt="ad"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">이달의Top3</h2>
-    <p>베스트!!!</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">구매하기</button>
-    </div>
-  </div>
-</div>
-
-
+    <div className="card w-96 bg-base-100 shadow-xl">
+        <figure><figure><Image src={We2} alt={'aa'}  /></figure></figure>
+        <div className="card-body">
+            <h2 className="card-title">
+            Toon!
+            <div className="badge badge-secondary">작품소개</div>
+            </h2>
+            <p>히트!</p>
+            <div className="card-actions justify-end">
+            <div className="badge badge-outline">Book</div> 
+            <div className="badge badge-outline">Best!</div>
+            </div>
+        </div>
+        </div>
+        
+      </div>
+      <div className='w-[35rem]'>
+    <div className="card w-96 bg-base-100 shadow-xl">
+        <figure><figure><Image src={We4} alt={'aa'}  /></figure></figure>
+        <div className="card-body">
+            <h2 className="card-title">
+            Toon!
+            <div className="badge badge-secondary">작품소개</div>
+            </h2>
+            <p>히트!</p>
+            <div className="card-actions justify-end">
+            <div className="badge badge-outline">Book</div> 
+            <div className="badge badge-outline">Best!</div>
+            </div>
+        </div>
+        </div>
+        
       </div>
       </div>
+      
     </>
   );
 }
