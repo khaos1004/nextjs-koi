@@ -1,6 +1,7 @@
 'use client'
 import Header from "@/components/public/header/Header"
 import Side from "@/components/public/side/Side"
+import DaisySide from "@/components/public/side/DaisySide"
 import Content from "@/components/public/contents/Content"
 import Footer from "@/components/public/footer/Footer"
 import "slick-carousel/slick/slick.css";
@@ -30,6 +31,7 @@ const RootLayout = () => {
                 <Header />
             </div>
             <Side />
+            {/* <DaisySide /> */}
             
             <div className="flex flex-row min-h-screen w-screen my-[3rem]">
                 <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}

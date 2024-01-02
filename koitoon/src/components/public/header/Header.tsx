@@ -6,6 +6,34 @@ import React, { useState, useEffect } from "react";
 
 export default function App() {
 
+  interface DataInterface {
+    ko: {
+        [key: string]: string[];
+    },
+    en: {
+      [key: string]: string[];
+  };
+ }
+
+  const data: DataInterface = {
+    ko: {
+        "Home": ["메뉴1", "메뉴2"],   // "Comic"
+        "About": ["메뉴1", "메뉴2"],   // "School"
+        "Contents": ["메뉴1", "메뉴2"],   // "Horror"
+        "PR": ["메뉴1", "메뉴2"], // "Fantasy"
+        "Contact": ["메뉴1", "메뉴2"],  // "Romance"
+        "ManageMent": ["메뉴1", "메뉴2"]  // "Romance"
+    },
+    en: {
+        "Home": ["menu1", "menu2"],   // "Comic"
+        "About": ["menu1", "menu2"],   // "School"
+        "Contents": ["menu1", "menu2"],   // "Horror"
+        "PR": ["menu1", "menu2"], // "Fantasy"
+        "Contact": ["menu1", "menu2"],  // "Romance"
+        "ManageMent": ["menu1", "menu2"]  // "Romance"
+  }
+ };
+
   const [colorChange, setcolorChange] = useState("KO");
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [menuHovered, setMenuHovered] = useState(false);
@@ -58,6 +86,20 @@ export default function App() {
               </svg>
             </span>
           </button>
+
+          {/* daisyside */}
+          {/* <label htmlFor="my-drawer" className="btn btn-primary drawer-button"><span className="block [&>svg]:h-5 [&>svg]:w-5 [&>svg]:text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-5 w-5">
+                <path
+                  fillRule="evenodd"
+                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                  clipRule="evenodd" />
+              </svg>
+            </span></label> */}
           
           <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
             {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mB5jFPMzg0CvPGs_tSgQLKSh-DDmtX_R4w&usqp=CAU" className="h-8" alt="companyLogo" /> */}

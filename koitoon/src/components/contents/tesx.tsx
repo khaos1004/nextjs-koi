@@ -18,4 +18,4 @@ const CustomPrevArrow: any = () => {
 
   
 
-export default CustomPrevArrow;
+export default SimpleSlider1;
