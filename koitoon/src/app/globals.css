@@ -3,6 +3,139 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  src: url('/fonts/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  src: url('/fonts/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  src: url('/fonts/SpoqaHanSansNeo-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  src: url('/fonts/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  src: url('/fonts/SpoqaHanSansNeo-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('/fonts/MADETOMMYBlack-PERSONALUse.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADE TOMMY Outline';
+  src: url('/fonts/MADETOMMYBlackOutline-PERSONALUse.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('/fonts/MADETOMMYBold-PERSONALUse.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADE TOMMY Outline';
+  src: url('/fonts/MADETOMMYBoldOutline-PERSONALUse.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('/fonts/MADETOMMYExtraBold-PERSONALUse.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY Outline';
+src: url('/fonts/MADETOMMYExtraBoldOutline-PERSONALUse.otf') format('opentype');
+font-weight: 800;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY';
+src: url('/fonts/MADETOMMYLight-PERSONALUse.otf') format('opentype');
+font-weight: 300;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY Outline';
+src: url('/fonts/MADETOMMYLightOutline-PERSONALUse.otf') format('opentype');
+font-weight: 300;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY';
+src: url('/fonts/MADETOMMYMedium-PERSONALUse.otf') format('opentype');
+font-weight: 500;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY Outline';
+src: url('/fonts/MADETOMMYMediumOutline-PERSONALUse.otf') format('opentype');
+font-weight: 500;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY';
+src: url('/fonts/MADETOMMYRegular-PERSONALUse.otf') format('opentype');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY Outline';
+src: url('/fonts/MADETOMMYRegularOutline-PERSONALUse.otf') format('opentype');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY';
+src: url('/fonts/MADETOMMYThin-PERSONALUse.otf') format('opentype');
+font-weight: 100;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MADE TOMMY Outline';
+src: url('/fonts/MADETOMMYThinOutline-PERSONALUse.otf') format('opentype');
+font-weight: 100;
+font-style: normal;
+}
+
+@font-face {
     font-family: 'RubikPuddles-Regular';
     src: url('/fonts/RubikPuddles-Regular.ttf');
 }
@@ -19,6 +152,12 @@
   
     font-weight: bold;
     font-size: 40px;
+  }
+
+  .textMap {
+    color: orange;
+    font-size: 20px;
+    border: 2px solid;
   }
 
   .containers {

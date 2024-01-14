@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect, useContext } from "react";
 import LanguageContext from "@/context/Language";
-import MainLogo from "@/../public/images/logo_웹툰코이컨텐츠(W).png";
+import MainLogoWhite from "@/../public/images/logo_웹툰코이컨텐츠(W).png";
+import MainLogoBlack from "@/../public/images/logo_웹툰코이컨텐츠(B).png";
 import Image from "next/image";
 
 export default function App() {
@@ -17,13 +18,58 @@ export default function App() {
 
   const renderSubMenu = (menuKey: string) => {
     // 여기에서 language가 'ko' 또는 'en' 중 하나임을 보장합니다.
-    const currentLanguageData = data[language as 'KO' | 'EN'];
+    const currentLanguageData = data[language as "KO" | "EN"];
     return currentLanguageData[menuKey].map((submenuItem) => (
-      <a href="#" key={submenuItem} className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">
+      <a
+        href="#"
+        key={submenuItem}
+        className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200"
+      >
         {submenuItem}
       </a>
     ));
   };
+
+  // const data = {
+  //   KO: {
+  //     ABOUT: [
+  //       { label: "회사소개", url: "/about" },
+  //       { label: "연혁", url: "/history" },
+  //       { label: "파트너사", url: "/partners" },
+  //       { label: "오시는길", url: "/location" }
+  //     ],
+  //     WEBTOON: [
+  //       // WEBTOON에 해당하는 항목들을 여기에 추가
+  //     ],
+  //     NEWS: [
+  //       { label: "공지사항", url: "/notice" },
+  //       { label: "직원채용", url: "/recruit" }
+  //     ],
+  //     CONTACT: [
+  //       { label: "비즈니스 문의", url: "/business-inquiries" },
+  //       { label: "연재 및 작품 문의", url: "/series-inquiries" }
+  //     ],
+  //   },
+  //   EN: {
+  //     ABOUT: [
+  //       { label: "Company info", url: "/en/about" },
+  //       { label: "History", url: "/en/history" },
+  //       { label: "Partner", url: "/en/partners" },
+  //       { label: "Location", url: "/en/location" }
+  //     ],
+  //     WEBTOON: [
+  //       // WEBTOON에 해당하는 항목들을 여기에 추가
+  //     ],
+  //     NEWS: [
+  //       { label: "Notice", url: "/en/notice" },
+  //       { label: "Recruit", url: "/en/recruit" }
+  //     ],
+  //     CONTACT: [
+  //       { label: "Business Inquiries", url: "/en/business-inquiries" },
+  //       { label: "Series and enquiries about works", url: "/en/series-inquiries" }
+  //     ],
+  //   },
+  // };
   
 
   const data: DataInterface = {
@@ -74,26 +120,38 @@ export default function App() {
   }, [menuHovered]);
 
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start"></div>
-      <div className="navbar-center">
-      <ul className="px-1 flex">
-      {Object.keys(data[language as 'KO' | 'EN']).map((menuKey) => (
-  <li key={menuKey} onMouseOver={() => handleMenuHover(menuKey)}
-      onMouseLeave={handleMenuLeave} className="relative ml-2">
-      <a href="#" className="hover-underline-animation block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-['SundayLemon']">
-        {menuKey}
+    <div className="navbar bg-base-100 items-center justify-center t">
+      <a href="/" className="flex w-12 h-12">
+        {/* { (dark) ? <Image src={MainLogoBlack} alt="aa" className="h-auto w-auto" />
+        : <Image src={MainLogoWhite} alt="aa" className="h-auto w-auto" /> } */}
+        <Image src={MainLogoBlack} alt="aa" className="h-auto w-auto" />
       </a>
-      {activeMenu === menuKey && (
-        <div onMouseOver={() => setMenuHovered(true)} 
-        onMouseLeave={handleMenuLeave} className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
-          {renderSubMenu(menuKey)}
-        </div>
-      )}
-  </li>
-))}
-        </ul>
-      </div>
+      <ul className="px-1 hidden lg:flex">
+        {Object.keys(data[language as "KO" | "EN"]).map((menuKey) => (
+          <li
+            key={menuKey}
+            onMouseOver={() => handleMenuHover(menuKey)}
+            onMouseLeave={handleMenuLeave}
+            className="relative ml-8"
+          >
+            <a
+              href="#"
+              className="hover-underline-animation block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 
+              font-['MADE TOMMY'] font-['MADE TOMMY Outline']">
+              {menuKey}
+            </a>
+            {activeMenu === menuKey && (
+              <div
+                onMouseOver={() => setMenuHovered(true)}
+                onMouseLeave={handleMenuLeave}
+                className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl font-['Spoqa Han Sans Neo']"
+              >
+                {renderSubMenu(menuKey)}
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
       <div className="ml-12">
         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <div className="flex w-[30%] pl-5">
@@ -155,7 +213,7 @@ export default function App() {
           >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
-        </label>
+        </label>        
       </div>
     </div>
   );

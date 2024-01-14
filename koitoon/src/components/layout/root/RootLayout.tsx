@@ -70,7 +70,7 @@ const RootLayout = () => {
             <div className="flex flex-row min-h-screen w-screen my-[1rem]">
                 <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
                 <div className="flex-3 w-4/6"> {/* 중앙 컨텐츠 영역 (3/5) */}
-                    <Slick />  
+                    {/* <Slick />   */}
                     <div data-aos="fade-up">    
                         <LangComponent />                  
                         <p className="text-sky-400/100">
@@ -78,7 +78,7 @@ const RootLayout = () => {
                         </p>                        
                     </div>  
                     <div data-aos="flip-left"> 
-                    <Slick3 />
+                    {/* <Slick3 /> */}
                     </div>                                      
                 </div>
                 <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
