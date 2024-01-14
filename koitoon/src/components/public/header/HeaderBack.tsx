@@ -1,8 +1,7 @@
 'use client'
 
 import { devNull } from "os";
-import React, { useState, useEffect, useContext } from "react";
-import LanguageContext  from "@/context/Language";
+import React, { useState, useEffect } from "react";
 
 
 export default function App() {
@@ -13,8 +12,8 @@ export default function App() {
     },
     en: {
       [key: string]: string[];
-    };
-  }
+  };
+ }
 
   const data: DataInterface = {
     ko: {
@@ -35,18 +34,12 @@ export default function App() {
   }
  };
 
-
-  const context = useContext(LanguageContext);
-  const { language, setLanguage } = context;
   const [colorChange, setcolorChange] = useState("KO");
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [menuHovered, setMenuHovered] = useState(false);
 
-  console.log(language)
-
-  const handleButtonClick = (menuType : string) => {   
+  const handleButtonClick = (menuType : string) => {
     setcolorChange(menuType);
-    setLanguage(menuType)
   };
 
   const handleMenuHover = (menuName : string) => {
@@ -69,70 +62,15 @@ export default function App() {
   }, [menuHovered]);
 
   return (
-    <div className="dark:bg-slate-800">
-    <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Home</a></li>
-        <li>
-          <a>about</a>
-          <ul className="p-2">
-            <li><a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a></li>
-            <li><a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a></li>
-          </ul>
-        </li>
-        <li>
-          <a>Mail</a>
-          <ul className="p-2">
-            <li><a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a></li>
-            <li><a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a></li>
-          </ul>
-        </li>
-        <li>
-          <a>Intro</a>
-          <ul className="p-2">
-            <li><a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200 dark:text-white">Submenu 1</a></li>
-            <li><a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a></li>
-          </ul>
-        </li>
-        <li>
-          <a>location</a>
-          <ul className="p-2">
-            <li><a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a></li>
-            <li><a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a></li>
-          </ul>
-        </li>
-        <li className="my-4"><a>세부설정</a>
-        <ul className="">
-        <li className="text-left">
-              <div className="flex items-center space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <div className="flex w-[30%] pl-5">
-                  <button onClick={() => handleButtonClick("KO")} className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO" ? "font-bold underline decoration-gray-600" : "opacity-25"}`}>KO</button>
-                  <p className="text-gray-600 text-center text-lg font-bold w-auto px-2">|</p>
-                  <button onClick={() => handleButtonClick("EN")} className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN" ? "font-bold underline decoration-gray-600" : "opacity-25"}`}>EN</button>
-                </div>
-                </div>
-        </li>  
-              <li className="pt-1">
-              <label className="flex cursor-pointer gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
-              <input type="checkbox" value="dark" className="toggle theme-controller"/>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </label>      
-            </li> 
-            </ul>  
-          </li> 
-      </ul>
-    </div>
-  </div>
+    
+    <>
+    
     {/* 기존  */}
-      <nav className="bg-white border-gray-200 hidden dark:bg-slate-800 lg:flex">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 dark:bg-slate-800">
+      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <button
-            className="bg-blue-400 mr-12 dark:bg-slate-800 inline-block rounded p-[0.60rem] text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-800 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-1000 active:shadow-lg"
+            className="bg-blue-400 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-800 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-1000 active:shadow-lg"
             data-te-sidenav-toggle-ref
             data-te-target="#sidenav-5"
             aria-controls="#sidenav-5"
@@ -151,7 +89,7 @@ export default function App() {
             </span>
           </button>          
       
-          <a href="" className="flex items-center space-x-3 rtl:space-x-reverse mr-8">            
+          <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">            
             <span className="self-center font-semibold whitespace-nowrap text-sky-800 dark:text-white font-['SundayLemon'] text-[2rem]">T o o n  K o i</span>
           </a>
          
@@ -173,8 +111,8 @@ export default function App() {
                    {activeMenu === "About" && (
                   <div  onMouseOver={() => setMenuHovered(true)} 
                   onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl ">
-                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a>
-                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 2</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
                   </div>
                 )}
               </li>
@@ -187,8 +125,8 @@ export default function App() {
                    {activeMenu === "Contents" && (
                   <div  onMouseOver={() => setMenuHovered(true)} 
                   onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
-                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a>
-                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 2</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
                   </div>
                 )}
               </li>
@@ -200,8 +138,8 @@ export default function App() {
                    {activeMenu === "PR" && (
                   <div  onMouseOver={() => setMenuHovered(true)} 
                   onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
-                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 1</a>
-                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 2</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
                   </div>
                 )}
               </li>
@@ -217,7 +155,7 @@ export default function App() {
                   <div  onMouseOver={() => setMenuHovered(true)} 
                   onMouseLeave={handleMenuLeave} className="absolute absolutes left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
                     <a href="#" className="block px-4 py-2 text-gray-800  font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 1</a>
-                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200">Submenu 2</a>
+                    <a href="#" className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 hover:bg-gray-200">Submenu 2</a>
                   </div>
                 )}
               </li>
@@ -243,18 +181,19 @@ export default function App() {
                 </div>
                 </div>
               </li>  
-              <li className="pt-1">
+                        <li className="pt-1">
               <label className="flex cursor-pointer gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
-              <input type="checkbox" value="dark" className="toggle theme-controller"/>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </label>      
-            </li>    
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+  <input type="checkbox" value="dark" className="toggle theme-controller"/>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</label>      
+</li>    
             </ul>
           </div>
         </div>
+
       </nav>
       <hr className="animate-pulse mt-2 shadow" />
-    </div>
+    </>
   );
 }
