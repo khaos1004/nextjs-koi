@@ -63,16 +63,16 @@ const SimpleSlider = () => {
   }, []);
 
   return (
-    <div className='mt-10 '>
-      <Slider ref={slickRef} {...settings}>
+    <div className='mt-10 z-0'>
+      <Slider ref={slickRef} {...settings} className='z-0'>
         <div>        
-          <Image src={We1} alt="ad" className='object-cover object-center w-full h-[35rem]' />               
+          <Image src={We1} alt="ad" className='object-cover object-center w-full h-[35rem] z-0' />               
         </div>    
         <div>
-          <Image src={We2} alt="ad" className='object-cover object-center w-full h-[35rem]' />               
+          <Image src={We2} alt="ad" className='object-cover object-center w-full h-[35rem] z-0' />               
         </div>
         <div>          
-          <Image src={We4} alt="ad" className='object-cover object-center w-full h-[35rem]' />               
+          <Image src={We4} alt="ad" className='object-cover object-center w-full h-[35rem] z-0' />               
         </div>        
       </Slider>
       <button onClick={previous}></button>

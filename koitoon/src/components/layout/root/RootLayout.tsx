@@ -50,7 +50,7 @@ const intro: any = {
     EN: "ToonKoi is a webtoon platform developed in Korea. The platform provides various genres of webtoons, and it is one of the services that is receiving attention in the Korean webtoon market. Koitoon is gaining popularity for its user-friendly interface and unique content, and it is reaching users not only in Korea but also abroad. The platform presents a variety of stories and art styles by providing opportunities for up-and-coming writers to post their works. Webtoons are a form of digital cartoons, featuring a format that can be read by scrolling, and Koitoon well reflects this modern way of spending cartoons."
 };
 
-const RootLayout = () => {    
+const RootLayout = ({children}:any) => {    
     useEffect(() => {
         AOS.init({
             duration : 1000
@@ -70,16 +70,7 @@ const RootLayout = () => {
             <div className="flex flex-row min-h-screen w-screen my-[1rem]">
                 <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
                 <div className="flex-3 w-4/6"> {/* 중앙 컨텐츠 영역 (3/5) */}
-                    {/* <Slick />   */}
-                    <div data-aos="fade-up">    
-                        <LangComponent />                  
-                        <p className="text-sky-400/100">
-                            {introText}   
-                        </p>                        
-                    </div>  
-                    <div data-aos="flip-left"> 
-                    {/* <Slick3 /> */}
-                    </div>                                      
+                    {children}                                                    
                 </div>
                 <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
             </div>                

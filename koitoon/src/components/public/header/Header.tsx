@@ -5,6 +5,7 @@ import LanguageContext from "@/context/Language";
 import MainLogoWhite from "@/../public/images/logo_웹툰코이컨텐츠(W).png";
 import MainLogoBlack from "@/../public/images/logo_웹툰코이컨텐츠(B).png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function App() {
   interface DataInterface {
@@ -70,7 +71,6 @@ export default function App() {
   //     ],
   //   },
   // };
-  
 
   const data: DataInterface = {
     KO: {
@@ -132,25 +132,26 @@ export default function App() {
             key={menuKey}
             onMouseOver={() => handleMenuHover(menuKey)}
             onMouseLeave={handleMenuLeave}
-            className="relative ml-8"
-          >
+            className="relative ml-8">
             <a
               href="#"
               className="hover-underline-animation block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 
-              font-['MADE TOMMY'] font-['MADE TOMMY Outline']">
+              font-['MADE TOMMY'] font-['MADE TOMMY Outline']"
+            >
               {menuKey}
             </a>
             {activeMenu === menuKey && (
               <div
                 onMouseOver={() => setMenuHovered(true)}
                 onMouseLeave={handleMenuLeave}
-                className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl font-['Spoqa Han Sans Neo']"
+                className="absolute left-0 mt-2 py-2 w-48 dark:bg-gray-700 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
               >
-                {renderSubMenu(menuKey)}
+                <Link href="/about/location">{renderSubMenu(menuKey)}</Link>
               </div>
             )}
           </li>
         ))}
+      
       </ul>
       <div className="ml-12">
         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -213,7 +214,7 @@ export default function App() {
           >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
-        </label>        
+        </label>
       </div>
     </div>
   );
