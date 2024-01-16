@@ -20,7 +20,7 @@ import Language from "@/context/Language"
 import { useContext, ReactNode, useState, Dispatch, SetStateAction } from "react"
 import { user } from "@nextui-org/react"
 import LanguageContext from "@/context/Language"
-import LangComponent from "@/components/contents/LangComponent"
+import {LangComponent} from "@/components/contents/LangComponent"
 
 interface LanguageProviderProps {
     children: ReactNode;

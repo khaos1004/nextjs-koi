@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import mainlo from "../../../../public/images/logo_웹툰코이컨텐츠(B)_한글.png";
 import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
+import LanguageContext from "@/context/Language"
+import {LocationComponent} from "@/components/contents/LangComponent"
 
 declare global {
   interface Window {
@@ -33,7 +35,7 @@ const NaverMap: React.FC<NaverMapProps> = ({ clientId }) => {
 
     // 정보 창 생성 및 설정
     const infoWindow = new window.naver.maps.InfoWindow({
-      content: '<a target="_blank" href="https://map.naver.com/p/entry/address/14128661.8789304,4516308.6999566,%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9E%94%EB%8B%A4%EB%A6%AC%EB%A1%9C%2030-11?c=19.00,0,0,0,dh"><div class="textMap">툰코이</div></a>', // 여기에 회사 이름을 넣으세요.
+      content: '<a target="_blank" href="https://map.naver.com/p/entry/place/1303772060?c=18.98,0,0,0,dh" class="bounce"><div class="textMap bounce">툰코이</div></a>', // 여기에 회사 이름을 넣으세요.
       anchorSize: new window.naver.maps.Size(0, 0),
     });
 
@@ -50,6 +52,9 @@ const NaverMap: React.FC<NaverMapProps> = ({ clientId }) => {
 
   return <div id="map" style={{ width: "100%", height: "400px" }} />;
 };
+
+
+
 
 const HomePage: React.FC = () => {
   const clientId = "oygjgwg355"; // 네이버 지도 API 클라이언트 ID
@@ -85,7 +90,7 @@ const HomePage: React.FC = () => {
 
       <div className="App w-[50rem] my-[3rem] ml-[16rem]">      
         <div data-aos="fade-up">
-        <div className="justify-center text-center my-2 text-5xl font-['Spoqa Han Sans Neo']"><h1>오시는길</h1></div>      
+        <div className="justify-center text-center my-2 text-5xl font-['Spoqa Han Sans Neo']"><h1><LocationComponent/></h1></div>      
             <NaverMap clientId={clientId} />              
         <dl className="flex bg-gray-200 items-center justify-center h-[4rem]">
             <dt>본사</dt>
