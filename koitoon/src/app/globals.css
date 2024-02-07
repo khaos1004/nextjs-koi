@@ -226,3 +226,7 @@ font-style: normal;
     top: 100%; /* 부모 요소의 높이만큼 아래에 위치 */
     
   }
+
+  .clip-hexagon {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }

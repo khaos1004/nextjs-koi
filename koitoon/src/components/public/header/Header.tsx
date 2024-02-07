@@ -17,73 +17,58 @@ export default function App() {
     };
   }
 
-  const renderSubMenu = (menuKey: string) => {
-    // 여기에서 language가 'ko' 또는 'en' 중 하나임을 보장합니다.
-    const currentLanguageData = data[language as "KO" | "EN"];
-    return currentLanguageData[menuKey].map((submenuItem) => (
-      <a
-        href="#"
-        key={submenuItem}
-        className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200"
-      >
-        {submenuItem}
-      </a>
-    ));
-  };
 
-  // const data = {
-  //   KO: {
-  //     ABOUT: [
-  //       { label: "회사소개", url: "/about" },
-  //       { label: "연혁", url: "/history" },
-  //       { label: "파트너사", url: "/partners" },
-  //       { label: "오시는길", url: "/location" }
-  //     ],
-  //     WEBTOON: [
-  //       // WEBTOON에 해당하는 항목들을 여기에 추가
-  //     ],
-  //     NEWS: [
-  //       { label: "공지사항", url: "/notice" },
-  //       { label: "직원채용", url: "/recruit" }
-  //     ],
-  //     CONTACT: [
-  //       { label: "비즈니스 문의", url: "/business-inquiries" },
-  //       { label: "연재 및 작품 문의", url: "/series-inquiries" }
-  //     ],
-  //   },
-  //   EN: {
-  //     ABOUT: [
-  //       { label: "Company info", url: "/en/about" },
-  //       { label: "History", url: "/en/history" },
-  //       { label: "Partner", url: "/en/partners" },
-  //       { label: "Location", url: "/en/location" }
-  //     ],
-  //     WEBTOON: [
-  //       // WEBTOON에 해당하는 항목들을 여기에 추가
-  //     ],
-  //     NEWS: [
-  //       { label: "Notice", url: "/en/notice" },
-  //       { label: "Recruit", url: "/en/recruit" }
-  //     ],
-  //     CONTACT: [
-  //       { label: "Business Inquiries", url: "/en/business-inquiries" },
-  //       { label: "Series and enquiries about works", url: "/en/series-inquiries" }
-  //     ],
-  //   },
-  // };
+  interface Menu {
+    label: string;
+    url: string;
+  }
 
-  const data: DataInterface = {
+  interface DataMenu {
+    KO: { [key: string]: Menu[] };
+    EN: { [key: string]: Menu[] };
+  }
+
+  const data: DataMenu = {
     KO: {
-      ABOUT: ["회사소개", "연혁", "파트너사", "오시는길"], // "School"
-      WEBTOON: [], // "Horror"
-      NEWS: ["공지사항", "직원채용"], // "Fantasy"
-      CONTACT: ["비즈니스 문의", "연재 및 작품 문의"], // "Romance"
+      ABOUT: [
+        { label: "회사소개", url: "/about/company" },
+        { label: "연혁", url: "/about/history" },
+        { label: "파트너사", url: "/about/partners" },
+        { label: "오시는길", url: "/about/location" },
+      ],
+      WEBTOON: [
+        // 예시: 웹툰 관련 데이터가 없을 경우 빈 배열
+      ],
+      NEWS: [
+        { label: "공지사항", url: "/news/announcements" },
+        { label: "직원채용", url: "/news/recruitment" },
+      ],
+      CONTACT: [
+        { label: "비즈니스 문의", url: "/contact/business" },
+        { label: "연재 및 작품 문의", url: "/contact/series" },
+      ],
     },
     EN: {
-      ABOUT: ["Company info", "History", "Partner", "Location"], // "School"
-      WEBTOON: [], // "Horror"
-      NEWS: ["Notice", "Recruit"], // "Fantasy"
-      CONTACT: ["Business Inquiries", "Series and enquiries about works"], // "Romance"
+      ABOUT: [
+        { label: "Company Info", url: "/about/company" },
+        { label: "History", url: "/about/history" },
+        { label: "Partners", url: "/about/partners" },
+        { label: "Location", url: "/about/location" },
+      ],
+      WEBTOON: [
+        // 예시: 웹툰 관련 데이터가 없을 경우 빈 배열
+      ],
+      NEWS: [
+        { label: "Notices", url: "/news/announcements" },
+        { label: "Recruitment", url: "/news/recruitment" },
+      ],
+      CONTACT: [
+        { label: "Business Inquiries", url: "/contact/business" },
+        {
+          label: "Series and Enquiries About Works",
+          url: "/contact/series",
+        },
+      ],
     },
   };
 
@@ -127,15 +112,16 @@ export default function App() {
         <Image src={MainLogoBlack} alt="aa" className="h-auto w-auto" />
       </a>
       <ul className="px-1 hidden lg:flex">
-        {Object.keys(data[language as "KO" | "EN"]).map((menuKey) => (
+        {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
           <li
-            key={menuKey}
+            key={index}
             onMouseOver={() => handleMenuHover(menuKey)}
             onMouseLeave={handleMenuLeave}
-            className="relative ml-8">
+            className="relative ml-8"
+          >
             <a
-              href="#"
-              className="hover-underline-animation block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 
+              className="hover-underline-animation block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0
+               dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 
               font-['MADE TOMMY'] font-['MADE TOMMY Outline']"
             >
               {menuKey}
@@ -146,12 +132,20 @@ export default function App() {
                 onMouseLeave={handleMenuLeave}
                 className="absolute left-0 mt-2 py-2 w-48 dark:bg-gray-700 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
               >
-                <Link href="/about/location">{renderSubMenu(menuKey)}</Link>
+                {data[language as "KO" | "EN"][menuKey].map((menuItem) => (                
+                    <Link
+                      href={menuItem.url}
+                      key={menuItem.label}
+                      className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200"
+                    >
+                      {menuItem.label}
+                    </Link>
+                ))}
+                {/* <Link href={""}>{renderSubMenu(menuKey)}</Link> */}
               </div>
             )}
           </li>
         ))}
-      
       </ul>
       <div className="ml-12">
         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
