@@ -6,9 +6,6 @@ import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
 import LanguageContext from "@/context/Language"
 import {LocationComponent} from "@/components/contents/LangComponent"
-import bg from "../../../../public/images/history_bg.jpg";
-import laod from "../../../../public/images/laod.jpg";
-import sub from "../../../../public/images/eBig_logo.png";
 
 declare global {
   interface Window {
@@ -64,37 +61,7 @@ const HomePage: React.FC = () => {
 
   return (
     <RootLayout>
-  
-        <div className="main_image">
-          <Image src={bg} width='5000' alt="bg" />
-          <div className="main_image_text font-bold">대체 이미지 파일 요청</div>
-        </div>
-
-        <div className="main_image">
-          <Image src={sub} width='300' className="c items-center bg-center content-center ml-[32rem] my-9" alt="bg" />
-          <div className="main_image_text font-bold col text-blue-900">대체 이미지 파일 요청</div>
-          <div className="justify-center text-center my-2 text-5xl font-['Spoqa Han Sans Neo']"><h1><LocationComponent/></h1></div>
-        </div>
-
-        <div className="main_image justify-center items-center justify-items-center mt-8">
-          <Image src={laod} width='1000' alt="bg" className="ml-[10rem]" />
-          <div className="main_image_text font-bold">대체 이미지 파일 요청</div>
-        </div>
-    
-
-      <div className="App w-[50rem] my-[3rem] ml-[16rem]">      
-        <div data-aos="fade-up">       
-            <NaverMap clientId={clientId} />              
-        <dl className="flex bg-gray-200 items-center justify-center h-[4rem]">
-            <dt>본사</dt>
-            <dd className="flex text-xs">
-                <p className="mx-2"><strong>ADDRESS.</strong>서울 마포구 잔다리로 30-11</p>
-                <p className="mr-2"><strong>TEL.</strong>010-5682-4220</p>
-                <p className="mr-2"><strong>EMAIL.</strong>dbcjdals@ToonKoi.com</p>
-            </dd>
-        </dl>
-        </div>
-      </div>
+      
     </RootLayout>
   );
 };

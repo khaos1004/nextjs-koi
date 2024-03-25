@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useContext } from "react";
 import LanguageContext from "@/context/Language";
-import MainLogoWhite from "@/../public/images/logo_웹툰코이컨텐츠(W).png";
 import MainLogoBlack from "@/../public/images/logo_웹툰코이컨텐츠(B).png";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,9 +31,9 @@ export default function App() {
     KO: {
       ABOUT: [
         { label: "회사소개", url: "/about/company" },
-        { label: "연혁", url: "/about/history" },
+        // { label: "연혁", url: "/about/history" },
         { label: "파트너사", url: "/about/partners" },
-        { label: "오시는길", url: "/about/location" },
+        // { label: "오시는길", url: "/about/location" },
       ],
       WEBTOON: [
         // 예시: 웹툰 관련 데이터가 없을 경우 빈 배열
@@ -51,9 +50,9 @@ export default function App() {
     EN: {
       ABOUT: [
         { label: "Company Info", url: "/about/company" },
-        { label: "History", url: "/about/history" },
+        // { label: "History", url: "/about/history" },
         { label: "Partners", url: "/about/partners" },
-        { label: "Location", url: "/about/location" },
+        // { label: "Location", url: "/about/location" },
       ],
       WEBTOON: [
         // 예시: 웹툰 관련 데이터가 없을 경우 빈 배열
@@ -105,11 +104,41 @@ export default function App() {
   }, [menuHovered]);
 
   return (
-    <div className="navbar bg-base-100 items-center justify-center t">
-      <a href="/" className="flex w-12 h-12">
-        {/* { (dark) ? <Image src={MainLogoBlack} alt="aa" className="h-auto w-auto" />
-        : <Image src={MainLogoWhite} alt="aa" className="h-auto w-auto" /> } */}
-        <Image src={MainLogoBlack} alt="aa" className="h-auto w-auto" />
+    <>  
+    <div className="navbar bg-base-100 md:hidden sm:flex">
+  <div className="navbar-start">
+    <div className="dropdown">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      </div>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Homepage</a></li>
+        <li><a>Portfolio</a></li>
+        <li><a>About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div className="navbar-center">
+  <a href="/" className="flex w-12 mr-[20rem]">        
+        <Image src={MainLogoBlack} alt="메인로고" className="h-auto w-auto" />
+      </a>
+  </div>
+  <div className="navbar-end">
+    <button className="btn btn-ghost btn-circle">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+    </button>
+    <button className="btn btn-ghost btn-circle">
+      <div className="indicator">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+        <span className="badge badge-xs badge-primary indicator-item"></span>
+      </div>
+    </button>
+  </div>
+</div>
+      
+    <div className="navbar bg-base-100 items-center justify-center fixed z-40">
+      <a href="/" className="flex w-12 mr-[20rem]">        
+        <Image src={MainLogoBlack} alt="메인로고" className="h-auto w-auto" />
       </a>
       <ul className="px-1 hidden lg:flex">
         {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
@@ -126,6 +155,7 @@ export default function App() {
             >
               {menuKey}
             </a>
+            
             {activeMenu === menuKey && (
               <div
                 onMouseOver={() => setMenuHovered(true)}
@@ -147,7 +177,7 @@ export default function App() {
           </li>
         ))}
       </ul>
-      <div className="ml-12">
+      <div className="ml-[15rem]">
         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <div className="flex w-[30%] pl-5">
             <button
@@ -175,7 +205,7 @@ export default function App() {
             </button>
           </div>
         </div>
-        <label className="flex cursor-pointer gap-2">
+        {/* <label className="flex cursor-pointer gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -208,8 +238,9 @@ export default function App() {
           >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
-        </label>
+        </label> */}
       </div>
     </div>
+    </>
   );
 }

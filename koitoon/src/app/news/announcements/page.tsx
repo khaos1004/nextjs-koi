@@ -6,9 +6,6 @@ import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
 import LanguageContext from "@/context/Language"
 import {LocationComponent} from "@/components/contents/LangComponent"
-import bg from "../../../../public/images/history_bg.jpg";
-import laod from "../../../../public/images/laod.jpg";
-import sub from "../../../../public/images/eBig_logo.png";
 
 declare global {
   interface Window {
@@ -64,26 +61,36 @@ const HomePage: React.FC = () => {
 
   return (
     <RootLayout>
-  
-        <div className="main_image">
-          <Image src={bg} width='5000' alt="bg" />
-          <div className="main_image_text font-bold">대체 이미지 파일 요청</div>
+      <div className="carousel w-full">
+        <div id="item1" className="carousel-item w-full">
+          <img
+            src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+            className="w-full"
+          />
         </div>
-
-        <div className="main_image">
-          <Image src={sub} width='300' className="c items-center bg-center content-center ml-[32rem] my-9" alt="bg" />
-          <div className="main_image_text font-bold col text-blue-900">대체 이미지 파일 요청</div>
-          <div className="justify-center text-center my-2 text-5xl font-['Spoqa Han Sans Neo']"><h1><LocationComponent/></h1></div>
+        <div id="item2" className="carousel-item w-full">
+          <img
+            src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+            className="w-full"
+          />
         </div>
-
-        <div className="main_image justify-center items-center justify-items-center mt-8">
-          <Image src={laod} width='1000' alt="bg" className="ml-[10rem]" />
-          <div className="main_image_text font-bold">대체 이미지 파일 요청</div>
+        <div id="item3" className="carousel-item w-full">
+          <img
+            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+            className="w-full"
+          />
         </div>
-    
+        <div id="item4" className="carousel-item w-full">
+          <img
+            src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+            className="w-full"
+          />
+        </div>
+      </div>
 
       <div className="App w-[50rem] my-[3rem] ml-[16rem]">      
-        <div data-aos="fade-up">       
+        <div data-aos="fade-up">
+        <div className="justify-center text-center my-2 text-5xl font-['Spoqa Han Sans Neo']"><h1><LocationComponent/></h1></div>      
             <NaverMap clientId={clientId} />              
         <dl className="flex bg-gray-200 items-center justify-center h-[4rem]">
             <dt>본사</dt>
