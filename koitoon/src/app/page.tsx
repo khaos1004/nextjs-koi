@@ -25,11 +25,11 @@ export default function Home() {
   return (
     <>
       <RootLayout>
-        <Slick />  
+        
         <div data-aos="fade-up">
           <LangComponent />
         </div>
-        <div data-aos="flip-left"><Slick3 /></div>
+        {/* <div data-aos="flip-left"><Slick3 /></div> */}
       </RootLayout>
     </>
   );

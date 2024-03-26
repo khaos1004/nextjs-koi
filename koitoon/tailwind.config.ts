@@ -18,7 +18,14 @@ const config: Config = {
       },
       fontFamily: {
         custom: ['RubikPuddles-Regular', 'sans'], // YourFontName을 폰트 패밀리 이름으로 대체하세요.
-      },      
+      }, 
+      screens: {
+        ss: { min: "100px", max: "819px" },
+      }, 
+      colors: {
+        'customeRed': '#ee511f',
+        // 'white': '#ffffff',
+      },    
     },
   },
   plugins: [require("tw-elements/dist/plugin.cjs"), require('taos/plugin'), require("daisyui")],

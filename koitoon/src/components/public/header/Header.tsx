@@ -44,7 +44,7 @@ export default function App() {
       ],
       CONTACT: [
         { label: "비즈니스 문의", url: "/contact/business" },
-        { label: "연재 및 작품 문의", url: "/contact/series" },
+        { label: "작품 문의", url: "/contact/series" },
       ],
     },
     EN: {
@@ -64,7 +64,7 @@ export default function App() {
       CONTACT: [
         { label: "Business Inquiries", url: "/contact/business" },
         {
-          label: "Series and Enquiries About Works",
+          label: "Inquiry about works",
           url: "/contact/series",
         },
       ],
@@ -104,108 +104,173 @@ export default function App() {
   }, [menuHovered]);
 
   return (
-    <>  
-    <div className="navbar bg-base-100 md:hidden sm:flex">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-      </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Homepage</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>About</a></li>
-      </ul>
-    </div>
-  </div>
-  <div className="navbar-center">
-  <a href="/" className="flex w-12 mr-[20rem]">        
-        <Image src={MainLogoBlack} alt="메인로고" className="h-auto w-auto" />
-      </a>
-  </div>
-  <div className="navbar-end">
-    <button className="btn btn-ghost btn-circle">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-    </button>
-    <button className="btn btn-ghost btn-circle">
-      <div className="indicator">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-        <span className="badge badge-xs badge-primary indicator-item"></span>
-      </div>
-    </button>
-  </div>
-</div>
-      
-    <div className="navbar bg-base-100 items-center justify-center fixed z-40">
-      <a href="/" className="flex w-12 mr-[20rem]">        
-        <Image src={MainLogoBlack} alt="메인로고" className="h-auto w-auto" />
-      </a>
-      <ul className="px-1 hidden lg:flex">
-        {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
-          <li
-            key={index}
-            onMouseOver={() => handleMenuHover(menuKey)}
-            onMouseLeave={handleMenuLeave}
-            className="relative ml-8"
-          >
-            <a
-              className="hover-underline-animation block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0
-               dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 
-              font-['MADE TOMMY'] font-['MADE TOMMY Outline']"
-            >
-              {menuKey}
-            </a>
-            
-            {activeMenu === menuKey && (
-              <div
-                onMouseOver={() => setMenuHovered(true)}
-                onMouseLeave={handleMenuLeave}
-                className="absolute left-0 mt-2 py-2 w-48 dark:bg-gray-700 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
+    <>
+
+      {/* -------------------------------------------------------------------------------------------------- */}
+      <div className="hidden ss:navbar bg-base-100">
+        <div className="navbar-start">
+          <div className="dropdown dropdown-bottom">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+            </div>
+            <ul className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+              {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
+                <>
+                  <div tabIndex={0} role="button dropdown dropdown-hover" className="btn m-1">{menuKey}
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                      {data[language as "KO" | "EN"][menuKey].map((menuItem) => (
+                        <li>
+                          <Link
+                            href={menuItem.url}
+                            key={menuItem.label}
+                            className="block px-4 py-2 text-gray-800 font-['SundayLemon'] 
+                            hover:text-[customeRed] dark:text-white hover:bg-gray-200"
+                          >
+                            {menuItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              ))}
+            </ul>
+          </div>
+          {/* <div className="dropdown dropdown-right">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+            </div>
+            <ul tabIndex={0} className="">
+              <div className="dropdown dropdown-right">
+                {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
+                  <>
+                    <div tabIndex={0} role="button" className="btn m-1">{menuKey}</div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                      {data[language as "KO" | "EN"][menuKey].map((menuItem) => (
+                        <li>
+                          <Link
+                            href={menuItem.url}
+                            key={menuItem.label}
+                            className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200"
+                          >
+                            {menuItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ))}
+              </div>
+            </ul>
+          </div> */}
+        </div>
+        <div className="navbar-center">
+          <a href="/" className="w-12 md:ml-[5rem]">
+            <Image src={MainLogoBlack} alt="메인로고" className="h-auto w-auto" />
+          </a>
+        </div>
+        <div className="navbar-end pr-4">
+          <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <div className="flex w-[30%]">
+              <button
+                onClick={() => handleButtonClick("KO")}
+                className={`text-gray-600 text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO"
+                  ? "font-bold underline decoration-gray-600"
+                  : "opacity-25"
+                  }`}
               >
-                {data[language as "KO" | "EN"][menuKey].map((menuItem) => (                
+                KO
+              </button>
+              <p className="text-gray-600 text-center text-sm font-bold w-auto px-2">
+                |
+              </p>
+              <button
+                onClick={() => handleButtonClick("EN")}
+                className={`text-gray-600 text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN"
+                  ? "font-bold underline decoration-gray-600"
+                  : "opacity-25"
+                  }`}
+              >
+                EN
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* -------------------------------------------------------------------------------------------------- */}
+
+
+
+      <div className="ss:hidden navbar bg-base-100 items-center justify-center fixed z-40">
+        <div className="navbar-start">
+          <a href="/" className="w-12 md:ml-[5rem]">
+            <Image src={MainLogoBlack} alt="메인로고" className="h-auto w-auto" />
+          </a>
+        </div>
+
+        <ul className="navbar-center">
+          {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
+            <li
+              key={index}
+              onMouseOver={() => handleMenuHover(menuKey)}
+              onMouseLeave={handleMenuLeave}
+              className="relative ml-8"
+            >
+              <a
+                className="hover-underline-animation block py-2 px-3 text-gray-900 rounded hover:text-[#EE511F] 
+                dark:hover:bg-gray-700 dark:hover:text-white font-['MADE TOMMY'] font-['MADE TOMMY Outline'] text-[customeRed]">
+                {menuKey}
+              </a>
+
+              {activeMenu === menuKey && (
+                <div
+                  onMouseOver={() => setMenuHovered(true)}
+                  onMouseLeave={handleMenuLeave}
+                  className="absolute left-0 mt-2 py-2 w-48 dark:bg-gray-700 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
+                >
+                  {data[language as "KO" | "EN"][menuKey].map((menuItem) => (
                     <Link
                       href={menuItem.url}
                       key={menuItem.label}
-                      className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200"
+                      className="block px-4 py-2 text-gray-800 font-['SundayLemon'] 
+                      hover:text-[#EE511F]"
                     >
                       {menuItem.label}
                     </Link>
-                ))}
-                {/* <Link href={""}>{renderSubMenu(menuKey)}</Link> */}
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
-      <div className="ml-[15rem]">
-        <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <div className="flex w-[30%] pl-5">
-            <button
-              onClick={() => handleButtonClick("KO")}
-              className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                colorChange == "KO"
+                  ))}
+                  {/* <Link href={""}>{renderSubMenu(menuKey)}</Link> */}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+        <div className="navbar-end">
+          <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            {/* <div className="flex "> */}
+              <button
+                onClick={() => handleButtonClick("KO")}
+                className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO"
                   ? "font-bold underline decoration-gray-600"
                   : "opacity-25"
-              }`}
-            >
-              KO
-            </button>
-            <p className="text-gray-600 text-center text-lg font-bold w-auto px-2">
-              |
-            </p>
-            <button
-              onClick={() => handleButtonClick("EN")}
-              className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                colorChange == "EN"
+                  }`}
+              >
+                KO
+              </button>
+              <p className="text-gray-600 text-center text-lg font-bold w-auto px-2">
+                |
+              </p>
+              <button
+                onClick={() => handleButtonClick("EN")}
+                className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN"
                   ? "font-bold underline decoration-gray-600"
                   : "opacity-25"
-              }`}
-            >
-              EN
-            </button>
+                  }`}
+              >
+                EN
+              </button>
+            {/* </div> */}
           </div>
-        </div>
-        {/* <label className="flex cursor-pointer gap-2">
+          {/* <label className="flex cursor-pointer gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -239,8 +304,8 @@ export default function App() {
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </label> */}
+        </div>
       </div>
-    </div>
     </>
   );
 }
