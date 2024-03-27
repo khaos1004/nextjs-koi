@@ -16,6 +16,27 @@ export default function App() {
     };
   }
 
+  const [hoveredMenu, setHoveredMenu] = useState(null);
+  const [focushover, setFocushove] = useState(false);
+
+   // onMouseOver 이벤트 핸들러
+   const handleFocus = () => {
+    setFocushove(true);
+    
+  };
+
+  // onMouseOver 이벤트 핸들러
+  const hoveredMenuIn = (menuKey: any) => {
+    setHoveredMenu(menuKey); // 현재 hover된 메뉴의 key 저장
+    
+  };
+
+  // onMouseLeave 이벤트 핸들러
+  const hoverMenuLeave = () => {
+    setFocushove(false); // hover 상태 초기화
+    // setHoveredMenu(null);
+  };
+
 
   interface Menu {
     label: string;
@@ -70,6 +91,7 @@ export default function App() {
       ],
     },
   };
+  { console.log(data) }
 
   const context = useContext(LanguageContext);
   const { language, setLanguage } = context;
@@ -109,60 +131,45 @@ export default function App() {
       {/* -------------------------------------------------------------------------------------------------- */}
       <div className="hidden ss:navbar bg-base-100">
         <div className="navbar-start">
-          <div className="dropdown dropdown-bottom">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          <div className="drawer">
+            <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+              {/* Page content here */}
+              <label htmlFor="my-drawer" className="btn btn-ghost btn-circle drawer-button">
+                {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle"> */}
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+                {/* </div> */}
+              </label>
             </div>
-            <ul className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-              {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
-                <>
-                  <div tabIndex={0} role="button dropdown dropdown-hover" className="btn m-1">{menuKey}
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                      {data[language as "KO" | "EN"][menuKey].map((menuItem) => (
-                        <li>
-                          <Link
-                            href={menuItem.url}
-                            key={menuItem.label}
-                            className="block px-4 py-2 text-gray-800 font-['SundayLemon'] 
-                            hover:text-[customeRed] dark:text-white hover:bg-gray-200"
-                          >
-                            {menuItem.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </>
-              ))}
-            </ul>
+            <div className="drawer-side">
+              <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+              <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+                {/* Sidebar content here */}
+                <ul className="menu bg-base-200 w-56 rounded-box">
+                  {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
+                    <li className="hover:text-[#EE511F] ">
+                      <details open>
+                        <summary className="">{menuKey}</summary>
+
+                        {
+                          data[language as "KO" | "EN"][menuKey].length > 0 ?
+                            data[language as "KO" | "EN"][menuKey].map((menuItem) => (
+                              <ul key={menuItem.label}>
+                                <li>
+                                  <Link href={menuItem.url}>{menuItem.label}</Link>
+                                </li>
+                              </ul>
+                            )) : null
+                        }
+                      </details>
+                    </li>
+                  ))}
+                </ul>
+              </ul>
+            </div>
           </div>
-          {/* <div className="dropdown dropdown-right">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-            </div>
-            <ul tabIndex={0} className="">
-              <div className="dropdown dropdown-right">
-                {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
-                  <>
-                    <div tabIndex={0} role="button" className="btn m-1">{menuKey}</div>
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                      {data[language as "KO" | "EN"][menuKey].map((menuItem) => (
-                        <li>
-                          <Link
-                            href={menuItem.url}
-                            key={menuItem.label}
-                            className="block px-4 py-2 text-gray-800 font-['SundayLemon'] hover:text-blue-500 dark:text-white hover:bg-gray-200"
-                          >
-                            {menuItem.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                ))}
-              </div>
-            </ul>
-          </div> */}
         </div>
         <div className="navbar-center">
           <a href="/" className="w-12 md:ml-[5rem]">
@@ -217,57 +224,63 @@ export default function App() {
               className="relative ml-8"
             >
               <a
-                className="hover-underline-animation block py-2 px-3 text-gray-900 rounded hover:text-[#EE511F] 
-                dark:hover:bg-gray-700 dark:hover:text-white font-['MADE TOMMY'] font-['MADE TOMMY Outline'] text-[customeRed]">
+                className={`block py-2 px-3 text-gray-900 rounded hover:text-[#EE511F] 
+                dark:hover:bg-gray-700 dark:hover:text-white font-['MADE TOMMY']
+                 font-['MADE TOMMY Outline'] text-[customeRed]
+                  ${hoveredMenu === menuKey ? 
+                 'text-[#EE511F]'  : ''}`}>
                 {menuKey}
               </a>
-
+                                 
               {activeMenu === menuKey && (
                 <div
                   onMouseOver={() => setMenuHovered(true)}
                   onMouseLeave={handleMenuLeave}
-                  className="absolute left-0 mt-2 py-2 w-48 dark:bg-gray-700 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
+                  className="absolute left-0 py-2 w-48 dark:bg-gray-700 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
                 >
                   {data[language as "KO" | "EN"][menuKey].map((menuItem) => (
                     <Link
                       href={menuItem.url}
                       key={menuItem.label}
-                      className="block px-4 py-2 text-gray-800 font-['SundayLemon'] 
-                      hover:text-[#EE511F]"
+                      className={`block px-4 py-2 text-gray-800 font-['SundayLemon'] 
+                      hover:text-[#EE511F] hover-underlineSub-animation`}
+                      onMouseOver={() => hoveredMenuIn(menuKey)} 
+                      onMouseLeave={hoverMenuLeave}
+                      onFocus={handleFocus}
+                      
                     >
                       {menuItem.label}
                     </Link>
                   ))}
-                  {/* <Link href={""}>{renderSubMenu(menuKey)}</Link> */}
                 </div>
               )}
             </li>
           ))}
         </ul>
-        <div className="navbar-end">
+        <div className="navbar-end mr-[5rem]">
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             {/* <div className="flex "> */}
-              <button
-                onClick={() => handleButtonClick("KO")}
-                className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO"
-                  ? "font-bold underline decoration-gray-600"
-                  : "opacity-25"
-                  }`}
-              >
-                KO
-              </button>
-              <p className="text-gray-600 text-center text-lg font-bold w-auto px-2">
-                |
-              </p>
-              <button
-                onClick={() => handleButtonClick("EN")}
-                className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN"
-                  ? "font-bold underline decoration-gray-600"
-                  : "opacity-25"
-                  }`}
-              >
-                EN
-              </button>
+            <button
+              onClick={() => handleButtonClick("KO")}
+              className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO"
+                ? "font-bold underline decoration-gray-600"
+                : "opacity-25"
+                }`}
+            >
+              KO
+            </button>
+            <p className="text-gray-600 text-center text-lg font-bold w-auto px-2">
+              |
+            </p>
+            <button
+              onClick={() => handleButtonClick("EN")}
+              className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN"
+                ? "font-bold underline decoration-gray-600"
+                : "opacity-25"
+                }`}
+            >
+              EN
+            </button>
             {/* </div> */}
           </div>
           {/* <label className="flex cursor-pointer gap-2">
