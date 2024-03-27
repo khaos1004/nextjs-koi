@@ -17,7 +17,7 @@ export default function App() {
   }
 
   const [hoveredMenu, setHoveredMenu] = useState("");
-  const [focushover, setFocushove] = useState(false);
+  const [focushover, setFocushove] = useState(true);
 
   // onMouseOver 이벤트 핸들러
   const handleFocus = () => {
@@ -27,17 +27,12 @@ export default function App() {
 
   // onMouseOver 이벤트 핸들러
   const hoveredMenuIn = (menuKey: any) => {
-    const typeString = String(menuKey);
-    setHoveredMenu(typeString); // 현재 hover된 메뉴의 key 저장
-    console.log("상태 호버" + typeof hoveredMenu);
-    console.log("코드 호버" + typeof menuKey);
-    console.log(hoveredMenu);
-    console.log(menuKey);
+    setHoveredMenu(menuKey); // 현재 hover된 메뉴의 key 저장
   };
 
   // onMouseLeave 이벤트 핸들러
   const hoverMenuLeave = () => {
-    setFocushove(false); // hover 상태 초기화
+    setHoveredMenu(""); // hover 상태 초기화
     // setHoveredMenu(null);
   };
 
@@ -131,7 +126,7 @@ export default function App() {
     <>
       {/* -------------------------------------------------------------------------------------------------- */}
       <div className="hidden ss:navbar bg-base-100 fixed">
-        <div className="navbar-start">
+        <div className="navbar-start ml-8">
           <div className="drawer">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
@@ -171,7 +166,9 @@ export default function App() {
                     (menuKey, index) => (
                       <li key={index} className="hover:text-[#EE511F] ">
                         <details key={index} open>
-                          <summary key={index} className="">{menuKey}</summary>
+                          <summary key={index} className="">
+                            {menuKey}
+                          </summary>
 
                           {data[language as "KO" | "EN"][menuKey].length > 0
                             ? data[language as "KO" | "EN"][menuKey].map(
@@ -256,15 +253,17 @@ export default function App() {
               className="relative ml-8"
             >
               <a
-                className={`block py-2 px-3 text-gray-900 rounded hover:text-[#EE511F] font-['MADE TOMMY Outline'] ${
-                  focushover === true
-                    ? "hover:hover-underline-animation"
-                    : ""
-                }${
-                  hoveredMenu === menuKey
-                    ? "hover:text-[#EE511F]"
-                    : ""
-                }`}
+                className={`block py-2 px-3 text-gray-900 rounded hover:text-[#EE511F] font-['MADE TOMMY Outline'] 
+              ${
+                hoveredMenu === menuKey
+                  ? "text-[#EE511F]"
+                  : ""
+              }
+              ${
+                hoveredMenu === menuKey
+                  ? "hover-underlineSub-animation"
+                  : ""
+              }`}
               >
                 {menuKey}
               </a>
@@ -275,21 +274,23 @@ export default function App() {
                   onMouseLeave={handleMenuLeave}
                   className="absolute left-0 py-2 w-48 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
                 >
-                  {data[language as "KO" | "EN"][menuKey].map((menuItem, index) => (
-                    <div key={index}>
-                      <Link
-                        href={menuItem.url}
-                        key={index}
-                        className={`block px-4 py-2 text-gray-800 font-['SundayLemon'] 
+                  {data[language as "KO" | "EN"][menuKey].map(
+                    (menuItem, index) => (
+                      <div key={index}>
+                        <Link
+                          href={menuItem.url}
+                          key={index}
+                          className={`block px-4 py-2 text-gray-800 font-['SundayLemon'] 
                       hover:text-[#EE511F] hover-underlineSub-animation`}
-                        onMouseOver={() => hoveredMenuIn(menuKey)}
-                        onMouseLeave={hoverMenuLeave}
-                        onFocus={handleFocus}
-                      >
-                        {menuItem.label}
-                      </Link>
-                    </div>
-                  ))}
+                          onMouseOver={() => hoveredMenuIn(menuKey)}
+                          onMouseLeave={hoverMenuLeave}
+                          onFocus={handleFocus}
+                        >
+                          {menuItem.label}
+                        </Link>
+                      </div>
+                    )
+                  )}
                 </div>
               )}
             </li>
@@ -357,7 +358,7 @@ export default function App() {
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </label> */}
-        </div>         
+        </div>
       </div>
       <hr className="bg-gray-600 mt-[4.2rem] ss:mt-[0.3rem]" />
     </>

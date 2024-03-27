@@ -53,16 +53,16 @@ const HomePage: React.FC = () => {
         </ul>
         <div className="text-4xl my-[4rem]">파트너사</div>
       </div>
-      
-      <div className="grid grid-cols-3 gap-4">
+
+      <div className="hidden ss:grid grid-cols-3 gap-4">        
         {/* 각 파트너 로고를 여기에 배치합니다. 예시: */}
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={80}
+              width={30}
               height={30}
               layout="intrinsic"
-              objectFit="cover"
+              objectFit="contain"
               src={too}
               alt="Partner Logo 1"
             />
@@ -71,12 +71,12 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              objectFit="contain"
               src={dl}
               alt="Partner Logo 1"
             />
@@ -85,7 +85,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={190}
               height={50}
@@ -99,7 +99,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={170}
               height={50}
@@ -113,9 +113,9 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={80}
+              width={40}
               height={50}
               layout="intrinsic"
               objectFit="cover"
@@ -127,9 +127,9 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={190}
+              width={70}
               height={50}
               layout="intrinsic"
               objectFit="cover"
@@ -141,7 +141,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={100}
               height={50}
@@ -155,10 +155,10 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={100}
-              height={50}
+              width={40}
+              height={20}
               layout="intrinsic"
               objectFit="cover"
               src={ma}
@@ -169,7 +169,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={190}
               height={50}
@@ -183,7 +183,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={190}
               height={50}
@@ -197,7 +197,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={190}
               height={50}
@@ -211,11 +211,11 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={100}
+              width={80}
               height={50}
-              layout="intrinsic"
+              layout="contain"
               objectFit="cover"
               src={blue}
               alt="Partner Logo 1"
@@ -225,7 +225,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={150}
               height={50}
@@ -239,7 +239,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={180}
               height={50}
@@ -253,9 +253,9 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={100}
+              width={50}
               height={50}
               layout="intrinsic"
               objectFit="cover"
@@ -267,7 +267,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={190}
               height={50}
@@ -281,7 +281,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={190}
               height={50}
@@ -295,7 +295,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={190}
               height={50}
@@ -309,7 +309,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={100}
               height={50}
@@ -323,7 +323,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={100}
               height={50}
@@ -337,7 +337,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={150}
               height={50}
@@ -351,7 +351,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={100}
               height={50}
@@ -365,12 +365,12 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={80}
-              height={50}
-              layout="intrinsic"
-              objectFit="cover"
+              width={35}
+              height={100}
+              layout="contain"
+              objectFit="contain"
               src={sun}
               alt="Partner Logo 1"
             />
@@ -378,9 +378,350 @@ const HomePage: React.FC = () => {
           <p className="mt-2 text-sm font-semibold">해와달</p>
         </div>
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[150px]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={120}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={nhn}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">nhn코미코</p>
+        </div>
+      </div>
+
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+      <div className="ss:hidden grid grid-cols-3 gap-4">        
+        {/* 각 파트너 로고를 여기에 배치합니다. 예시: */}
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={85}
+              height={30}
+              layout="intrinsic"
+              objectFit="contain"
+              src={too}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">투믹스</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={190}
+              height={50}
+              layout="intrinsic"
+              objectFit="contain"
+              src={dl}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">DLsite comipo</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={190}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={book}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">북큐브</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
               width={170}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={naver}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">네이버시리즈</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={85}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={lala}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">라라툰</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={140}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={legin}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">레진코믹스</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={120}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={ridy}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">리디</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={85}
+              height={20}
+              layout="intrinsic"
+              objectFit="cover"
+              src={ma}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">마녀코믹스</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={190}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={me}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">메타툰</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={190}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={bom}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">봄툰</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={190}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={bookpal}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">북팔</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={80}
+              height={50}
+              layout="contain"
+              objectFit="cover"
+              src={blue}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">블루픽</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={150}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={any}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">애니툰</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={180}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={every}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">에브리웨이</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={80}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={orm}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">오름미디어</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={190}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={one}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">원스토리</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={190}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={onestore}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">원스토어</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={190}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={wiz}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">위즈덤하우스</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={100}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={kaka}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">카카오페이지</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={100}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={tapas}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">타파스</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={150}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={topco}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">탑코</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={100}
+              height={50}
+              layout="intrinsic"
+              objectFit="cover"
+              src={piner}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">피너툰</p>
+        </div>
+
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={75}
+              height={100}
+              layout="contain"
+              objectFit="contain"
+              src={sun}
+              alt="Partner Logo 1"
+            />
+          </div>
+          <p className="mt-2 text-sm font-semibold">해와달</p>
+        </div>
+        <div className="flex flex-col items-center mb-[2rem]">
+          <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+            <Image
+              width={120}
               height={50}
               layout="intrinsic"
               objectFit="cover"
