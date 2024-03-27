@@ -16,19 +16,23 @@ export default function App() {
     };
   }
 
-  const [hoveredMenu, setHoveredMenu] = useState(null);
+  const [hoveredMenu, setHoveredMenu] = useState("");
   const [focushover, setFocushove] = useState(false);
 
-   // onMouseOver 이벤트 핸들러
-   const handleFocus = () => {
+  // onMouseOver 이벤트 핸들러
+  const handleFocus = () => {
     setFocushove(true);
-    
+    console.log(focushover);
   };
 
   // onMouseOver 이벤트 핸들러
   const hoveredMenuIn = (menuKey: any) => {
-    setHoveredMenu(menuKey); // 현재 hover된 메뉴의 key 저장
-    
+    const typeString = String(menuKey);
+    setHoveredMenu(typeString); // 현재 hover된 메뉴의 key 저장
+    console.log("상태 호버" + typeof hoveredMenu);
+    console.log("코드 호버" + typeof menuKey);
+    console.log(hoveredMenu);
+    console.log(menuKey);
   };
 
   // onMouseLeave 이벤트 핸들러
@@ -36,7 +40,6 @@ export default function App() {
     setFocushove(false); // hover 상태 초기화
     // setHoveredMenu(null);
   };
-
 
   interface Menu {
     label: string;
@@ -91,7 +94,6 @@ export default function App() {
       ],
     },
   };
-  { console.log(data) }
 
   const context = useContext(LanguageContext);
   const { language, setLanguage } = context;
@@ -127,45 +129,67 @@ export default function App() {
 
   return (
     <>
-
       {/* -------------------------------------------------------------------------------------------------- */}
-      <div className="hidden ss:navbar bg-base-100">
+      <div className="hidden ss:navbar bg-base-100 fixed">
         <div className="navbar-start">
           <div className="drawer">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
               {/* Page content here */}
-              <label htmlFor="my-drawer" className="btn btn-ghost btn-circle drawer-button">
+              <label
+                htmlFor="my-drawer"
+                className="btn btn-ghost btn-circle drawer-button"
+              >
                 {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle"> */}
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
                 </svg>
                 {/* </div> */}
               </label>
             </div>
             <div className="drawer-side">
-              <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+              <label
+                htmlFor="my-drawer"
+                aria-label="close sidebar"
+                className="drawer-overlay"
+              ></label>
               <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                 {/* Sidebar content here */}
                 <ul className="menu bg-base-200 w-56 rounded-box">
-                  {Object.keys(data[language as "KO" | "EN"]).map((menuKey, index) => (
-                    <li className="hover:text-[#EE511F] ">
-                      <details open>
-                        <summary className="">{menuKey}</summary>
+                  {Object.keys(data[language as "KO" | "EN"]).map(
+                    (menuKey, index) => (
+                      <li key={index} className="hover:text-[#EE511F] ">
+                        <details key={index} open>
+                          <summary key={index} className="">{menuKey}</summary>
 
-                        {
-                          data[language as "KO" | "EN"][menuKey].length > 0 ?
-                            data[language as "KO" | "EN"][menuKey].map((menuItem) => (
-                              <ul key={menuItem.label}>
-                                <li>
-                                  <Link href={menuItem.url}>{menuItem.label}</Link>
-                                </li>
-                              </ul>
-                            )) : null
-                        }
-                      </details>
-                    </li>
-                  ))}
+                          {data[language as "KO" | "EN"][menuKey].length > 0
+                            ? data[language as "KO" | "EN"][menuKey].map(
+                                (menuItem, index) => (
+                                  <ul key={index}>
+                                    <li key={index}>
+                                      <Link key={index} href={menuItem.url}>
+                                        {menuItem.label}
+                                      </Link>
+                                    </li>
+                                  </ul>
+                                )
+                              )
+                            : null}
+                        </details>
+                      </li>
+                    )
+                  )}
                 </ul>
               </ul>
             </div>
@@ -173,7 +197,11 @@ export default function App() {
         </div>
         <div className="navbar-center">
           <a href="/" className="w-12 md:ml-[5rem]">
-            <Image src={MainLogoBlack} alt="메인로고" className="h-auto w-auto" />
+            <Image
+              src={MainLogoBlack}
+              alt="메인로고"
+              className="h-auto w-auto"
+            />
           </a>
         </div>
         <div className="navbar-end pr-4">
@@ -181,10 +209,11 @@ export default function App() {
             <div className="flex w-[30%]">
               <button
                 onClick={() => handleButtonClick("KO")}
-                className={`text-gray-600 text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO"
-                  ? "font-bold underline decoration-gray-600"
-                  : "opacity-25"
-                  }`}
+                className={`text-gray-600 text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+                  colorChange == "KO"
+                    ? "font-bold underline decoration-gray-600"
+                    : "opacity-25"
+                }`}
               >
                 KO
               </button>
@@ -193,10 +222,11 @@ export default function App() {
               </p>
               <button
                 onClick={() => handleButtonClick("EN")}
-                className={`text-gray-600 text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN"
-                  ? "font-bold underline decoration-gray-600"
-                  : "opacity-25"
-                  }`}
+                className={`text-gray-600 text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+                  colorChange == "EN"
+                    ? "font-bold underline decoration-gray-600"
+                    : "opacity-25"
+                }`}
               >
                 EN
               </button>
@@ -206,12 +236,14 @@ export default function App() {
       </div>
       {/* -------------------------------------------------------------------------------------------------- */}
 
-
-
       <div className="ss:hidden navbar bg-base-100 items-center justify-center fixed z-40">
         <div className="navbar-start">
           <a href="/" className="w-12 md:ml-[5rem]">
-            <Image src={MainLogoBlack} alt="메인로고" className="h-auto w-auto" />
+            <Image
+              src={MainLogoBlack}
+              alt="메인로고"
+              className="h-auto w-auto"
+            />
           </a>
         </div>
 
@@ -224,33 +256,39 @@ export default function App() {
               className="relative ml-8"
             >
               <a
-                className={`block py-2 px-3 text-gray-900 rounded hover:text-[#EE511F] 
-                dark:hover:bg-gray-700 dark:hover:text-white font-['MADE TOMMY']
-                 font-['MADE TOMMY Outline'] text-[customeRed]
-                  ${hoveredMenu === menuKey ? 
-                 'text-[#EE511F]'  : ''}`}>
+                className={`block py-2 px-3 text-gray-900 rounded hover:text-[#EE511F] font-['MADE TOMMY Outline'] ${
+                  focushover === true
+                    ? "hover:hover-underline-animation"
+                    : ""
+                }${
+                  hoveredMenu === menuKey
+                    ? "hover:text-[#EE511F]"
+                    : ""
+                }`}
+              >
                 {menuKey}
               </a>
-                                 
+
               {activeMenu === menuKey && (
                 <div
                   onMouseOver={() => setMenuHovered(true)}
                   onMouseLeave={handleMenuLeave}
-                  className="absolute left-0 py-2 w-48 dark:bg-gray-700 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
+                  className="absolute left-0 py-2 w-48 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
                 >
-                  {data[language as "KO" | "EN"][menuKey].map((menuItem) => (
-                    <Link
-                      href={menuItem.url}
-                      key={menuItem.label}
-                      className={`block px-4 py-2 text-gray-800 font-['SundayLemon'] 
+                  {data[language as "KO" | "EN"][menuKey].map((menuItem, index) => (
+                    <div key={index}>
+                      <Link
+                        href={menuItem.url}
+                        key={index}
+                        className={`block px-4 py-2 text-gray-800 font-['SundayLemon'] 
                       hover:text-[#EE511F] hover-underlineSub-animation`}
-                      onMouseOver={() => hoveredMenuIn(menuKey)} 
-                      onMouseLeave={hoverMenuLeave}
-                      onFocus={handleFocus}
-                      
-                    >
-                      {menuItem.label}
-                    </Link>
+                        onMouseOver={() => hoveredMenuIn(menuKey)}
+                        onMouseLeave={hoverMenuLeave}
+                        onFocus={handleFocus}
+                      >
+                        {menuItem.label}
+                      </Link>
+                    </div>
                   ))}
                 </div>
               )}
@@ -262,10 +300,11 @@ export default function App() {
             {/* <div className="flex "> */}
             <button
               onClick={() => handleButtonClick("KO")}
-              className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "KO"
-                ? "font-bold underline decoration-gray-600"
-                : "opacity-25"
-                }`}
+              className={`text-gray-600 text-center text-lg font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+                colorChange == "KO"
+                  ? "font-bold underline decoration-gray-600"
+                  : "opacity-25"
+              }`}
             >
               KO
             </button>
@@ -274,10 +313,11 @@ export default function App() {
             </p>
             <button
               onClick={() => handleButtonClick("EN")}
-              className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${colorChange == "EN"
-                ? "font-bold underline decoration-gray-600"
-                : "opacity-25"
-                }`}
+              className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+                colorChange == "EN"
+                  ? "font-bold underline decoration-gray-600"
+                  : "opacity-25"
+              }`}
             >
               EN
             </button>
@@ -317,8 +357,9 @@ export default function App() {
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </label> */}
-        </div>
+        </div>         
       </div>
+      <hr className="bg-gray-600 mt-[4.2rem] ss:mt-[0.3rem]" />
     </>
   );
 }
