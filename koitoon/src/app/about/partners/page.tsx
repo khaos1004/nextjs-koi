@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
         <div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
       </div>
 
-      <div className="text-sm breadcrumbs">
+      <div className="text-sm breadcrumbs" data-aos="fade-up">
         <ul>
           <li>
             <a href="/">홈</a>
@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
         <div className="text-4xl my-[4rem]">파트너사</div>
       </div>
 
-      <div className="hidden ss:grid grid-cols-3 gap-4">        
+      <div className="hidden ss:grid grid-cols-3 gap-4" data-aos="fade-up">        
         {/* 각 파트너 로고를 여기에 배치합니다. 예시: */}
         <div className="flex flex-col items-center">
           <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[100px]">
@@ -395,7 +395,7 @@ const HomePage: React.FC = () => {
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
-      <div className="ss:hidden grid grid-cols-3 gap-4">        
+      <div className="ss:hidden grid grid-cols-3 gap-4" data-aos="fade-up">        
         {/* 각 파트너 로고를 여기에 배치합니다. 예시: */}
         <div className="flex flex-col items-center mb-[2rem]">
           <div className="p-4 shadow-lg h-[120px] w-[300px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[100px]">

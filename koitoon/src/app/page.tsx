@@ -30,6 +30,7 @@ export default function Home() {
           <LangComponent />
         </div>
         {/* <div data-aos="flip-left"><Slick3 /></div> */}
+        {/* https://codepen.io/flaguna/pen/wvzJxRG */}
       </RootLayout>
     </>
   );
