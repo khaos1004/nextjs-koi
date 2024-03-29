@@ -5,9 +5,9 @@ import DaisySide from "@/components/public/side/DaisySide"
 import Content from "@/components/public/contents/Content"
 import Footer from "@/components/public/footer/Footer"
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Slick from "@/components/contents/Slick";
+// import Slick from "@/components/contents/Slick";
 import Slick2 from "@/components/contents/Sick2";
 import Slick3 from "@/components/contents/Slick3";
 import Slick4 from "@/components/contents/Slick4";
@@ -20,25 +20,26 @@ import Language from "@/context/Language"
 import { useContext, ReactNode, useState, Dispatch, SetStateAction } from "react"
 import { user } from "@nextui-org/react"
 import LanguageContext from "@/context/Language"
-import {LangComponent} from "@/components/contents/LangComponent"
+import MenuContext from "@/context/MenuConxtex"
+import { LangComponent } from "@/components/contents/LangComponent"
 
 interface LanguageProviderProps {
     children: ReactNode;
-  }
+}
 
-  interface LanguageContextType {
+interface LanguageContextType {
     language: 'KO' | 'EN';
     setLanguage: Dispatch<SetStateAction<'KO' | 'EN'>>;
-  }
+}
 
-  const LanguageProvider = ({ children }: LanguageProviderProps) => {
+const LanguageProvider = ({ children }: LanguageProviderProps) => {
     const [language, setLanguage] = useState<string>('KO');
     return (
         <Language.Provider value={{ language, setLanguage }}>
-          {children}
+            {children}
         </Language.Provider>
-      );
-    };
+    );
+};
 
 type lang = {
     KO: string,
@@ -50,10 +51,10 @@ const intro: any = {
     EN: "ToonKoi is a webtoon platform developed in Korea. The platform provides various genres of webtoons, and it is one of the services that is receiving attention in the Korean webtoon market. Koitoon is gaining popularity for its user-friendly interface and unique content, and it is reaching users not only in Korea but also abroad. The platform presents a variety of stories and art styles by providing opportunities for up-and-coming writers to post their works. Webtoons are a form of digital cartoons, featuring a format that can be read by scrolling, and Koitoon well reflects this modern way of spending cartoons."
 };
 
-const RootLayout = ({children}:any) => {    
+const RootLayout = ({ children }: any) => {
     useEffect(() => {
         AOS.init({
-            duration : 1000
+            duration: 1000
         });
     });
 
@@ -62,21 +63,21 @@ const RootLayout = ({children}:any) => {
 
     return (
         <LanguageProvider>
-        <div className="flex flex-col">
-            <div className="h-16"> {/* 네비게이션 바 */}
-                <Header />
-            </div>
-            <Side />      
-            <div className="flex flex-row min-h-screen w-screen my-[1rem]">
-                <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
-                <div className="flex-3 w-4/6"> {/* 중앙 컨텐츠 영역 (3/5) */}
-                    {children}                                                    
+            <div className="flex flex-col">
+                <div className="h-16"> {/* 네비게이션 바 */}
+                    <Header />
                 </div>
-                <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
-            </div>                
-        <Footer />
-    </div>
-    </LanguageProvider>
+                <Side />
+                <div className="flex flex-row min-h-screen w-screen my-[1rem]">
+                    <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
+                    <div className="flex-3 w-4/6"> {/* 중앙 컨텐츠 영역 (3/5) */}
+                        {children}
+                    </div>
+                    <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
+                </div>
+                <Footer />
+            </div>
+        </LanguageProvider>
     )
 }
 

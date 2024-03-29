@@ -3,7 +3,7 @@ import RootLayout from "@/components/layout/root/RootLayout";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import Slider from "react-slick";
-import Slick from "@/components/contents/Slick";
+// import Slick from "@/components/contents/Slick";
 import Slick2 from "@/components/contents/Sick2";
 import Slick3 from "@/components/contents/Slick3";
 import Slick4 from "@/components/contents/Slick4";
