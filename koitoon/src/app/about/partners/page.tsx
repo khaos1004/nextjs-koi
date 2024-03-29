@@ -81,7 +81,7 @@ const HomePage: React.FC = () => {
               alt="Partner Logo 1"
             />
           </div>
-          <p className="mt-2 text-sm font-semibold">DLsite comipo</p>
+          <p className="mt-2 text-sm font-semibold">DLsite <br />comipo</p>
         </div>
 
         <div className="flex flex-col items-center">

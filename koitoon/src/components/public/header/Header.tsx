@@ -16,24 +16,24 @@ export default function App() {
     };
   }
 
-  const [hoveredMenu, setHoveredMenu] = useState("");
-  const [focushover, setFocushove] = useState(true);
+  const [hoveredMenu, setHoveredMenu] = useState<String>();
+  const [focushover, setFocushove] = useState(false);
 
   // onMouseOver 이벤트 핸들러
   const handleFocus = () => {
     setFocushove(true);
-    console.log(focushover);
   };
 
   // onMouseOver 이벤트 핸들러
-  const hoveredMenuIn = (menuKey: any) => {
+  const hoveredMenuIn = (menuKey: String) => {
     setHoveredMenu(menuKey); // 현재 hover된 메뉴의 key 저장
+    console.log(menuKey);
   };
 
   // onMouseLeave 이벤트 핸들러
   const hoverMenuLeave = () => {
     setHoveredMenu(""); // hover 상태 초기화
-    // setHoveredMenu(null);
+    setFocushove(false);
   };
 
   interface Menu {
@@ -122,10 +122,11 @@ export default function App() {
     }
   }, [menuHovered]);
 
+
   return (
     <>
       {/* -------------------------------------------------------------------------------------------------- */}
-      <div className="hidden ss:navbar bg-base-100 fixed">
+      <div className="hidden ss:navbar bg-base-100 fixed z-50">
         <div className="navbar-start ml-8">
           <div className="drawer">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
@@ -253,17 +254,18 @@ export default function App() {
               className="relative ml-8"
             >
               <a
-                className={`block py-2 px-3 text-gray-900 rounded hover:text-[#EE511F] font-['MADE TOMMY Outline'] 
+                className={`block py-2 px-3 rounded hover:text-[#EE511F]
               ${
                 hoveredMenu === menuKey
                   ? "text-[#EE511F]"
                   : ""
               }
               ${
-                hoveredMenu === menuKey
-                  ? "hover-underlineSub-animation"
+                hoveredMenu === menuKey && focushover === true
+                  ? "hover-underline2-animation"
                   : ""
-              }`}
+              }
+              `} 
               >
                 {menuKey}
               </a>
@@ -272,8 +274,7 @@ export default function App() {
                 <div
                   onMouseOver={() => setMenuHovered(true)}
                   onMouseLeave={handleMenuLeave}
-                  className="absolute left-0 py-2 w-48 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
-                >
+                  className="absolute left-0 py-2 w-48 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white">
                   {data[language as "KO" | "EN"][menuKey].map(
                     (menuItem, index) => (
                       <div key={index}>
@@ -282,7 +283,7 @@ export default function App() {
                           key={index}
                           className={`block px-4 py-2 text-gray-800 font-['SundayLemon'] 
                       hover:text-[#EE511F] hover-underlineSub-animation`}
-                          onMouseOver={() => hoveredMenuIn(menuKey)}
+                          onMouseOver={() => hoveredMenuIn(String(menuKey))}
                           onMouseLeave={hoverMenuLeave}
                           onFocus={handleFocus}
                         >
@@ -322,42 +323,7 @@ export default function App() {
             >
               EN
             </button>
-            {/* </div> */}
-          </div>
-          {/* <label className="flex cursor-pointer gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="12" cy="12" r="5" />
-            <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-          </svg>
-          <input
-            type="checkbox"
-            value="dark"
-            className="toggle theme-controller"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </label> */}
+          </div>          
         </div>
       </div>
       <hr className="bg-gray-600 mt-[4.2rem] ss:mt-[0.3rem]" />
