@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+
+* {
+  font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+}
 
 @font-face {
   font-family: 'Spoqa Han Sans Neo';

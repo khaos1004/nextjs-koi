@@ -19,7 +19,9 @@ export default function RootLayout({
     <html lang="en" data-theme="light">  
     <head>
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>      
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>   
+      <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css' />
+      <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'></link>   
     </head>    
       <body className={inter.className}>
         {children}        
