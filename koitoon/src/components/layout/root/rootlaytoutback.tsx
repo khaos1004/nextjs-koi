@@ -7,7 +7,6 @@ import Footer from "@/components/public/footer/Footer"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import Slider from "react-slick";
-import Slick from "@/components/contents/Slick";
 import Slick2 from "@/components/contents/Sick2";
 import Slick3 from "@/components/contents/Slick3";
 import Slick4 from "@/components/contents/Slick4";
@@ -74,7 +73,7 @@ const RootLayout = () => {
                 <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
                 <div className="flex-3 w-4/6"> {/* 중앙 컨텐츠 영역 (3/5) */}
                 {/* <div className="animate-wiggle w-[30rem] h-[30rem] bg-blue-600">ㅏㄷ개개</div> */}
-                    <Slick />  
+                    {/* <Slick />   */}
                     <div data-aos="fade-up">                      
                         <p className="text-sky-400/100">
                             {introText}   

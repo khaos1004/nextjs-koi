@@ -1,27 +1,15 @@
 'use client'
 import Header from "@/components/public/header/Header"
 import Side from "@/components/public/side/Side"
-import DaisySide from "@/components/public/side/DaisySide"
-import Content from "@/components/public/contents/Content"
 import Footer from "@/components/public/footer/Footer"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-// import Slick from "@/components/contents/Slick";
-import Slick2 from "@/components/contents/Sick2";
-import Slick3 from "@/components/contents/Slick3";
-import Slick4 from "@/components/contents/Slick4";
-import We1 from '@/../../public/images/3.jpg'
-import { motion } from 'framer-motion';
 import '../../../app/aos.css';
-import { useEffect } from "react";
 import AOS from "aos";
 import Language from "@/context/Language"
-import { useContext, ReactNode, useState, Dispatch, SetStateAction } from "react"
-import { user } from "@nextui-org/react"
+import { useEffect, useContext, ReactNode, useState, Dispatch, SetStateAction } from "react"
 import LanguageContext from "@/context/Language"
-import MenuContext from "@/context/MenuConxtex"
-import { LangComponent } from "@/components/contents/LangComponent"
+
 
 interface LanguageProviderProps {
     children: ReactNode;
@@ -51,12 +39,24 @@ const intro: any = {
     EN: "ToonKoi is a webtoon platform developed in Korea. The platform provides various genres of webtoons, and it is one of the services that is receiving attention in the Korean webtoon market. Koitoon is gaining popularity for its user-friendly interface and unique content, and it is reaching users not only in Korea but also abroad. The platform presents a variety of stories and art styles by providing opportunities for up-and-coming writers to post their works. Webtoons are a form of digital cartoons, featuring a format that can be read by scrolling, and Koitoon well reflects this modern way of spending cartoons."
 };
 
+const [isLoading, setIsLoading] = useState<boolean>(false);
+
+
 const RootLayout = ({ children }: any) => {
     useEffect(() => {
         AOS.init({
             duration: 1000
         });
     });
+
+
+//   useEffect(() => {
+//     setIsLoading(true);
+//     // 데이터 로딩 로직
+//     fetchData().then(() => {
+//       setIsLoading(false);
+//     });
+//   }, []);
 
     const { language } = useContext(LanguageContext);
     const introText = intro[language]; // 언어에 따라 intro 객체에서 텍스트 가져오기
