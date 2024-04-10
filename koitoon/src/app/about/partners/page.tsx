@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
         <div className="text-4xl my-[4rem] font-medium">파트너사</div>
       </div>
 
-      <div className="hidden ss:grid grid-cols-4 gap-4 mb-[7.5rem]" data-aos="fade-up">        
+      <div className="hidden ss:grid grid-cols-2 gap-4 mb-[7.5rem]" data-aos="fade-up">        
         {/* 각 파트너 로고를 여기에 배치합니다. 예시: */}
         <div className="flex flex-col items-center">
           <div className="p-4 shadow-lg h-[120px] w-[200px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[100px]">
@@ -115,7 +115,7 @@ const HomePage: React.FC = () => {
         <div className="flex flex-col items-center">
           <div className="p-4 shadow-lg h-[120px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={40}
+              width={35}
               height={50}
               layout="intrinsic"
               objectFit="cover"
@@ -157,7 +157,7 @@ const HomePage: React.FC = () => {
         <div className="flex flex-col items-center">
           <div className="p-4 shadow-lg h-[120px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
             <Image
-              width={40}
+              width={35}
               height={20}
               layout="intrinsic"
               objectFit="cover"

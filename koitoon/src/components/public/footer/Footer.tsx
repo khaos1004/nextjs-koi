@@ -57,7 +57,7 @@ const Footer = () => {
               853-09-00557
             </div>
           </div>
-          <div className="block text-sm text-white dark:text-gray-800 my-2">
+          <div className="ml-12 block text-sm text-white sm:text-right dark:text-gray-800 my-2 opacity-25">
             Copyright © WEBTOON KOI CONTENT.All Rights Reserved
           </div>
         </div>
