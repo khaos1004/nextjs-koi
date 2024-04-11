@@ -93,7 +93,7 @@ export default function Home() {
                       <div className="flex text-center items-center justify-between ">
                       {/* <a href="https://www.flaticon.com/kr/free-icons/" title="방향 아이콘">방향 아이콘 제작자: Andy Horvath - Flaticon</a> */}
                         <div className="text-4xl my-[4rem] font-bold">WEBTOON</div>
-                        <div className="font-medium flex justify-center items-center">MORE &nbsp; <Image src={Arrow} alt="sa" className="h-[1.5rem] w-[1.5rem]" /></div>
+                        <div className="font-medium flex justify-center items-center hover:text-orange-600 cursor-pointer">MORE &nbsp; <Image src={Arrow} alt="sa" className="h-[1.5rem] w-[1.5rem]" /></div>
                       </div>
 
                       <div className="flex space-x-4 overflow-hidden shadow-2xl">
@@ -127,7 +127,7 @@ export default function Home() {
 
                       <div className="flex text-center items-center justify-between mt-[4rem] mb-8">
                         <div className="text-4xl font-bold">RECRUIT</div>
-                        <div className="font-medium flex justify-center items-center">MORE &nbsp; <Image src={Arrow} alt="sa" className="h-[1.5rem] w-[1.5rem]" /></div>
+                        <div className="font-medium flex justify-center items-center hover:text-orange-600 cursor-pointer">MORE &nbsp; <Image src={Arrow} alt="sa" className="h-[1.5rem] w-[1.5rem]" /></div>
                       </div>
                       <Image src={MainCenter} alt="aa" className="brightness-50 w-full h-[20rem] mb-8" />  
 
