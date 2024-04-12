@@ -166,7 +166,7 @@ export default function App() {
                   {Object.keys(data[language as "KO" | "EN"]).map(
                     (menuKey, index) => (
                       <li key={index} className="hover:text-[#EE511F] ">
-                        <details key={index} open>
+                        <details key={index}>
                           <summary key={index} className="">
                             {menuKey}
                           </summary>
