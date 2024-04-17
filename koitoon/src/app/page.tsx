@@ -75,7 +75,7 @@ export default function Home() {
                     <Header />
                 </div>     
                 <Side />   
-                <div className="main_image">
+                <div className="main_image" data-aos="fade-up">
                   <Image src={MainTop} alt="aa" className="brightness-50 w-full h-[25rem] " />  
                   <div className="main_image_text justify-center items-center content-center">
                     <div className="text-center">
@@ -85,7 +85,7 @@ export default function Home() {
                     <div className="flex justify-center mt-8"><button className="btn  text-white rounded-3xl w-[13rem] hover:bg-orange-500 bg-inherit">작품 바로가기 &nbsp; &nbsp; &gt; </button></div>
                   </div>                  
                 </div>    
-                <div className="flex flex-row min-h-screen w-screen my-[1rem]">
+                <div className="flex flex-row min-h-screen w-screen my-[1rem]" data-aos="fade-up">
                     <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
                     <div className="flex-3 w-4/6"> {/* 중앙 컨텐츠 영역 (3/5) */}
 

@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
             <Header />
           </div>
           <Side />
-          <div className="flex flex-row min-h-screen w-screen mt-[1rem]">
+          <div className="flex flex-row min-h-screen w-screen mt-[1rem]" data-aos="fade-up">
             <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
             <div className="flex-3 w-4/6">
               {/* 중앙 컨텐츠 영역 (3/5) */}
@@ -113,7 +113,7 @@ const HomePage: React.FC = () => {
         </div>
         {/* --------------------------------------------------------------- */}
 
-        <div className="flex flex-row">
+        <div className="flex flex-row" data-aos="fade-up">
           <div className="main_image">
             <Image src={Mid} alt="dsa" layout="" className="h-[25rem]" />
             <div className="main_image_text pr-[35rem] pb-[15rem] text-lg font-semibold ">
@@ -180,14 +180,14 @@ const HomePage: React.FC = () => {
           <div className="flex-3 w-4/6">
             {" "}
             {/* 중앙 컨텐츠 영역 (3/5) */}
-            <div className="ju justify-center items-center text-center">
+            <div className="ju justify-center items-center text-center" data-aos="fade-up">
               <div className="text-4xl my-[4rem] text-[#EE511F] font-bold">
                 HISTORY
               </div>
             </div>
             {/* ---------------------------------------------------------------------------------------------- */}
             {/* ---------------------------------------------------------------------------------------------- */}
-            <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical" data-aos="fade-up">
               <li>
                 <div className="timeline-middle">
                   <svg
