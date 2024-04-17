@@ -32,7 +32,7 @@ const config: Config = {
       },    
     },
   },
-  plugins: [require("tw-elements/dist/plugin.cjs"), require('taos/plugin'), require("daisyui")],
+  plugins: [require("tw-elements/dist/plugin.cjs"), require('taos/plugin'), require("daisyui"), require('tailwind-scrollbar-hide')],
   darkMode: "class",
   safelist: [
     '!duration-[0ms]',

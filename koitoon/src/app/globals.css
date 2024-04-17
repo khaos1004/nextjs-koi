@@ -291,3 +291,9 @@ font-style: normal;
     background-size: 15rem 15rem;
     z-index: -1;
   }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }

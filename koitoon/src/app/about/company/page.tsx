@@ -64,7 +64,6 @@ const HomePage: React.FC = () => {
           <div className="flex flex-row min-h-screen w-screen mt-[1rem]">
             <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
             <div className="flex-3 w-4/6">
-              {" "}
               {/* 중앙 컨텐츠 영역 (3/5) */}
               <div className="text-sm breadcrumbs">
                 <ul>
@@ -145,7 +144,6 @@ const HomePage: React.FC = () => {
             </div>
 
             <div className="main_image_text pl-[16rem] pt-[6rem] text-lg font-semibold flex">
-
               <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 ml-[15rem] mr-16">
                 <Image src={t1} alt="대체 텍스트" width={80} height={80} />
               </div>
@@ -158,19 +156,26 @@ const HomePage: React.FC = () => {
                 <Image src={t3} alt="대체 텍스트" width={80} height={80} />
               </div>
             </div>
-            <div className="main_image_text flex mt-[9rem] ml-[13.5rem] justify-center text-center">
+            <div className="main_image_text flex mt-[9rem] ml-[5.5rem] justify-center text-center">
               <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[7px]"></span>
               <span className="">웹툰 콘텐츠 제작</span>
+            </div>
+            <div className="main_image_text flex mt-[9rem] ml-[15rem] justify-center text-center">
               <span className="bg-orange-500 w-3 h-3 rounded-full ml-[5rem] mr-[5px] mt-[7px]"></span>
-              <span className="pr-[5rem]">해외 유통</span>
+              <span className="pr-[4rem]">해외 유통</span>
+            </div>
+            <div className="main_image_text flex mt-[9rem] ml-[25.2rem] justify-center text-center">
               <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[7px]"></span>
-              <span className="">AI웹툰 제작<br /> 기술 개발</span>
+              <span className="">
+                AI웹툰 제작
+                <br /> 기술 개발
+              </span>
             </div>
           </div>
         </div>
 
         {/* -------------------------------------------------------------- */}
-        <div className="flex flex-row min-h-screen w-screen my-[1rem]">
+        <div className="flex flex-row min-h-screen w-screen my-[1rem] relative ">
           <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
           <div className="flex-3 w-4/6">
             {" "}
@@ -180,7 +185,8 @@ const HomePage: React.FC = () => {
                 HISTORY
               </div>
             </div>
-
+            {/* ---------------------------------------------------------------------------------------------- */}
+            {/* ---------------------------------------------------------------------------------------------- */}
             <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
               <li>
                 <div className="timeline-middle">
@@ -198,14 +204,27 @@ const HomePage: React.FC = () => {
                   </svg>
                 </div>
                 <div className="timeline-start md:text-end mb-10">
-                  <time className="">1984</time>
-                  <div className="">Firster</div>
-                  The
+                  <time className="text-3xl text-orange-600">2024</time>
+                  <div className="flex justify-end text-center items-center">
+                    <div className="text-xl mr-4 font-semibold">07월</div>
+                    <div>2차 저작물 업무 협약(에브리웨어/챗툰)</div>
+                  </div>
+                  <div className="flex justify-end text-center items-center mr-[2.8rem]">
+                    <div className="text-xl mr-4 font-semibold">05월</div>
+                    <div>국가공인기술평가 우수기업 인증</div>
+                  </div>
+                  <div className="flex justify-end text-center items-center mr-[6.9rem]">
+                    <div className="text-xl mr-4 font-semibold">04월</div>
+                    <div>
+                      노블 코믹스 작품연재 <br />
+                      계약 완료 및 런칭 예정
+                    </div>
+                  </div>
                 </div>
-                <hr className="bg-orange-500" />
+                <hr />
               </li>
               <li>
-                <hr className="bg-orange-500" />
+                <hr />
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -221,14 +240,14 @@ const HomePage: React.FC = () => {
                   </svg>
                 </div>
                 <div className="timeline-end mb-10">
-                  <time className="font-mono italic">1998</time>
-                  <div className="text-lg font-black">iMac</div>
-                  iMac
+                  <time className="text-3xl text-orange-600">2023</time>
+                  {/* <div className="text-lg font-black">iMac</div> */}
+                  내용 채울예정
                 </div>
-                <hr className="bg-orange-500" />
+                <hr />
               </li>
               <li>
-                <hr className="bg-orange-500" />
+                <hr />
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -244,14 +263,13 @@ const HomePage: React.FC = () => {
                   </svg>
                 </div>
                 <div className="timeline-start md:text-end mb-10">
-                  <time className="font-mono italic">2001</time>
-                  <div className="text-lg font-black">iPod</div>
-                  The
+                  <time className="text-3xl text-orange-600">2021</time>
+                  내용 채울예정
                 </div>
-                <hr className="bg-orange-500" />
+                <hr />
               </li>
               <li>
-                <hr className="bg-orange-500" />
+                <hr />
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -267,14 +285,13 @@ const HomePage: React.FC = () => {
                   </svg>
                 </div>
                 <div className="timeline-end mb-10">
-                  <time className="font-mono italic">2007</time>
-                  <div className="text-lg font-black">iPhone</div>
-                  iPhone
+                  <time className="text-3xl text-orange-600">2020</time>
+                  내용 채울예정
                 </div>
-                <hr className="bg-orange-500" />
+                <hr />
               </li>
               <li>
-                <hr className="bg-orange-500" />
+                <hr />
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -290,18 +307,21 @@ const HomePage: React.FC = () => {
                   </svg>
                 </div>
                 <div className="timeline-start md:text-end mb-10">
-                  <time className="font-mono italic">2015</time>
-                  <div className="text-lg font-black">Apple Watch</div>
-                  The App
+                  <time className="text-3xl text-orange-600">2019</time>
+                  내용 채울예정
                 </div>
               </li>
             </ul>
+            <div className="relative h-screen w-screen"></div>
           </div>
           <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
         </div>
         <div className="flex flex-col">
           <Footer />
         </div>
+
+        <div className="absolute top-10 left-10 bg-orange-500 rounded-full h-[20rem] w-[20rem] opacity-10 z-0 mt-[110rem] ml-[32rem]"></div>
+        <div className="absolute top-10 left-10 bg-orange-600 rounded-full h-[20rem] w-[20rem] opacity-90 z-0 mt-[102rem] ml-[102rem] overflow-hidden"></div>
       </LanguageProvider>
     </>
   );

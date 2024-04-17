@@ -21,6 +21,7 @@
     "react-dom": "^18",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "taos": "^1.0.5",
     "tw-elements": "^1.0.0"
   },
