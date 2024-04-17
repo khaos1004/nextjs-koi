@@ -117,71 +117,55 @@ const HomePage: React.FC = () => {
         <div className="flex flex-row">
           <div className="main_image">
             <Image src={Mid} alt="dsa" layout="" className="h-[25rem]" />
-            <div className="main_image_text pr-[35rem] pb-[10rem] text-lg font-semibold ">
+            <div className="main_image_text pr-[35rem] pb-[15rem] text-lg font-semibold ">
               <div className="text-orange-600">COMPANY PROFILE</div>
             </div>
             <div className="flex main_image_text">
-              <div className="block dark:text-gray-800 text-gray-500 pr-[31rem] pb-[5rem]">
+              <div className="block dark:text-gray-800 text-gray-500 pr-[31rem] pb-[10rem]">
                 <span>설립연도</span>{" "}
                 <span className=" text-white ml-8">2015년 10월 02일</span>
               </div>
-              {/* <div className="block text-sm text-white dark:text-gray-800 ml-2">
-                2015년 10월 02일
-              </div> */}
             </div>
             <div className="flex main_image_text">
-              <div className="block dark:text-gray-800 text-gray-500 pr-[34rem] pb-[1rem]">
+              <div className="block dark:text-gray-800 text-gray-500 pr-[34rem] pb-[6rem]">
                 <span>대표이사</span>{" "}
                 <span className=" text-white ml-8">이준형 대표</span>
               </div>
-              {/* <div className="block text-sm text-white dark:text-gray-800 ml-2">
-                이준형 대표
-              </div> */}
             </div>
             <div className="flex main_image_text">
-              <div className="block dark:text-gray-800 text-gray-500 pr-[26rem] pt-[3.5rem]">
+              <div className="block dark:text-gray-800 text-gray-500 pr-[26rem] pb-[2rem]">
                 <span>본사위치</span>{" "}
                 <span className=" text-white ml-8">
                   서울시 마포구 잔다리로 30-11
                 </span>
               </div>
             </div>
-            <div className="main_image_text pl-[15rem] pt-[2rem] text-lg font-semibold ">
+            <div className="main_image_text pl-[15rem] pb-[5rem] text-lg font-semibold ">
               <div className="text-orange-600">BUSINESS AREA</div>
             </div>
 
-            <div className="main_image_text pl-[15rem] pt-[13rem] text-lg font-semibold flex">
-            
-              <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 ml-[15rem] mr-8">
+            <div className="main_image_text pl-[16rem] pt-[6rem] text-lg font-semibold flex">
+
+              <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 ml-[15rem] mr-16">
                 <Image src={t1} alt="대체 텍스트" width={80} height={80} />
               </div>
 
-              <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mr-8">
+              <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mr-16">
                 <Image src={t2} alt="대체 텍스트" width={80} height={80} />
               </div>
 
               <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500">
                 <Image src={t3} alt="대체 텍스트" width={80} height={80} />
               </div>
-          
             </div>
-
-            {/* <div className="main_image_text justify-center items-center content-center">
-              <div className="text-left">
-                <span className="">
-                  
-                </span>{" "}
-                <span className="font-semibold">글로벌 웹툰 제작사</span>
-              </div>
-              <div className="text-5xl font-bold">
-                WEBTOON <span className="te text-orange-700">KOI CONTENT</span>
-              </div>
-              <div className="flex justify-center mt-8">
-                <button className="btn  text-white rounded-3xl w-[13rem] hover:bg-orange-500 bg-inherit">
-                  작품 바로가기 &nbsp; &nbsp; &gt;{" "}
-                </button>
-              </div>
-            </div> */}
+            <div className="main_image_text flex mt-[9rem] ml-[13.5rem] justify-center text-center">
+              <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[7px]"></span>
+              <span className="">웹툰 콘텐츠 제작</span>
+              <span className="bg-orange-500 w-3 h-3 rounded-full ml-[5rem] mr-[5px] mt-[7px]"></span>
+              <span className="pr-[5rem]">해외 유통</span>
+              <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[7px]"></span>
+              <span className="">AI웹툰 제작<br /> 기술 개발</span>
+            </div>
           </div>
         </div>
 
@@ -196,6 +180,7 @@ const HomePage: React.FC = () => {
                 HISTORY
               </div>
             </div>
+
             <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
               <li>
                 <div className="timeline-middle">

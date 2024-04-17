@@ -14,7 +14,8 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'pattern': 'radial-gradient(circle at center, transparent 20%, #f3f4f6 20%, #f3f4f6 80%, transparent 80%), radial-gradient(circle at 20% 20%, transparent 20%, #f3f4f6 20%, #f3f4f6 80%, transparent 80%)'
       },
       boxShadow: {
         'custom-up': '-60px -80px 30px -30px rgba(255, 155, 0, 0), 0 0px 0px -50px rgba(255, 165, 0, 0.5)', // 예시 값입니다.
