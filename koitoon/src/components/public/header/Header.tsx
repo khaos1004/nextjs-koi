@@ -62,8 +62,8 @@ export default function App() {
         { label: "직원채용", url: "/news/recruitment" },
       ],
       CONTACT: [
-        { label: "비즈니스 문의", url: "/contact/business" },
-        { label: "작품 문의", url: "/contact/series" },
+        // { label: "비즈니스 문의", url: "/contact/business" },
+        // { label: "작품 문의", url: "/contact/series" },
       ],
     },
     EN: {
@@ -81,11 +81,11 @@ export default function App() {
         { label: "Recruitment", url: "/news/recruitment" },
       ],
       CONTACT: [
-        { label: "Business Inquiries", url: "/contact/business" },
-        {
-          label: "Inquiry about works",
-          url: "/contact/series",
-        },
+        // { label: "Business Inquiries", url: "/contact/business" },
+        // {
+        //   label: "Inquiry about works",
+        //   url: "/contact/series",
+        // },
       ],
     },
   };
@@ -166,10 +166,10 @@ export default function App() {
                   {Object.keys(data[language as "KO" | "EN"]).map(
                     (menuKey, index) => (
                       <li key={index} className="hover:text-[#EE511F] ">
-                        <details key={index}>
+                        <details key={index}>                        
                           <summary key={index} className="">
                             {menuKey}
-                          </summary>
+                          </summary>                      
 
                           {data[language as "KO" | "EN"][menuKey].length > 0
                             ? data[language as "KO" | "EN"][menuKey].map(
@@ -251,9 +251,8 @@ export default function App() {
               key={index}
               onMouseOver={() => handleMenuHover(menuKey)}
               onMouseLeave={handleMenuLeave}
-              className="relative ml-8"
-            >
-              <a
+              className="relative ml-8">
+              <Link href={menuKey == "CONTACT" ? "/contact" : ""}
                 className={`block py-2 px-3 rounded hover:text-[#EE511F]
               ${
                 hoveredMenu === menuKey
@@ -268,7 +267,7 @@ export default function App() {
               `} 
               >
                 {menuKey}
-              </a>
+              </Link>
 
               {activeMenu === menuKey && (
                 <div
@@ -285,8 +284,7 @@ export default function App() {
                       hover:text-[#EE511F] hover-underlineSub-animation`}
                           onMouseOver={() => hoveredMenuIn(String(menuKey))}
                           onMouseLeave={hoverMenuLeave}
-                          onFocus={handleFocus}
-                        >
+                          onFocus={handleFocus}>
                           {menuItem.label}
                         </Link>
                       </div>

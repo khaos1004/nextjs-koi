@@ -1,106 +1,105 @@
 "use client";
 
 import React, { useEffect, useContext } from "react";
-import mainlo from "../../../../public/images/logo_웹툰코이컨텐츠(B)_한글.png";
+import bg from "../../../../public/images/history_bg.jpg";
 import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
-import LanguageContext from "@/context/Language"
-import {LocationComponent} from "@/components/contents/LangComponent"
-
-declare global {
-  interface Window {
-    naver: any;
-  }
-}
-
-interface NaverMapProps {
-  clientId: string;
-}
-
-const NaverMap: React.FC<NaverMapProps> = ({ clientId }) => {
-  const initMap = () => {
-    const mapCenter = new window.naver.maps.LatLng(37.551846, 126.9199291); // 지도의 중심 좌표 (회사 위치)
-
-    // 지도 생성
-    const map = new window.naver.maps.Map("map", {
-      center: mapCenter,
-      zoom: 15,
-    });
-
-    // 마커 생성
-    const marker = new window.naver.maps.Marker({
-      position: mapCenter,
-      map: map,
-    });
-
-    // 정보 창 생성 및 설정
-    const infoWindow = new window.naver.maps.InfoWindow({
-      content: '<a target="_blank" href="https://map.naver.com/p/entry/place/1303772060?c=18.98,0,0,0,dh" class="bounce"><div class="textMap bounce">툰코이</div></a>', // 여기에 회사 이름을 넣으세요.
-      anchorSize: new window.naver.maps.Size(0, 0),
-    });
-
-    // 정보 창을 마커에 바로 표시
-    infoWindow.open(map, marker);
-  };
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${clientId}`;
-    script.addEventListener("load", initMap);
-    document.head.appendChild(script);
-  }, [clientId]);
-
-  return <div id="map" style={{ width: "100%", height: "400px" }} />;
-};
-
-
-
+import LanguageContext from "@/context/Language";
+import { LocationComponent } from "@/components/contents/LangComponent";
+import Empty from "@/../../public/images/main/thumbnail2.png";
 
 const HomePage: React.FC = () => {
   const clientId = "oygjgwg355"; // 네이버 지도 API 클라이언트 ID
 
   return (
     <RootLayout>
-      <div className="carousel w-full">
-        <div id="item1" className="carousel-item w-full">
-          <img
-            src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item2" className="carousel-item w-full">
-          <img
-            src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item3" className="carousel-item w-full">
-          <img
-            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item4" className="carousel-item w-full">
-          <img
-            src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
-            className="w-full"
-          />
-        </div>
+      <div className="main_image">
+        {/* <Image width={100} height={50} layout="intrinsic" objectFit="cover" src={bg} width='5000' alt="bg" />
+        <div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
       </div>
 
-      <div className="App w-[50rem] my-[3rem] ml-[16rem]">      
-        <div data-aos="fade-up">
-        <div className="justify-center text-center my-2 text-5xl font-['Spoqa Han Sans Neo']"><h1><LocationComponent/></h1></div>      
-            <NaverMap clientId={clientId} />              
-        <dl className="flex bg-gray-200 items-center justify-center h-[4rem]">
-            <dt>본사</dt>
-            <dd className="flex text-xs">
-                <p className="mx-2"><strong>ADDRESS.</strong>서울 마포구 잔다리로 30-11</p>
-                <p className="mr-2"><strong>TEL.</strong>010-5682-4220</p>
-                <p className="mr-2"><strong>EMAIL.</strong>dbcjdals@ToonKoi.com</p>
-            </dd>
-        </dl>
+      <div className="text-sm breadcrumbs" data-aos="fade-up">
+        <ul>
+          <li>
+            <a href="/">홈</a>
+          </li>
+          <li>
+            <a>NEWS</a>
+          </li>
+          <li>회사소식</li>
+        </ul>
+        <div className="text-4xl my-[4rem] font-medium">회사소식</div>
+      </div>
+      <div className="flex">
+        <select className="select select-bordered w-[10rem] max-w-xs mr-2">
+          <option disabled selected>
+            회사
+          </option>
+          <option>내용</option>
+          <option>제목 + 내용</option>
+        </select>
+        <label className="input input-bordered flex items-center gap-2 w-[20rem]">
+          <input
+            type="text"
+            className="grow"
+            placeholder="검색어를 입력해주세요"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            className="w-4 h-4 opacity-70"
+          >
+            <path
+              fillRule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </label>
+      </div>
+      <hr className="my-[2rem]" />
+
+      <div className="card lg:card-side bg-base-100 shadow-xl">
+        <figure>
+          <Image src={Empty} alt="aa" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">제목을 입력해주세요</h2>
+          <p>본문을 입력해주세요</p>
         </div>
+      </div>
+      <hr className="my-[2rem]" />
+      <div className="card lg:card-side bg-base-100 shadow-xl">
+        <figure>
+          <Image src={Empty} alt="aa" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">제목을 입력해주세요</h2>
+          <p>본문을 입력해주세요</p>
+        </div>
+      </div>
+      <hr className="my-[2rem]" />
+      <div className="card lg:card-side bg-base-100 shadow-xl">
+        <figure>
+          <Image src={Empty} alt="aa" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">제목을 입력해주세요</h2>
+          <p>본문을 입력해주세요</p>
+        </div>
+      </div>
+      <hr className="my-[2rem] hidden" />
+
+      <div className="flex my-[5rem] justify-center items-center self-center">
+        <button className="join-item btn mx-4 hover:bg-orange-500">«</button>
+        <button className="join-item btn mr-4 hover:bg-orange-500 text-xs">&lt;</button>
+        <button className="join-item btn hover:bg-orange-500 mr-4">1</button>
+        <button className="join-item btn hover:bg-orange-500 mr-4">2</button>
+        <button className="join-item btn hover:bg-orange-500 mr-4">3</button>
+        <button className="join-item btn hover:bg-orange-500">4</button>
+        <button className="join-item btn ml-4 hover:bg-orange-500 text-xs">&gt;</button>
+        <button className="join-item btn mx-4 hover:bg-orange-500">»</button>
       </div>
     </RootLayout>
   );

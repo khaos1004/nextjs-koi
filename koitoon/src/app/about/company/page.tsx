@@ -61,7 +61,10 @@ const HomePage: React.FC = () => {
             <Header />
           </div>
           <Side />
-          <div className="flex flex-row min-h-screen w-screen mt-[1rem]" data-aos="fade-up">
+          <div
+            className="flex flex-row min-h-screen w-screen mt-[1rem]"
+            data-aos="fade-up"
+          >
             <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
             <div className="flex-3 w-4/6">
               {/* 중앙 컨텐츠 영역 (3/5) */}
@@ -81,7 +84,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="flex">
                 <div className="w-[40rem]">
-                  <div className="text-left text-4xl w-[36rem]">
+                  <div className="text-left text-4xl w-auto">
                     <span className="font-bold">웹툰 트렌드</span>
                     <span className="font-thin">와 </span>
                     <span className="font-bold">문화</span>
@@ -99,11 +102,11 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="ml-4">
+                <div className="ml-4 flex w-[20rem]">
                   <Image
                     src={Main}
                     alt="ad"
-                    className="w-[20rem] h-[20rem] rounded-full shadow-custom-up shadow-orange-500"
+                    className="w-[15rem] h-[15rem] rounded-full shadow-custom-up shadow-orange-500 min-w-[15rem] ml-8"
                   />
                 </div>
               </div>
@@ -113,32 +116,111 @@ const HomePage: React.FC = () => {
         </div>
         {/* --------------------------------------------------------------- */}
 
-        <div className="flex flex-row" data-aos="fade-up">
-          <div className="main_image">
+        <div className="hidden ss:flex ss:flex-row" data-aos="fade-up">
+          <div className="main_image w-full">
             <Image src={Mid} alt="dsa" layout="" className="h-[25rem]" />
-            <div className="main_image_text pr-[35rem] pb-[15rem] text-lg font-semibold ">
-              <div className="text-orange-600">COMPANY PROFILE</div>
-            </div>
-            <div className="flex main_image_text">
-              <div className="block dark:text-gray-800 text-gray-500 pr-[31rem] pb-[10rem]">
-                <span>설립연도</span>{" "}
-                <span className=" text-white ml-8">2015년 10월 02일</span>
+            <div className="w-[50rem]">
+              <div className="main_image_text pl-[36rem] pb-[15rem] w-[100rem] text-lg font-semibold ">
+                <span className="text-orange-600">COMPANY PROFILE</span>
+              </div>
+              <div className="flex main_image_text">
+                <div className="block dark:text-gray-800 text-gray-500 pb-[10rem] w-[100rem] pl-[31rem]">
+                  <span>설립연도</span>{" "}
+                  <span className=" text-white ml-8">2015년 10월 02일</span>
+                </div>
+              </div>
+              <div className="flex main_image_text">
+                <div className="block dark:text-gray-800 text-gray-500 pb-[6rem] w-[100rem] pl-[31rem]">
+                  <span>대표이사</span>{" "}
+                  <span className=" text-white ml-8">이준형 대표</span>
+                </div>
+              </div>
+              <div className="flex main_image_text">
+                <div className="block dark:text-gray-800 text-gray-500 pb-[2rem] w-[100rem] pl-[31rem]">
+                  <span>본사위치</span>{" "}
+                  <span className=" text-white ml-8">
+                    서울시 마포구 잔다리로 30-11
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="flex main_image_text">
-              <div className="block dark:text-gray-800 text-gray-500 pr-[34rem] pb-[6rem]">
-                <span>대표이사</span>{" "}
-                <span className=" text-white ml-8">이준형 대표</span>
+
+            <div className="main_image_text pl-[13rem] pb-[rem] min-w-[25rem] text-bold font-normal ">
+              <div className="text-orange-600">BUSINESS AREA</div>
+            </div>
+
+            <div className="main_image_text pl-[4.5rem] pt-[6rem] text-lg font-semibold flex min-w-[10rem]">
+              <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 ml-[15rem] mr-16">
+                <Image src={t1} alt="대체 텍스트" width={40} height={40} />
+              </div>
+
+              <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mr-16">
+                <Image src={t2} alt="대체 텍스트" width={40} height={40} />
+              </div>
+
+              <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500">
+                <Image src={t3} alt="대체 텍스트" width={40} height={40} />
               </div>
             </div>
-            <div className="flex main_image_text">
-              <div className="block dark:text-gray-800 text-gray-500 pr-[26rem] pb-[2rem]">
-                <span>본사위치</span>{" "}
-                <span className=" text-white ml-8">
-                  서울시 마포구 잔다리로 30-11
+            <div className="min-w-[20rem]">
+              <div className="main_image_text flex mt-[7rem] ml-[3rem] justify-center text-center">
+                <span className="min-w-[5rem]">
+                  <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[2px]"></span>
+                  <span className="font-bold text-xs">
+                    웹툰 콘텐츠 제작
+                  </span>
+                </span>
+              </div>
+              <div className="main_image_text flex mt-[7rem] ml-[9rem] justify-center text-center">
+                <span className="min-w-[15rem]">
+                  <span className="bg-orange-500 w-3 h-3 rounded-full ml-[5rem] mr-[5px] mt-[2px]"></span>
+                  <span className="mr-[4rem] font-bold text-xs">
+                    해외 유통
+                  </span>
+                </span>
+              </div>
+              <div className="main_image_text flex mt-[7rem] ml-[16.5rem] justify-center text-center">
+                <span className="min-w-[8rem]">
+                  <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[2px]"></span>
+                  <span className="font-bold text-xs">
+                    AI웹툰 제작
+                    <br /> 기술 개발
+                  </span>
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="hidden lg:flex lg:flex-row" data-aos="fade-up">
+          <div className="main_image w-full">
+            <Image src={Mid} alt="dsa" layout="" className="h-[25rem]" />
+            <div className="w-[50rem]">
+              <div className="main_image_text pl-[20rem] pb-[15rem] w-[100rem] text-lg font-semibold ">
+                <span className="text-orange-600">COMPANY PROFILE</span>
+              </div>
+              <div className="flex main_image_text">
+                <div className="block dark:text-gray-800 text-gray-500 pb-[10rem] w-[100rem] pl-[20rem]">
+                  <span>설립연도</span>{" "}
+                  <span className=" text-white ml-8">2015년 10월 02일</span>
+                </div>
+              </div>
+              <div className="flex main_image_text">
+                <div className="block dark:text-gray-800 text-gray-500 pb-[6rem] w-[100rem] pl-[20rem]">
+                  <span>대표이사</span>{" "}
+                  <span className=" text-white ml-8">이준형 대표</span>
+                </div>
+              </div>
+              <div className="flex main_image_text">
+                <div className="block dark:text-gray-800 text-gray-500 pb-[2rem] w-[100rem] pl-[20rem]">
+                  <span>본사위치</span>{" "}
+                  <span className=" text-white ml-8">
+                    서울시 마포구 잔다리로 30-11
+                  </span>
+                </div>
+              </div>
+            </div>
+
             <div className="main_image_text pl-[15rem] pb-[5rem] text-lg font-semibold ">
               <div className="text-orange-600">BUSINESS AREA</div>
             </div>
@@ -180,14 +262,20 @@ const HomePage: React.FC = () => {
           <div className="flex-3 w-4/6">
             {" "}
             {/* 중앙 컨텐츠 영역 (3/5) */}
-            <div className="ju justify-center items-center text-center" data-aos="fade-up">
+            <div
+              className="ju justify-center items-center text-center"
+              data-aos="fade-up"
+            >
               <div className="text-4xl my-[4rem] text-[#EE511F] font-bold">
                 HISTORY
               </div>
             </div>
             {/* ---------------------------------------------------------------------------------------------- */}
             {/* ---------------------------------------------------------------------------------------------- */}
-            <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical" data-aos="fade-up">
+            <ul
+              className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+              data-aos="fade-up"
+            >
               <li>
                 <div className="timeline-middle">
                   <svg
@@ -320,8 +408,8 @@ const HomePage: React.FC = () => {
           <Footer />
         </div>
 
-        <div className="absolute top-10 left-10 bg-orange-500 rounded-full h-[20rem] w-[20rem] opacity-10 z-0 mt-[110rem] ml-[32rem]"></div>
-        <div className="absolute top-10 left-10 bg-orange-600 rounded-full h-[20rem] w-[20rem] opacity-90 z-0 mt-[102rem] ml-[102rem] overflow-hidden"></div>
+        <div className="absolute top-10 left-10 bg-orange-500 rounded-full lg:h-[20rem] lg:w-[20rem] opacity-10 z-0 lg:mt-[110rem] lg:ml-[15rem] ss:mt-[95rem] ss:ml-[20rem]"></div>
+        <div className="absolute top-10 left-10 bg-orange-600 rounded-full lg:h-[20rem] lg:w-[20rem] opacity-90 z-0 lg:mt-[95rem] lg:ml-[55rem] ss:mt-[95rem] ss:ml-[25 rem] overflow-hidden"></div>
       </LanguageProvider>
     </>
   );
