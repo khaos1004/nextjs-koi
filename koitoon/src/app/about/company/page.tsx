@@ -289,20 +289,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="timeline-start md:text-end mb-10">
                   <time className="text-3xl text-orange-600">2024</time>
-                  <div className="flex justify-end text-center items-center">
-                    <div className="text-xl mr-4 font-semibold">07월</div>
-                    <div>2차 저작물 업무 협약(에브리웨어/챗툰)</div>
-                  </div>
-                  <div className="flex justify-end text-center items-center mr-[2.8rem]">
-                    <div className="text-xl mr-4 font-semibold">05월</div>
-                    <div>국가공인기술평가 우수기업 인증</div>
-                  </div>
-                  <div className="flex justify-end text-center items-center mr-[6.9rem]">
-                    <div className="text-xl mr-4 font-semibold">04월</div>
-                    <div>
-                      노블 코믹스 작품연재 <br />
-                      계약 완료 및 런칭 예정
-                    </div>
+                  <div className="justify-start items-start text-left">                  
+                  <span className="text-xl font-semibold mr-4">04월</span> 노블 코믹스 작품연재 계약 완료 및 런칭 예정<br />
+                  <span className="text-xl font-semibold mr-4">05월</span> 국가공인기술평가 우수기업 인증<br />
+                  <span className="text-xl font-semibold mr-4">07월</span> 2차 저작물 업무 협약(에브리웨어/챗툰)<br />                                                   
                   </div>
                 </div>
                 <hr className="bg-orange-500" />

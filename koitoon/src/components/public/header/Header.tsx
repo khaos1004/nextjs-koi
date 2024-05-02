@@ -122,7 +122,6 @@ export default function App() {
     }
   }, [menuHovered]);
 
-
   return (
     <>
       {/* -------------------------------------------------------------------------------------------------- */}
@@ -166,13 +165,18 @@ export default function App() {
                   {Object.keys(data[language as "KO" | "EN"]).map(
                     (menuKey, index) => (
                       <li key={index} className="hover:text-[#EE511F] ">
+                        {menuKey == "CONTACT" || menuKey == "WEBTOON" ?  
+                        <Link href={menuKey == "CONTACT" ? "/contact" : ""} key={index}>                        
+                          <summary key={index} className="">
+                            {menuKey}
+                          </summary>                                               
+                        </Link> : 
+
                         <details key={index}>                        
                           <summary key={index} className="">
                             {menuKey}
                           </summary>                      
-
-                          {data[language as "KO" | "EN"][menuKey].length > 0
-                            ? data[language as "KO" | "EN"][menuKey].map(
+                          {data[language as "KO" | "EN"][menuKey].map(
                                 (menuItem, index) => (
                                   <ul key={index}>
                                     <li key={index}>
@@ -183,8 +187,8 @@ export default function App() {
                                   </ul>
                                 )
                               )
-                            : null}
-                        </details>
+                            }
+                        </details>}                       
                       </li>
                     )
                   )}
@@ -251,20 +255,18 @@ export default function App() {
               key={index}
               onMouseOver={() => handleMenuHover(menuKey)}
               onMouseLeave={handleMenuLeave}
-              className="relative ml-8">
-              <Link href={menuKey == "CONTACT" ? "/contact" : ""}
+              className="relative ml-8"
+            >
+              <Link
+                href={menuKey == "CONTACT" ? "/contact" : ""}
                 className={`block py-2 px-3 rounded hover:text-[#EE511F]
-              ${
-                hoveredMenu === menuKey
-                  ? "text-[#EE511F]"
-                  : ""
-              }
+              ${hoveredMenu === menuKey ? "text-[#EE511F]" : ""}
               ${
                 hoveredMenu === menuKey && focushover === true
                   ? "hover-underline2-animation"
                   : ""
               }
-              `} 
+              `}
               >
                 {menuKey}
               </Link>
@@ -273,7 +275,8 @@ export default function App() {
                 <div
                   onMouseOver={() => setMenuHovered(true)}
                   onMouseLeave={handleMenuLeave}
-                  className="absolute left-0 py-2 w-48 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white">
+                  className="absolute left-0 py-2 w-48 rounded-lg shadow-xl font-['Spoqa Han Sans Neo'] z-[100] bg-white"
+                >
                   {data[language as "KO" | "EN"][menuKey].map(
                     (menuItem, index) => (
                       <div key={index}>
@@ -284,7 +287,8 @@ export default function App() {
                       hover:text-[#EE511F] hover-underlineSub-animation`}
                           onMouseOver={() => hoveredMenuIn(String(menuKey))}
                           onMouseLeave={hoverMenuLeave}
-                          onFocus={handleFocus}>
+                          onFocus={handleFocus}
+                        >
                           {menuItem.label}
                         </Link>
                       </div>
@@ -321,7 +325,7 @@ export default function App() {
             >
               EN
             </button>
-          </div>          
+          </div>
         </div>
       </div>
       <hr className="bg-gray-600 mt-[4.2rem] ss:mt-[0.3rem]" />

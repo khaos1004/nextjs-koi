@@ -75,8 +75,8 @@ const HomePage: React.FC = () => {
       </div>      
 
       <div className="App" data-aos="fade-up">
-        <div data-aos="fade-up">
-          <NaverMap clientId={clientId} />
+        <div data-aos="fade-up" className="z-1">
+          <NaverMap  clientId={clientId} />
           {/* <dl className="flex bg-gray-200 items-center justify-center h-[4rem]">
             <dt>본사</dt>
             <dd className="flex text-xs">
