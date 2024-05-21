@@ -59,8 +59,8 @@ const HomePage: React.FC = () => {
 
   return (
     <RootLayout>
-      <div className="text-sm breadcrumbs hidden lg:flex" data-aos="fade-up">
-        <ul className="">
+      <div className="text-sm sm:breadcrumbs lg:flex" data-aos="fade-up">
+        <ul className="ss:hidden">
           <li>
             <a href="/">홈</a>
           </li>

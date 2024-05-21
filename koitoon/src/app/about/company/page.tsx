@@ -68,8 +68,8 @@ const HomePage: React.FC = () => {
             <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
             <div className="flex-3 w-4/6">
               {/* 중앙 컨텐츠 영역 (3/5) */}
-              <div className="text-sm breadcrumbs">
-                <ul>
+              <div className="text-sm sm:breadcrumbs">
+                <ul className="ss:hidden">
                   <li>
                     <a href="/">홈</a>
                   </li>
@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
                   </li>
                   <li>회사소개</li>
                 </ul>
-                <div className="text-4xl my-[4rem] text-[#EE511F] font-bold">
+                <div className="text-4xl my-[4rem] text-[#EE511F] font-bold ss:text-center">
                   ABOUT US
                 </div>
               </div>

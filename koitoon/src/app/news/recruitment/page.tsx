@@ -1,12 +1,13 @@
 "use client";
-// pages/index.tsx
+
 import { useState, FormEvent } from "react";
 import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
-import lico from "@/../public/images/lico (1).jpg"
+import lico from "@/../public/images/lico (1).jpg";
 import Link from "next/link";
+import Car from "../../../../public/images/news/career 1.png";
 
 interface EmailFormData {
   to: string;
@@ -43,94 +44,96 @@ const EmailForm: React.FC = () => {
 
   return (
     <RootLayout>
-      <>      
-        <div className="flex mt-16">          
-          <div className="flex flex-col ">
-            <div className="text-8xl font-bold">CAREER</div>
-            <div className="text-5xl mt-4">CULTURE & PLAYER</div>
-            <p className="mt-4 text-lg">툰코이는 언제나 통통튀는 새로운 시도와 도전을 향해 박수를 보내며, 스피드란 일처리 방식이 일품입니다.</p>
-            </div>
-          <Image className="h-[35rem] w-[45rem]" src={lico} alt="ad"/>        
+      <>
+        <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
+          <ul className="ss:hidden">
+            <li>
+              <a href="/">홈</a>
+            </li>
+            <li>
+              <a href="/">NEWS</a>
+            </li>
+            <li>
+              <a>직원채용</a>
+            </li>
+          </ul>
+          <div className="text-4xl mt-[4rem] mb-[1rem] font-medium ss:text-center">
+            직원 채용
+          </div>
+          <div>
+            웹툰코이컨텐츠와 함께 즐겁게 일할 웹툰 작가님을 기다리고 있습니다.
+          </div>
         </div>
-        <div className="text-5xl mt-8"> WORK LIFE</div>
-        <div className="text-lg mt-4">플레이어들의 유연한 사고와 스튜디오 리코가 꿈꾸는 즐겁고 수평적인 성장문화를 위하여
-        쾌적하고 개성적인 오피스 환경은 물론, 모두가 함께 즐길 수 있는 다양한 문화들을 만들어 나가고 있습니다.  
-        </div>
-        <ul className="menu w-full rounded-box">
-          <li className="my-2 ">
-            <details>
-              <summary className="text-3xl font-bold">BETTER WORK <p className="text-sm items-center justify-around">업무기기  개인업무비용  교육비지원</p></summary>
-              <ul>
-                <li><a>BETTER WORK</a></li>                
-              </ul>
-            </details>
-          </li>
-          <li className="my-2">
-            <details>
-              <summary className="text-3xl font-bold">BETTER HEALTH <p className="text-sm items-center">건강검진 단체 상해보험 가입 24시간 의료상담 심리상담 지원</p></summary>
-              <ul>
-                <li><a>BETTER WORK</a></li>                
-              </ul>
-            </details>
-          </li>
-          <li className="my-2">
-            <details>
-              <summary className="text-3xl font-bold">BETTER HOLIDAY <p className="text-sm items-center justify-around">휴양시설 리프레시 플러스휴가 오픈개러데이</p></summary>
-              <ul>
-                <li><a>BETTER WORK</a></li>                
-              </ul>
-            </details>
-          </li>
-          <li className="my-2">
-            <details>
-              <summary className="text-3xl font-bold">BETTER LIFE <p className="text-sm items-center">대출이자 직장 어린이집 카페테리아 경조사비</p></summary>
-              <ul>
-                <li><a>BETTER WORK</a></li>                
-              </ul>
-            </details>
-          </li>
-        </ul>
-        <div className="text-5xl mt-28 mb-2">채용 분야</div>
-        <hr />
-        <ul className="menu w-full rounded-box">
-          <li className="my-2 ">
-            <details>
-              <summary className="text-3xl font-bold">[프리랜서] 작가모집 
-              </summary>
-              <ul>
-                <li>
-                  <div className="flex flex-col">
-                    <h1>스튜디오 리코 인재 Pool 안내</h1>
-                    <div className="text-center">본 공고에 지원하실 경우 '툰코이 작가 인재 Pool'에 등록되며,
-                    구인 니즈 발생 시 가장 우선적으로 검토할 목적의 지원서를 받는 창구입니다.                    
-                    </div>
-                    
-                    <h1>담당 업무</h1>
-                      <div>
-                      네이버웹툰 연재 만화의 번역 (한국어 → 일본어)
-                      </div>
-                      <div>
-                      한국 웹툰을 일본어로 번역 (대사/효과음 등) 
-                      </div>                                    
 
-                    <h1>자격 요건 </h1>
-                      <div>
-                      한국어와 일본어 구사가 가능하고, 언어에 대해 끊임없이 배우고자 하는 열정이 있으신 분
-                      </div>
-                      <div>
-                      만화/애니메이션 등의 컨텐츠에 대한 관심과 애정이 있는 분
-                      </div>                    
-                  </div>                  
-                </li> 
-                <div className="items-center justify-center center content-center mx-4 mt-8">
-                <Link href="/news/recruitment/join"><button className="btn">지원하기</button></Link>   
-                </div>   
-                <hr className="mt-4" />
-                                     
-              </ul>
-            </details>
-          </li>        
-        </ul>
+        <div className="container mx-auto" data-aos="fade-up">
+          <div className="my-[2rem]">
+            <Image src={Car} alt={""} className="w-full" />
+          </div>
+
+          <div
+            className="p-8 border border-violet-200 rounded-lg bg-violet-50"
+            data-aos="fade-up"
+          >
+            <h2 className="text-2xl font-bold mb-12 flex items-center">
+              <span className="inline-block bg-orange-600 h-4 w-4 mr-2"></span>
+              웹툰 파트
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                  <span className="font-bold w-2 text-xl mr-2">|</span> 상시
+                  모집
+                </h3>
+                <ul className="list-disc ml-5">
+                  <li>콘텐츠 작가: 오리지널 / 각색콘티 (그림콘티)</li>
+                  <li>배경, 선화, 채색 작가</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                  <span className="font-bold text-xl w-2 mr-2">|</span> 자격요건
+                </h3>
+                <ul className="list-disc ml-5">
+                  <li>장르, 소재 무관</li>
+                  <li>신입/기성 작가 무관</li>
+                  <li>성인 이상 지원 가능</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                  <span className="font-bold text-xl w-2 mr-2">|</span> 복지 및
+                  혜택
+                </h3>
+                <ul className="list-disc ml-5">
+                  <li>자율으로 연차/반차 사용</li>
+                  <li>야근 절대 X, 칼퇴 보장</li>
+                  <li>회사 창립기념일 휴무, 여름휴가 지원</li>
+                  <li>외부 컨퍼런스 참석 가능</li>
+                  <li>명절 선물 및 보너스 지급</li>
+                  <li>다양한 종류의 간식 및 음료 상시 제공</li>
+                  <li>전직원 듀얼모니터 및 맥무릎 장비 지원</li>
+                  <li>도서 구매 비용 지원</li>
+                  <li>고양이 있음</li>
+                  <li>고양이 귀여움</li>
+                  <li>고양이 털밥짐</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold mb-2 flex items-center">
+                <span className="font-extrabold text-xl tracking-widest w-4 mr-2">
+                  |
+                </span>
+                지원 방법
+              </h3>
+              <li className="break-all">E-mail 지원: kocontent@kocontent.com</li>
+              <p>지원 서류: 자유 양식 (이력서, 작품 포트폴리오, 기획안 등)</p>
+              <p className="text-red-600 mt-4">
+                ※ 메일 전 화대답 빠르게 연락 드리겠습니다.
+              </p>
+            </div>
+          </div>
+        </div>
       </>
     </RootLayout>
   );

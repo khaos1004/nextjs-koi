@@ -67,8 +67,8 @@ const HomePage: React.FC = () => {
         <div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
       </div>
 
-      <div className="text-sm breadcrumbs" data-aos="fade-up">
-        <ul>
+      <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
+        <ul className="ss:hidden">
           <li>
             <a href="/">홈</a>
           </li>
@@ -77,7 +77,7 @@ const HomePage: React.FC = () => {
           </li>
           <li>회사소식</li>
         </ul>
-        <div className="text-4xl my-[4rem] font-medium">회사소식</div>
+        <div className="text-4xl my-[4rem] font-medium text-center">회사소식</div>
       </div>
       <div className="flex">
 

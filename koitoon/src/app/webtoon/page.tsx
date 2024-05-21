@@ -53,8 +53,8 @@ const HomePage: React.FC = () => {
         <div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
       </div>
 
-      <div className="text-sm breadcrumbs" data-aos="fade-up">
-        <ul>
+      <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
+        <ul className="ss:hidden">
           <li>
             <a href="/">홈</a>
           </li>
