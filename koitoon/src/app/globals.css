@@ -17,12 +17,12 @@
 @import url('https://fonts.cdnfonts.com/css/made-tommy'); /* 실제 CDN 링크로 교체 */
 
 /* 기본 폰트 설정을 한글 폰트로 */
-body {
+body.ko {
   font-family: 'Spoqa Han Sans Neo', sans-serif;
 }
 
 /* 영어 텍스트에 MADE Tommy 폰트 적용 */
-body:lang(EN), body *:lang(EN) {
+body.en {
   font-family: 'MADE Tommy', sans-serif;
 }
 

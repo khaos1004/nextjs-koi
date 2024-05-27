@@ -23,12 +23,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     const storedLanguage = localStorage.getItem("language") as "KO" | "EN" | null;
     if (storedLanguage) {
       setLanguage(storedLanguage);
+      document.body.className = storedLanguage.toLowerCase();
     }
   }, []);
 
   const changeLanguage = (lang: "KO" | "EN") => {
     setLanguage(lang);
     localStorage.setItem("language", lang);
+    document.body.className = lang.toLowerCase();
   };
 
   return (
