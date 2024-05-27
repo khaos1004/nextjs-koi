@@ -12,6 +12,7 @@ import MainCenter from "@/../../public/images/main/메인_채용.jpg";
 import Empty from "@/../../public/images/main/thumbnail2.png";
 import Arrow from "@/../../public/images/main/free-icon-direction-arrow-4939761.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const images = [
   Empty,
@@ -55,19 +56,33 @@ export default function Home() {
               WEBTOON <span className="te text-orange-700">KOI CONTENT</span>
             </div>
             <div className="flex justify-center mt-8">
+              <Link href="/about/company">
               <button className="btn text-white rounded-3xl w-[13rem] hover:bg-orange-500 bg-inherit">
-                작품 바로가기 &nbsp; &nbsp; &gt;{" "}
+                작품 바로가기 &nbsp; &nbsp; &gt;{" "}                
               </button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="flex flex-row min-h-screen w-screen my-[1rem] mb-[15rem]" data-aos="fade-up">
+        <div
+          className="flex flex-row min-h-screen w-screen my-[1rem] mb-[15rem]"
+          data-aos="fade-up"
+        >
           <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
-          <div className="flex-3 w-4/6"> {/* 중앙 컨텐츠 영역 (3/5) */}
+          <div className="flex-3 w-4/6">
+            {" "}
+            {/* 중앙 컨텐츠 영역 (3/5) */}
             <div className="flex text-center items-center justify-between">
               <div className="text-4xl my-[4rem] font-bold">WEBTOON</div>
               <div className="font-medium flex justify-center items-center hover:text-orange-600 cursor-pointer">
-                MORE &nbsp; <Image src={Arrow} alt="Arrow" className="h-[1.5rem] w-[1.5rem]" />
+                <Link href="/webtoon" className="flex">
+                  MORE &nbsp;{" "}
+                  <Image
+                    src={Arrow}
+                    alt="Arrow"
+                    className="h-[1.5rem] w-[1.5rem]"
+                  />
+                </Link>
               </div>
             </div>
             <div className="flex space-x-4 overflow-hidden shadow-md">
@@ -79,13 +94,29 @@ export default function Home() {
             <div className="flex justify-center mt-8 items-center">
               <button className="bg-white rounded-full hover:bg-gray-100 mr-4 stroke-1 stroke-[#BDBDBD]">
                 {/* 이전 버튼 */}
-                <svg className="h-8 w-8 m-1" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                  className="h-8 w-8 m-1"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
                   <path d="M15 19l-7-7 7-7"></path>
                 </svg>
               </button>
               <button className="bg-white rounded-full hover:bg-gray-100 ml-4 stroke-1 stroke-[#BDBDBD]">
                 {/* 다음 버튼 */}
-                <svg className="h-8 w-8 m-1" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                  className="h-8 w-8 m-1"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
                   <path d="M9 5l7 7-7 7"></path>
                 </svg>
               </button>
@@ -93,14 +124,26 @@ export default function Home() {
             <div className="flex text-center items-center justify-between mt-[4rem] mb-8">
               <div className="text-4xl font-bold">RECRUIT</div>
               <div className="font-medium flex justify-center items-center hover:text-orange-600 cursor-pointer">
-                MORE &nbsp; <Image src={Arrow} alt="Arrow" className="h-[1.5rem] w-[1.5rem]" />
+                <Link href="/news/recruitment" className="flex">
+                  MORE &nbsp;{" "}
+                  <Image
+                    src={Arrow}
+                    alt="Arrow"
+                    className="h-[1.5rem] w-[1.5rem]"
+                  />
+                </Link>
               </div>
             </div>
-            <Image src={MainCenter} alt="Main center" className="brightness-50 w-full h-[20rem] mb-8" />
+            <Image
+              src={MainCenter}
+              alt="Main center"
+              className="brightness-50 w-full h-[20rem] mb-8"
+            />
             <div>
               <div className="text-3xl mb-4 font-medium">직원채용</div>
               <div className="font-medium">
-                글로벌 웹툰을 만들어 나갈 실력있고 열정적인 인재들을 찾고 있습니다.
+                글로벌 웹툰을 만들어 나갈 실력있고 열정적인 인재들을 찾고
+                있습니다.
               </div>
             </div>
           </div>

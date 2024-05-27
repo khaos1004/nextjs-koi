@@ -289,10 +289,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="timeline-start md:text-end mb-10">
                   <time className="text-3xl text-orange-600">2024</time>
-                  <div className="justify-start items-start text-left">                  
-                  <span className="text-xl font-semibold mr-4">04월</span> 노블 코믹스 작품연재 계약 완료 및 런칭 예정<br />
-                  <span className="text-xl font-semibold mr-4">05월</span> 국가공인기술평가 우수기업 인증<br />
-                  <span className="text-xl font-semibold mr-4">07월</span> 2차 저작물 업무 협약(에브리웨어/챗툰)<br />                                                   
+                  <div className="justify-start items-start text-left">                 
+                  <span className="text-xl font-semibold mr-4">07월</span> 2차 저작물 업무 협약(에브리웨어/챗툰)<br /> 
+                  <span className="text-xl font-semibold mr-4">05월</span> 국가공인기술평가 우수기업 인증<br />   
+                  <span className="text-xl font-semibold mr-4">04월</span> 노블 코믹스 작품연재 계약 완료 및 런칭 예정<br />                                                                                    
                   </div>
                 </div>
                 <hr className="bg-orange-500" />
@@ -315,9 +315,13 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="timeline-end mb-10 w-auto">
                   <time className="text-3xl text-orange-600">2023</time><br />
-                  <span className="text-xl font-semibold mr-4">02월</span> 오름미디어 US 계약체결 및 유럽 진출 (7작품)<br />
+                  <span className="text-xl font-semibold mr-4">12월</span> <span className="text-orange-600">㈜웹툰코이컨텐츠 법인 설립</span><br />
+                  <span className="text-xl font-semibold mr-4">10월</span> 비비온 JP 계약체결 및 일본 진출 (20작품)<br />
+                  <span className="text-xl font-semibold mr-4">07월</span> 2차 저작물 업무 협약 (에브리웨이)<br />
+                  <span className="text-xl font-semibold mr-4">05월</span> 국가공인기술평가 우수기업 인증<br />
                   <span className="text-xl font-semibold mr-4">04월</span> 노블코믹스 작품 연재 계약 완료 및 런칭 예정 (애니툰 노블코믹스/피너툰/해와달)<br />
-                  <span className="text-xl font-semibold mr-4">05월</span> 국가<br />
+                  <span className="text-xl font-semibold mr-4">02월</span> 오름미디어 US 계약체결 및 유럽 진출 (7작품)<br />
+
                 </div>
                 <hr className="bg-orange-500" />
               </li>
@@ -339,12 +343,14 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="timeline-start md:text-end mb-10">
                 <time className="text-3xl text-orange-600">2022</time><br />
-                  <div className="justify-start items-start text-left">                  
-                  <span className="text-xl font-semibold mr-4">01월</span> 레진 US 글로벌 계약 체결 (15작품)<br />
-                  <span className="text-xl font-semibold mr-4">02월</span> 비비온 JP 계약체결 및 일본 진출 (11작품)<br />
+                  <div className="justify-start items-start text-left">                
+                  <span className="text-xl font-semibold mr-4">12월</span> 매출액 23억 돌파<br />  
+                  <span className="text-xl font-semibold mr-4">11월</span> 블루픽 노블코믹스 작품 연재 계약 완료<br />
+                  <span className="text-xl font-semibold mr-[3.75rem]"></span><span className="text-orange-600 ">㈜툰코이 법인 설립</span> <br />
                   <span className="text-xl font-semibold mr-4">07월</span> 연재 작품 90개 달성<br />
-                  <span className="text-xl font-semibold mr-4">11월</span> 블루픽 노블코믹스 작품 연재 계약 완료 ㈜툰코이 법인 설립<br />
-                  <span className="text-xl font-semibold mr-4">12월</span> 매출액 23억 돌파<br />
+                  <span className="text-xl font-semibold mr-4">02월</span> 비비온 JP 계약체결 및 일본 진출 (11작품)<br />
+                  <span className="text-xl font-semibold mr-4">01월</span> 레진 US 글로벌 계약 체결 (15작품)<br />
+
                   </div>
                 </div>
                 <hr className="bg-orange-500" />
@@ -367,9 +373,11 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="timeline-end mb-10">
                   <time className="text-3xl text-orange-600">2021</time><br />
-                  <span className="text-xl font-semibold mr-4">06월</span> 플랫폼 아튜브 MOU 체결<br />
-                  <span className="text-xl font-semibold mr-4">07월</span> 코핀 US 글로벌 진출 (25작품)<br />
                   <span className="text-xl font-semibold mr-4">11월</span> 연재 작품 70개 달성<br />
+                  <span className="text-xl font-semibold mr-4">07월</span> 코핀 US 글로벌 진출 (25작품)<br />
+                  <span className="text-xl font-semibold mr-4">06월</span> 플랫폼 아튜브 MOU 체결<br />
+                  
+                  
                 </div>
                 <hr className="bg-orange-500" />
               </li>            
@@ -392,7 +400,7 @@ const HomePage: React.FC = () => {
                 <div className="timeline-start md:text-end mb-10">
                   <time className="text-3xl text-orange-600">2020</time><br />
                   <div className="justify-start items-start text-left">      
-                  <span className="text-xl font-semibold mr-4">32월</span> 국내 10개 업체 서비스 자체 IP 컨텐츠 런칭<br />        
+                  <span className="text-xl font-semibold mr-4">03월</span> 국내 10개 업체 서비스 자체 IP 컨텐츠 런칭<br />        
                   </div>          
                 </div>
                 <hr className="bg-orange-500" />
@@ -415,8 +423,9 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="timeline-end mb-10">
                   <time className="text-3xl text-orange-600">2019</time><br />
-                  <span className="text-xl font-semibold mr-4">02월</span> 애니툰 작품 계약 완료 및 런칭<br />                  
                   <span className="text-xl font-semibold mr-4">10월</span> 연재 작품 50개 달성<br />
+                  <span className="text-xl font-semibold mr-4">02월</span> 애니툰 작품 계약 완료 및 런칭<br />                  
+                  
                 </div>
                 <hr className="bg-orange-500" />
               </li>
@@ -462,8 +471,8 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="timeline-end mb-10">
                   <time className="text-3xl text-orange-600">2016</time><br />
-                  <span className="text-xl font-semibold mr-4">05월</span> 탑툰 작품 연재 계약 완료 및 런칭<br />
-                  <span className="text-xl font-semibold mr-4">12월</span> 정산금 7억 5천 달성<br />                  
+                  <span className="text-xl font-semibold mr-4">12월</span> 정산금 7억 5천 달성<br />   
+                  <span className="text-xl font-semibold mr-4">05월</span> 탑툰 작품 연재 계약 완료 및 런칭<br />                                
                 </div>
                 <hr className="bg-orange-500" />
               </li>
@@ -485,11 +494,13 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="timeline-start md:text-end mb-10">
                   <time className="text-3xl text-orange-600">2015</time><br />
-                  <div className="justify-start items-start text-left">      
-                  <span className="text-xl font-semibold mr-4">10월</span> 웹툰코이컨텐츠 설립<br />
+                  <div className="justify-start items-start text-left">                        
                   <span className="text-xl font-semibold mr-4">11월</span> 투믹스 12작품 연재 계약 완료 및 런칭<br />         
+                  <span className="text-xl font-semibold mr-4">10월</span> <span className=" text-orange-600">웹툰코이컨텐츠 설립</span><br />
                   </div>        
                 </div>
+                
+                
                 <hr className="bg-orange-500" />                
               </li>     
               <li>
@@ -504,8 +515,8 @@ const HomePage: React.FC = () => {
           <Footer />
         </div>
 
-        <div className="absolute top-10 left-10 bg-orange-500 rounded-full lg:h-[20rem] lg:w-[20rem] opacity-10 z-0 lg:mt-[145rem] lg:ml-[15rem] ss:mt-[95rem] ss:ml-[20rem]"></div>
-        <div className="absolute top-10 left-10 bg-orange-600 rounded-full lg:h-[20rem] lg:w-[20rem] opacity-90 z-0 lg:mt-[95rem] lg:ml-[70rem] ss:mt-[95rem] ss:ml-[25 rem] overflow-hidden"></div>
+        {/* <div className="absolute top-10 left-10 bg-orange-500 rounded-full lg:h-[20rem] lg:w-[20rem] opacity-10 z-0 lg:mt-[145rem] lg:ml-[15rem] ss:mt-[95rem] ss:ml-[20rem]"></div>
+        <div className="absolute top-10 left-10 bg-orange-600 rounded-full lg:h-[20rem] lg:w-[20rem] opacity-90 z-0 lg:mt-[95rem] lg:ml-[70rem] ss:mt-[95rem] ss:ml-[25 rem] overflow-hidden"></div> */}
       </LanguageProvider>
     </>
   );

@@ -4,6 +4,15 @@ import Location2 from "../../../../public/images/svg/icon_place_36dp";
 import Image from "next/image";
 
 const Footer = () => {
+  const downloadPDF = () => {
+    const link = document.createElement('a');
+    link.href = '/pdf/Test.pdf'; // PDF 파일 경로
+    link.download = 'Test.pdf'; // 다운로드 시 파일 이름
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <footer className="hidden ss:block rounded-lg shadow bg-zinc-900">
@@ -17,7 +26,10 @@ const Footer = () => {
                 웹툰 코이 컨텐츠
               </div>
               {/* <button className="btn glass">회사소개서</button> */}
-              <button className="btn btn-sm rounded-3xl text-white bg-slate-800 hover:text-black">
+              <button
+                onClick={downloadPDF}
+                className="btn btn-sm rounded-3xl text-white bg-slate-800 hover:text-black"
+              >
                 회사소개서
                 <span>
                   <Down />
@@ -62,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-{/* ------------------------------------------------------------------------- */}
+      {/* ------------------------------------------------------------------------- */}
       <footer className="rounded-lg shadow ss:hidden bg-zinc-900">
         <div className="w-full max-w-screen-xl mx-auto pl-4 pt-8">
           <div className="sm:flex sm:items-center sm:justify-between">
@@ -74,13 +86,15 @@ const Footer = () => {
                 웹툰 코이 컨텐츠
               </div>
               {/* <button className="btn glass">회사소개서</button> */}
-              <button className="btn btn-sm rounded-3xl text-white bg-slate-800 hover:text-black bol border-[rgba(0,0,0,0.5)]">
-            
+              <button
+                onClick={downloadPDF}
+                className="btn btn-sm rounded-3xl text-white bg-slate-800 hover:text-black bol border-[rgba(0,0,0,0.5)]"
+              >
                 회사소개서
                 <span>
                   <Down />
                 </span>
-              </button>            
+              </button>
             </a>
           </div>
         </div>
@@ -90,19 +104,25 @@ const Footer = () => {
             서울 마포구 잔다리로 30-11, 3F
           </div>
           <div className="flex">
-            <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">Tel.</div>
+            <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">
+              Tel.
+            </div>
             <div className="block text-sm text-white dark:text-gray-800 ml-2">
               02-2602-5250
             </div>
           </div>
           <div className="flex">
-            <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">Email.</div>
+            <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">
+              Email.
+            </div>
             <div className="block text-sm text-white dark:text-gray-800 ml-2">
               koicontent@koicontent.com
             </div>
           </div>
           <div className="flex">
-            <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">대표자</div>
+            <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">
+              대표자
+            </div>
             <div className="block text-sm text-white dark:text-gray-800 ml-2">
               이준형
             </div>
