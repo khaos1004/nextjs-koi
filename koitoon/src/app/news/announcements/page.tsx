@@ -1,32 +1,16 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import bg from "../../../../public/images/history_bg.jpg";
 import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
-import LanguageContext from "@/context/Language";
-import { LocationComponent } from "@/components/contents/LangComponent";
-import Empty from "@/../../public/images/main/thumbnail2.png";
-
-// 카드 데이터 배열
-const cardsData = [
-  { id: 1, title: '제목 1', content: '본문 1' },
-  { id: 2, title: '제목 2', content: '본문 2' },
-  { id: 3, title: '제목 3', content: '본문 3' },
-  { id: 4, title: '제목 4', content: '본문 4' },
-  { id: 5, title: '제목 5', content: '본문 5' },
-  { id: 6, title: '제목 6', content: '본문 6' },
-  { id: 7, title: '제목 7', content: '본문 7' },
-  { id: 8, title: '제목 8', content: '본문 8' },
-  { id: 9, title: '제목 9', content: '본문 9' },
-  { id: 10, title: '제목 10', content: '본문 10' },
-];
+import { cardsData, Card } from "@/app/board/Data"; // 정확한 경로로 수정하세요.
+import Link from "next/link"; // Link를 import합니다.
 
 const HomePage: React.FC = () => {
   const [visibleCount, setVisibleCount] = useState(5);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchFilter, setSearchFilter] = useState('title');
-  const loadMoreRef = useRef(null);
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -60,6 +44,10 @@ const HomePage: React.FC = () => {
     }
   });
 
+  const handleCardClick = (card: Card) => {
+    window.location.href = `/board?id=${card.id}&image=${card.imageUrl}`;
+  };
+
   return (
     <RootLayout>
       <div className="main_image">
@@ -79,9 +67,7 @@ const HomePage: React.FC = () => {
         </ul>
         <div className="text-4xl my-[4rem] font-medium text-center">회사소식</div>
       </div>
-      <div className="flex">
-
-        
+      <div className="flex" data-aos="fade-up">
         <select 
           className="select select-ghost w-[10rem] max-w-xs mr-2"
           onChange={(e) => setSearchFilter(e.target.value)}
@@ -116,14 +102,15 @@ const HomePage: React.FC = () => {
 
       {filteredCards.length > 0 ? (
         filteredCards.slice(0, visibleCount).map((card) => (
-          <div key={card.id}>
-            <div className="card lg:card-side bg-base-100 shadow-xl">
-              <figure>
-                <Image src={Empty} alt="aa" />
-              </figure>
-              <div className="card-body">
+          <div key={card.id} onClick={() => handleCardClick(card)}>
+            <div className="card lg:card-side bg-base-100 shadow-xl cursor-pointer flex " data-aos="fade-up">
+              <div className="w-1/4">
+                <Image src={card.imageUrl} alt={card.title} width={400} height={300} objectFit="cover" />
+              </div>
+              <div className="w-3/4 card-body">
                 <h2 className="card-title">{card.title}</h2>
                 <p>{card.content}</p>
+                <p className="text-gray-500">{card.date}</p>
               </div>
             </div>
             <hr className="my-[2rem]" />
@@ -136,8 +123,7 @@ const HomePage: React.FC = () => {
         </div>
       )}
       <div ref={loadMoreRef} className="h-16"></div>
-   
-      <hr className="my-[2rem]" />
+
     </RootLayout>
   );
 };

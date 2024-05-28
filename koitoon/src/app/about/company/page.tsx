@@ -7,6 +7,7 @@ import React, {
   useState,
   Dispatch,
   SetStateAction,
+  createContext,
 } from "react";
 import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
@@ -15,7 +16,7 @@ import Mid from "@/../public/images/about/Mask group.png";
 import t1 from "@/../public/images/about/icon_about/content-creator.png";
 import t2 from "@/../public/images/about/icon_about/worldwide.png";
 import t3 from "@/../public/images/about/icon_about/planing.png";
-import Language from "@/context/Language";
+// import Language from "@/context/Language";
 import historybg from "@/../public/images/history_bg.jpg";
 import laod from "@/../public/images/laod.jpg";
 import bg from "../../../../public/images/history_bg.jpg";
@@ -24,24 +25,22 @@ import Header from "@/components/public/header/Header";
 import Side from "@/components/public/side/Side";
 import Footer from "@/components/public/footer/Footer";
 
-interface LanguageProviderProps {
-  children: ReactNode;
-}
-
 interface LanguageContextType {
   language: "KO" | "EN";
   setLanguage: Dispatch<SetStateAction<"KO" | "EN">>;
 }
 
-const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [language, setLanguage] = useState<string>("KO");
+const Language = createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = React.useState<"KO" | "EN">("KO");
+
   return (
     <Language.Provider value={{ language, setLanguage }}>
       {children}
     </Language.Provider>
   );
 };
-
 const HomePage: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalImages = 4; // 이미지 총 개수
@@ -116,141 +115,67 @@ const HomePage: React.FC = () => {
         </div>
         {/* --------------------------------------------------------------- */}
 
-        <div className="hidden ss:flex ss:flex-row" data-aos="fade-up">
-          <div className="main_image w-full">
-            <Image src={Mid} alt="dsa" layout="" className="h-[25rem]" />
-            <div className="w-[50rem]">
-              <div className="main_image_text pl-[36rem] pb-[15rem] w-[100rem] text-lg font-semibold ">
-                <span className="text-orange-600">COMPANY PROFILE</span>
-              </div>
-              <div className="flex main_image_text">
-                <div className="block dark:text-gray-800 text-gray-500 pb-[10rem] w-[100rem] pl-[31rem]">
-                  <span>설립연도</span>{" "}
-                  <span className=" text-white ml-8">2015년 10월 02일</span>
-                </div>
-              </div>
-              <div className="flex main_image_text">
-                <div className="block dark:text-gray-800 text-gray-500 pb-[6rem] w-[100rem] pl-[31rem]">
-                  <span>대표이사</span>{" "}
-                  <span className=" text-white ml-8">이준형 대표</span>
-                </div>
-              </div>
-              <div className="flex main_image_text">
-                <div className="block dark:text-gray-800 text-gray-500 pb-[2rem] w-[100rem] pl-[31rem]">
-                  <span>본사위치</span>{" "}
-                  <span className=" text-white ml-8">
-                    서울시 마포구 잔다리로 30-11
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="main_image_text pl-[13rem] pb-[rem] min-w-[25rem] text-bold font-normal ">
-              <div className="text-orange-600">BUSINESS AREA</div>
-            </div>
-
-            <div className="main_image_text pl-[4.5rem] pt-[6rem] text-lg font-semibold flex min-w-[10rem]">
-              <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 ml-[15rem] mr-16">
-                <Image src={t1} alt="대체 텍스트" width={40} height={40} />
-              </div>
-
-              <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mr-16">
-                <Image src={t2} alt="대체 텍스트" width={40} height={40} />
-              </div>
-
-              <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500">
-                <Image src={t3} alt="대체 텍스트" width={40} height={40} />
-              </div>
-            </div>
-            <div className="min-w-[20rem]">
-              <div className="main_image_text flex mt-[7rem] ml-[3rem] justify-center text-center">
-                <span className="min-w-[5rem]">
-                  <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[2px]"></span>
-                  <span className="font-bold text-xs">웹툰 콘텐츠 제작</span>
-                </span>
-              </div>
-              <div className="main_image_text flex mt-[7rem] ml-[9rem] justify-center text-center">
-                <span className="min-w-[15rem]">
-                  <span className="bg-orange-500 w-3 h-3 rounded-full ml-[5rem] mr-[5px] mt-[2px]"></span>
-                  <span className="mr-[4rem] font-bold text-xs">해외 유통</span>
-                </span>
-              </div>
-              <div className="main_image_text flex mt-[7rem] ml-[16.5rem] justify-center text-center">
-                <span className="min-w-[8rem]">
-                  <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[2px]"></span>
-                  <span className="font-bold text-xs">
-                    AI웹툰 제작
-                    <br /> 기술 개발
-                  </span>
-                </span>
-              </div>
-            </div>
+        
+        <div className="relative w-full h-[25rem] flex items-start justify-start bg-black">
+      <Image src={Mid} alt="Company Background" layout="fill" className="object-cover" />
+      
+      {/* 좌측 상단 COMPANY PROFILE 섹션 */}
+      <div className="absolute top-10 left- text-white">
+        <div className="text-orange-600 text-2xl font-bold mb-6">COMPANY PROFILE</div>
+        <div className="text-gray-300 space-y-4">
+          <div>
+            <span className="block text-gray-400">설립연도</span>
+            <span className="text-lg">2015년 10월 02일</span>
+          </div>
+          <div>
+            <span className="block text-gray-400">대표이사</span>
+            <span className="text-lg">이준형 대표</span>
+          </div>
+          <div>
+            <span className="block text-gray-400">본사위치</span>
+            <span className="text-lg">서울시 마포구 잔다리로 30-11</span>
           </div>
         </div>
-
-        <div className="hidden lg:flex lg:flex-row" data-aos="fade-up">
-          <div className="main_image w-full">
-            <Image src={Mid} alt="dsa" layout="" className="h-[25rem]" />
-            <div className="w-[50rem]">
-              <div className="main_image_text pl-[20rem] pb-[15rem] w-[100rem] text-lg font-semibold ">
-                <span className="text-orange-600">COMPANY PROFILE</span>
-              </div>
-              <div className="flex main_image_text">
-                <div className="block dark:text-gray-800 text-gray-500 pb-[10rem] w-[100rem] pl-[20rem]">
-                  <span>설립연도</span>{" "}
-                  <span className=" text-white ml-8">2015년 10월 02일</span>
-                </div>
-              </div>
-              <div className="flex main_image_text">
-                <div className="block dark:text-gray-800 text-gray-500 pb-[6rem] w-[100rem] pl-[20rem]">
-                  <span>대표이사</span>{" "}
-                  <span className=" text-white ml-8">이준형 대표</span>
-                </div>
-              </div>
-              <div className="flex main_image_text">
-                <div className="block dark:text-gray-800 text-gray-500 pb-[2rem] w-[100rem] pl-[20rem]">
-                  <span>본사위치</span>{" "}
-                  <span className=" text-white ml-8">
-                    서울시 마포구 잔다리로 30-11
-                  </span>
-                </div>
-              </div>
+      </div>
+      
+      {/* 중앙에서 우측 하단 BUSINESS AREA 섹션 */}
+      <div className="absolute bottom-10 right-10 text-white text-center">
+        <div className="text-orange-600 text-2xl font-bold">BUSINESS AREA</div>
+        <div className="flex justify-center mt-8 space-x-8">
+          <div className="flex flex-col items-center">
+            <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
+              <Image src={t1} alt="Content Creator" width={40} height={40} />
             </div>
-
-            <div className="main_image_text pl-[15rem] pb-[5rem] text-lg font-semibold ">
-              <div className="text-orange-600">BUSINESS AREA</div>
+            <div className="flex items-center">
+              <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+              <span className="font-bold text-xs">웹툰 콘텐츠 제작</span>
             </div>
-
-            <div className="main_image_text pl-[16rem] pt-[6rem] text-lg font-semibold flex">
-              <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 ml-[15rem] mr-16">
-                <Image src={t1} alt="대체 텍스트" width={80} height={80} />
-              </div>
-
-              <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mr-16">
-                <Image src={t2} alt="대체 텍스트" width={80} height={80} />
-              </div>
-
-              <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500">
-                <Image src={t3} alt="대체 텍스트" width={80} height={80} />
-              </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
+              <Image src={t2} alt="Worldwide" width={40} height={40} />
             </div>
-            <div className="main_image_text flex mt-[9rem] ml-[5.5rem] justify-center text-center">
-              <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[7px]"></span>
-              <span className="">웹툰 콘텐츠 제작</span>
+            <div className="flex items-center">
+              <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+              <span className="font-bold text-xs">해외 유통</span>
             </div>
-            <div className="main_image_text flex mt-[9rem] ml-[15rem] justify-center text-center">
-              <span className="bg-orange-500 w-3 h-3 rounded-full ml-[5rem] mr-[5px] mt-[7px]"></span>
-              <span className="pr-[4rem]">해외 유통</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
+              <Image src={t3} alt="AI Webtoon" width={40} height={40} />
             </div>
-            <div className="main_image_text flex mt-[9rem] ml-[25.2rem] justify-center text-center">
-              <span className="bg-orange-500 w-3 h-3 rounded-full mr-[5px] mt-[7px]"></span>
-              <span className="">
+            <div className="flex items-center">
+              <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+              <span className="font-bold text-xs">
                 AI웹툰 제작
                 <br /> 기술 개발
               </span>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+        
 
         {/* -------------------------------------------------------------- */}
         <div className="flex flex-row min-h-screen w-screen my-[1rem] relative ">

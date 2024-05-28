@@ -10,22 +10,19 @@
 
 /* styles/globals.css */
 
-/* Google Fonts에서 Spoqa Han Sans Neo 불러오기 */
+/* Google Fonts에서 가져온 예제 */
 @import url('https://fonts.googleapis.com/css2?family=Spoqa+Han+Sans+Neo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MADE+Tommy:wght@400;700&display=swap');
 
-/* MADE Tommy 폰트 CDN 링크 */
-@import url('https://fonts.cdnfonts.com/css/made-tommy'); /* 실제 CDN 링크로 교체 */
-
-/* 기본 폰트 설정을 한글 폰트로 */
-body.ko {
+/* 한글에 대한 폰트 설정 */
+body {
   font-family: 'Spoqa Han Sans Neo', sans-serif;
 }
 
-/* 영어 텍스트에 MADE Tommy 폰트 적용 */
-body.en {
+/* 영문에 대한 폰트 설정 */
+body *:lang(en) {
   font-family: 'MADE Tommy', sans-serif;
 }
-
 
 @font-face {
     font-family: 'RubikPuddles-Regular';
