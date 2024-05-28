@@ -116,11 +116,11 @@ const HomePage: React.FC = () => {
         {/* --------------------------------------------------------------- */}
 
         
-        <div className="relative w-full h-[25rem] flex items-start justify-start bg-black">
+        <div className="relative w-full h-[25rem] flex items-center justify-center bg-black">
       <Image src={Mid} alt="Company Background" layout="fill" className="object-cover" />
       
-      {/* 좌측 상단 COMPANY PROFILE 섹션 */}
-      <div className="absolute top-10 left- text-white">
+      {/* 좌측 COMPANY PROFILE 섹션 */}
+      <div className="absolute top-1/4 left-1/4 text-white">
         <div className="text-orange-600 text-2xl font-bold mb-6">COMPANY PROFILE</div>
         <div className="text-gray-300 space-y-4">
           <div>
@@ -139,9 +139,9 @@ const HomePage: React.FC = () => {
       </div>
       
       {/* 중앙에서 우측 하단 BUSINESS AREA 섹션 */}
-      <div className="absolute bottom-10 right-10 text-white text-center">
-        <div className="text-orange-600 text-2xl font-bold">BUSINESS AREA</div>
-        <div className="flex justify-center mt-8 space-x-8">
+      <div className="absolute bottom-1/4 right-1/4 text-white text-center">
+        <div className="text-orange-600 text-2xl font-bold mb-6">BUSINESS AREA</div>
+        <div className="flex justify-center space-x-12">
           <div className="flex flex-col items-center">
             <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
               <Image src={t1} alt="Content Creator" width={40} height={40} />
