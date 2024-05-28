@@ -1,13 +1,13 @@
 import Down from "../../../../public/images/svg/icon_download_24dp";
-import Location from "../../../../public/images/svg/icons8-채점자-24.png";
-import Location2 from "../../../../public/images/svg/icon_place_36dp";
+import { Location } from "../../../../public/svg/Location";
+import { Logox } from "../../../../public/svg/Logx";
 import Image from "next/image";
 
 const Footer = () => {
   const downloadPDF = () => {
-    const link = document.createElement('a');
-    link.href = '/pdf/Test.pdf'; // PDF 파일 경로
-    link.download = 'Test.pdf'; // 다운로드 시 파일 이름
+    const link = document.createElement("a");
+    link.href = "/pdf/Test.pdf"; // PDF 파일 경로
+    link.download = "Test.pdf"; // 다운로드 시 파일 이름
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -22,7 +22,7 @@ const Footer = () => {
               href=""
               className="flex items-center sm:mb-0 space-x-3 my-4 rtl:space-x-reverse"
             >
-              <div className="self-center text-white font-semibold whitespace-nowrap dark:text-white text-lg">
+              <div className="self-center text-white font-semibold whitespace-nowrap dark:text-white text-sm">
                 웹툰 코이 컨텐츠
               </div>
               {/* <button className="btn glass">회사소개서</button> */}
@@ -39,10 +39,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full max-w-screen-xl mx-auto pl-4 md:py-8">
-          <div className="self-center mb-4 text-white text-2xl font-semibold whitespace-nowrap flex dark:text-white">
-            <Location2 />
+          <div className="self-center mb-4 text-white text-base font-semibold whitespace-nowrap flex items-center dark:text-white">
+            <Location />
             서울 마포구 잔다리로 30-11, 3F
           </div>
+
           <div className="flex">
             <div className="block dark:text-gray-800 text-gray-500">Tel.</div>
             <div className="block text-sm text-white dark:text-gray-800 ml-2">
@@ -69,7 +70,7 @@ const Footer = () => {
               853-09-00557
             </div>
           </div>
-          <div className="ml-12 block text-sm text-white sm:text-right dark:text-gray-800 my-2 opacity-25">
+          <div className="ml-[4px] block text-xs text-white sm:text-right dark:text-gray-800 my-2 opacity-25">
             Copyright © WEBTOON KOI CONTENT.All Rights Reserved
           </div>
         </div>
@@ -99,11 +100,20 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full max-w-screen-xl mx-auto pl-4 md:py-8">
-          <div className="self-center mb-4 text-white whitespace-nowrap flex text-[1.75rem] font-normal">
-            <Location2 />
-            서울 마포구 잔다리로 30-11, 3F
-          </div>
           <div className="flex">
+            <div className="self-center mb-4 text-white text-2xl font-semibold whitespace-nowrap flex items-center dark:text-white flex-grow">
+              <Location />
+              서울 마포구 잔다리로 30-11, 3F
+            </div>
+            <div className="flex ml-auto justify-between">
+              <span className="mx-2"> <Logox /></span>
+              <span className="mx-2"> <Logox /></span>
+              <span className="mx-2 mr-8"> <Logox /></span>
+                  
+            </div>
+          </div>
+
+          <div className="flex my-[0.2rem]">
             <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">
               Tel.
             </div>
@@ -111,7 +121,7 @@ const Footer = () => {
               02-2602-5250
             </div>
           </div>
-          <div className="flex">
+          <div className="flex my-[0.2rem]">
             <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">
               Email.
             </div>
@@ -119,7 +129,7 @@ const Footer = () => {
               koicontent@koicontent.com
             </div>
           </div>
-          <div className="flex">
+          <div className="flex my-[0.2rem]">
             <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">
               대표자
             </div>
@@ -127,7 +137,7 @@ const Footer = () => {
               이준형
             </div>
           </div>
-          <div className="flex">
+          <div className="flex my-[0.2rem]">
             <div className="block dark:text-gray-800 text-gray-500 text-[0.875rem]">
               사업자 등록번호
             </div>

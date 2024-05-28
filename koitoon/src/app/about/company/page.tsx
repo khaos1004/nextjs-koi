@@ -32,7 +32,9 @@ interface LanguageContextType {
 
 const Language = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [language, setLanguage] = React.useState<"KO" | "EN">("KO");
 
   return (
@@ -114,68 +116,157 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         {/* --------------------------------------------------------------- */}
+        <div className="relative w-full h-auto flex-col items-center justify-center bg-black py-8 hidden ss:flex">
+          <Image
+            src={Mid}
+            alt="Company Background"
+            layout="fill"
+            className="object-cover absolute inset-0 w-full h-full"
+          />
+          <div className="relative z-10 w-full max-w-screen-lg px-4 text-white">
+            {/* BUSINESS AREA 섹션 */}
+            <div className="text-center mb-12">
+              <div className="text-orange-600 text-2xl font-bold mb-6">
+                BUSINESS AREA
+              </div>
+              <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12">
+                <div className="flex flex-col items-center">
+                  <div className="flex justify-center items-center rounded-full h-12 w-12 border border-orange-500 mb-2">
+                    <Image
+                      src={t1}
+                      alt="Content Creator"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                    <span className="font-bold">웹툰 콘텐츠 제작</span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="flex justify-center items-center rounded-full h-12 w-12 border border-orange-500 mb-2">
+                    <Image src={t2} alt="Worldwide" width={40} height={40} />
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                    <span className="font-bold">해외 유통</span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="flex justify-center items-center rounded-full h-12 w-12 border border-orange-500 mb-2">
+                    <Image src={t3} alt="AI Webtoon" width={40} height={40} />
+                  </div>
+                  <div className="flex items-center text-sm text-center">
+                    <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                    <span className="font-bold">
+                      AI웹툰 제작
+                      <br />
+                      기술 개발
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        
-        <div className="relative w-full h-[25rem] flex items-center justify-center bg-black">
-      <Image src={Mid} alt="Company Background" layout="fill" className="object-cover" />
-      
-      {/* 좌측 COMPANY PROFILE 섹션 */}
-      <div className="absolute top-1/4 left-1/4 text-white">
-        <div className="text-orange-600 text-2xl font-bold mb-6">COMPANY PROFILE</div>
-        <div className="text-gray-300 space-y-4">
-          <div>
-            <span className="block text-gray-400">설립연도</span>
-            <span className="text-lg">2015년 10월 02일</span>
-          </div>
-          <div>
-            <span className="block text-gray-400">대표이사</span>
-            <span className="text-lg">이준형 대표</span>
-          </div>
-          <div>
-            <span className="block text-gray-400">본사위치</span>
-            <span className="text-lg">서울시 마포구 잔다리로 30-11</span>
-          </div>
-        </div>
-      </div>
-      
-      {/* 중앙에서 우측 하단 BUSINESS AREA 섹션 */}
-      <div className="absolute bottom-1/4 right-1/4 text-white text-center">
-        <div className="text-orange-600 text-2xl font-bold mb-6">BUSINESS AREA</div>
-        <div className="flex justify-center space-x-12">
-          <div className="flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
-              <Image src={t1} alt="Content Creator" width={40} height={40} />
-            </div>
-            <div className="flex items-center">
-              <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-              <span className="font-bold text-xs">웹툰 콘텐츠 제작</span>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
-              <Image src={t2} alt="Worldwide" width={40} height={40} />
-            </div>
-            <div className="flex items-center">
-              <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-              <span className="font-bold text-xs">해외 유통</span>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
-              <Image src={t3} alt="AI Webtoon" width={40} height={40} />
-            </div>
-            <div className="flex items-center">
-              <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-              <span className="font-bold text-xs">
-                AI웹툰 제작
-                <br /> 기술 개발
-              </span>
+            {/* COMPANY PROFILE 섹션 */}
+            <div className="text-center">
+              <div className="text-orange-600 text-2xl font-bold mb-6">
+                COMPANY PROFILE
+              </div>
+              <div className="text-gray-300 space-y-4">
+                <div>
+                  <span className="block text-gray-400 text-sm">설립연도</span>
+                  <span className="text-lg">2015년 10월 02일</span>
+                </div>
+                <div>
+                  <span className="block text-gray-400 text-sm">대표이사</span>
+                  <span className="text-lg">이준형 대표</span>
+                </div>
+                <div>
+                  <span className="block text-gray-400 text-sm">본사위치</span>
+                  <span className="text-lg">서울시 마포구 잔다리로 30-11</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-        
+
+        {/* --------------------------------------------------------------- */}
+
+        <div className="relative w-full h-[25rem] items-center justify-center bg-black hidden sm:flex">
+          <Image
+            src={Mid}
+            alt="Company Background"
+            fill
+            className="object-cover"
+          />
+
+          {/* 좌측 COMPANY PROFILE 섹션 */}
+          <div className="absolute top-1/4 left-1/4 text-white">
+            <div className="text-orange-600 text-2xl font-bold mb-6">
+              COMPANY PROFILE
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <div>
+                <span className="block text-gray-400">설립연도</span>
+                <span className="text-lg">2015년 10월 02일</span>
+              </div>
+              <div>
+                <span className="block text-gray-400">대표이사</span>
+                <span className="text-lg">이준형 대표</span>
+              </div>
+              <div>
+                <span className="block text-gray-400">본사위치</span>
+                <span className="text-lg">서울시 마포구 잔다리로 30-11</span>
+              </div>
+            </div>
+          </div>
+
+          {/* 중앙에서 우측 하단 BUSINESS AREA 섹션 */}
+          <div className="absolute bottom-1/4 right-1/4 text-white text-center">
+            <div className="text-orange-600 text-2xl font-bold mb-6">
+              BUSINESS AREA
+            </div>
+            <div className="flex justify-center space-x-12">
+              <div className="flex flex-col items-center">
+                <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
+                  <Image
+                    src={t1}
+                    alt="Content Creator"
+                    width={40}
+                    height={40}
+                  />
+                </div>
+                <div className="flex items-center">
+                  <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                  <span className="font-bold text-xs">웹툰 콘텐츠 제작</span>
+                </div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
+                  <Image src={t2} alt="Worldwide" width={40} height={40} />
+                </div>
+                <div className="flex items-center">
+                  <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                  <span className="font-bold text-xs">해외 유통</span>
+                </div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="flex justify-center items-center rounded-full h-[3rem] w-[3rem] border border-orange-500 mb-2">
+                  <Image src={t3} alt="AI Webtoon" width={40} height={40} />
+                </div>
+                <div className="flex items-center">
+                  <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                  <span className="font-bold text-xs">
+                    AI웹툰 제작
+                    <br /> 기술 개발
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* -------------------------------------------------------------- */}
         <div className="flex flex-row min-h-screen w-screen my-[1rem] relative ">
@@ -192,32 +283,162 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             {/* ---------------------------------------------------------------------------------------------- */}
+            <ul className="hidden ss:flex timeline timeline-vertical">
+              <li>
+                <div className="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                  </svg>
+                </div>
+                <div className="timeline-end flex">
+                  <div className="timeline-start mt-[5rem]">2023</div>
+                  <div className="justify-center items-center flex">
+                    <div className="text-[0.7rem] mr-2 w-[5rem]">03월</div>
+                    <div className=" text-[0.7rem]">
+                      비비온 JP 웹툰코이컨텐츠 자체 AI 작품 계약 (예정)
+                    </div>
+                    <br />
+                    <div className="text-[0.7rem] mr-2 w-[5rem]">02월</div>
+                    <div className=" text-[0.7rem]">
+                      에브리웨이 MOU 업무 협약식 오름미디어 US 계약체결 및 유럽
+                      진출 (9작품)
+                    </div>
+                  </div>
+                </div>
+                <hr className=" text-orange-600" />
+              </li>
+              <li>
+                <hr className=" text-orange-600" />
+
+                <div className="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                  </svg>
+                </div>
+                <div className="timeline-end flex ">
+                  <div className="justify-center items-center mt-[7.75rem]">
+                    <div className="text-[0.7rem] mr-2 w-[5rem]">03월</div>
+                    <div className=" text-[0.7rem]">
+                      비비온 JP 웹툰코이컨텐츠 자체 AI 작품 계약 (예정)
+                    </div>
+                    <br />
+                    <div className="text-[0.7rem] mr-2 w-[5rem]">02월</div>
+                    <div className=" text-[0.7rem]">
+                      에브리웨이 MOU 업무 협약식 오름미디어 US 계약체결 및 유럽
+                      진출 (9작품)
+                    </div>
+                  </div>
+                </div>
+                <hr className=" text-orange-600" />
+              </li>
+              <li>
+                <hr className=" text-orange-600" />
+                <div className="timeline-start">2001</div>
+                <div className="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                  </svg>
+                </div>
+                <div className="timeline-end timeline-box">iPod</div>
+                <hr className=" text-orange-600" />
+              </li>
+              <li>
+                <hr className=" text-orange-600" />
+                <div className="timeline-start">2007</div>
+                <div className="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                  </svg>
+                </div>
+                <div className="timeline-end timeline-box">iPhone</div>
+                <hr />
+              </li>
+              <li>
+                <hr className=" text-orange-600" />
+                <div className="timeline-start">2015</div>
+                <div className="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                  </svg>
+                </div>
+                <div className="timeline-end timeline-box">Apple Watch</div>
+              </li>
+            </ul>
             {/* ---------------------------------------------------------------------------------------------- */}
             <ul
-              className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+              className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical hidden sm:flex"
               data-aos="fade-up"
             >
               <li>
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                   </svg>
                 </div>
                 <div className="timeline-start md:text-end mb-10">
                   <time className="text-3xl text-orange-600">2024</time>
-                  <div className="justify-start items-start text-left">                 
-                  <span className="text-xl font-semibold mr-4">07월</span> 2차 저작물 업무 협약(에브리웨어/챗툰)<br /> 
-                  <span className="text-xl font-semibold mr-4">05월</span> 국가공인기술평가 우수기업 인증<br />   
-                  <span className="text-xl font-semibold mr-4">04월</span> 노블 코믹스 작품연재 계약 완료 및 런칭 예정<br />                                                                                    
+                  <div className="justify-start items-start text-left">
+                    <span className="text-xl font-semibold mr-4">07월</span> 2차
+                    저작물 업무 협약(에브리웨어/챗툰)
+                    <br />
+                    <span className="text-xl font-semibold mr-4">
+                      05월
+                    </span>{" "}
+                    국가공인기술평가 우수기업 인증
+                    <br />
+                    <span className="text-xl font-semibold mr-4">
+                      04월
+                    </span>{" "}
+                    노블 코믹스 작품연재 계약 완료 및 런칭 예정
+                    <br />
                   </div>
                 </div>
                 <hr className="bg-orange-500" />
@@ -227,26 +448,40 @@ const HomePage: React.FC = () => {
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                   </svg>
                 </div>
                 <div className="timeline-end mb-10 w-auto">
-                  <time className="text-3xl text-orange-600">2023</time><br />
-                  <span className="text-xl font-semibold mr-4">12월</span> <span className="text-orange-600">㈜웹툰코이컨텐츠 법인 설립</span><br />
-                  <span className="text-xl font-semibold mr-4">10월</span> 비비온 JP 계약체결 및 일본 진출 (20작품)<br />
-                  <span className="text-xl font-semibold mr-4">07월</span> 2차 저작물 업무 협약 (에브리웨이)<br />
-                  <span className="text-xl font-semibold mr-4">05월</span> 국가공인기술평가 우수기업 인증<br />
-                  <span className="text-xl font-semibold mr-4">04월</span> 노블코믹스 작품 연재 계약 완료 및 런칭 예정 (애니툰 노블코믹스/피너툰/해와달)<br />
-                  <span className="text-xl font-semibold mr-4">02월</span> 오름미디어 US 계약체결 및 유럽 진출 (7작품)<br />
-
+                  <time className="text-3xl text-orange-600">2023</time>
+                  <br />
+                  <span className="text-xl font-semibold mr-4">12월</span>{" "}
+                  <span className="text-orange-600">
+                    ㈜웹툰코이컨텐츠 법인 설립
+                  </span>
+                  <br />
+                  <span className="text-xl font-semibold mr-4">10월</span>{" "}
+                  비비온 JP 계약체결 및 일본 진출 (20작품)
+                  <br />
+                  <span className="text-xl font-semibold mr-4">07월</span> 2차
+                  저작물 업무 협약 (에브리웨이)
+                  <br />
+                  <span className="text-xl font-semibold mr-4">05월</span>{" "}
+                  국가공인기술평가 우수기업 인증
+                  <br />
+                  <span className="text-xl font-semibold mr-4">04월</span>{" "}
+                  노블코믹스 작품 연재 계약 완료 및 런칭 예정 (애니툰
+                  노블코믹스/피너툰/해와달)
+                  <br />
+                  <span className="text-xl font-semibold mr-4">02월</span>{" "}
+                  오름미디어 US 계약체결 및 유럽 진출 (7작품)
+                  <br />
                 </div>
                 <hr className="bg-orange-500" />
               </li>
@@ -255,27 +490,48 @@ const HomePage: React.FC = () => {
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                   </svg>
                 </div>
                 <div className="timeline-start md:text-end mb-10">
-                <time className="text-3xl text-orange-600">2022</time><br />
-                  <div className="justify-start items-start text-left">                
-                  <span className="text-xl font-semibold mr-4">12월</span> 매출액 23억 돌파<br />  
-                  <span className="text-xl font-semibold mr-4">11월</span> 블루픽 노블코믹스 작품 연재 계약 완료<br />
-                  <span className="text-xl font-semibold mr-[3.75rem]"></span><span className="text-orange-600 ">㈜툰코이 법인 설립</span> <br />
-                  <span className="text-xl font-semibold mr-4">07월</span> 연재 작품 90개 달성<br />
-                  <span className="text-xl font-semibold mr-4">02월</span> 비비온 JP 계약체결 및 일본 진출 (11작품)<br />
-                  <span className="text-xl font-semibold mr-4">01월</span> 레진 US 글로벌 계약 체결 (15작품)<br />
-
+                  <time className="text-3xl text-orange-600">2022</time>
+                  <br />
+                  <div className="justify-start items-start text-left">
+                    <span className="text-xl font-semibold mr-4">12월</span>{" "}
+                    매출액 23억 돌파
+                    <br />
+                    <span className="text-xl font-semibold mr-4">
+                      11월
+                    </span>{" "}
+                    블루픽 노블코믹스 작품 연재 계약 완료
+                    <br />
+                    <span className="text-xl font-semibold mr-[3.75rem]"></span>
+                    <span className="text-orange-600 ">
+                      ㈜툰코이 법인 설립
+                    </span>{" "}
+                    <br />
+                    <span className="text-xl font-semibold mr-4">
+                      07월
+                    </span>{" "}
+                    연재 작품 90개 달성
+                    <br />
+                    <span className="text-xl font-semibold mr-4">
+                      02월
+                    </span>{" "}
+                    비비온 JP 계약체결 및 일본 진출 (11작품)
+                    <br />
+                    <span className="text-xl font-semibold mr-4">
+                      01월
+                    </span>{" "}
+                    레진 US 글로벌 계약 체결 (15작품)
+                    <br />
                   </div>
                 </div>
                 <hr className="bg-orange-500" />
@@ -285,48 +541,28 @@ const HomePage: React.FC = () => {
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                   </svg>
                 </div>
                 <div className="timeline-end mb-10">
-                  <time className="text-3xl text-orange-600">2021</time><br />
-                  <span className="text-xl font-semibold mr-4">11월</span> 연재 작품 70개 달성<br />
-                  <span className="text-xl font-semibold mr-4">07월</span> 코핀 US 글로벌 진출 (25작품)<br />
-                  <span className="text-xl font-semibold mr-4">06월</span> 플랫폼 아튜브 MOU 체결<br />
-                  
-                  
-                </div>
-                <hr className="bg-orange-500" />
-              </li>            
-              <li>
-                <hr className="bg-orange-500" />
-                <div className="timeline-middle">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div className="timeline-start md:text-end mb-10">
-                  <time className="text-3xl text-orange-600">2020</time><br />
-                  <div className="justify-start items-start text-left">      
-                  <span className="text-xl font-semibold mr-4">03월</span> 국내 10개 업체 서비스 자체 IP 컨텐츠 런칭<br />        
-                  </div>          
+                  <time className="text-3xl text-orange-600">2021</time>
+                  <br />
+                  <span className="text-xl font-semibold mr-4">11월</span> 연재
+                  작품 70개 달성
+                  <br />
+                  <span className="text-xl font-semibold mr-4">07월</span> 코핀
+                  US 글로벌 진출 (25작품)
+                  <br />
+                  <span className="text-xl font-semibold mr-4">06월</span>{" "}
+                  플랫폼 아튜브 MOU 체결
+                  <br />
                 </div>
                 <hr className="bg-orange-500" />
               </li>
@@ -335,45 +571,23 @@ const HomePage: React.FC = () => {
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div className="timeline-end mb-10">
-                  <time className="text-3xl text-orange-600">2019</time><br />
-                  <span className="text-xl font-semibold mr-4">10월</span> 연재 작품 50개 달성<br />
-                  <span className="text-xl font-semibold mr-4">02월</span> 애니툰 작품 계약 완료 및 런칭<br />                  
-                  
-                </div>
-                <hr className="bg-orange-500" />
-              </li>
-              <li>
-                <hr className="bg-orange-500" />
-                <div className="timeline-middle">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                   </svg>
                 </div>
                 <div className="timeline-start md:text-end mb-10">
-                  <time className="text-3xl text-orange-600">2018</time><br />
-                  <div className="justify-start items-start text-left">      
-                  <span className="text-xl font-semibold mr-4">05월</span> 매출액 10억 이상 돌파<br />               
+                  <time className="text-3xl text-orange-600">2020</time>
+                  <br />
+                  <div className="justify-start items-start text-left">
+                    <span className="text-xl font-semibold mr-4">03월</span>{" "}
+                    국내 10개 업체 서비스 자체 IP 컨텐츠 런칭
+                    <br />
                   </div>
                 </div>
                 <hr className="bg-orange-500" />
@@ -383,21 +597,25 @@ const HomePage: React.FC = () => {
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                   </svg>
                 </div>
                 <div className="timeline-end mb-10">
-                  <time className="text-3xl text-orange-600">2016</time><br />
-                  <span className="text-xl font-semibold mr-4">12월</span> 정산금 7억 5천 달성<br />   
-                  <span className="text-xl font-semibold mr-4">05월</span> 탑툰 작품 연재 계약 완료 및 런칭<br />                                
+                  <time className="text-3xl text-orange-600">2019</time>
+                  <br />
+                  <span className="text-xl font-semibold mr-4">10월</span> 연재
+                  작품 50개 달성
+                  <br />
+                  <span className="text-xl font-semibold mr-4">02월</span>{" "}
+                  애니툰 작품 계약 완료 및 런칭
+                  <br />
                 </div>
                 <hr className="bg-orange-500" />
               </li>
@@ -406,33 +624,92 @@ const HomePage: React.FC = () => {
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                   </svg>
                 </div>
                 <div className="timeline-start md:text-end mb-10">
-                  <time className="text-3xl text-orange-600">2015</time><br />
-                  <div className="justify-start items-start text-left">                        
-                  <span className="text-xl font-semibold mr-4">11월</span> 투믹스 12작품 연재 계약 완료 및 런칭<br />         
-                  <span className="text-xl font-semibold mr-4">10월</span> <span className=" text-orange-600">웹툰코이컨텐츠 설립</span><br />
-                  </div>        
+                  <time className="text-3xl text-orange-600">2018</time>
+                  <br />
+                  <div className="justify-start items-start text-left">
+                    <span className="text-xl font-semibold mr-4">05월</span>{" "}
+                    매출액 10억 이상 돌파
+                    <br />
+                  </div>
                 </div>
-                
-                
-                <hr className="bg-orange-500" />                
-              </li>     
+                <hr className="bg-orange-500" />
+              </li>
               <li>
-                <hr />                                        
-              </li>         
+                <hr className="bg-orange-500" />
+                <div className="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                  </svg>
+                </div>
+                <div className="timeline-end mb-10">
+                  <time className="text-3xl text-orange-600">2016</time>
+                  <br />
+                  <span className="text-xl font-semibold mr-4">12월</span>{" "}
+                  정산금 7억 5천 달성
+                  <br />
+                  <span className="text-xl font-semibold mr-4">05월</span> 탑툰
+                  작품 연재 계약 완료 및 런칭
+                  <br />
+                </div>
+                <hr className="bg-orange-500" />
+              </li>
+              <li>
+                <hr className="bg-orange-500" />
+                <div className="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#EA3323"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                  </svg>
+                </div>
+                <div className="timeline-start md:text-end mb-10">
+                  <time className="text-3xl text-orange-600">2015</time>
+                  <br />
+                  <div className="justify-start items-start text-left">
+                    <span className="text-xl font-semibold mr-4">11월</span>{" "}
+                    투믹스 12작품 연재 계약 완료 및 런칭
+                    <br />
+                    <span className="text-xl font-semibold mr-4">
+                      10월
+                    </span>{" "}
+                    <span className=" text-orange-600">
+                      웹툰코이컨텐츠 설립
+                    </span>
+                    <br />
+                  </div>
+                </div>
+                <hr className="bg-orange-500" />
+              </li>
+              <li>
+                <hr />
+              </li>
             </ul>
-            <div className="relative h-screen w-screen"></div>
+            <div className="my-[10rem]"></div>
           </div>
           <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
         </div>

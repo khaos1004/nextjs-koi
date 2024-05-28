@@ -99,7 +99,7 @@ const HomePage: React.FC = () => {
         <div className="my-4">아래 연락처 또는 이메일로 문의하시면 검토 후 빠른 시일 내 연락 드리겠습니다.</div>
         <div className="">TEL : 02-2602-5250</div>
         <div className="">E-Mail : koicontent@koicontent.com</div>
-        <button className="btn my-8 rounded-3xl h-[2rem] bg-slate-900 text-white w-[7rem] hover:bg-orange-500">문의하기</button>
+        {/* <button className="btn my-8 rounded-3xl h-[2rem] bg-slate-900 text-white w-[7rem] hover:bg-orange-500">문의하기</button> */}
       </div>  
     </RootLayout>
   );

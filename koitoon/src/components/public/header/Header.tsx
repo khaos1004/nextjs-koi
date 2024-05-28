@@ -193,7 +193,9 @@ export default function App() {
             <div className="flex w-[30%]">
               <button
                 onClick={() => handleButtonClick("KO")}
-                className={`text-gray-600 text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10`}
+                className={`text-gray-600 text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+                  language === "KO" ? "font-bold underline text-orange-600" : "opacity-25"
+                }`}
               >
                 KO
               </button>
@@ -202,7 +204,9 @@ export default function App() {
               </p>
               <button
                 onClick={() => handleButtonClick("EN")}
-                className={`text-gray-600 text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 `}
+                className={`text-gray-600 text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+                  language === "EN" ? "font-bold underline text-orange-600" : "opacity-25"
+                }`}
               >
                 EN
               </button>

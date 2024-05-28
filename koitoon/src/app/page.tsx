@@ -1,7 +1,6 @@
 "use client";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import Header from "@/components/public/header/Header";
 import Side from "@/components/public/side/Side";
 import Footer from "@/components/public/footer/Footer";
@@ -52,9 +51,14 @@ export default function Home() {
               </span>{" "}
               <span className="font-semibold">글로벌 웹툰 제작사</span>
             </div>
-            <div className="text-5xl font-bold">
-              WEBTOON <span className="te text-orange-700">KOI CONTENT</span>
+            <div className="text-5xl font-bold hidden sm:flex">
+              WEBTOON&nbsp; <br className="" /> <span className="te text-orange-700">KOI CONTENT</span>
             </div>
+
+            <div className="sm:hidden text-3xl font-bold justify-center items-center text-center">
+              WEBTOON<br className="" /> <span className="te text-orange-700">KOI CONTENT</span>
+            </div>
+
             <div className="flex justify-center mt-8">
               <Link href="/about/company">
               <button className="btn text-white rounded-3xl w-[13rem] hover:bg-orange-500 bg-inherit">
@@ -73,7 +77,7 @@ export default function Home() {
             {" "}
             {/* 중앙 컨텐츠 영역 (3/5) */}
             <div className="flex text-center items-center justify-between">
-              <div className="text-4xl my-[4rem] font-bold">WEBTOON</div>
+              <div className="text-4xl my-[4rem] font-bold ss:text-xl">WEBTOON</div>
               <div className="font-medium flex justify-center items-center hover:text-orange-600 cursor-pointer">
                 <Link href="/webtoon" className="flex">
                   MORE &nbsp;{" "}
@@ -85,11 +89,16 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex space-x-4 overflow-hidden shadow-md">
+            <div className="hidden sm:flex space-x-4 overflow-hidden shadow-md">
               <Image src={Empty} alt="Thumbnail" className="w-1/4 shadow-2xl" />
               <Image src={Empty} alt="Thumbnail" className="w-1/4 shadow-2xl" />
               <Image src={Empty} alt="Thumbnail" className="w-1/4 shadow-2xl" />
               <Image src={Empty} alt="Thumbnail" className="w-1/4 shadow-2xl" />
+            </div>
+            <div className="hidden ss:flex space-x-4 overflow-hidden shadow-md">
+              <Image src={Empty} alt="Thumbnail" className="w-1/2 shadow-2xl" />
+              <Image src={Empty} alt="Thumbnail" className="w-1/2 shadow-2xl" />
+              
             </div>
             <div className="flex justify-center mt-8 items-center">
               <button className="bg-white rounded-full hover:bg-gray-100 mr-4 stroke-1 stroke-[#BDBDBD]">
@@ -122,7 +131,7 @@ export default function Home() {
               </button>
             </div>
             <div className="flex text-center items-center justify-between mt-[4rem] mb-8">
-              <div className="text-4xl font-bold">RECRUIT</div>
+              <div className="text-4xl ss:text-2xl font-bold">RECRUIT</div>
               <div className="font-medium flex justify-center items-center hover:text-orange-600 cursor-pointer">
                 <Link href="/news/recruitment" className="flex">
                   MORE &nbsp;{" "}
@@ -140,7 +149,7 @@ export default function Home() {
               className="brightness-50 w-full h-[20rem] mb-8"
             />
             <div>
-              <div className="text-3xl mb-4 font-medium">직원채용</div>
+              <div className="text-3xl mb-4 font-medium ">직원채용</div>
               <div className="font-medium">
                 글로벌 웹툰을 만들어 나갈 실력있고 열정적인 인재들을 찾고
                 있습니다.

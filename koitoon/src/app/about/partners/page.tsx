@@ -51,13 +51,13 @@ const HomePage: React.FC = () => {
           </li>
           <li>파트너사</li>
         </ul>
-        <div className="text-4xl my-[4rem] font-medium ss:text-center">파트너사</div>
+        <div className="text-4xl my-[4rem] ss:text-center font-bold">파트너사</div>
       </div>
 
       <div className="hidden ss:grid grid-cols-2 gap-4 mb-[7.5rem]" data-aos="fade-up">        
         {/* 각 파트너 로고를 여기에 배치합니다. 예시: */}
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={30}
               height={30}
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -85,7 +85,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -99,7 +99,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={170}
               height={50}
@@ -113,7 +113,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={35}
               height={50}
@@ -127,7 +127,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={70}
               height={50}
@@ -141,7 +141,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={100}
               height={50}
@@ -155,7 +155,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={35}
               height={20}
@@ -169,7 +169,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -183,7 +183,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -197,7 +197,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -211,7 +211,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={80}
               height={50}
@@ -225,7 +225,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={150}
               height={50}
@@ -239,7 +239,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={180}
               height={50}
@@ -253,7 +253,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={50}
               height={50}
@@ -267,7 +267,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -281,7 +281,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -295,7 +295,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -309,7 +309,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={100}
               height={50}
@@ -323,7 +323,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={100}
               height={50}
@@ -337,7 +337,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={150}
               height={50}
@@ -351,7 +351,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={100}
               height={50}
@@ -365,7 +365,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={35}
               height={100}
@@ -378,9 +378,9 @@ const HomePage: React.FC = () => {
           <p className="mt-2 text-sm font-semibold">해와달</p>
         </div>
         <div className="flex flex-col items-center">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[50px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
-              width={120}
+              width={70}
               height={50}
               layout="intrinsic"
               objectFit="cover"
@@ -397,11 +397,11 @@ const HomePage: React.FC = () => {
 
       <div className="ss:hidden grid grid-cols-4 gap-1 mb-[7.5rem]" data-aos="fade-up">        
         {/* 각 파트너 로고를 여기에 배치합니다. 예시: */}
-        <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[100px]">
+        <div className="flex flex-col items-center mb-[1rem]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex flex-col justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
-              width={85}
-              height={30}
+              width={50}
+              height={50}
               layout="intrinsic"
               objectFit="contain"
               src={too}
@@ -412,7 +412,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -426,7 +426,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -440,7 +440,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={170}
               height={50}
@@ -454,9 +454,9 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
-              width={85}
+              width={55}
               height={50}
               layout="intrinsic"
               objectFit="cover"
@@ -468,7 +468,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={140}
               height={50}
@@ -482,7 +482,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={120}
               height={50}
@@ -496,9 +496,9 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
-              width={85}
+              width={55}
               height={20}
               layout="intrinsic"
               objectFit="cover"
@@ -510,7 +510,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -524,7 +524,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -538,7 +538,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -552,7 +552,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={80}
               height={50}
@@ -566,7 +566,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={150}
               height={50}
@@ -580,7 +580,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={180}
               height={50}
@@ -594,7 +594,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={80}
               height={50}
@@ -608,7 +608,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -622,7 +622,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -636,7 +636,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={190}
               height={50}
@@ -650,7 +650,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={100}
               height={50}
@@ -664,7 +664,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={100}
               height={50}
@@ -678,7 +678,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={150}
               height={50}
@@ -692,7 +692,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
               width={100}
               height={50}
@@ -706,9 +706,9 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
-              width={75}
+              width={50}
               height={100}
               layout="contain"
               objectFit="contain"
@@ -719,9 +719,9 @@ const HomePage: React.FC = () => {
           <p className="mt-2 text-sm font-semibold">해와달</p>
         </div>
         <div className="flex flex-col items-center mb-[2rem]">
-          <div className="p-4 shadow-lg h-[120px] w-[150px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[100px]">
+          <div className="p-4 shadow-lg h-[100px] w-[200px] rounded-lg flex justify-center items-center ss:h-[50px] ss:w-[80px]">
             <Image
-              width={120}
+              width={100}
               height={50}
               layout="intrinsic"
               objectFit="cover"
