@@ -69,7 +69,7 @@ const HomePage: React.FC = () => {
       </div>
       <div className="flex" data-aos="fade-up">
         <select 
-          className="select select-ghost w-[10rem] max-w-xs mr-2"
+          className="select select-ghost w-[10rem] max-w-xs mr-2 ss:w-[7rem] ss:text-[0.6rem]"
           onChange={(e) => setSearchFilter(e.target.value)}
         >
           <option className="hover:bg-gray-500 " value="title">제목</option>
@@ -79,7 +79,7 @@ const HomePage: React.FC = () => {
         <label className="input input-bordered flex items-center gap-2 w-[20rem]">
           <input
             type="text"
-            className="grow"
+            className="grow ss:w-[6rem] ss:text-[0.5rem]"
             placeholder="검색어를 입력해주세요"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
