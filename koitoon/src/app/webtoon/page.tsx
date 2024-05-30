@@ -62,7 +62,7 @@ const HomePage: React.FC = () => {
             <a>WEBTOON</a>
           </li>          
         </ul>
-        <div className="text-4xl my-[4rem] font-medium">작품</div>
+        <div className="text-4xl my-[4rem] font-medium ss:text-center">작품</div>
       </div>
 
       <div className="flex justify-center items-center mb-[3rem]">
