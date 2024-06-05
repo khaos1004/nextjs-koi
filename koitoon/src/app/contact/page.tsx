@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import mainlo from "../../../../public/images/logo_웹툰코이컨텐츠(B)_한글.png";
 import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
 import LanguageContext from "@/context/Language";
-import { LocationComponent } from "@/components/contents/LangComponent";
+import EmailModal from "@/components/EmailModal";
 
 declare global {
   interface Window {
@@ -55,52 +55,86 @@ const NaverMap: React.FC<NaverMapProps> = ({ clientId }) => {
 };
 
 const HomePage: React.FC = () => {
+  const { language } = useContext(LanguageContext);
   const clientId = "oygjgwg355"; // 네이버 지도 API 클라이언트 ID
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const textContent = {
+    ko: {
+      breadcrumbs: ["홈", "CONTACT"],
+      contact: "CONTACT",
+      directions: "오시는 길",
+      company: "(주)웹툰코이컨텐츠",
+      address: "(04042) 서울특별시 마포구 잔다리로 30-11, 3층",
+      businessInquiry: "비즈니스 문의",
+      inquiryDetails:
+        "아래 연락처 또는 이메일로 문의하시면 검토 후 빠른 시일 내 연락 드리겠습니다.",
+      phone: "TEL : 02-2602-5250",
+      email: "E-Mail : koicontent@koicontent.com",
+      inquireButton: "문의하기",
+    },
+    en: {
+      breadcrumbs: ["Home", "CONTACT"],
+      contact: "CONTACT",
+      directions: "Directions",
+      company: "Webtoon Koi Content Co., Ltd.",
+      address: "3rd Floor, 30-11 Jandari-ro, Mapo-gu, Seoul, 04042, South Korea",
+      businessInquiry: "Business Inquiry",
+      inquiryDetails:
+        "Please contact us via the phone number or email below. We will review your inquiry and get back to you as soon as possible.",
+      phone: "TEL: 02-2602-5250",
+      email: "E-Mail: koicontent@koicontent.com",
+      inquireButton: "Inquire",
+    },
+  };
+
+  const content = language === "KO" ? textContent.ko : textContent.en;
 
   return (
     <RootLayout>
       <div className="text-sm sm:breadcrumbs lg:flex" data-aos="fade-up">
         <ul className="ss:hidden">
-          <li>
-            <a href="/">홈</a>
-          </li>
-          <li>CONTACT</li>
-        </ul>        
+          {content.breadcrumbs.map((breadcrumb, index) => (
+            <li key={index}>
+              <a href="/">{breadcrumb}</a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="text-4xl my-[2rem] font-medium text-orange-500" data-aos="fade-up">CONTACT</div>
+      <div
+        className="text-4xl my-[2rem] font-medium text-orange-500"
+        data-aos="fade-up"
+      >
+        {content.contact}
+      </div>
       <div className="flex-row" data-aos="fade-up">
-        <div className="text text-3xl">오시는 길</div>
-        <div className="mt-8 font-bold">(주)웹툰코이컨텐츠</div>
-        <div className="mb-[2rem]">(04042) 서울특별시 마포구 잔다리로 30-11, 3층</div>
-      </div>      
+        <div className="text text-3xl">{content.directions}</div>
+        <div className="mt-8 font-bold">{content.company}</div>
+        <div className="mb-[2rem]">{content.address}</div>
+      </div>
 
       <div className="App" data-aos="fade-up">
         <div data-aos="fade-up" className="z-1">
-          <NaverMap  clientId={clientId} />
-          {/* <dl className="flex bg-gray-200 items-center justify-center h-[4rem]">
-            <dt>본사</dt>
-            <dd className="flex text-xs">
-              <p className="mx-2">
-                <strong>ADDRESS.</strong>서울 마포구 잔다리로 30-11
-              </p>
-              <p className="mr-2">
-                <strong>TEL.</strong>010-5682-4220
-              </p>
-              <p className="mr-2">
-                <strong>EMAIL.</strong>dbcjdals@ToonKoi.com
-              </p>
-            </dd>
-          </dl> */}
+          <NaverMap clientId={clientId} />
         </div>
       </div>
       <hr className="my-[2rem]" />
       <div className="flex-row mb-[5rem]" data-aos="fade-up">
-        <div className="text text-3xl">비즈니스 문의</div>
-        <div className="my-4">아래 연락처 또는 이메일로 문의하시면 검토 후 빠른 시일 내 연락 드리겠습니다.</div>
-        <div className="">TEL : 02-2602-5250</div>
-        <div className="">E-Mail : koicontent@koicontent.com</div>
-        {/* <button className="btn my-8 rounded-3xl h-[2rem] bg-slate-900 text-white w-[7rem] hover:bg-orange-500">문의하기</button> */}
-      </div>  
+        <div className="text text-3xl">{content.businessInquiry}</div>
+        <div className="my-4">{content.inquiryDetails}</div>
+        <div className="">{content.phone}</div>
+        <div className="">{content.email}</div>
+        <button
+          className="btn my-8 rounded-3xl h-[2rem] bg-slate-900 text-white w-[7rem] hover:bg-orange-500"
+          onClick={openModal}
+        >
+          {content.inquireButton}
+        </button>
+      </div>
+      <EmailModal isOpen={isModalOpen} onClose={closeModal} />
     </RootLayout>
   );
 };
