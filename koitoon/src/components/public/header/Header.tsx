@@ -194,7 +194,7 @@ export default function App() {
               <button
                 onClick={() => handleButtonClick("KO")}
                 className={`text-gray-600 text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                  language === "KO" ? "font-bold underline text-orange-600" : "opacity-25"
+                  language === "KO" ? "font-bold underline text-black" : "opacity-25"
                 }`}
               >
                 KO
@@ -205,7 +205,7 @@ export default function App() {
               <button
                 onClick={() => handleButtonClick("EN")}
                 className={`text-gray-600 text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                  language === "EN" ? "font-bold underline text-orange-600" : "opacity-25"
+                  language === "EN" ? "font-bold underline text-black" : "opacity-25"
                 }`}
               >
                 EN
@@ -231,7 +231,7 @@ export default function App() {
               key={index}
               onMouseOver={() => handleMenuHover(menuKey)}
               onMouseLeave={handleMenuLeave}
-              className="relative ml-8"
+              className="relative ml-8 font-bold"
             >
               <Link
                 href={data[language as "KO" | "EN"][menuKey].url}
@@ -280,7 +280,7 @@ export default function App() {
             <button
               onClick={() => handleButtonClick("KO")}
               className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                language === "KO" ? "font-bold underline text-orange-600" : "opacity-25"
+                language === "KO" ? "font-bold underline text-black" : "opacity-25"
               }`}
             >
               KO
@@ -291,7 +291,7 @@ export default function App() {
             <button
               onClick={() => handleButtonClick("EN")}
               className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                language === "EN" ? "font-bold underline text-orange-600" : "opacity-25"
+                language === "EN" ? "font-bold underline text-black" : "opacity-25"
               }`}
             >
               EN

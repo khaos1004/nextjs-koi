@@ -4,23 +4,35 @@ import Header from "@/components/public/header/Header";
 import Side from "@/components/public/side/Side";
 import Footer from "@/components/public/footer/Footer";
 import { useEffect, useState, useContext } from "react";
-import { LanguageProvider, default as LanguageContext } from "@/context/Language"; // 올바르게 import
+import {
+  LanguageProvider,
+  default as LanguageContext,
+} from "@/context/Language"; // 올바르게 import
 import MainTop from "@/../../public/images/main/메인_배경.jpg";
 import MainCenter from "@/../../public/images/main/메인_채용.jpg";
 import Arrow from "@/../../public/images/main/free-icon-direction-arrow-4939761.png";
 import Image from "next/image";
 import Link from "next/link";
 
-import Partner1 from "@/../../public/images/partner/파트너사_bookcube.png";
-import Partner2 from "@/../../public/images/partner/파트너사_네이버시리즈.png";
-import Partner3 from "@/../../public/images/partner/파트너사_bookcube.png";
-import Partner4 from "@/../../public/images/partner/파트너사_bookcube.png";
-import Partner5 from "@/../../public/images/partner/파트너사_리디.png";
-import Partner6 from "@/../../public/images/partner/파트너사_bookcube.png";
-import Partner7 from "@/../../public/images/partner/파트너사_bookcube.png";
-import Partner8 from "@/../../public/images/partner/파트너사_네이버시리즈.png";
+import Partner1 from "@/../../public/images/webtoon/image0.png";
+import Partner2 from "@/../../public/images/webtoon/image1.jpeg";
+import Partner3 from "@/../../public/images/webtoon/image3.jpeg";
+import Partner4 from "@/../../public/images/webtoon/image4.jpeg";
+import Partner5 from "@/../../public/images/webtoon/image5.jpeg";
+import Partner6 from "@/../../public/images/webtoon/image6.png";
+import Partner7 from "@/../../public/images/webtoon/image7.jpeg";
+import Partner8 from "@/../../public/images/webtoon/image8.jpeg";
 
-const images = [Partner1, Partner2, Partner3, Partner4, Partner5, Partner6, Partner7, Partner8];
+const images = [
+  Partner1,
+  Partner2,
+  Partner3,
+  Partner4,
+  Partner5,
+  Partner6,
+  Partner7,
+  Partner8,
+];
 
 const textContent = {
   KO: {
@@ -30,16 +42,19 @@ const textContent = {
     more: "MORE",
     recruit: "RECRUIT",
     recruitment: "직원채용",
-    recruitmentDescription: "글로벌 웹툰을 만들어 나갈 실력있고 열정적인 인재들을 찾고 있습니다.",
+    recruitmentDescription:
+      "글로벌 웹툰을 만들어 나갈 실력있고 열정적인 인재들을 찾고 있습니다.",
   },
   EN: {
-    leading: "Leading webtoon trends and culture, connecting authors and readers",
+    leading:
+      "Leading webtoon trends and culture, connecting authors and readers",
     globalStudio: "Global Webtoon Studio",
     goToWorks: "Go to Works",
     more: "MORE",
     recruit: "RECRUIT",
     recruitment: "Recruitment",
-    recruitmentDescription: "We are looking for talented and passionate individuals to create global webtoons.",
+    recruitmentDescription:
+      "We are looking for talented and passionate individuals to create global webtoons.",
   },
 };
 
@@ -49,16 +64,18 @@ function HomePage() {
   const totalImages = images.length;
 
   const handleNext = () => {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 639;
     const imagesPerSlide = isMobile ? 2 : 4;
     setCurrentIndex((prevIndex) => (prevIndex + imagesPerSlide) % totalImages);
   };
 
   const handlePrev = () => {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 639;
     const imagesPerSlide = isMobile ? 2 : 4;
     setCurrentIndex((prevIndex) =>
-      prevIndex - imagesPerSlide < 0 ? totalImages - imagesPerSlide : prevIndex - imagesPerSlide
+      prevIndex - imagesPerSlide < 0
+        ? totalImages - imagesPerSlide
+        : prevIndex - imagesPerSlide
     );
   };
 
@@ -77,7 +94,7 @@ function HomePage() {
         <Image
           src={MainTop}
           alt="Main background"
-          className="brightness-50 w-full h-[25rem]"
+          className="brightness-50 w-full h-[35rem]"
         />
         <div className="main_image_text justify-center items-center content-center">
           <div className="text-center">
@@ -91,12 +108,13 @@ function HomePage() {
 
           <div className="sm:hidden text-3xl font-bold justify-center items-center text-center">
             WEBTOON
-            <br className="" /> <span className="te text-orange-700">KOI CONTENT</span>
+            <br className="" />{" "}
+            <span className="te text-orange-700">KOI CONTENT</span>
           </div>
 
           <div className="flex justify-center mt-8">
             <Link href="/about/company">
-              <button className="btn text-white rounded-3xl w-[13rem] hover:bg-orange-500 bg-inherit">
+              <button className="btn text-white rounded-3xl w-[13rem] hover:bg-[#EE511F] bg-inherit">
                 {text.goToWorks} &nbsp; &nbsp; &gt;{" "}
               </button>
             </Link>
@@ -144,14 +162,17 @@ function HomePage() {
             {images
               .slice(currentIndex, currentIndex + imagesPerSlide / 2)
               .map((src, index) => (
-                <Image
-                  key={index}
-                  src={src}
-                  alt={`Thumbnail ${index}`}
-                  className="w-1/2 shadow-2xl"
-                  width={100}
-                  height={100} // 이미지 크기 조정
-                />
+                <div key={index} className="w-24 h-24 flex-none">
+                  {" "}
+                  {/* 고정된 크기의 컨테이너 */}
+                  <Image
+                    src={src}
+                    alt={`Thumbnail ${index}`}
+                    className="object-cover w-full h-full" // 이미지 크기 조정 및 고정
+                    width={96}
+                    height={96}
+                  />
+                </div>
               ))}
           </div>
           <div className="flex justify-center mt-8 items-center">

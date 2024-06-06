@@ -5,11 +5,14 @@ import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
 import { cardsData, Card } from "@/app/board/Data"; // 정확한 경로로 수정하세요.
 import Link from "next/link"; // Link를 import합니다.
+import Dea from "@/../../public/images/webtoon/image9.jpeg";
+
 
 const HomePage: React.FC = () => {
   const [visibleCount, setVisibleCount] = useState(5);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchFilter, setSearchFilter] = useState('title');
+  const [placeholder, setPlaceholder] = useState('검색어를 입력해주세요');
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -65,24 +68,26 @@ const HomePage: React.FC = () => {
           </li>
           <li>회사소식</li>
         </ul>
-        <div className="text-4xl my-[4rem] font-medium text-center">회사소식</div>
+        <div className="text-4xl my-[4rem] ss:text-center font-bold">회사소식</div>
       </div>
       <div className="flex" data-aos="fade-up">
         <select 
-          className="select select-ghost w-[10rem] max-w-xs mr-2 ss:w-[7rem] ss:text-[0.6rem]"
+          className="select select-ghost w-[10rem] max-w-xs mr-2 ss:w-[7rem] ss:text-[0.6rem] border border-gray-300"
           onChange={(e) => setSearchFilter(e.target.value)}
         >
           <option className="hover:bg-gray-500 " value="title">제목</option>
           <option className="hover:bg-gray-500 " value="content">내용</option>
           <option className="hover:bg-gray-500 " value="title+content">제목 + 내용</option>
         </select>
-        <label className="input input-bordered flex items-center gap-2 w-[20rem]">
+        <label className="input input-bordered flex items-center gap-2 w-[20rem] ">
           <input
             type="text"
             className="grow ss:w-[6rem] ss:text-[0.5rem]"
-            placeholder="검색어를 입력해주세요"
+            placeholder={placeholder}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            onFocus={() => setPlaceholder('입력 중')}
+            onBlur={() => setPlaceholder('검색어를 입력해주세요')}
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -103,9 +108,9 @@ const HomePage: React.FC = () => {
       {filteredCards.length > 0 ? (
         filteredCards.slice(0, visibleCount).map((card) => (
           <div key={card.id} onClick={() => handleCardClick(card)}>
-            <div className="card lg:card-side bg-base-100 shadow-xl cursor-pointer flex " data-aos="fade-up">
-              <div className="w-1/4">
-                <Image src={card.imageUrl} alt={card.title} width={400} height={300} objectFit="cover" />
+            <div className="card lg:card-side bg-base-100 cursor-pointer flex " data-aos="fade-up">
+              <div className="sm:w-1/4 border border-gray-300">
+                <Image src={card.imageUrl} alt={card.title} width={400} height={300} objectFit="cover" />                
               </div>
               <div className="w-3/4 card-body">
                 <h2 className="card-title">{card.title}</h2>
@@ -123,7 +128,6 @@ const HomePage: React.FC = () => {
         </div>
       )}
       <div ref={loadMoreRef} className="h-16"></div>
-
     </RootLayout>
   );
 };

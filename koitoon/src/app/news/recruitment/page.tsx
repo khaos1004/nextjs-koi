@@ -8,6 +8,12 @@ import Image from "next/image";
 import lico from "@/../public/images/lico (1).jpg";
 import Link from "next/link";
 import Car from "../../../../public/images/news/career 1.png";
+import CarPC from "../../../../public/images/news/채용공고_배경_데스크탑.jpg";
+import CarMobile from "../../../../public/images/news/채용공고_배경_모바일.jpg";
+import Hourglass from "../../../../public/images/news//Vector.png";
+import Hand from "../../../../public/images/news//Vector (1).png";
+import Paper from "../../../../public/images/news//Vector (2).png";
+import Focus from "../../../../public/images/news//Vector (3).png";
 
 interface EmailFormData {
   to: string;
@@ -48,63 +54,86 @@ const EmailForm: React.FC = () => {
         <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
           <ul className="ss:hidden">
             <li>
-              <a href="/">홈</a>
+              <Link href="/">홈</Link>
             </li>
             <li>
-              <a href="/">NEWS</a>
+              <Link href="/">NEWS</Link>
             </li>
             <li>
               <a>직원채용</a>
             </li>
           </ul>
-          <div className="text-4xl mt-[4rem] mb-[1rem] font-medium ss:text-center">
+          <div className="text-4xl mt-[4rem] mb-[1rem] font-bold ss:text-center">
             직원 채용
           </div>
-          <div>
+          <div className="font-[20px] ss:text-center">
             웹툰코이컨텐츠와 함께 즐겁게 일할 웹툰 작가님을 기다리고 있습니다.
           </div>
         </div>
 
-        <div className="container mx-auto" data-aos="fade-up">
-          <div className="my-[2rem]">
-            <Image src={Car} alt={""} className="w-full" />
+        <div className="container mx-auto " data-aos="fade-up  ">
+          <div className="my-[2rem] ss:hidden flex">
+            <Image src={CarPC} alt={""} className="w-full" />
           </div>
 
+          <div className="my-[2rem] hidden ss:flex min-w-[320px]">
+            <Image src={CarMobile} alt={""} />
+          </div>
+
+          {/* 모바일 */}
           <div
-            className="p-8 border border-violet-200 rounded-lg bg-violet-50"
-            data-aos="fade-up"
+            className="p-8 border border-violet-200 rounded-lg bg-violet-50 sm:hidden min-w-[320px]"
+            
           >
-            <h2 className="text-2xl font-bold mb-12 flex items-center">
-              <span className="inline-block bg-orange-600 h-4 w-4 mr-2"></span>
-              웹툰 파트
+            <h2 className="text-2xl font-bold mb-12 flex items-center ss:text-center">
+              <span className="inline-block bg-orange-600 h-4 w-4 mr-2 ss:text-center"></span>
+              <span className="ss:text-center"> 웹툰 파트</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
                   <span className="font-bold w-2 text-xl mr-2">|</span> 상시
-                  모집
+                  모집 <Image src={Hourglass} className="ml-4 w-6" alt={""} />
                 </h3>
-                <ul className="list-disc ml-5">
+                <ul className="list-disc ml-8">
                   <li>콘텐츠 작가: 오리지널 / 각색콘티 (그림콘티)</li>
                   <li>배경, 선화, 채색 작가</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
-                  <span className="font-bold text-xl w-2 mr-2">|</span> 자격요건
+                  <span className="font-bold text-xl w-2 mr-2">|</span> 자격요건 <Image src={Paper} className="ml-4 w-7" alt={""} />
                 </h3>
-                <ul className="list-disc ml-5">
-                  <li>장르, 소재 무관</li>
+                <ul className="list-disc ml-8">
+                  <li className="">장르, 소재 무관</li>
                   <li>신입/기성 작가 무관</li>
                   <li>성인 이상 지원 가능</li>
                 </ul>
               </div>
+
+              <div className="mt-8">
+              <h3 className="text-xl font-semibold mb-2 flex items-center">
+                <span className="font-extrabold text-xl tracking-widest w-4 mr-2">
+                  |
+                </span>
+                지원 방법 <Image src={Focus} className="ml-4 w-8" alt={""} />
+              </h3>
+              <ul className="list-disc ml-8">
+                <li className="w-auto">E-mail 지원: kocontent@kocontent.com</li>
+                <li>
+                  지원 서류: 자유 양식 (이력서, 작품 포트폴리오, 기획안 등)
+                </li>
+                <li className="text-red-600">
+                  메일 전 화대답 빠르게 연락 드리겠습니다.
+                </li>
+              </ul>
+            </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
                   <span className="font-bold text-xl w-2 mr-2">|</span> 복지 및
-                  혜택
+                  혜택 <Image src={Hand} className="ml-4 w-8" alt={""} />
                 </h3>
-                <ul className="list-disc ml-5">
+                <ul className="list-disc ml-8">
                   <li>자율으로 연차/반차 사용</li>
                   <li>야근 절대 X, 칼퇴 보장</li>
                   <li>회사 창립기념일 휴무, 여름휴가 지원</li>
@@ -115,7 +144,60 @@ const EmailForm: React.FC = () => {
                   <li>도서 구매 비용 지원</li>
                   <li>고양이 있음</li>
                   <li>고양이 귀여움</li>
-                  <li>고양이 털밥짐</li>
+                  <li>고양이 털빠짐</li>
+                </ul>
+              </div>
+            </div>            
+          </div>
+
+          {/* PC화면  */}
+
+          <div
+            className="p-8 border border-violet-200 rounded-lg bg-violet-50 ss:hidden"
+            data-aos="fade-up"
+          >
+            <h2 className="text-2xl font-bold mb-12 flex items-center ss:text-center">
+              <span className="inline-block bg-orange-600 h-4 w-4 mr-2 ss:text-center"></span>
+              <span className="ss:text-center"> 웹툰 파트</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                  <span className="font-bold w-2 text-xl mr-2">|</span> 상시
+                  모집 <Image src={Hourglass} className="ml-4 w-6" alt={""} />
+                </h3>
+                <ul className="list-disc ml-8">
+                  <li>콘텐츠 작가: 오리지널 / 각색콘티 (그림콘티)</li>
+                  <li>배경, 선화, 채색 작가</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                  <span className="font-bold text-xl w-2 mr-2">|</span> 자격요건 <Image src={Paper} className="ml-4 w-7" alt={""} />
+                </h3>
+                <ul className="list-disc ml-8">
+                  <li className="">장르, 소재 무관</li>
+                  <li>신입/기성 작가 무관</li>
+                  <li>성인 이상 지원 가능</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                  <span className="font-bold text-xl w-2 mr-2">|</span> 복지 및
+                  혜택 <Image src={Hand} className="ml-4 w-8" alt={""} />
+                </h3>
+                <ul className="list-disc ml-8">
+                  <li>자율으로 연차/반차 사용</li>
+                  <li>야근 절대 X, 칼퇴 보장</li>
+                  <li>회사 창립기념일 휴무, 여름휴가 지원</li>
+                  <li>외부 컨퍼런스 참석 가능</li>
+                  <li>명절 선물 및 보너스 지급</li>
+                  <li>다양한 종류의 간식 및 음료 상시 제공</li>
+                  <li>전직원 듀얼모니터 및 맥무릎 장비 지원</li>
+                  <li>도서 구매 비용 지원</li>
+                  <li>고양이 있음</li>
+                  <li>고양이 귀여움</li>
+                  <li>고양이 털빠짐</li>
                 </ul>
               </div>
             </div>
@@ -124,13 +206,17 @@ const EmailForm: React.FC = () => {
                 <span className="font-extrabold text-xl tracking-widest w-4 mr-2">
                   |
                 </span>
-                지원 방법
+                지원 방법 <Image src={Focus} className="ml-4 w-8" alt={""} />
               </h3>
-              <li className="break-all">E-mail 지원: kocontent@kocontent.com</li>
-              <p>지원 서류: 자유 양식 (이력서, 작품 포트폴리오, 기획안 등)</p>
-              <p className="text-red-600 mt-4">
-                ※ 메일 전 화대답 빠르게 연락 드리겠습니다.
-              </p>
+              <ul className="list-disc ml-8">
+                <li>E-mail 지원: kocontent@kocontent.com</li>
+                <li>
+                  지원 서류: 자유 양식 (이력서, 작품 포트폴리오, 기획안 등)
+                </li>
+                <li className="text-red-600">
+                  메일 전 화대답 빠르게 연락 드리겠습니다.
+                </li>
+              </ul>
             </div>
           </div>
         </div>

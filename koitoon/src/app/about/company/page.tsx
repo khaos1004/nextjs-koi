@@ -9,7 +9,6 @@ import React, {
   SetStateAction,
   createContext,
 } from "react";
-import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
 import Main from "@/../public/images/about/메인.jpg";
 import Mid from "@/../public/images/about/Mask group.png";
@@ -17,11 +16,6 @@ import t1 from "@/../public/images/about/icon_about/content-creator.png";
 import t2 from "@/../public/images/about/icon_about/worldwide.png";
 import t3 from "@/../public/images/about/icon_about/planing.png";
 import MainAbout from "@/../public/images/about/mainabout.jpg";
-// import Language from "@/context/Language";
-import historybg from "@/../public/images/history_bg.jpg";
-import laod from "@/../public/images/laod.jpg";
-import bg from "../../../../public/images/history_bg.jpg";
-import sub from "../../../../public/images/eBig_logo.png";
 import Header from "@/components/public/header/Header";
 import Side from "@/components/public/side/Side";
 import Footer from "@/components/public/footer/Footer";
@@ -133,17 +127,17 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         {/* --------------------------------------------------------------- */}
-        <div className="relative w-full h-screen flex items-center justify-center bg-black">
+        <div className="sm:flex ss:hidden relative w-full py-12 flex items-center justify-center bg-black ">
           <Image
             src={Mid}
             alt="Company Background"
             fill
-            objectFit="cover"
-            className="absolute inset-0 w-full h-full opacity-50"
+            className="absolute inset-0 w-full h-full object-cover opacity-70"
           />
-          <div className="relative z-10 w-full max-w-lg mx-auto px-6 text-white">
+
+          <div className="relative z-10 w-full max-w-screen-lg px-8 text-white flex flex-col md:flex-row justify-between items-start">
             {/* COMPANY PROFILE 섹션 */}
-            <div className="text-center mb-12">
+            <div className="md:w-1/2 mt-12 md:mt-0">
               <div className="text-orange-600 text-2xl font-bold mb-6">
                 COMPANY PROFILE
               </div>
@@ -164,43 +158,146 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* BUSINESS AREA 섹션 */}
-            <div className="text-center">
-              <div className="text-orange-600 text-2xl font-bold mb-6">
+            <div className="md:w-1/2 mt-24 md:mt-48">
+              <div className="text-orange-600 text-2xl font-bold mb-6 text-center md:text-left">
                 BUSINESS AREA
               </div>
-              <div className="space-y-8">
-                <div className="flex justify-center space-x-8">
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
-                      <Image src={t1} alt="Content Creator" width={32} height={32} />
-                    </div>
-                    <div className="flex items-center text-sm mt-2">
-                      <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-                      <span className="font-bold">웹툰 콘텐츠 제작</span>
-                    </div>
+              <div className="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
+                <div className="flex flex-col items-center">
+                  <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
+                    <Image
+                      src={t1}
+                      alt="Content Creator"
+                      width={40}
+                      height={40}
+                    />
                   </div>
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
-                      <Image src={t2} alt="Worldwide" width={32} height={32} />
-                    </div>
-                    <div className="flex items-center text-sm mt-2">
-                      <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-                      <span className="font-bold">해외 유통</span>
-                    </div>
+                  <div className="flex items-center text-sm">
+                    <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                    <span className="font-bold">웹툰 콘텐츠 제작</span>
                   </div>
                 </div>
-                <div className="flex justify-center">
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
-                      <Image src={t3} alt="AI Webtoon" width={32} height={32} />
+                <div className="flex flex-col items-center">
+                  <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
+                    <Image src={t2} alt="Worldwide" width={40} height={40} />
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                    <span className="font-bold">해외 유통</span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
+                    <Image src={t3} alt="AI Webtoon" width={40} height={40} />
+                  </div>
+                  <div className="flex items-center text-sm text-center">
+                    <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                    <span className="font-bold">
+                      AI웹툰 제작
+                      <br />
+                      기술 개발
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* --------------------------------------------------------------- */}
+
+        <div className="hidden ss:flex relative w-full h-auto flex-col items-center justify-center bg-black py-8">
+          <Image
+            src={Mid}
+            alt="Company Background"
+            fill
+            className="object-cover absolute inset-0 w-full h-full opacity-50"
+          />
+          <div className="relative z-10 w-full max-w-md mx-auto px-4 text-white">
+            <div className="relative z-10 w-full max-w-lg mx-auto px-6 text-white">
+              {/* COMPANY PROFILE 섹션 */}
+              <div className="text-center mb-12">
+                <div className="text-orange-600 text-2xl font-bold mb-6">
+                  COMPANY PROFILE
+                </div>
+                <div className="text-gray-300 space-y-4">
+                  <div>
+                    <span className="block text-gray-400 text-sm">
+                      설립연도
+                    </span>
+                    <span className="text-lg">2015년 10월 02일</span>
+                  </div>
+                  <div>
+                    <span className="block text-gray-400 text-sm">
+                      대표이사
+                    </span>
+                    <span className="text-lg">이준형 대표</span>
+                  </div>
+                  <div>
+                    <span className="block text-gray-400 text-sm">
+                      본사위치
+                    </span>
+                    <span className="text-lg">
+                      서울시 마포구 잔다리로 30-11
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* BUSINESS AREA 섹션 */}
+              <div className="text-center">
+                <div className="text-orange-600 text-2xl font-bold mb-6">
+                  BUSINESS AREA
+                </div>
+                <div className="space-y-8">
+                  <div className="flex justify-center space-x-8">
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
+                        <Image
+                          src={t1}
+                          alt="Content Creator"
+                          width={32}
+                          height={32}
+                        />
+                      </div>
+                      <div className="flex items-center text-sm mt-2">
+                        <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                        <span className="font-bold">웹툰 콘텐츠 제작</span>
+                      </div>
                     </div>
-                    <div className="flex items-center text-sm mt-2">
-                      <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-                      <span className="font-bold text-center">
-                        AI웹툰 제작
-                        <br />
-                        기술 개발
-                      </span>
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
+                        <Image
+                          src={t2}
+                          alt="Worldwide"
+                          width={32}
+                          height={32}
+                        />
+                      </div>
+                      <div className="flex items-center text-sm mt-2">
+                        <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                        <span className="font-bold">해외 유통</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
+                        <Image
+                          src={t3}
+                          alt="AI Webtoon"
+                          width={32}
+                          height={32}
+                        />
+                      </div>
+                      <div className="flex items-center text-sm mt-2">
+                        <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                        <span className="font-bold text-center">
+                          AI웹툰 제작
+                          <br />
+                          기술 개발
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -208,9 +305,8 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* --------------------------------------------------------------- */}
-
-
 
         {/* -------------------------------------------------------------- */}
         <div className="flex flex-row min-h-screen w-screen my-[1rem] relative ">
@@ -227,7 +323,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             {/* ---------------------------------------------------------------------------------------------- */}
-
             <ul
               className="timeline timeline-snap-icon timeline-vertical hidden ss:flex timeline-start"
               data-aos="fade-up"
@@ -517,9 +612,7 @@ const HomePage: React.FC = () => {
                     <span className="text-sm font-semibold mr-2">11월</span>{" "}
                     투믹스 12작품 연재 계약 완료 및 런칭
                     <br />
-                    <span className="text-sm font-semibold mr-2">
-                      10월
-                    </span>
+                    <span className="text-sm font-semibold mr-2">10월</span>
                     <span className=" text-orange-600">
                       웹툰코이컨텐츠 설립
                     </span>
@@ -844,9 +937,6 @@ const HomePage: React.FC = () => {
         <div className="flex flex-col">
           <Footer />
         </div>
-
-        {/* <div className="absolute top-10 left-10 bg-orange-500 rounded-full lg:h-[20rem] lg:w-[20rem] opacity-10 z-0 lg:mt-[145rem] lg:ml-[15rem] ss:mt-[95rem] ss:ml-[20rem]"></div>
-        <div className="absolute top-10 left-10 bg-orange-600 rounded-full lg:h-[20rem] lg:w-[20rem] opacity-90 z-0 lg:mt-[95rem] lg:ml-[70rem] ss:mt-[95rem] ss:ml-[25 rem] overflow-hidden"></div> */}
       </LanguageProvider>
     </>
   );

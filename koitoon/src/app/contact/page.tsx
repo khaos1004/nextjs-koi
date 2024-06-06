@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
   const closeModal = () => setIsModalOpen(false);
 
   const textContent = {
-    ko: {
+    KO: {
       breadcrumbs: ["홈", "CONTACT"],
       contact: "CONTACT",
       directions: "오시는 길",
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
       email: "E-Mail : koicontent@koicontent.com",
       inquireButton: "문의하기",
     },
-    en: {
+    EN: {
       breadcrumbs: ["Home", "CONTACT"],
       contact: "CONTACT",
       directions: "Directions",
@@ -91,7 +91,7 @@ const HomePage: React.FC = () => {
     },
   };
 
-  const content = language === "KO" ? textContent.ko : textContent.en;
+  const content = language === "KO" ? textContent.KO : textContent.EN;
 
   return (
     <RootLayout>
@@ -105,14 +105,14 @@ const HomePage: React.FC = () => {
         </ul>
       </div>
       <div
-        className="text-4xl my-[2rem] font-medium text-orange-500"
+        className="text-4xl my-[2rem] font-bold text-[#EE511F]"
         data-aos="fade-up"
       >
         {content.contact}
       </div>
       <div className="flex-row" data-aos="fade-up">
-        <div className="text text-3xl">{content.directions}</div>
-        <div className="mt-8 font-bold">{content.company}</div>
+        <div className="text text-3xl font-bold">{content.directions}</div>
+        <div className="mt-4 font-bold">{content.company}</div>
         <div className="mb-[2rem]">{content.address}</div>
       </div>
 
@@ -127,12 +127,12 @@ const HomePage: React.FC = () => {
         <div className="my-4">{content.inquiryDetails}</div>
         <div className="">{content.phone}</div>
         <div className="">{content.email}</div>
-        <button
+        {/* <button
           className="btn my-8 rounded-3xl h-[2rem] bg-slate-900 text-white w-[7rem] hover:bg-orange-500"
           onClick={openModal}
         >
           {content.inquireButton}
-        </button>
+        </button> */}
       </div>
       <EmailModal isOpen={isModalOpen} onClose={closeModal} />
     </RootLayout>

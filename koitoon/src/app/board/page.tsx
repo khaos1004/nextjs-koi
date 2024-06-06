@@ -62,8 +62,8 @@ const BoardPage: React.FC = () => {
       <hr className="my-[2rem]" />
 
       <div className="flex justify-center items-center mb-[4rem]">
-        <button className="btn btn-neutral w-[5rem]">
-          <Link href="/news/announcements">목록</Link>
+        <button className="btn btn-neutral w-[5rem] hover:bg-[#EE511F]">
+          <Link href="news/announcements">목록</Link>
         </button>
       </div>
 

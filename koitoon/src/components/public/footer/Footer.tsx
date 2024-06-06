@@ -6,11 +6,11 @@ import Image from "next/image";
 const Footer = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
-    link.href = "/pdf/Test.pdf"; // PDF 파일 경로
-    link.download = "Test.pdf"; // 다운로드 시 파일 이름
+    link.href = "/pdf/webToonKoi.pdf"; // PDF 파일 경로
+    link.download = "웹툰코이컨텐츠 회사소개서.pdf"; // 다운로드 시 파일 이름
     document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    link.click(); 
+    document.body.removeChild(link); 
   };
 
   return (
@@ -28,7 +28,7 @@ const Footer = () => {
               {/* <button className="btn glass">회사소개서</button> */}
               <button
                 onClick={downloadPDF}
-                className="btn btn-sm rounded-3xl text-white bg-slate-800 hover:text-black"
+                className="btn btn-sm rounded-3xl text-white bg-slate-800 hover:text-black hover:bg-[#EE511F]"
               >
                 회사소개서
                 <span>
@@ -89,7 +89,7 @@ const Footer = () => {
               {/* <button className="btn glass">회사소개서</button> */}
               <button
                 onClick={downloadPDF}
-                className="btn btn-sm rounded-3xl text-white bg-slate-800 hover:text-black bol border-[rgba(0,0,0,0.5)]"
+                className="btn btn-sm rounded-3xl text-white bg-slate-800 hover:text-black bol border-[rgba(0,0,0,0.5)] hover:bg-[#EE511F]"
               >
                 회사소개서
                 <span>
