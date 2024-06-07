@@ -66,8 +66,8 @@ const SimpleSlider1 = () => {
 
   return (    
 <>
-<div className='flex mt-52' data-aos="fade-up"
-     data-aos-duration="3000" >     
+<div className='flex mt-52' 
+     >     
         
     <div className='w-[35rem]'>
     <div className="card w-96 glass">

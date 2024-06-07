@@ -999,7 +999,7 @@ return (
 <div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
 </div>
 
-  <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
+  <div className="text-sm sm:breadcrumbs" >
     <ul className="ss:hidden">
       <li>
         <a href="/">홈</a>
@@ -1036,7 +1036,7 @@ return (
 
   <div
     className="grid ss:grid-cols-2 sm:grid-cols-4 gap-8 mb-[7.5rem] "
-    data-aos="fade-up"
+    
   >
     {filteredCards.map((card) => (
       <div key={card.id} className="flex flex-col items-center mb-8">
