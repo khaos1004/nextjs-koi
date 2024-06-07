@@ -13,6 +13,8 @@ import MainCenter from "@/../../public/images/main/메인_채용.jpg";
 import Arrow from "@/../../public/images/main/free-icon-direction-arrow-4939761.png";
 import Image from "next/image";
 import Link from "next/link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Partner1 from "@/../../public/images/webtoon/image0.png";
 import Partner2 from "@/../../public/images/webtoon/image1.jpeg";
@@ -62,6 +64,10 @@ function HomePage() {
   const { language } = useContext(LanguageContext);
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalImages = images.length;
+
+  useEffect(() => {
+    AOS.init(); // AOS 초기화
+  }, []);
 
   const handleNext = () => {
     const isMobile = window.innerWidth < 639;
@@ -187,7 +193,7 @@ function HomePage() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                viewBox="0 24 24"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path d="M15 19l-7-7 7-7"></path>
@@ -204,7 +210,7 @@ function HomePage() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                viewBox="0 24 24"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path d="M9 5l7 7-7 7"></path>

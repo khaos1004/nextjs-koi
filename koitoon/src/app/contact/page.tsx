@@ -95,7 +95,7 @@ const HomePage: React.FC = () => {
 
   return (
     <RootLayout>
-      <div className="text-sm sm:breadcrumbs lg:flex" data-aos="fade-up">
+      <div className="text-sm sm:breadcrumbs sm:flex" data-aos="fade-up">
         <ul className="ss:hidden">
           {content.breadcrumbs.map((breadcrumb, index) => (
             <li key={index}>
