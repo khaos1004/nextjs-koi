@@ -1,10 +1,16 @@
-'use client'
+"use client";
 
-import React, { useState } from "react";
+import React, { useState, useContext,useEffect } from "react";
 import RootLayout from "@/components/layout/root/RootLayout";
+import {
+  LanguageProvider,
+  default as LanguageContext,
+} from "@/context/Language";
+import useFont from '@/app/hooks/UseFont';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Link from "next/link";
 import Image from "next/image";
-import Empty from "@/../../public/images/main/thumbnail2.png";
 import Royal from "@/../../public/images/webtoon/image0.png";
 import Perfect from "@/../../public/images/webtoon/image1.jpeg";
 import We from "@/../../public/images/webtoon/image3.jpeg";
@@ -87,15 +93,33 @@ import Bank from "@/../../public/images/webtoon/image78.png";
 import How from "@/../../public/images/webtoon/image79.jpeg";
 
 interface CardData {
-id: number;
-image: any;
-url: any;
-title: string;
-content: string;
-hashtags: string;
-author: string;
-type: "연재작" | "완결작";
+  id: number;
+  image: any;
+  url: any;
+  title: string;
+  content: string;
+  hashtags: string;
+  author: string;
+  type: "연재작" | "완결작";
 }
+
+const textContent = {
+  KO: 
+  {
+    type1:"연재작",
+    type2:"완결작",
+    home:"홈",
+    work:"작품"
+  },
+  EN: 
+  {
+    type1:"serial work",
+    type2:"Completed work",
+    home:"Home",
+    work:"WORK"
+  }
+}
+
 
 const allCardsData: CardData[] = [
   {
@@ -301,8 +325,7 @@ const allCardsData: CardData[] = [
     image: Solo,
     url: "https://novel.bookpal.co.kr/view_toon/7013026",
     title: "혼밥하는 여자",
-    content:
-      "혼자 밥 먹는 외로운 남녀들의 모든 고민!! 오늘 밤엔 뭘 먹지?!",
+    content: "혼자 밥 먹는 외로운 남녀들의 모든 고민!! 오늘 밤엔 뭘 먹지?!",
     hashtags: "#에로틱 #드라마 #하렘",
     author: "비아그라/흑염소",
     type: "완결작",
@@ -357,7 +380,7 @@ const allCardsData: CardData[] = [
     url: "https://novel.bookpal.co.kr/view_toon/7013050",
     title: "성적취향",
     content:
-      "\"일반적인 건 흥미없어, 특별한게 흥분되잖아?\" 일탈을 꿈꾸며 SNS에 자신을 노출시키는 여자들과 그녀들을 사냥하는 남자의 이야기",
+      '"일반적인 건 흥미없어, 특별한게 흥분되잖아?" 일탈을 꿈꾸며 SNS에 자신을 노출시키는 여자들과 그녀들을 사냥하는 남자의 이야기',
     hashtags: "#현대물 #에로틱 #계약관계",
     author: "주녕/샴푸",
     type: "완결작",
@@ -478,7 +501,7 @@ const allCardsData: CardData[] = [
     url: "https://www.toomics.com/webtoon/episode/toon/2509",
     title: "친구아빠",
     content:
-      "친구의 아빠를 사랑하게 됐다. 내 첫경험을 바치고 싶을 만큼.어느 밤, 용기를 내 친구 아빠의 방으로 들어갔다.\"아저씨는 내가 여자로 보이지 않나요?\" 나는 그를 사랑하시 위해 돌이킬 수 없는 선택을 했다.",
+      '친구의 아빠를 사랑하게 됐다. 내 첫경험을 바치고 싶을 만큼.어느 밤, 용기를 내 친구 아빠의 방으로 들어갔다."아저씨는 내가 여자로 보이지 않나요?" 나는 그를 사랑하시 위해 돌이킬 수 없는 선택을 했다.',
     hashtags: "#여대생 #유부남 #비밀관계",
     author: "코이 / 해피그라",
     type: "완결작",
@@ -588,7 +611,7 @@ const allCardsData: CardData[] = [
     url: "https://www.toomics.com/webtoon/episode/toon/5216",
     title: "분양녀",
     content:
-      "우연하게...? 순결을 잃게 된 탐스러운 그녀, 신고를 다짐한 그녀가 선택한 방법은 \"분양녀 시스템\"? 뭐... 까짓것 몸으로 도장 찍고 계약합시다.!!!",
+      '우연하게...? 순결을 잃게 된 탐스러운 그녀, 신고를 다짐한 그녀가 선택한 방법은 "분양녀 시스템"? 뭐... 까짓것 몸으로 도장 찍고 계약합시다.!!!',
     hashtags: "#오피스 #계약관계 #조건만남",
     author: "코이/도능",
     type: "완결작",
@@ -676,7 +699,7 @@ const allCardsData: CardData[] = [
     url: "https://www.toomics.com/webtoon/episode/toon/5344",
     title: "노출교사",
     content:
-      "고등학교 선생님으로는 어울리지 않는 화려한 얼굴과 몸매의 소유자 \"혜린\". 항상 당당한 그녀에게도 비밀이 하나 있는데... 그것은 바로 \"노출 중독\" 이라는 것!! 그녀의 비밀스럽고 아슬아슬한 일탈이 시작된다.",
+      '고등학교 선생님으로는 어울리지 않는 화려한 얼굴과 몸매의 소유자 "혜린". 항상 당당한 그녀에게도 비밀이 하나 있는데... 그것은 바로 "노출 중독" 이라는 것!! 그녀의 비밀스럽고 아슬아슬한 일탈이 시작된다.',
     hashtags: "#선생님 #노출 #거유",
     author: "에로로/G유",
     type: "연재작",
@@ -687,7 +710,7 @@ const allCardsData: CardData[] = [
     url: "https://www.toomics.com/webtoon/episode/toon/5358",
     title: "버린남자",
     content:
-      "하찮고 별 볼일 없단 이유로 나를 버렸던 그 여자... 과거의 나를 지워버리고 다시 돌아왔다. \"이젠 내가 널 마음껏 갖고 놀아줄게\"",
+      '하찮고 별 볼일 없단 이유로 나를 버렸던 그 여자... 과거의 나를 지워버리고 다시 돌아왔다. "이젠 내가 널 마음껏 갖고 놀아줄게"',
     hashtags: "#유부녀 #전남친 #전여친",
     author: "코이/조오타",
     type: "완결작",
@@ -698,7 +721,7 @@ const allCardsData: CardData[] = [
     url: "https://www.toomics.com/webtoon/episode/toon/5391",
     title: "슈가대디",
     content:
-      "나의 사랑을 필요로 하는 남자 그리고 그 사랑의 대가는?! \"아저씨... 저의 아빠가 되어주세요♥\"",
+      '나의 사랑을 필요로 하는 남자 그리고 그 사랑의 대가는?! "아저씨... 저의 아빠가 되어주세요♥"',
     hashtags: "#계약관계 #스폰 #SNS",
     author: "썸/이규",
     type: "완결작",
@@ -939,8 +962,7 @@ const allCardsData: CardData[] = [
     image: MyD,
     url: "https://www.toomics.com/webtoon/episode/toon/7231",
     title: "내 딸을 부탁해",
-    content:
-      "친구가 딸애를 부탁하고 떠났다. 하지만 난, 그 애가 여자로 보인다",
+    content: "친구가 딸애를 부탁하고 떠났다. 하지만 난, 그 애가 여자로 보인다",
     hashtags: "#친구아빠 #관음 #금발",
     author: "비아그라 / 코작가",
     type: "완결작",
@@ -977,99 +999,110 @@ const allCardsData: CardData[] = [
     hashtags: "#캠퍼스 #여대생 #존예",
     author: "오투린/싸또",
     type: "완결작",
-  }
+  },
 ];
 
-
-
-
 const HomePage: React.FC = () => {
-const [selectedType, setSelectedType] = useState<"연재작" | "완결작">(
-"연재작"
-);
+  const { language } = useContext(LanguageContext);
 
-const filteredCards = allCardsData.filter(
-(card) => card.type === selectedType
-);
+  useFont(); // 커스텀 훅 사용
+  useEffect(() => {
+    AOS.init(); // AOS 초기화
+  }, []);
 
-return (
-<RootLayout>
-<div className="main_image">
-{/* <Image width={100} height={50} layout="intrinsic" objectFit="cover" src={bg} width='5000' alt="bg" />
-<div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
-</div>
+  const text = textContent[language];
+  console.log(text.type1);
 
-  <div className="text-sm sm:breadcrumbs" >
-    <ul className="ss:hidden">
-      <li>
-        <a href="/">홈</a>
-      </li>
-      <li>
-        <a>WEBTOON</a>
-      </li>
-    </ul>
-    <div className="text-4xl my-[4rem] ss:text-center font-bold">작품</div>
-  </div>
+  const [selectedType, setSelectedType] = useState<"연재작" | "완결작">(
+    "연재작"
+  );
 
-  <div className="flex justify-center items-center mb-[3rem]">
-    <button
-      className={`mr-4 text-2xl font-bold  ${
-        selectedType === "연재작"
-          ? "text-[#EE511F]"
-          : "hover:text-[#EE511F] opacity-30"
-      }`}
-      onClick={() => setSelectedType("연재작")}
-    >
-      연재작
-    </button>
-    <button
-      className={`text-2xl font-bold ${
-        selectedType === "완결작"
-          ? "text-[#EE511F]"
-          : "hover:text-[#EE511F] opacity-30"
-      }`}
-      onClick={() => setSelectedType("완결작")}
-    >
-      완결작
-    </button>
-  </div>
+  const filteredCards = allCardsData.filter(
+    (card) => card.type === selectedType
+  );
 
-  <div
-    className="grid ss:grid-cols-2 sm:grid-cols-4 gap-8 mb-[7.5rem] "
-    
-  >
-    {filteredCards.map((card) => (
-      <div key={card.id} className="flex flex-col items-center mb-8">
-        <div className="relative group overflow-hidden rounded-lg w-full h-[20rem]">
-          <Image
-            src={card.image}
-            alt="작품 이미지" 
-       
-            fill                                
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
-            <div className="text-white font-semibold text-sm mb-2">
-              {card.hashtags}
-            </div>
-            <div className="text-white font-bold text-sm">
-              {card.author}
-            </div>
-            <div className="text-lg text-white">ㅡ</div>
-            <div className="text-white text-xs mb-4">{card.content}</div>
-            <Link href={card.url} target="_blank">
-              <button className="bg-transparent text-white px-4 py-2 rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-black">
-                View +
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="text-lg font-medium mt-4">{card.title}</div>
+  return (
+    <RootLayout>
+      <div className="main_image">
       </div>
-    ))}
-  </div>
-</RootLayout>
-);
+
+      <div className="text-sm sm:breadcrumbs">
+        <ul className="ss:hidden">
+          <li>
+            <a href="/">{text.home}</a>
+          </li>
+          <li>
+            <a>WEBTOON</a>
+          </li>
+        </ul>
+        <div className="text-4xl my-[4rem] ss:text-center font-bold">{text.work}</div>
+      </div>
+
+      <div className="flex justify-center items-center mb-[3rem]">
+        <button
+          className={`mr-4 text-2xl font-bold  ${
+            selectedType === "연재작"
+              ? "text-[#EE511F]"
+              : "hover:text-[#EE511F] opacity-30"
+          }`}
+          onClick={() => setSelectedType("연재작")}
+        >
+          {text.type1}
+        </button>
+        <button
+          className={`text-2xl font-bold ${
+            selectedType === "완결작"
+              ? "text-[#EE511F]"
+              : "hover:text-[#EE511F] opacity-30"
+          }`}
+          onClick={() => setSelectedType("완결작")}
+        >
+          {text.type1}
+        </button>
+      </div>
+
+      <div className="grid ss:grid-cols-2 sm:grid-cols-4 gap-8 mb-[7.5rem] ">
+        {filteredCards.map((card) => (
+          <div key={card.id} className="flex flex-col items-center mb-8">
+            <div className="relative group overflow-hidden rounded-lg w-full h-[20rem]">
+              <Image
+                src={card.image}
+                alt="작품 이미지"
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
+                <div className="text-white font-semibold text-sm mb-2">
+                  {card.hashtags}
+                </div>
+                <div className="text-white font-bold text-sm">
+                  {card.author}
+                </div>
+                <div className="text-lg text-white">ㅡ</div>
+                <div className="text-white text-xs mb-4">          
+                  {card.content.length > 20
+                    ? card.content.substring(0, 20) + "..."
+                    : card.content}
+                </div>
+                <Link href={card.url} target="_blank">
+                  <button className="bg-transparent text-white px-4 py-2 rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-black">
+                    View +
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div className="text-lg font-medium mt-4">{card.title}</div>
+          </div>
+        ))}
+      </div>
+    </RootLayout>
+  );
 };
 
-export default HomePage;
+export default function Home() {
+  return (
+    <LanguageProvider>
+      <HomePage />
+    </LanguageProvider>
+  );
+}

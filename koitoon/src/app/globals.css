@@ -4,35 +4,53 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 
-* {
-  font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
-}
-
 /* styles/globals.css */
-
-/* Google Fonts에서 가져온 예제 */
-@import url('https://fonts.googleapis.com/css2?family=Spoqa+Han+Sans+Neo:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=MADE+Tommy:wght@400;700&display=swap');
-
-/* 한글에 대한 폰트 설정 */
-body {
-  font-family: 'Spoqa Han Sans Neo', sans-serif;
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* 영문에 대한 폰트 설정 */
-body *:lang(en) {
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Tommy';
+  src: url('/fonts/MADETommy-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Tommy';
+  src: url('/fonts/MADETommy-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.font-tommy {
   font-family: 'MADE Tommy', sans-serif;
 }
 
-@font-face {
-    font-family: 'RubikPuddles-Regular';
-    src: url('/fonts/RubikPuddles-Regular.ttf');
+.font-pretendard {
+  font-family: 'Pretendard', sans-serif;
 }
 
-@font-face {
-    font-family: 'SundayLemon';
-    src: url('/fonts/SundayLemon.ttf');
-}
+
 
 .textRainbow {
     background-image: linear-gradient(90deg, red, orange, yellow, green, blue, navy, purple);

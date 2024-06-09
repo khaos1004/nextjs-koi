@@ -4,8 +4,12 @@ import React, { useEffect, useContext } from "react";
 import bg from "../../../../public/images/history_bg.jpg";
 import RootLayout from "@/components/layout/root/RootLayout";
 import Image from "next/image";
-import LanguageContext from "@/context/Language";
-import { LocationComponent } from "@/components/contents/LangComponent";
+import {
+  LanguageProvider,
+  default as LanguageContext,
+} from "@/context/Language"; // 올바르게 import
+import AOS from "aos";
+import "aos/dist/aos.css";
 import too from "../../../../public/images/partner/파트너사_투믹스.png";
 import dl from "../../../../public/images/partner/파트너사_DLsitecomipo.png";
 import book from "../../../../public/images/partner/파트너사_bookcube.png";
@@ -30,56 +34,49 @@ import tapas from "../../../../public/images/partner/파트너사_타파스.png"
 import topco from "../../../../public/images/partner/파트너사_탑코.png";
 import piner from "../../../../public/images/partner/파트너사_피너툰.png";
 import sun from "../../../../public/images/partner/파트너사_해와달.png";
+import useFont from '@/app/hooks/UseFont';
+
+const textContent = {
+  KO: {
+    home: "홈",
+    about:"ABOUT",
+    partner:"파트너사",    
+   
+  },
+  EN: {
+    home: "Home",
+    about:"About",
+    partner:"Partner Company",      
+  },
+};
 
 const HomePage: React.FC = () => {
-  const clientId = "oygjgwg355"; // 네이버 지도 API 클라이언트 ID
+  
 
-  const textContent = {
-    KO: {
-      home: "홈",
-      path: "글로벌 웹툰 제작사",
-      goToWorks: "작품 바로가기",
-      more: "MORE",
-      recruit: "RECRUIT",
-      recruitment: "직원채용",
-      recruitmentDescription:
-        "글로벌 웹툰을 만들어 나갈 실력있고 열정적인 인재들을 찾고 있습니다.",
-    },
-    EN: {
-      leading:
-        "Leading webtoon trends and culture, connecting authors and readers",
-      globalStudio: "Global Webtoon Studio",
-      goToWorks: "Go to Works",
-      more: "MORE",
-      recruit: "RECRUIT",
-      recruitment: "Recruitment",
-      recruitmentDescription:
-        "We are looking for talented and passionate individuals to create global webtoons.",
-    },
-  };
+  useEffect(() => {
+    AOS.init(); // AOS 초기화
+  }, []);
+const { language } = useContext(LanguageContext);
+
+ const text = textContent[language];
+ useFont(); // 커스텀 훅 사용
 
   return (
     <RootLayout>
-      <div className="main_image">
-        {/* <Image width={100} height={50} layout="intrinsic" objectFit="cover" src={bg} width='5000' alt="bg" />
-        <div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
-      </div>
-
       <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
         <ul className="ss:hidden">
           <li>
-            <a href="/">홈</a>
+            <a href="/">{text.home}</a>
           </li>
           <li>
-            <a>ABOUT</a>
+            <a>{text.about}</a>
           </li>
-          <li>파트너사</li>
+          <li>{text.partner}</li>
         </ul>
         <div className="text-4xl my-[4rem] ss:text-center font-bold">
-          파트너사
+        {text.partner}
         </div>
       </div>
-
       <div
         className="hidden ss:grid grid-cols-2 gap-4 mb-[7.5rem]"
         data-aos="fade-up"
@@ -783,4 +780,10 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default function Home() {
+  return (
+    <LanguageProvider>
+      <HomePage />
+    </LanguageProvider>
+  );
+}

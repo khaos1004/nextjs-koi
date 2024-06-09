@@ -8,7 +8,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../../app/aos.css";
 import AOS from "aos";
 import { useEffect, ReactNode } from "react";
-import { LanguageProvider } from "@/context/Language";
+import {
+  LanguageProvider,
+  default as LanguageContext,
+} from "@/context/Language"; // 올바르게 import
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -18,24 +21,18 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   }, []);
 
   return (
-    <LanguageProvider>
-      <MenuProvider>
-        <div className="flex flex-col">
-          <div className="h-16">
-            <Header />
-          </div>
-          <Side />
-          <div className="flex flex-row min-h-screen w-screen my-[1rem]">
-            <div className="flex-1"></div>
-            <div className="flex-3 w-4/6">
-              {children}
-            </div>
-            <div className="flex-1"></div>
-          </div>
-          <Footer />
-        </div>
-      </MenuProvider>
-    </LanguageProvider>
+    <div className="flex flex-col">
+      <div className="h-16">
+        <Header />
+      </div>
+      <Side />
+      <div className="flex flex-row min-h-screen w-screen my-[1rem]">
+        <div className="flex-1"></div>
+        <div className="flex-3 w-4/6">{children}</div>
+        <div className="flex-1"></div>
+      </div>
+      <Footer />
+    </div>
   );
 };
 
