@@ -17,7 +17,43 @@ import {
 } from "@/context/Language";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import useFont from '@/app/hooks/UseFont';
+import useFont from "@/app/hooks/UseFont";
+
+const events = [
+  {
+    year: "2024",
+    items: [
+      {
+        date: "03월",
+        description: "비비안 JP 렌즈라이센스 자체 AI 적용 계약 (예정)",
+      },
+      {
+        date: "02월",
+        description:
+          "에르브레이와 MOU 업무 협약식 오르미디어 US 계약체결 및 유럽 진출 (9개품)",
+      },
+    ],
+  },
+  {
+    year: "2023",
+    items: [
+      { date: "12월", description: "(주)헬렌토리앤젤본부 설립" },
+      { date: "10월", description: "비비안 JP 계약체결 및 일본 진출 (20개품)" },
+      { date: "07월", description: "2차 작품 집필 완료 (에르브레이)" },
+      { date: "05월", description: "국가임상가공가 우수기업 인증" },
+      {
+        date: "04월",
+        description:
+          "노르프루믹스 작품 연재 계약 완료 및 런칭 예정 (애니노 노르프루믹스/피너티) (작품명)",
+      },
+      {
+        date: "02월",
+        description: "오르미디어 US 계약체결 및 유럽 진출 (7개품)",
+      },
+    ],
+  },
+  // 더 많은 이벤트 추가
+];
 
 interface HistoryEvent {
   month: string;
@@ -68,10 +104,10 @@ const textContent: Record<string, TextContent> = {
     about: "ABOUT",
     companyIntro: "회사소개",
     aboutUs: "ABOUT US",
-    webtoonTrend: "웹툰 트렌드",
+    webtoonTrend: "웹툰 트렌드와",
     culture: "문화",
     leading: "를 선도하고 ",
-    connecting: "를 연결하는 ",
+    connecting: "작가와 독자를 연결하는 ",
     globalWebtoon: "글로벌 웹툰 제작사",
     webtoonKoiContent: "웹툰코이컨텐츠",
     description:
@@ -181,10 +217,10 @@ const textContent: Record<string, TextContent> = {
     about: "About",
     companyIntro: "Company Introduction",
     aboutUs: "About Us",
-    webtoonTrend: "Webtoon Trends",
+    webtoonTrend: "Webtoon Trends and",
     culture: "Culture",
-    leading: " Leader,",
-    connecting: "as a Connection",
+    leading: " Leader",
+    connecting: "connecting authors and readers,",
     globalWebtoon: "Global Webtoon Creator",
     webtoonKoiContent: "Webtoon Koi Content",
     description:
@@ -349,11 +385,11 @@ const HomePage: React.FC = () => {
         </div>
         <Side />
         <div
-          className="flex flex-row min-h-screen w-screen mt-[1rem]"
+          className="flex flex-row min-h-[50rem] w-screen mt-[1rem]"
           data-aos="fade-up"
         >
           <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
-          <div className="flex-3 w-4/6">
+          <div className="flex-3 w-4/8">
             {/* 중앙 컨텐츠 영역 (3/5) */}
             <div className="text-sm sm:breadcrumbs">
               <ul className="ss:hidden">
@@ -365,44 +401,71 @@ const HomePage: React.FC = () => {
                 </li>
                 <li>{text.companyIntro}</li>
               </ul>
-              <div className="text-4xl my-[4rem] text-[#EE511F] font-bold ss:text-center">
+              <div className="text-4xl my-[4rem] text-[#EE511F] font-bold ss:text-left">
                 {text.aboutUs}
               </div>
             </div>
-            <div className="flex">
-              <div className="w-full max-w-[40rem] my-[3rem] mx-auto">
-                <div className="text-left sm:text-4xl ss:text-xl w-auto">
-                  <span className="font-bold">{text.webtoonTrend}</span>
-                  <span className="font-thin">{text.leading}</span>
-                  <span className="font-bold">{text.culture}</span>
-                  <span className="font-thin">{text.connecting}</span>
-                  <span className="font-bold">{text.globalWebtoon}</span>
-                </div>
-                <div className="w-full ss:flex justify-center my-8 hidden ">
-                  <Image
-                    src={Main}
-                    alt="ad"
-                    className="h-[15rem] object-contain"
-                  />
-                </div>
-                <div className="mt-12 text-left">
-                  <span className="font-bold">{text.webtoonKoiContent}</span>
-                  {text.description}
-                </div>
-              </div>
-
-              <div className="ml-4 w-auto hidden sm:flex">
-                <Image
-                  src={MainAbout}
-                  alt="ad"
-                  className="rounded-full ml-12"
-                />
-              </div>
-            </div>
+            <div className="flex text-left items-start justify-start">
+        <div className="w-full max-w-[35rem] my-[2rem]">
+          <div className="text-left sm:text-4xl ss:text-xl w-auto leading-snug">
+            <span className="font-bold">{text.webtoonTrend}</span>
+            <span className="font-bold">{text.culture}</span>
+            <span className="font-thin">{text.leading}</span><br />
+            <span className="font-thin">{text.connecting}</span><br />
+            <span className="font-bold">{text.globalWebtoon}</span>
+          </div>
+          <div className="w-full ss:flex justify-center my-8 hidden">
+            <Image
+              src={Main}
+              alt="ad"
+              className="h-[15rem] object-contain"
+            />
+          </div>
+          <div className="mt-12 text-left">
+            <span className="font-bold">{text.webtoonKoiContent}</span>
+            {text.description}
+          </div>
+        </div>
+        <div className="ml-[5rem] mt-[-4rem] min-w-auto sm:flex">
+          <Image
+            src={MainAbout}
+            alt="ad"
+            className="rounded-full"
+          />
+        </div>
+      </div>
           </div>
           <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
         </div>
       </div>
+
+      {/* --------------------------------------------------------------- */}
+
+      {/* <div className="container mx-auto p-4">
+      <h1 className="text-4xl font-bold text-center my-8">HISTORY</h1>
+      <div className="relative">
+        {events.map((event, index) => (
+          <div key={index} className="mb-8 flex items-center">
+            <div className="w-1/2 pr-8 text-right">
+              {event.items.map((item, idx) => (
+                <div key={idx} className="mb-4">
+                  <h3 className="text-lg font-semibold">{item.date}</h3>
+                  <p className="text-gray-700">{item.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="w-1/2 pl-8 relative flex justify-center">
+              <div className="bg-orange-500 text-white p-4 rounded-full w-24 h-24 flex items-center justify-center">
+                <h2 className="text-2xl font-bold">{event.year}</h2>
+              </div>
+            </div>
+            {index < events.length - 1 && (
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-300"></div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div> */}
       {/* --------------------------------------------------------------- */}
       <div className="sm:flex ss:hidden relative w-full py-12 flex items-center justify-center bg-black ">
         <Image
@@ -454,7 +517,11 @@ const HomePage: React.FC = () => {
                   />
                 </div>
                 <div className="flex items-center text-sm">
-                  <span className={`bg-orange-500 w-3 h-3 rounded-full mr-2 mb-4 ${language === 'EN' ? 'w-7' : ''}`}></span>                
+                  <span
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-2 mb-4 ${
+                      language === "EN" ? "w-7" : ""
+                    }`}
+                  ></span>
                   <span className="font-bold">{text.webtoonCreation}</span>
                 </div>
               </div>
@@ -463,7 +530,11 @@ const HomePage: React.FC = () => {
                   <Image src={t2} alt="Worldwide" width={40} height={40} />
                 </div>
                 <div className="flex items-center text-sm">
-                  <span className={`bg-orange-500 w-3 h-3 rounded-full mr-2 ${language === 'EN' ? 'w-[1.30rem]' : ''}`}></span>
+                  <span
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-2 ${
+                      language === "EN" ? "w-[1.30rem]" : ""
+                    }`}
+                  ></span>
                   <span className="font-bold">{text.globalDistribution}</span>
                 </div>
               </div>
@@ -472,10 +543,12 @@ const HomePage: React.FC = () => {
                   <Image src={t3} alt="AI Webtoon" width={40} height={40} />
                 </div>
                 <div className="flex items-center text-sm text-center">
-                  <span className={`bg-orange-500 w-3 h-3 rounded-full mr-2 mb-4 ${language === 'EN' ? 'w-7' : ''}`}></span>
-                  <span className="font-bold">
-                    {text.aiWebtoon}
-                  </span>
+                  <span
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-2 mb-4 ${
+                      language === "EN" ? "w-7" : ""
+                    }`}
+                  ></span>
+                  <span className="font-bold">{text.aiWebtoon}</span>
                 </div>
               </div>
             </div>
@@ -507,7 +580,9 @@ const HomePage: React.FC = () => {
                   <span className="text-lg">{text.foundedDate}</span>
                 </div>
                 <div>
-                  <span className="block text-gray-400 text-sm">{text.ceo}</span>
+                  <span className="block text-gray-400 text-sm">
+                    {text.ceo}
+                  </span>
                   <span className="text-lg">{text.ceoName}</span>
                 </div>
                 <div>
@@ -546,7 +621,9 @@ const HomePage: React.FC = () => {
                     </div>
                     <div className="flex items-center text-sm mt-2">
                       <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-                      <span className="font-bold">{text.globalDistribution}</span>
+                      <span className="font-bold">
+                        {text.globalDistribution}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -897,7 +974,9 @@ const HomePage: React.FC = () => {
               <div className="timeline-start md:text-end mb-10">
                 <time className="text-3xl text-orange-600">2024</time>
                 <div className="justify-start items-start text-left">
-                  <span className="text-xl font-semibold mr-4 text-left">07월</span>
+                  <span className="text-xl font-semibold mr-4 text-left">
+                    07월
+                  </span>
                   {text.historyData[0].events[0].event}
                   <br />
                   <span className="text-xl font-semibold mr-4">05월</span>
@@ -942,7 +1021,9 @@ const HomePage: React.FC = () => {
                 <span className="text-xl font-semibold mr-4 ">05월</span>
                 {text.historyData[1].events[3].event}
                 <br />
-                <span className="text-xl font-semibold mr-4 text-left">04월</span>
+                <span className="text-xl font-semibold mr-4 text-left">
+                  04월
+                </span>
                 {text.historyData[1].events[4].event}
                 <br />
                 <span className="text-xl font-semibold mr-4">02월</span>

@@ -11,10 +11,13 @@ import Hourglass from "../../../../public/images/news//Vector.png";
 import Hand from "../../../../public/images/news//Vector (1).png";
 import Paper from "../../../../public/images/news//Vector (2).png";
 import Focus from "../../../../public/images/news//Vector (3).png";
-import { LanguageProvider, default as LanguageContext } from "@/context/Language"; // 올바르게 import
+import {
+  LanguageProvider,
+  default as LanguageContext,
+} from "@/context/Language"; // 올바르게 import
 import AOS from "aos";
 import "aos/dist/aos.css";
-import useFont from '@/app/hooks/UseFont';
+import useFont from "@/app/hooks/UseFont";
 
 interface EmailFormData {
   to: string;
@@ -28,7 +31,8 @@ const textContent = {
     home: "홈",
     news: "NEWS",
     recruitment: "직원채용",
-    welcomeMessage: "웹툰코이컨텐츠와 함께 즐겁게 일할 웹툰 작가님을 기다리고 있습니다.",
+    welcomeMessage:
+      "웹툰코이컨텐츠와 함께 즐겁게 일할 웹툰 작가님을 기다리고 있습니다.",
     webtoonPart: "웹툰 파트",
     recruitmentTitle: "상시 모집",
     qualification: "자격요건",
@@ -57,14 +61,15 @@ const textContent = {
     applicationInstructions: [
       "E-mail 지원: kocontent@kocontent.com",
       "지원 서류: 자유 양식 (이력서, 작품 포트폴리오, 기획안 등)",
-      "메일 전 화대답 빠르게 연락 드리겠습니다.",
+      "※ 확인 후 최대한 빠르게 연락 드리겠습니다",
     ],
   },
   EN: {
     home: "Home",
     news: "NEWS",
     recruitment: "Recruitment",
-    welcomeMessage: "We are looking for webtoon artists to work happily with Webtoon Koi Content.",
+    welcomeMessage:
+      "We are looking for webtoon artists to work happily with Webtoon Koi Content.",
     webtoonPart: "Webtoon Part",
     recruitmentTitle: "Ongoing Recruitment",
     qualification: "Qualifications",
@@ -93,11 +98,10 @@ const textContent = {
     applicationInstructions: [
       "E-mail Application: kocontent@kocontent.com",
       "Application Documents: Free format (resume, work portfolio, project proposal, etc.)",
-      "We will contact you quickly after receiving your email.",
+      "※ I'll check and get back to you as soon as possible",
     ],
   },
 };
-
 
 const EmailForm: React.FC = () => {
   const { language } = useContext(LanguageContext);
@@ -151,7 +155,7 @@ const EmailForm: React.FC = () => {
           <div className="text-4xl mt-[4rem] mb-[1rem] font-bold ss:text-center">
             {text.recruitment}
           </div>
-          <div className="font-[20px] ss:text-center">
+          <div className="font-light ss:text-center">
             {text.welcomeMessage}
           </div>
         </div>
@@ -166,9 +170,7 @@ const EmailForm: React.FC = () => {
           </div>
 
           {/* 모바일 */}
-          <div
-            className="p-8 border border-violet-200 rounded-lg bg-violet-50 sm:hidden min-w-[320px]"
-          >
+          <div className="p-8 border border-violet-200 rounded-lg bg-violet-50 sm:hidden min-w-[320px]">
             <h2 className="text-2xl font-bold mb-12 flex items-center ss:text-center">
               <span className="inline-block bg-orange-600 h-4 w-4 mr-2 ss:text-center"></span>
               <span className="ss:text-center"> {text.webtoonPart}</span>
@@ -176,8 +178,13 @@ const EmailForm: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
-                  <span className="font-bold w-2 text-xl mr-2">|</span> {text.recruitmentTitle}                   
-                  <Image src={Hourglass} className={`ml-4 w-6 ${language === 'EN' ? 'mr-20' : ''}`} alt={""} />
+                  <span className="font-bold w-2 text-xl mr-2">|</span>{" "}
+                  {text.recruitmentTitle}
+                  <Image
+                    src={Hourglass}
+                    className={`ml-4 w-6 ${language === "EN" ? "mr-20" : ""}`}
+                    alt={""}
+                  />
                 </h3>
                 <ul className="list-disc ml-8">
                   <li>{text.recruitmentContent}</li>
@@ -186,7 +193,8 @@ const EmailForm: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
-                  <span className="font-bold text-xl w-2 mr-2">|</span> {text.qualification} 
+                  <span className="font-bold text-xl w-2 mr-2">|</span>{" "}
+                  {text.qualification}
                   <Image src={Paper} className="ml-4 w-7" alt={""} />
                 </h3>
                 <ul className="list-disc ml-8">
@@ -201,7 +209,7 @@ const EmailForm: React.FC = () => {
                   <span className="font-extrabold text-xl tracking-widest w-4 mr-2">
                     |
                   </span>
-                  {text.applicationMethod} 
+                  {text.applicationMethod}
                   <Image src={Focus} className="ml-4 w-8" alt={""} />
                 </h3>
                 <ul className="list-disc ml-8">
@@ -212,8 +220,13 @@ const EmailForm: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center w-full">
-                  <span className="font-bold text-xl w-2 mr-2">|</span> {text.benefits}                   
-                  <Image src={Hand} className={`ml-4 w-8 ${language === 'EN' ? 'mr-16' : ''}`} alt={""} />
+                  <span className="font-bold text-xl w-2 mr-2">|</span>{" "}
+                  {text.benefits}
+                  <Image
+                    src={Hand}
+                    className={`ml-4 w-8 ${language === "EN" ? "mr-16" : ""}`}
+                    alt={""}
+                  />
                 </h3>
                 <ul className="list-disc ml-8">
                   {text.benefitsContent.map((benefit, index) => (
@@ -236,7 +249,8 @@ const EmailForm: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
-                  <span className="font-bold w-2 text-xl mr-2">|</span> {text.recruitmentTitle} 
+                  <span className="font-bold w-2 text-xl mr-2">|</span>{" "}
+                  {text.recruitmentTitle}
                   <Image src={Hourglass} className="ml-4 w-6" alt={""} />
                 </h3>
                 <ul className="list-disc ml-8">
@@ -246,7 +260,8 @@ const EmailForm: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
-                  <span className="font-bold text-xl w-2 mr-2">|</span> {text.qualification} 
+                  <span className="font-bold text-xl w-2 mr-2">|</span>{" "}
+                  {text.qualification}
                   <Image src={Paper} className="ml-4 w-7" alt={""} />
                 </h3>
                 <ul className="list-disc ml-8">
@@ -257,7 +272,8 @@ const EmailForm: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center">
-                  <span className="font-bold text-xl w-2 mr-2">|</span> {text.benefits} 
+                  <span className="font-bold text-xl w-2 mr-2">|</span>{" "}
+                  {text.benefits}
                   <Image src={Hand} className="ml-4 w-8" alt={""} />
                 </h3>
                 <ul className="list-disc ml-8">
@@ -272,14 +288,19 @@ const EmailForm: React.FC = () => {
                 <span className="font-extrabold text-xl tracking-widest w-4 mr-2">
                   |
                 </span>
-                {text.applicationMethod} 
+                {text.applicationMethod}
                 <Image src={Focus} className="ml-4 w-8" alt={""} />
               </h3>
               <ul className="list-disc ml-8">
-                {text.applicationInstructions.map((instruction, index) => (
-                  <li key={index}>{instruction}</li>
-                ))}
+                {text.applicationInstructions.map((instruction, index) =>
+                  index != 2 ? (
+                    <li key={index}>{instruction}</li>
+                  ) : (
+                    ""
+                  )                  
+                )}
               </ul>
+              <span className="text-[#EE511F] text-xs mr-[10rem] ml-[0.75rem]" >{text.applicationInstructions[2]}</span>
             </div>
           </div>
         </div>

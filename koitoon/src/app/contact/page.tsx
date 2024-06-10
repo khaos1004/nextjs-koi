@@ -26,7 +26,7 @@ const textContent = {
     phone: "TEL : 02-2602-5250",
     email: "E-Mail : koicontent@koicontent.com",
     inquireButton: "문의하기",
-    map:"툰코이"
+    map:"웹툰코이컨텐츠"
   },
   EN: {
     breadcrumbs: ["Home", "CONTACT"],
@@ -40,7 +40,7 @@ const textContent = {
     phone: "TEL: 02-2602-5250",
     email: "E-Mail: koicontent@koicontent.com",
     inquireButton: "Inquire",
-    map:"ToonKoi"
+    map:"WebtoonKoiContents"
   },
 };
 
@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
       </div>
       <hr className="my-[2rem]" />
       <div className="flex-row mb-[7rem]" data-aos="fade-up">
-        <div className="text text-3xl">{text.businessInquiry}</div>
+        <div className="text text-3xl font-bold">{text.businessInquiry}</div>
         <div className="my-4">{text.inquiryDetails}</div>
         <div className="">{text.phone}</div>
         <div className="">{text.email}</div>
