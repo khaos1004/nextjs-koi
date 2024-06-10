@@ -1057,7 +1057,7 @@ const HomePage: React.FC = () => {
           }`}
           onClick={() => setSelectedType("완결작")}
         >
-          {text.type1}
+          {text.type2}
         </button>
       </div>
 
