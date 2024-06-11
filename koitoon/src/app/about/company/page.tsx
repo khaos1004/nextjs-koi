@@ -401,39 +401,39 @@ const HomePage: React.FC = () => {
                 </li>
                 <li>{text.companyIntro}</li>
               </ul>
-              <div className="text-4xl my-[4rem] text-[#EE511F] font-bold ss:text-left">
+              <div className="text-4xl my-[4rem] text-[#EE511F] font-bold ss:text-center">
                 {text.aboutUs}
               </div>
             </div>
             <div className="flex text-left items-start justify-start">
-        <div className="w-full max-w-[35rem] my-[2rem]">
-          <div className="text-left sm:text-4xl ss:text-xl w-auto leading-snug">
-            <span className="font-bold">{text.webtoonTrend}</span>
-            <span className="font-bold">{text.culture}</span>
-            <span className="font-thin">{text.leading}</span><br />
-            <span className="font-thin">{text.connecting}</span><br />
-            <span className="font-bold">{text.globalWebtoon}</span>
-          </div>
-          <div className="w-full ss:flex justify-center my-8 hidden">
-            <Image
-              src={Main}
-              alt="ad"
-              className="h-[15rem] object-contain"
-            />
-          </div>
-          <div className="mt-12 text-left">
-            <span className="font-bold">{text.webtoonKoiContent}</span>
-            {text.description}
-          </div>
-        </div>
-        <div className="ml-[5rem] mt-[-4rem] min-w-auto sm:flex">
-          <Image
-            src={MainAbout}
-            alt="ad"
-            className="rounded-full"
-          />
-        </div>
-      </div>
+              <div className="w-full max-w-[35rem] my-[2rem]">
+                <div className="sm:text-left sm:text-4xl ss:text-xl ss:text-center w-auto leading-snug">
+                  <span className="font-bold">{text.webtoonTrend}</span>
+                  <span className="font-bold">{text.culture}</span>
+                  <span className="font-thin">{text.leading}</span><br />
+                  <span className="font-thin">{text.connecting}</span><br />
+                  <span className="font-bold">{text.globalWebtoon}</span>
+                </div>
+                <div className="w-full ss:flex justify-center my-8 hidden">
+                  <Image
+                    src={Main}
+                    alt="ad"
+                    className="h-[15rem] object-contain"
+                  />
+                </div>
+                <div className="mt-12 text-left">
+                  <span className="font-bold">{text.webtoonKoiContent}</span>
+                  {text.description}
+                </div>
+              </div>
+              <div className="ml-[5rem] mt-[-4rem] min-w-auto hidden sm:flex">
+                <Image
+                  src={MainAbout}
+                  alt="ad"
+                  className="rounded-full"
+                />
+              </div>
+            </div>
           </div>
           <div className="flex-1"></div> {/* 오른쪽 여백 (1/5) */}
         </div>
@@ -506,53 +506,46 @@ const HomePage: React.FC = () => {
             <div className="text-orange-600 text-2xl font-bold mb-6 text-center md:text-left">
               {text.businessArea}
             </div>
-            <div className="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
-              <div className="flex flex-col items-center">
+            <div className="flex flex-col sm:flex-row justify-around items-start space-y-6 md:space-y-0">
+              <div className="flex flex-col items-center w-[35rem]">
                 <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
-                  <Image
-                    src={t1}
-                    alt="Content Creator"
-                    width={40}
-                    height={40}
-                  />
+                  <Image src={t1} alt="Content Creator" width={40} height={40} />
                 </div>
-                <div className="flex items-center text-sm">
+                <div className={`flex text-sm text-center  ${language === "EN" ? "items-start" : "items-center"}`}>
                   <span
-                    className={`bg-orange-500 w-3 h-3 rounded-full mr-2 mb-4 ${
-                      language === "EN" ? "w-7" : ""
-                    }`}
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${language === "EN" ? "w-5 mt-1 ml-5" : ""}`}
+                    style={{ marginBottom: '-0.25rem' }}
                   ></span>
                   <span className="font-bold">{text.webtoonCreation}</span>
                 </div>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center w-[35rem]">
                 <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
                   <Image src={t2} alt="Worldwide" width={40} height={40} />
                 </div>
-                <div className="flex items-center text-sm">
+                <div className={`flex text-sm text-center  ${language === "EN" ? "items-start" : "items-center"}`}>
                   <span
-                    className={`bg-orange-500 w-3 h-3 rounded-full mr-2 ${
-                      language === "EN" ? "w-[1.30rem]" : ""
-                    }`}
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${language === "EN" ? "w-3 mt-1" : ""}`}
+                    style={{ marginBottom: '-0.25rem' }}
                   ></span>
                   <span className="font-bold">{text.globalDistribution}</span>
                 </div>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center w-[35rem]">
                 <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
                   <Image src={t3} alt="AI Webtoon" width={40} height={40} />
                 </div>
-                <div className="flex items-center text-sm text-center">
+                <div className={`flex text-sm text-center  ${language === "EN" ? "items-start" : "items-center"}`}>
                   <span
-                    className={`bg-orange-500 w-3 h-3 rounded-full mr-2 mb-4 ${
-                      language === "EN" ? "w-7" : ""
-                    }`}
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${language === "EN" ? "w-8 mt-1" : ""}`}
+                    style={{ marginBottom: '-0.25rem' }}
                   ></span>
                   <span className="font-bold">{text.aiWebtoon}</span>
                 </div>
               </div>
             </div>
           </div>
+          {/* 비즈니스 섹션 */}
         </div>
       </div>
 
@@ -603,15 +596,11 @@ const HomePage: React.FC = () => {
                 <div className="flex justify-center space-x-8">
                   <div className="flex flex-col items-center">
                     <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
-                      <Image
-                        src={t1}
-                        alt="Content Creator"
-                        width={32}
-                        height={32}
-                      />
+                      <Image src={t1} alt="Content Creator" width={32} height={32} />
                     </div>
                     <div className="flex items-center text-sm mt-2">
-                      <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
+                    <span className={`bg-orange-500 w-3 h-3 rounded-full  ${language === "EN" ? "w-4 mt-1 " : "mr-1"}`}
+                    style={{ marginBottom: '-0.25rem' }}></span>
                       <span className="font-bold">{text.webtoonCreation}</span>
                     </div>
                   </div>
@@ -620,28 +609,28 @@ const HomePage: React.FC = () => {
                       <Image src={t2} alt="Worldwide" width={32} height={32} />
                     </div>
                     <div className="flex items-center text-sm mt-2">
-                      <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-                      <span className="font-bold">
-                        {text.globalDistribution}
-                      </span>
+                    <span className={`bg-orange-500 w-3 h-3 rounded-full  ${language === "EN" ? "w-4 mt-1 " : "mr-1"}`}
+                    style={{ marginBottom: '-0.25rem' }}></span>
+                      <span className="font-bold">{text.globalDistribution}</span>
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center w-3/1">
                   <div className="flex flex-col items-center">
                     <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
                       <Image src={t3} alt="AI Webtoon" width={32} height={32} />
                     </div>
                     <div className="flex items-center text-sm mt-2">
-                      <span className="bg-orange-500 w-3 h-3 rounded-full mr-2"></span>
-                      <span className="font-bold text-center">
-                        {text.aiWebtoon}
-                      </span>
+                      <span className={`bg-orange-500 w-3 h-3 rounded-full  ${language === "EN" ? "w-4 mt-1 " : "mr-1"}`}
+                    style={{ marginBottom: '-0.25rem' }}></span>
+                      <span className="font-bold text-center">{text.aiWebtoon}</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* 모바일  */}
           </div>
         </div>
       </div>
