@@ -24,7 +24,10 @@ const config: Config = {
         custom: ['RubikPuddles-Regular', 'sans'], // YourFontName을 폰트 패밀리 이름으로 대체하세요.
       }, 
       screens: {
-        ss: { min: "0px", max: "639px" },
+        ss: { min: "0px", max: "767px" },
+        pad: { min: "768px", max: "1024px" },
+        sm: {  min: "1025px" },
+        
       }, 
       colors: {
         'customeRed': '#ee511f',

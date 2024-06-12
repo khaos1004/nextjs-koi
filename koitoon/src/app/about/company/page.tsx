@@ -410,8 +410,10 @@ const HomePage: React.FC = () => {
                 <div className="sm:text-left sm:text-4xl ss:text-xl ss:text-center w-auto leading-snug">
                   <span className="font-bold">{text.webtoonTrend}</span>
                   <span className="font-bold">{text.culture}</span>
-                  <span className="font-thin">{text.leading}</span><br />
-                  <span className="font-thin">{text.connecting}</span><br />
+                  <span className="font-thin">{text.leading}</span>
+                  <br />
+                  <span className="font-thin">{text.connecting}</span>
+                  <br />
                   <span className="font-bold">{text.globalWebtoon}</span>
                 </div>
                 <div className="w-full ss:flex justify-center my-8 hidden">
@@ -427,11 +429,7 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
               <div className="ml-[5rem] mt-[-4rem] min-w-auto hidden sm:flex">
-                <Image
-                  src={MainAbout}
-                  alt="ad"
-                  className="rounded-full"
-                />
+                <Image src={MainAbout} alt="ad" className="rounded-full" />
               </div>
             </div>
           </div>
@@ -509,12 +507,23 @@ const HomePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row justify-around items-start space-y-6 md:space-y-0">
               <div className="flex flex-col items-center w-[35rem]">
                 <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
-                  <Image src={t1} alt="Content Creator" width={40} height={40} />
+                  <Image
+                    src={t1}
+                    alt="Content Creator"
+                    width={40}
+                    height={40}
+                  />
                 </div>
-                <div className={`flex text-sm text-center  ${language === "EN" ? "items-start" : "items-center"}`}>
+                <div
+                  className={`flex text-sm text-center  ${
+                    language === "EN" ? "items-start" : "items-center"
+                  }`}
+                >
                   <span
-                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${language === "EN" ? "w-5 mt-1 ml-5" : ""}`}
-                    style={{ marginBottom: '-0.25rem' }}
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${
+                      language === "EN" ? "w-5 mt-1 ml-5" : ""
+                    }`}
+                    style={{ marginBottom: "-0.25rem" }}
                   ></span>
                   <span className="font-bold">{text.webtoonCreation}</span>
                 </div>
@@ -523,10 +532,16 @@ const HomePage: React.FC = () => {
                 <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
                   <Image src={t2} alt="Worldwide" width={40} height={40} />
                 </div>
-                <div className={`flex text-sm text-center  ${language === "EN" ? "items-start" : "items-center"}`}>
+                <div
+                  className={`flex text-sm text-center  ${
+                    language === "EN" ? "items-start" : "items-center"
+                  }`}
+                >
                   <span
-                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${language === "EN" ? "w-3 mt-1" : ""}`}
-                    style={{ marginBottom: '-0.25rem' }}
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${
+                      language === "EN" ? "w-3 mt-1" : ""
+                    }`}
+                    style={{ marginBottom: "-0.25rem" }}
                   ></span>
                   <span className="font-bold">{text.globalDistribution}</span>
                 </div>
@@ -535,10 +550,16 @@ const HomePage: React.FC = () => {
                 <div className="flex justify-center items-center rounded-full h-24 w-24 border border-orange-500 mb-2">
                   <Image src={t3} alt="AI Webtoon" width={40} height={40} />
                 </div>
-                <div className={`flex text-sm text-center  ${language === "EN" ? "items-start" : "items-center"}`}>
+                <div
+                  className={`flex text-sm text-center  ${
+                    language === "EN" ? "items-start" : "items-center"
+                  }`}
+                >
                   <span
-                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${language === "EN" ? "w-8 mt-1" : ""}`}
-                    style={{ marginBottom: '-0.25rem' }}
+                    className={`bg-orange-500 w-3 h-3 rounded-full mr-1 ${
+                      language === "EN" ? "w-8 mt-1" : ""
+                    }`}
+                    style={{ marginBottom: "-0.25rem" }}
                   ></span>
                   <span className="font-bold">{text.aiWebtoon}</span>
                 </div>
@@ -596,11 +617,20 @@ const HomePage: React.FC = () => {
                 <div className="flex justify-center space-x-8">
                   <div className="flex flex-col items-center">
                     <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
-                      <Image src={t1} alt="Content Creator" width={32} height={32} />
+                      <Image
+                        src={t1}
+                        alt="Content Creator"
+                        width={32}
+                        height={32}
+                      />
                     </div>
                     <div className="flex items-center text-sm mt-2">
-                    <span className={`bg-orange-500 w-3 h-3 rounded-full  ${language === "EN" ? "w-4 mt-1 " : "mr-1"}`}
-                    style={{ marginBottom: '-0.25rem' }}></span>
+                      <span
+                        className={`bg-orange-500 w-3 h-3 rounded-full  ${
+                          language === "EN" ? "w-4 mt-1 " : "mr-1"
+                        }`}
+                        style={{ marginBottom: "-0.25rem" }}
+                      ></span>
                       <span className="font-bold">{text.webtoonCreation}</span>
                     </div>
                   </div>
@@ -609,9 +639,15 @@ const HomePage: React.FC = () => {
                       <Image src={t2} alt="Worldwide" width={32} height={32} />
                     </div>
                     <div className="flex items-center text-sm mt-2">
-                    <span className={`bg-orange-500 w-3 h-3 rounded-full  ${language === "EN" ? "w-4 mt-1 " : "mr-1"}`}
-                    style={{ marginBottom: '-0.25rem' }}></span>
-                      <span className="font-bold">{text.globalDistribution}</span>
+                      <span
+                        className={`bg-orange-500 w-3 h-3 rounded-full  ${
+                          language === "EN" ? "w-4 mt-1 " : "mr-1"
+                        }`}
+                        style={{ marginBottom: "-0.25rem" }}
+                      ></span>
+                      <span className="font-bold">
+                        {text.globalDistribution}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -621,9 +657,15 @@ const HomePage: React.FC = () => {
                       <Image src={t3} alt="AI Webtoon" width={32} height={32} />
                     </div>
                     <div className="flex items-center text-sm mt-2">
-                      <span className={`bg-orange-500 w-3 h-3 rounded-full  ${language === "EN" ? "w-4 mt-1 " : "mr-1"}`}
-                    style={{ marginBottom: '-0.25rem' }}></span>
-                      <span className="font-bold text-center">{text.aiWebtoon}</span>
+                      <span
+                        className={`bg-orange-500 w-3 h-3 rounded-full  ${
+                          language === "EN" ? "w-4 mt-1 " : "mr-1"
+                        }`}
+                        style={{ marginBottom: "-0.25rem" }}
+                      ></span>
+                      <span className="font-bold text-center">
+                        {text.aiWebtoon}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -941,11 +983,10 @@ const HomePage: React.FC = () => {
               <hr />
             </li>
           </ul>
-          {/* ---------------------------------------------------------------------------------------------- */}
-          <ul
-            className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical hidden sm:flex"
-            data-aos="fade-up"
-          >
+          {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
+          {/* PC연혁 ---------------------------------------------------------------------------------------------------------------------------------------- */}
+          <ul className="timeline timeline-snap-icon max-sm:timeline-compact timeline-vertical">
+            {/* 첫 번째 아이템 */}
             <li>
               <div className="timeline-middle">
                 <svg
@@ -954,32 +995,119 @@ const HomePage: React.FC = () => {
                   viewBox="0 0 24 24"
                   width="24px"
                   fill="#EA3323"
+                  className="inline-block align-middle"
                 >
-                  <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <div className="timeline-start md:text-end mb-10">
-                <time className="text-3xl text-orange-600">2024</time>
-                <div className="justify-start items-start text-left">
-                  <span className="text-xl font-semibold mr-4 text-left">
+              <span className="flex timeline-end sm:text-end mb-[8rem] items-center">
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
+                </div>
+                <div className="text-3xl text-[#EE511F] ml-2">2024</div>
+              </span>
+              <span className="timeline-start sm:text-end mb-[6rem] mr-8 text-right">
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[0].events[0].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">07월</div>
+                </div>
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[0].events[1].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">05월</div>
+                </div>
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[0].events[2].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">04월</div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] w-full h-full" />
+            </li>
+
+            {/* 두 번째 아이템 */}
+            <li>
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#EA3323"
+                  className="inline-block align-middle"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                </svg>
+              </div>
+              <span className="flex timeline-start mb-[8rem] items-center">
+                <div className="text-3xl text-[#EE511F] ml-2">2023</div>
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
+                </div>
+              </span>
+              <span className="timeline-end sm:text-start mb-[6rem] mr-8 text-left">
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    12월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[1].events[0].event}
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    10월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[1].events[1].event}
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
                     07월
-                  </span>
-                  {text.historyData[0].events[0].event}
-                  <br />
-                  <span className="text-xl font-semibold mr-4">05월</span>
-                  {text.historyData[0].events[1].event}
-                  <br />
-                  <span className="text-xl font-semibold mr-4 ">04월</span>
-                  {text.historyData[0].events[2].event}
-                  <br />
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[1].events[2].event}
+                  </div>
                 </div>
-              </div>
-              <hr className="bg-orange-500" />
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    05월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[1].events[3].event}
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    04월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[1].events[4].event}
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    02월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[1].events[5].event}
+                  </div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] mt-[-10px] mb-[-20px]" />
             </li>
+
+            {/* 세 번째 아이템 */}
             <li>
-              <hr className="bg-orange-500" />
               <div className="timeline-middle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -987,194 +1115,62 @@ const HomePage: React.FC = () => {
                   viewBox="0 0 24 24"
                   width="24px"
                   fill="#EA3323"
+                  className="inline-block align-middle"
                 >
-                  <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <div className="timeline-end mb-10 w-auto">
-                <time className="text-3xl text-orange-600">2023</time>
-                <br />
-                <span className="text-xl font-semibold mr-4">12월</span>
-                <span className="text-orange-600">
-                  {text.historyData[1].events[0].event}
-                </span>
-                <br />
-                <span className="text-xl font-semibold mr-4">10월</span>
-                {text.historyData[1].events[1].event}
-                <br />
-                <span className="text-xl font-semibold mr-4">07월</span>
-                {text.historyData[1].events[2].event}
-                <br />
-                <span className="text-xl font-semibold mr-4 ">05월</span>
-                {text.historyData[1].events[3].event}
-                <br />
-                <span className="text-xl font-semibold mr-4 text-left">
-                  04월
-                </span>
-                {text.historyData[1].events[4].event}
-                <br />
-                <span className="text-xl font-semibold mr-4">02월</span>
-                {text.historyData[1].events[5].event}
-                <br />
-              </div>
-              <hr className="bg-orange-500" />
-            </li>
-            <li>
-              <hr className="bg-orange-500" />
-              <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                  fill="#EA3323"
-                >
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
-                </svg>
-              </div>
-              <div className="timeline-start md:text-end mb-10">
-                <time className="text-3xl text-orange-600">2022</time>
-                <br />
-                <div className="justify-start items-start text-left">
-                  <span className="text-xl font-semibold mr-4">12월</span>
-                  {text.historyData[2].events[0].event}
-                  <br />
-                  <span className="text-xl font-semibold mr-4">11월</span>
-                  {text.historyData[2].events[1].event}
-                  <br />
-                  <span className="text-xl font-semibold mr-[3.75rem]"></span>
-                  <span className="text-orange-600 ">
+              <span className="flex timeline-end sm:text-end mb-[8rem] items-center">
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
+                </div>
+                <div className="text-3xl text-[#EE511F] ml-2">2022</div>
+              </span>
+              <span className="timeline-start sm:text-end mb-[6rem] mr-8 text-right">
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[2].events[0].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">12월</div>
+                </div>
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[2].events[1].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">11월</div>
+                </div>
+                <div className="flex">
+                  <div className="flex-1 text-orange-600">
                     {text.historyData[2].events[2].event}
-                  </span>
-                  <br />
-                  <span className="text-xl font-semibold mr-4">07월</span>
-                  {text.historyData[2].events[3].event}
-                  <br />
-                  <span className="text-xl font-semibold mr-4">02월</span>
-                  {text.historyData[2].events[4].event}
-                  <br />
-                  <span className="text-xl font-semibold mr-4">01월</span>
-                  {text.historyData[2].events[5].event}
-                  <br />
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none"></div>
                 </div>
-              </div>
-              <hr className="bg-orange-500" />
-            </li>
-            <li>
-              <hr className="bg-orange-500" />
-              <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                  fill="#EA3323"
-                >
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
-                </svg>
-              </div>
-              <div className="timeline-end mb-10">
-                <time className="text-3xl text-orange-600">2021</time>
-                <br />
-                <span className="text-xl font-semibold mr-4">11월</span>
-                {text.historyData[3].events[0].event}
-                <br />
-                <span className="text-xl font-semibold mr-4">07월</span>
-                {text.historyData[3].events[1].event}
-                <br />
-                <span className="text-xl font-semibold mr-4">06월</span>
-                {text.historyData[3].events[2].event}
-                <br />
-              </div>
-              <hr className="bg-orange-500" />
-            </li>
-            <li>
-              <hr className="bg-orange-500" />
-              <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                  fill="#EA3323"
-                >
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
-                </svg>
-              </div>
-              <div className="timeline-start md:text-end mb-10">
-                <time className="text-3xl text-orange-600">2020</time>
-                <br />
-                <div className="justify-start items-start text-left">
-                  <span className="text-xl font-semibold mr-4">03월</span>
-                  {text.historyData[4].events[0].event}
-                  <br />
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[2].events[3].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">07월</div>
                 </div>
-              </div>
-              <hr className="bg-orange-500" />
-            </li>
-            <li>
-              <hr className="bg-orange-500" />
-              <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                  fill="#EA3323"
-                >
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
-                </svg>
-              </div>
-              <div className="timeline-end mb-10">
-                <time className="text-3xl text-orange-600">2019</time>
-                <br />
-                <span className="text-xl font-semibold mr-4">10월</span>
-                {text.historyData[5].events[0].event}
-                <br />
-                <span className="text-xl font-semibold mr-4">02월</span>
-                {text.historyData[5].events[1].event}
-                <br />
-              </div>
-              <hr className="bg-orange-500" />
-            </li>
-            <li>
-              <hr className="bg-orange-500" />
-              <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                  fill="#EA3323"
-                >
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
-                </svg>
-              </div>
-              <div className="timeline-start md:text-end mb-10">
-                <time className="text-3xl text-orange-600">2018</time>
-                <br />
-                <div className="justify-start items-start text-left">
-                  <span className="text-xl font-semibold mr-4">05월</span>
-                  {text.historyData[6].events[0].event}
-                  <br />
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[2].events[4].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">02월</div>
                 </div>
-              </div>
-              <hr className="bg-orange-500" />
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[2].events[5].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">01월</div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] w-full h-full" />
             </li>
+
+            {/* 네 번째 아이템 */}
             <li>
-              <hr className="bg-orange-500" />
               <div className="timeline-middle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1182,26 +1178,50 @@ const HomePage: React.FC = () => {
                   viewBox="0 0 24 24"
                   width="24px"
                   fill="#EA3323"
+                  className="inline-block align-middle"
                 >
-                  <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <div className="timeline-end mb-10">
-                <time className="text-3xl text-orange-600">2016</time>
-                <br />
-                <span className="text-xl font-semibold mr-4">12월</span>
-                {text.historyData[7].events[0].event}
-                <br />
-                <span className="text-xl font-semibold mr-4">05월</span>
-                {text.historyData[7].events[1].event}
-                <br />
-              </div>
-              <hr className="bg-orange-500" />
+              <span className="flex timeline-start mb-[8rem] items-center">
+                <div className="text-3xl text-[#EE511F] ml-2">2021</div>
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
+                </div>
+              </span>
+              <span className="timeline-end sm:text-start mb-[6rem] mr-8 text-left">
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    11월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[3].events[0].event}
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    07월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[3].events[1].event}
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    06월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[3].events[2].event}
+                  </div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] mt-[-10px] mb-[-20px]" />
             </li>
+
+            {/* 다섯 번째 아이템 */}
             <li>
-              <hr className="bg-orange-500" />
               <div className="timeline-middle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1209,30 +1229,222 @@ const HomePage: React.FC = () => {
                   viewBox="0 0 24 24"
                   width="24px"
                   fill="#EA3323"
+                  className="inline-block align-middle"
                 >
-                  <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <div className="timeline-start md:text-end mb-10">
-                <time className="text-3xl text-orange-600">2015</time>
-                <br />
-                <div className="justify-start items-start text-left">
-                  <span className="text-xl font-semibold mr-4">11월</span>
-                  {text.historyData[8].events[0].event}
-                  <br />
-                  <span className="text-xl font-semibold mr-4">10월</span>
-                  <span className=" text-orange-600">
+              <span className="flex timeline-end sm:text-end mb-[8rem] items-center">
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
+                </div>
+                <div className="text-3xl text-[#EE511F] ml-2">2020</div>
+              </span>
+              <span className="timeline-start sm:text-end mb-[6rem] mr-8 text-right">
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[4].events[0].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">03월</div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] w-full h-full" />
+            </li>
+
+            {/* 여섯 번째 아이템 */}
+            <li>
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#EA3323"
+                  className="inline-block align-middle"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                </svg>
+              </div>
+              <span className="flex timeline-start mb-[8rem] items-center">
+                <div className="text-3xl text-[#EE511F] ml-2">2019</div>
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
+                </div>
+              </span>
+              <span className="timeline-end sm:text-start mb-[6rem] mr-8 text-left">
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    10월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[5].events[0].event}
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    02월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[5].events[1].event}
+                  </div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] mt-[-10px] mb-[-20px]" />
+            </li>
+
+            {/* 일곱 번째 아이템 */}
+            <li>
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#EA3323"
+                  className="inline-block align-middle"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                </svg>
+              </div>
+              <span className="flex timeline-end sm:text-end mb-[8rem] items-center">
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
+                </div>
+                <div className="text-3xl text-[#EE511F] ml-2">2018</div>
+              </span>
+              <span className="timeline-start sm:text-end mb-[6rem] mr-8 text-right">
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[6].events[0].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">05월</div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] w-full h-full" />
+            </li>
+
+            {/* 여덟 번째 아이템 */}
+            <li>
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#EA3323"
+                  className="inline-block align-middle"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                </svg>
+              </div>
+              <span className="flex timeline-start mb-[8rem] items-center">
+                <div className="text-3xl text-[#EE511F] ml-2">2016</div>
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
+                </div>
+              </span>
+              <span className="timeline-end sm:text-start mb-[6rem] mr-8 text-left">
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    12월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[7].events[0].event}
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    05월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[7].events[1].event}
+                  </div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] mt-[-10px] mb-[-20px]" />
+            </li>
+
+            {/* 아홉 번째 아이템 */}
+            <li>
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#EA3323"
+                  className="inline-block align-middle"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                </svg>
+              </div>
+              <span className="flex timeline-end sm:text-end mb-[8rem] items-center">
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
+                </div>
+                <div className="text-3xl text-[#EE511F] ml-2">2015</div>
+              </span>
+              <span className="timeline-start sm:text-end mb-[6rem] mr-8 text-right">
+                <div className="flex">
+                  <div className="flex-1">
+                    {text.historyData[8].events[0].event}
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">11월</div>
+                </div>
+                <div className="flex">
+                  <div className="flex-1 text-orange-600">
                     {text.historyData[8].events[1].event}
-                  </span>
-                  <br />
+                  </div>
+                  <div className="text-lg font-black ml-4 flex-none">10월</div>
                 </div>
-              </div>
-              <hr className="bg-orange-500" />
+              </span>
+              <hr className="bg-[#EE511F] w-full h-full" />
             </li>
+
+            {/* 열 번째 아이템 */}
             <li>
-              <hr />
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#EA3323"
+                  className="inline-block align-middle"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                </svg>
+              </div>
+              <span className="flex timeline-start mb-[8rem] items-center">
+                <div className="text-3xl text-[#EE511F] ml-2">2014</div>
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
+                </div>
+              </span>
+              <span className="timeline-end sm:text-start mb-[6rem] mr-8 text-left">
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    10월
+                  </div>
+                  <div className="flex-1">
+                    {text.historyData[9].events[0].event}
+                 
+                  </div>
+                </div>
+              </span>
+              <hr className="bg-[#EE511F] mt-[-10px] mb-[-20px]" />
             </li>
           </ul>
           <div className="my-[10rem]"></div>
