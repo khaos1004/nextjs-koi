@@ -165,12 +165,12 @@ const EmailForm: React.FC = () => {
             <Image src={CarPC} alt={""} className="w-full" />
           </div>
 
-          <div className="my-[2rem] hidden ss:flex min-w-[320px]">
+          <div className="my-[2rem] hidden ss:flex">
             <Image src={CarMobile} alt={""} />
           </div>
 
           {/* 모바일 */}
-          <div className="p-8 border border-violet-200 rounded-lg bg-violet-50 sm:hidden min-w-[320px]">
+          <div className="p-8 border border-violet-200 rounded-lg bg-violet-50 sm:hidden">
             <h2 className="text-2xl font-bold mb-12 flex items-center ss:text-center">
               <span className="inline-block bg-orange-600 h-4 w-4 mr-2 ss:text-center"></span>
               <span className="ss:text-center"> {text.webtoonPart}</span>
@@ -205,12 +205,12 @@ const EmailForm: React.FC = () => {
               </div>
 
               <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                <h3 className="text-xl font-semibold mb-2 flex items-center w-full">
                   <span className="font-extrabold text-xl tracking-widest w-4 mr-2">
                     |
                   </span>
                   {text.applicationMethod}
-                  <Image src={Focus} className="ml-4 w-8" alt={""} />
+                  <Image src={Focus} className={`ml-4 w-8 ${language === "EN" ? "mr-12" : ""}`} alt={""} />
                 </h3>
                 <ul className="list-disc ml-8">
                   {text.applicationInstructions.map((instruction, index) => (

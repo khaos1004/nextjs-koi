@@ -15,87 +15,90 @@ import Image from "next/image";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Royal from "@/../../public/images/webtoon/image0.png";
-import Perfect from "@/../../public/images/webtoon/image1.jpeg";
-import We from "@/../../public/images/webtoon/image3.jpeg";
-import Star from "@/../../public/images/webtoon/image4.jpeg";
-import Twotwo from "@/../../public/images/webtoon/image5.jpeg";
-import Twoman from "@/../../public/images/webtoon/image6.png";
-import Mons from "@/../../public/images/webtoon/image7.jpeg";
-import Yong from "@/../../public/images/webtoon/image8.jpeg";
-import Dea from "@/../../public/images/webtoon/image9.jpeg";
-import Bul from "@/../../public/images/webtoon/image10.png";
-import Sowon from "@/../../public/images/webtoon/image11.jpeg";
-import Jad from "@/../../public/images/webtoon/image12.jpeg";
-import Ul from "@/../../public/images/webtoon/image13.jpeg";
-import Sex from "@/../../public/images/webtoon/image14.png";
-import Bad from "@/../../public/images/webtoon/image15.png";
-import Ssang from "@/../../public/images/webtoon/image16.png";
-import Am from "@/../../public/images/webtoon/image17.jpeg";
-import Jjo from "@/../../public/images/webtoon/image18.jpeg";
-import Solo from "@/../../public/images/webtoon/image19.png";
-import Man from "@/../../public/images/webtoon/image20.jpeg";
-import Dut from "@/../../public/images/webtoon/image21.png";
-import Wo from "@/../../public/images/webtoon/image22.jpeg";
-import Red from "@/../../public/images/webtoon/image23.png";
-import SexType from "@/../../public/images/webtoon/image24.jpeg";
-import BadBagu from "@/../../public/images/webtoon/image25.jpeg";
-import BadSwim from "@/../../public/images/webtoon/image26.jpeg";
-import OnAir from "@/../../public/images/webtoon/image27.jpeg";
-import Club from "@/../../public/images/webtoon/image28.png";
-import Gi from "@/../../public/images/webtoon/image29.jpeg";
-import Relaod from "@/../../public/images/webtoon/image30.png";
-import Dum from "@/../../public/images/webtoon/image31.jpeg";
-import Wife from "@/../../public/images/webtoon/image32.jpeg";
-import Dad from "@/../../public/images/webtoon/image33.jpeg";
-import Bitch from "@/../../public/images/webtoon/image34.jpeg";
-import FDad from "@/../../public/images/webtoon/image35.jpeg";
-import Sexy from "@/../../public/images/webtoon/image36.jpeg";
-import Good from "@/../../public/images/webtoon/image37.jpeg";
-import Idon from "@/../../public/images/webtoon/image38.jpeg";
-import Thatwo from "@/../../public/images/webtoon/image39.jpeg";
-import Dua from "@/../../public/images/webtoon/image40.jpeg";
-import Ca from "@/../../public/images/webtoon/image41.jpeg";
-import Para from "@/../../public/images/webtoon/image42.jpeg";
-import Idol from "@/../../public/images/webtoon/image43.jpeg";
-import FWife from "@/../../public/images/webtoon/image44.png";
-import Pet from "@/../../public/images/webtoon/image45.jpeg";
-import Che from "@/../../public/images/webtoon/image46.jpeg";
-import Mom from "@/../../public/images/webtoon/image47.jpeg";
-import Hea from "@/../../public/images/webtoon/image48.jpeg";
-import Siren from "@/../../public/images/webtoon/image49.jpeg";
-import Helper from "@/../../public/images/webtoon/image50.jpeg";
-import Oun from "@/../../public/images/webtoon/image51.jpeg";
-import Suk from "@/../../public/images/webtoon/image52.jpeg";
-import No from "@/../../public/images/webtoon/image53.jpeg";
-import Bu from "@/../../public/images/webtoon/image54.jpeg";
-import Suga from "@/../../public/images/webtoon/image55.png";
-import Ddak from "@/../../public/images/webtoon/image56.jpeg";
-import YongG from "@/../../public/images/webtoon/image56.jpeg";
-import Pre from "@/../../public/images/webtoon/image57.jpeg";
-import Oneroom from "@/../../public/images/webtoon/image58.jpeg";
-import Mu from "@/../../public/images/webtoon/image59.png";
-import De from "@/../../public/images/webtoon/image60.jpeg";
-import Joca from "@/../../public/images/webtoon/image61.png";
-import Bunu from "@/../../public/images/webtoon/image62.png";
-import Imo from "@/../../public/images/webtoon/image63.png";
-import TowJa from "@/../../public/images/webtoon/image64.png";
-import MomStu from "@/../../public/images/webtoon/image65.png";
-import NewMom from "@/../../public/images/webtoon/image66.jpeg";
-import Dolsing from "@/../../public/images/webtoon/image67.jpeg";
-import Delil from "@/../../public/images/webtoon/image68.jpeg";
-import Easy from "@/../../public/images/webtoon/image69.jpeg";
-import Bila from "@/../../public/images/webtoon/image70.jpeg";
-import Iut from "@/../../public/images/webtoon/image71.png";
-import SexOffi from "@/../../public/images/webtoon/image72.jpeg";
-import Down from "@/../../public/images/webtoon/image73.jpeg";
-import Quik from "@/../../public/images/webtoon/image74.png";
-import Campu from "@/../../public/images/webtoon/image75.png";
-import Tax from "@/../../public/images/webtoon/image76.png";
-import MyD from "@/../../public/images/webtoon/image77.jpeg";
-import Bank from "@/../../public/images/webtoon/image78.png";
-import How from "@/../../public/images/webtoon/image79.jpeg";
-import useFont from '@/app/hooks/UseFont';
+import ArrowR from "../../public/svg/arrowR";
+import ArrowLong from "../../public/svg/arrowLong";
+import 로열블루로즈 from "@/../../public/images/webtoon/image0.png";
+import 퍼펙트 from "@/../../public/images/webtoon/image1.jpeg";
+import 위클리28년 from "@/../../public/images/webtoon/image2.jpeg";
+import 별빛이내린다 from "@/../../public/images/webtoon/image3.jpeg";
+import 투투데이 from "@/../../public/images/webtoon/image4.jpeg";
+import 투맨 from "@/../../public/images/webtoon/image06.jpeg";
+import 격투몬스터 from "@/../../public/images/webtoon/image5.jpeg";
+import 용마전 from "@/../../public/images/webtoon/image6.png";
+import 대남 from "@/../../public/images/webtoon/image7.jpeg";
+import 불가사리 from "@/../../public/images/webtoon/image8.jpeg";
+import 소원을말해봐 from "@/../../public/images/webtoon/image9.jpeg";
+import 자드락비 from "@/../../public/images/webtoon/image10.png";
+import 얼굴값 from "@/../../public/images/webtoon/image11.jpeg";
+import 성상담소 from "@/../../public/images/webtoon/image12.jpeg";
+import 못된여자 from "@/../../public/images/webtoon/image13.jpeg";
+import 쌍녀 from "@/../../public/images/webtoon/image14.png";
+import 암캐처제 from "@/../../public/images/webtoon/image15.png";
+import 쪼여줄께 from "@/../../public/images/webtoon/image16.png";
+import 혼밥하는여자 from "@/../../public/images/webtoon/image17.jpeg";
+import 그런남자 from "@/../../public/images/webtoon/image18.jpeg";
+import 덫 from "@/../../public/images/webtoon/image19.png";
+import 여직원들 from "@/../../public/images/webtoon/image20.jpeg";
+import 붉은벽 from "@/../../public/images/webtoon/image21.png";
+import 성적취향 from "@/../../public/images/webtoon/image22.jpeg";
+import 부도덕한배구부 from "@/../../public/images/webtoon/image23.png";
+import 부도덕한수영부 from "@/../../public/images/webtoon/image24.jpeg";
+import 벌거벗은방송국 from "@/../../public/images/webtoon/image25.jpeg";
+import 노예클럽 from "@/../../public/images/webtoon/image26.jpeg";
+import 소녀표류기 from "@/../../public/images/webtoon/image27.jpeg";
+import 그놈은갱신중 from "@/../../public/images/webtoon/image28.png";
+import 호구들 from "@/../../public/images/webtoon/image29.jpeg";
+import 아내의섹파 from "@/../../public/images/webtoon/image30.png";
+import 아빠는출근중 from "@/../../public/images/webtoon/image31.jpeg";
+import 내로남불 from "@/../../public/images/webtoon/image32.jpeg";
+import 친구아빠 from "@/../../public/images/webtoon/image33.jpeg";
+import 섹시백 from "@/../../public/images/webtoon/image34.jpeg";
+import 질좋은여자 from "@/../../public/images/webtoon/image35.jpeg";
+import 잠재적연애구간 from "@/../../public/images/webtoon/image36.jpeg";
+import 그런여자 from "@/../../public/images/webtoon/image37.jpeg";
+import 첫사랑의딸 from "@/../../public/images/webtoon/image38.jpeg";
+import 캐슬 from "@/../../public/images/webtoon/image39.jpeg";
+import 파라다이스 from "@/../../public/images/webtoon/image40.jpeg";
+import 아이돌키우기 from "@/../../public/images/webtoon/image41.jpeg";
+import 친구아내 from "@/../../public/images/webtoon/image42.jpeg";
+import 분양녀 from "@/../../public/images/webtoon/image43.jpeg";
+import 처제 from "@/../../public/images/webtoon/image44.png";
+import 엄마실격 from "@/../../public/images/webtoon/image45.jpeg";
+import 해녀 from "@/../../public/images/webtoon/image46.jpeg";
+import 불륜주의보 from "@/../../public/images/webtoon/image47.jpeg";
+import 도우미 from "@/../../public/images/webtoon/image48.jpeg";
+import 은밀한거래 from "@/../../public/images/webtoon/image49.jpeg";
+import 숙모 from "@/../../public/images/webtoon/image50.jpeg";
+import 노출교사 from "@/../../public/images/webtoon/image51.jpeg";
+import 버린남자 from "@/../../public/images/webtoon/image52.jpeg";
+import 슈가대디 from "@/../../public/images/webtoon/image53.jpeg";
+import 딱풀이안빠져요 from "@/../../public/images/webtoon/image54.jpeg";
+import 어린여자 from "@/../../public/images/webtoon/image55.png";
+import 이쁘니 from "@/../../public/images/webtoon/image56.jpeg";
+import 원룸텔 from "@/../../public/images/webtoon/image57.jpeg";
+import 며느리 from "@/../../public/images/webtoon/image58.jpeg";
+import 이혼녀 from "@/../../public/images/webtoon/image59.png";
+import 조카딸 from "@/../../public/images/webtoon/image60.jpeg";
+import 부녀회장 from "@/../../public/images/webtoon/image61.png";
+import 이모 from "@/../../public/images/webtoon/image62.png";
+import 두자매 from "@/../../public/images/webtoon/image63.png";
+import 엄마는여대생 from "@/../../public/images/webtoon/image64.png";
+import 새엄마는내여친 from "@/../../public/images/webtoon/image65.png";
+import 돌싱녀 from "@/../../public/images/webtoon/image67.jpeg";
+import 데릴아빠 from "@/../../public/images/webtoon/image68.jpeg";
+import 찐한친구 from "@/../../public/images/webtoon/image69.jpeg";
+import 빌라 from "@/../../public/images/webtoon/image70.jpeg";
+import 이웃의맛 from "@/../../public/images/webtoon/image71.png";
+import sex오피스 from "@/../../public/images/webtoon/image72.jpeg";
+import 아랫집아줌마 from "@/../../public/images/webtoon/image74.png";
+import 택배요 from "@/../../public/images/webtoon/image75.png";
+import 몸캠퍼스 from "@/../../public/images/webtoon/image76.png";
+import 택시 from "@/../../public/images/webtoon/image77.jpeg";
+import 내딸을부탁해 from "@/../../public/images/webtoon/image78.png";
+import 은행원 from "@/../../public/images/webtoon/image79.jpeg";
+import 어쩌다이지경 from "@/../../public/images/webtoon/image80.jpeg";
+
+import useFont from "@/app/hooks/UseFont";
 
 interface CardData {
   id: number;
@@ -110,7 +113,7 @@ interface CardData {
 const allCardsData: CardData[] = [
   {
     id: 1,
-    image: Royal,
+    image: 로열블루로즈,
     url: "https://novel.bookpal.co.kr/view_toon/7013175",
     title: "로열블루로즈",
     content:
@@ -120,7 +123,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 2,
-    image: Perfect,
+    image: 퍼펙트,
     url: "https://bollae.net/board/?board=ani_01&tab=web&type=view&ani_id=131",
     title: "퍼펙트",
     content:
@@ -130,7 +133,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 3,
-    image: We,
+    image: 위클리28년,
     url: "https://bollae.net/board/?board=ani_01&tab=web&type=view&ani_id=129",
     title: "위클리28년",
     content:
@@ -140,7 +143,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 4,
-    image: Star,
+    image: 별빛이내린다,
     url: "https://novel.bookpal.co.kr/view_toon/7013045",
     title: "별빛이 내린다",
     content:
@@ -150,7 +153,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 5,
-    image: Twotwo,
+    image: 투투데이,
     url: "https://novel.bookpal.co.kr/view_toon/7013036",
     title: "투투데이",
     content:
@@ -160,7 +163,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 6,
-    image: Twoman,
+    image: 투맨,
     url: "https://www.toomics.com/webtoon/episode/toon/4589",
     title: "투맨",
     content:
@@ -170,7 +173,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 7,
-    image: Mons,
+    image: 격투몬스터,
     url: "http://novel.bookpal.co.kr/view/7013072",
     title: "격투몬스터",
     content:
@@ -180,7 +183,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 8,
-    image: Yong,
+    image: 용마전,
     url: "https://novel.bookpal.co.kr/view_toon/7013173",
     title: "용마전",
     content:
@@ -190,7 +193,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 9,
-    image: Dea,
+    image: 대남,
     url: "https://novel.bookpal.co.kr/view_toon/7013031",
     title: "대남",
     content:
@@ -200,7 +203,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 10,
-    image: Bul,
+    image: 불가사리,
     url: "https://novel.bookpal.co.kr/view_toon/7013022",
     title: "불가사리",
     content:
@@ -210,7 +213,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 11,
-    image: Sowon,
+    image: 소원을말해봐,
     url: "https://novel.bookpal.co.kr/view_toon/7013024",
     title: "소원을말해봐",
     content:
@@ -220,7 +223,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 12,
-    image: Jad,
+    image: 자드락비,
     url: "https://novel.bookpal.co.kr/view_toon/7013027",
     title: "자드락비",
     content:
@@ -230,7 +233,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 13,
-    image: Ul,
+    image: 얼굴값,
     url: "https://novel.bookpal.co.kr/view_toon/7013028",
     title: "얼굴값",
     content:
@@ -240,7 +243,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 14,
-    image: Sex,
+    image: 성상담소,
     url: "https://novel.bookpal.co.kr/view_toon/7013029",
     title: "성상담소",
     content:
@@ -250,7 +253,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 15,
-    image: Bad,
+    image: 못된여자,
     url: "https://novel.bookpal.co.kr/view_toon/7013043",
     title: "못된여자",
     content:
@@ -260,7 +263,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 16,
-    image: Ssang,
+    image: 쌍녀,
     url: "https://novel.bookpal.co.kr/view_toon/7013023",
     title: "쌍녀",
     content:
@@ -270,7 +273,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 17,
-    image: Am,
+    image: 암캐처제,
     url: "https://novel.bookpal.co.kr/view_toon/7013044",
     title: "암캐처제",
     content:
@@ -280,7 +283,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 18,
-    image: Jjo,
+    image: 쪼여줄께,
     url: "https://novel.bookpal.co.kr/view_toon/7013025",
     title: "쪼여줄께",
     content:
@@ -290,7 +293,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 19,
-    image: Solo,
+    image: 혼밥하는여자,
     url: "https://novel.bookpal.co.kr/view_toon/7013026",
     title: "혼밥하는 여자",
     content: "혼자 밥 먹는 외로운 남녀들의 모든 고민!! 오늘 밤엔 뭘 먹지?!",
@@ -299,7 +302,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 20,
-    image: Man,
+    image: 그런남자,
     url: "https://novel.bookpal.co.kr/view_toon/7013042",
     title: "그런남자",
     content:
@@ -309,7 +312,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 21,
-    image: Dut,
+    image: 덫,
     url: "https://novel.bookpal.co.kr/view_toon/7013035",
     title: "덫",
     content:
@@ -319,7 +322,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 22,
-    image: Wo,
+    image: 여직원들,
     url: "https://novel.bookpal.co.kr/view_toon/7013030",
     title: "여직원들",
     content:
@@ -329,7 +332,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 23,
-    image: Red,
+    image: 붉은벽,
     url: "https://cafe.naver.com/bscomic/683643",
     title: "붉은벽",
     content:
@@ -339,17 +342,16 @@ const allCardsData: CardData[] = [
   },
   {
     id: 24,
-    image: SexType,
+    image: 성적취향,
     url: "https://novel.bookpal.co.kr/view_toon/7013050",
     title: "성적취향",
-    content:
-      '"일반적인 건 흥미없어, 특별한게 흥분되잖아?" 일탈을 꿈꾸며 SNS에 자신을 노출시키는 여자들과 그녀들을 사냥하는 남자의 이야기',
+    content: `"일반적인 건 흥미없어, 특별한게 흥분되잖아?" 일탈을 꿈꾸며 SNS에 자신을 노출시키는 여자들과 그녀들을 사냥하는 남자의 이야기`,
     hashtags: "#현대물 #에로틱 #계약관계",
     author: "주녕/샴푸",
   },
   {
     id: 25,
-    image: BadBagu,
+    image: 부도덕한배구부,
     url: "https://novel.bookpal.co.kr/view_toon/7013034",
     title: "부도덕한 배구부",
     content:
@@ -359,7 +361,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 26,
-    image: BadSwim,
+    image: 부도덕한수영부,
     url: "https://novel.bookpal.co.kr/view_toon/7013033",
     title: "부도덕한 수영부",
     content:
@@ -369,7 +371,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 27,
-    image: OnAir,
+    image: 벌거벗은방송국,
     url: "https://novel.bookpal.co.kr/view_toon/7013032",
     title: "벌거벗은 방송국",
     content:
@@ -379,7 +381,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 28,
-    image: Club,
+    image: 노예클럽,
     url: "https://novel.bookpal.co.kr/view_toon/7013064",
     title: "노예클럽",
     content:
@@ -389,7 +391,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 29,
-    image: Gi,
+    image: 소녀표류기,
     url: "https://novel.bookpal.co.kr/view_toon/7013071",
     title: "15소녀표류기",
     content:
@@ -399,7 +401,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 30,
-    image: Relaod,
+    image: 그놈은갱신중,
     url: "https://novel.bookpal.co.kr/view_toon/7013177",
     title: "그놈은 갱신 중",
     content:
@@ -409,7 +411,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 31,
-    image: Dum,
+    image: 호구들,
     url: "",
     title: "호구들",
     content:
@@ -419,7 +421,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 32,
-    image: Wife,
+    image: 아내의섹파,
     url: "https://novel.bookpal.co.kr/view_toon/7013183",
     title: "아내의 섹파",
     content:
@@ -429,7 +431,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 33,
-    image: Dad,
+    image: 아빠는출근중,
     url: "https://www.toomics.com/webtoon/episode/toon/4936",
     title: "아빠는 출근 중",
     content:
@@ -439,7 +441,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 34,
-    image: Bitch,
+    image: 내로남불,
     url: "https://www.toomics.com/webtoon/episode/toon/4971",
     title: "내로남불",
     content:
@@ -449,7 +451,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 35,
-    image: No,
+    image: 친구아빠,
     url: "https://www.toomics.com/webtoon/episode/toon/2509",
     title: "친구아빠",
     content:
@@ -459,7 +461,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 36,
-    image: FDad,
+    image: 섹시백,
     url: "https://www.toomics.com/webtoon/episode/toon/4671",
     title: "섹시백",
     content:
@@ -469,17 +471,17 @@ const allCardsData: CardData[] = [
   },
   {
     id: 37,
-    image: Sexy,
+    image: 질좋은여자,
     url: "https://www.toomics.com/webtoon/episode/toon/4884",
     title: "질 좋은 여자",
     content:
       "오염 가득한 세상 속 산소탱크 같은 여신..! 그녀는 오늘도 남자들의 외로움을 몸으로 달래준다! 이 예쁘고 천사 같은 여자를 진정으로 사랑해줄 남자... 어디 없나요?",
     hashtags: "#존예 #섹시녀 #하렘",
-    author: "Viagra/BECK HO-AN",
+    author: "VIAGRA/BECK HO-AN",
   },
   {
     id: 38,
-    image: Good,
+    image: 잠재적연애구간,
     url: "https://www.toomics.com/webtoon/episode/toon/5025",
     title: "잠재적연애구간",
     content:
@@ -489,7 +491,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 39,
-    image: Idon,
+    image: 그런여자,
     url: "https://www.toomics.com/webtoon/episode/toon/5074",
     title: "그런여자",
     content:
@@ -499,7 +501,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 40,
-    image: Thatwo,
+    image: 첫사랑의딸,
     url: "https://www.toomics.com/webtoon/episode/toon/4758",
     title: "첫사랑의 딸",
     content:
@@ -509,7 +511,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 41,
-    image: Dua,
+    image: 캐슬,
     url: "https://www.toomics.com/webtoon/episode/toon/5106",
     title: "캐슬",
     content:
@@ -519,7 +521,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 42,
-    image: Ca,
+    image: 파라다이스,
     url: "https://www.toomics.com/webtoon/episode/toon/4994",
     title: "파라다이스",
     content:
@@ -529,17 +531,17 @@ const allCardsData: CardData[] = [
   },
   {
     id: 43,
-    image: Para,
+    image: 아이돌키우기,
     url: "https://www.toomics.com/webtoon/episode/toon/5174",
     title: "아이돌키우기",
     content:
       "여자로 오해받은 예쁜 남자 로드 매니저 방수경, 근신 중인 슈퍼스타 이아솜과 동거를 시작하다! 눈앞의 섹시 아이돌이 그림의 떡?",
     hashtags: "#연예계 #동거 #존예",
-    author: "Viagra/BECK",
+    author: "VIAGRA/BECK",
   },
   {
     id: 44,
-    image: Idol,
+    image: 친구아내,
     url: "https://www.toomics.com/webtoon/episode/toon/5131",
     title: "친구아내",
     content:
@@ -549,7 +551,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 45,
-    image: FWife,
+    image: 분양녀,
     url: "https://www.toomics.com/webtoon/episode/toon/5216",
     title: "분양녀",
     content:
@@ -559,7 +561,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 46,
-    image: Pet,
+    image: 처제,
     url: "https://www.toomics.com/webtoon/episode/toon/5247",
     title: "처제",
     content:
@@ -569,17 +571,17 @@ const allCardsData: CardData[] = [
   },
   {
     id: 47,
-    image: Che,
+    image: 엄마실격,
     url: "https://www.toomics.com/webtoon/episode/toon/5175",
     title: "엄마실격",
     content:
-      "42세 라고는 믿기 힘든 외모의 아름다운 그녀, 유진. 그녀를 중심으로 개성 강하고 매력적인 4명이 만들어넨사각관계 이야기.",
+      "42세 라고는 믿기 힘든 외모의 아름다운 그녀, 유진. 그녀를 중심으로 개성 강하고 매력적인 4명이 만들어넨 사각관계 이야기.",
     hashtags: "#친구엄마 #유부녀",
     author: "비아그라/INJAK",
   },
   {
     id: 48,
-    image: Mom,
+    image: 해녀,
     url: "https://www.toomics.com/webtoon/episode/toon/5198",
     title: "해녀",
     content:
@@ -589,7 +591,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 49,
-    image: Bu,
+    image: 불륜주의보,
     url: "https://www.toomics.com/webtoon/episode/toon/5232",
     title: "불륜주의보",
     content:
@@ -599,7 +601,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 50,
-    image: Hea,
+    image: 도우미,
     url: "https://www.toomics.com/webtoon/episode/toon/5343",
     title: "도우미",
     content:
@@ -609,7 +611,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 51,
-    image: Siren,
+    image: 은밀한거래,
     url: "https://www.toomics.com/webtoon/episode/toon/5338",
     title: "은밀한거래",
     content:
@@ -619,7 +621,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 52,
-    image: Helper,
+    image: 숙모,
     url: "https://www.toomics.com/webtoon/episode/toon/4966",
     title: "숙모",
     content:
@@ -629,7 +631,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 53,
-    image: Oun,
+    image: 노출교사,
     url: "https://www.toomics.com/webtoon/episode/toon/5344",
     title: "노출교사",
     content:
@@ -639,7 +641,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 54,
-    image: Suk,
+    image: 버린남자,
     url: "https://www.toomics.com/webtoon/episode/toon/5358",
     title: "버린남자",
     content:
@@ -649,7 +651,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 55,
-    image: YongG,
+    image: 슈가대디,
     url: "https://www.toomics.com/webtoon/episode/toon/5391",
     title: "슈가대디",
     content:
@@ -659,37 +661,37 @@ const allCardsData: CardData[] = [
   },
   {
     id: 56,
-    image: Ddak,
+    image: 딱풀이안빠져요,
     url: "",
     title: "딱풀이 안 빠져요",
     content:
       "야릇한 사진으로 인터넷을 뜨겁게 달군 화제의 그녀가 바로 내 옆집에 산다면?!",
-    hashtags: "",
+    hashtags: "#에로틱 #일본유통불가",
     author: "썸 / 19테디",
   },
   {
     id: 57,
-    image: Pre,
+    image: 어린여자,
     url: "",
     title: "어린여자",
     content:
       "난 예쁘거나 섹시한 여자보다 어린 여자가 좋다 세상에 떼 묻지 않은...조그마한 선물에도 감동 할줄 아는 그런 순수한 여자 그리고 무엇보다 맛이 좋다!",
-    hashtags: "",
+    hashtags: "#에로틱 #일본유통불가",
     author: "비아그라 / 판다스틱",
   },
   {
     id: 58,
-    image: Oneroom,
+    image: 이쁘니,
     url: "",
     title: "이쁘니",
     content:
       "차갑게 거절한 남자가 알고보니 내 운명의 반쪽? 접근하는 남자들의 무리한 부탁도 거절하지 못하는 순진한 그녀의 운명의 남자는 나타날 것인가!",
-    hashtags: "",
+    hashtags: "#에로틱 #일본유통불가",
     author: "썸 / 탐",
   },
   {
     id: 59,
-    image: Mu,
+    image: 원룸텔,
     url: "https://www.toomics.com/webtoon/episode/toon/5645",
     title: "원룸텔",
     content:
@@ -699,7 +701,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 60,
-    image: De,
+    image: 며느리,
     url: "https://www.toomics.com/webtoon/episode/toon/5250",
     title: "며느리",
     content:
@@ -709,7 +711,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 61,
-    image: Joca,
+    image: 이혼녀,
     url: "https://www.toomics.com/webtoon/episode/toon/5683",
     title: "이혼녀",
     content:
@@ -719,7 +721,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 62,
-    image: Bunu,
+    image: 조카딸,
     url: "https://www.toomics.com/webtoon/episode/toon/5214",
     title: "조카딸",
     content:
@@ -729,17 +731,17 @@ const allCardsData: CardData[] = [
   },
   {
     id: 63,
-    image: Imo,
+    image: 부녀회장,
     url: "https://www.toomics.com/webtoon/episode/toon/5738",
     title: "부녀회장",
     content:
       "아파트 재건축을 위한 조합장을 선출하는 부녀회에서 조합장으로 당선된 한상진. 조합설립 동의서를 얻기 위해 미승인주민들의 집을 방문하는 상진은 미승인주민들의 집을 방문하면서 그들과의 비밀스러운 관계가 시작된다.",
     hashtags: "#이웃 #유부녀 #육체쾌락",
-    author: "코이/아트홀",
+    author: "코이/나라냐",
   },
   {
     id: 64,
-    image: TowJa,
+    image: 이모,
     url: "https://www.toomics.com/webtoon/episode/toon/5809",
     title: "이모",
     content:
@@ -749,7 +751,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 65,
-    image: MomStu,
+    image: 두자매,
     url: "https://www.toomics.com/webtoon/episode/toon/5613",
     title: "두자매",
     content:
@@ -759,7 +761,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 66,
-    image: NewMom,
+    image: 엄마는여대생,
     url: "https://www.toomics.com/webtoon/episode/toon/5140",
     title: "엄마는 여대생",
     content:
@@ -769,17 +771,17 @@ const allCardsData: CardData[] = [
   },
   {
     id: 67,
-    image: Dolsing,
+    image: 새엄마는내여친,
     url: "https://novel.bookpal.co.kr/view_toon/7013046",
     title: "새엄마는 내 여친",
     content:
-      "나와는 고작 7살 차이의 젊은 아버지의 연인, 넘지 말아야 될 선까지 넘어버린 우리 사이... 아버지에게 미안한 마음도 잠시뿐 우리는 서로를 탐닉하면서 하루하루 사랑을 키워갔다. 우리의 사랑! 이대로 이뤄질 수 있을까?",
+      "나와는 고작 7살 차이의 젊은 아버지의 연인, 넘지 말아야 될 선까지 넘어버린 우리 사이... 아버지에게 미안한 마음도 잠시뿐 우리는 서로를 탐닉하면서 하루하루 사랑을 키워갔다. 우리의 사랑! 이대로 이뤄질 수 있을까?...",
     hashtags: "#새엄마 #연상녀 #거유",
     author: "비아그라/G유",
   },
   {
     id: 68,
-    image: Delil,
+    image: 돌싱녀,
     url: "https://www.toomics.com/webtoon/episode/toon/6677",
     title: "돌싱녀",
     content:
@@ -789,17 +791,18 @@ const allCardsData: CardData[] = [
   },
   {
     id: 69,
-    image: Easy,
+    image: 데릴아빠,
     url: "https://www.toomics.com/webtoon/episode/toon/6675",
     title: "데릴아빠",
-    content:
-      "XX코인은 대박이라더니…!! 아루 아침에 전 재산을 잃어버린 충격에 회사에서 깽판을 치고 쫒겨나 희망도 없이 죽으려고 내려온 바닷가였는데, 이게 무슨 일이지? 입이 떨 벌어질 정도의 미녀. 그런데.. 음..? 내가 왜 혼인신고서에 도장을 찍고 있는거지? 게다가 뭐? 아줌마를 꼭 빼닮은 저 쭉쭉 빵빵한 20대 글래머 아가씨들은 다 누구? 뭐?? 전부 딸들이라고?",
+    content: `"XX코인은 대박이라더니…!! 아루 아침에 전 재산을 잃어버린 충격에 회사에서 깽판을 치고 쫒겨나 희망도 없이 죽으려고 내려온 바닷가였는데, 이게 무슨 일이지? 입이 떨 벌어질 정도의 미녀. 그런데.. 음..?
+내가 왜 혼인신고서에 도장을 찍고 있는거지? 
+게다가 뭐? 아줌마를 꼭 빼닮은 저 쭉쭉 빵빵한 20대 글래머 아가씨들은 다 누구? 뭐?? 전부 딸들이라고?"`,
     hashtags: "#유부녀 #모녀 #동거",
     author: "썸/이호돈",
   },
   {
     id: 70,
-    image: Bila,
+    image: 찐한친구,
     url: "https://www.toomics.com/webtoon/episode/toon/6485",
     title: "찐한 친구",
     content:
@@ -809,7 +812,7 @@ const allCardsData: CardData[] = [
   },
   {
     id: 71,
-    image: Iut,
+    image: 빌라,
     url: "https://www.toomics.com/webtoon/episode/toon/6483",
     title: "69빌라",
     content:
@@ -819,80 +822,94 @@ const allCardsData: CardData[] = [
   },
   {
     id: 72,
-    image: SexOffi,
-    url: "https://www.anytoon.co.kr/webtoon/episode/8020",
+    image: 이웃의맛,
+    url: "https://www.toomics.com/webtoon/episode/toon/5810",
     title: "이웃의 맛",
-    content:
-      "남 부럽지 않은 환경에 늘 떵떵거리며 살 줄 알았는데…조직의 불법 온라인 카지노 자금을 세탁하는 과정에서 빼돌리던 내역이 발각됐다! 조직에서도, 경찰에게도 쫒기며 도망자 신세가 된 이들 부부는 미국에서 사느라 집을 비운 절친의 집으로 피신한다 급하게 챙겨나온건 손에 쥔 몇 푼 뿐, 살려면 동네 주민들과 접촉이 있을 수밖에 없다. 서로 친 인척관계, 다양한 이해관계가 얽혀있는 오감동 주민들과 부대끼며 벌어지는 유혹과 사건 사고들. 그 안에서도 새로운 사랑은 싹 트게 되는데...각자의 마음이 오감동 마을 주민 누군가에게로 향하며 부부의 골 또한 깊어진다, 이들의 위험한 로맨스는 어떤 결론에 이를까?",
+    content: `"남 부럽지 않은 환경에 늘 떵떵거리며 살 줄 알았는데…조직의 불법 온라인 카지노 자금을 세탁하는 과정에서 빼돌리던 내역이 발각됐다! 조직에서도, 경찰에게도 쫒기며 도망자 신세가 된 이들 부부는 미국에서 사느라 집을 비운 절친의 집으로 피신한다 급하게 챙겨나온건 손에 쥔 몇 푼 뿐, 살려면 동네 주민들과 접촉이 있을 수밖에 없다.
+서로 친 인척관계, 다양한 이해관계가 얽혀있는 오감동 주민들과 부대끼며 벌어지는 유혹과 사건 사고들. 그 안에서도 새로운 사랑은 싹 트게 되는데...각자의 마음이 오감동 마을 주민 누군가에게로 향하며 부부의 골 또한 깊어진다, 이들의 위험한 로맨스는 어떤 결론에 이를까?"`,
     hashtags: "#이웃 #유부남 #유부녀",
     author: "에로로/오투린",
   },
   {
     id: 73,
-    image: Down,
+    image: sex오피스,
+    url: "https://www.toomics.com/webtoon/episode/toon/6676",
+    title: "sex오피스",
+    content: `"친구가 남자를 모르는 유진에게 소소한 재미라도 보라며 선물해준 작은 딜도, 시험 삼아서 넣어본 딜도가 끼어서 빠지지 않는다?! 이러지도 저러지도 못하는 틈에 당황스러워 잊고 있던 업체 미팅일정이 떠올라 급한대로 약속 장소에 나가보는데…."`,
+    hashtags: "#오피스 #불륜 #성욕",
+    author: "비아그라/씨알리스",
+  },
+  {
+    id: 74,
+    image: 아랫집아줌마,
     url: "https://toptoon.com/comic/ep_list/downstairs_lady",
     title: "아랫집 아줌마",
     content:
       "반복적이고 무료한 일상을 보내는 윤지. 남자한테 사랑받으면서 관계하고 싶은 욕구는 매일 끓어오른다. 그런 윤지의 일상에 변화가 생기기 시작하는데… “나랑 하고 싶어.? 하고 싶으면 해도 돼…",
     hashtags: "#미시 #유부녀 #비밀관계",
-    author: "비아그라/나라냐",
+    author: "비아그라 / 나라냐",
   },
   {
-    id: 74,
-    image: Quik,
+    id: 75,
+    image: 택배요,
     url: "https://toptoon.com/comic/ep_list/Parcel_Service",
     title: "택배요",
     content:
-      "탄탄한 중견기업 사장의 아들 기두. 방탕한한 생활을 누리며, 남부러울 것 없던 삶에 큰 변화가 찾아왔다! 회사는 부도로 넘어가고..아버지는 감옥에..엄마는 행방 불명.. 한순간에 택배기사가 되고마는데!",
+      "탄탄한 중견기업 사장의 아들 기두. 방탕한 생활을 누리며, 남부러울 것 없던 삶에 큰 변화가 찾아왔다! 회사는 부도로 넘어가고..아버지는 감옥에..엄마는 행방 불명.. 한순간에 택배기사가 되고마는데!",
     hashtags: "#택배 #만남 #일상",
     author: "마카 / 청유자",
   },
   {
-    id: 75,
-    image: Campu,
+    id: 76,
+    image: 몸캠퍼스,
     url: "https://www.anytoon.co.kr/webtoon/episode/8020",
     title: "몸 Cam퍼스",
-    content:
-      "캠퍼스 라이프를 꿈꾸며, 새내기가 되었다! MT와 OT, 동아리활동!! 그리고 피어나는 사랑..! 그런데 바이러스 때문에 비대면 수업이라고? 절망적인 첫 화상 수업시간, cam 화면에 동기생 '현아'의 자위행위가 펼쳐지게 되는데…",
+    content: `"캠퍼스 라이프를 꿈꾸며, 새내기가 되었다!
+MT와 OT, 동아리활동!! 그리고 피어나는 사랑..! 그.런.데. 바이러스 때문에 비대면 수업이라고오오?
+절망적인 첫 화상 수업시간, cam 화면에 동기생 '현아'의 자위행위가 펼쳐지게 되는데…"`,
     hashtags: "#고수위 #연하남 #캠퍼스",
     author: "서페이드",
   },
   {
-    id: 76,
-    image: Tax,
+    id: 77,
+    image: 택시,
     url: "https://www.toomics.com/webtoon/episode/toon/7302",
     title: "택시",
-    content:
-      "평범한 택시 운전사인 주인공. 생판 처음 보는 여성이 처음을 가져감을 시작으로 그가 마음에 두고 있던 여성도 그에게 조금씩 몸과 마음을 열어주는데...",
+    content: `"평범한 택시 운전사인 주인공.
+생판 처음 보는 여성이 처음을 가져감을 시작으로
+그가 마음에 두고 있던 여성도 그에게 조금씩 몸과 마음을 열어주는데..."`,
     hashtags: "#성적취향 #유혹 #찌질남",
     author: "코이 / 부타",
   },
   {
-    id: 77,
-    image: MyD,
+    id: 78,
+    image: 내딸을부탁해,
     url: "https://www.toomics.com/webtoon/episode/toon/7231",
     title: "내 딸을 부탁해",
-    content: "친구가 딸애를 부탁하고 떠났다. 하지만 난, 그 애가 여자로 보인다",
+    content: `"친구가 딸애를 부탁하고 떠났다
+하지만 난, 그 애가 여자로 보인다"`,
     hashtags: "#친구아빠 #관음 #금발",
     author: "비아그라 / 코작가",
   },
   {
-    id: 78,
-    image: Bank,
+    id: 79,
+    image: 은행원,
     url: "https://www.toomics.com/webtoon/episode/toon/7462",
     title: "은행원",
-    content:
-      "주인공 은행원 박하주. 돈많고 물많은(?) 사모님들께 은행 상품을 팔기 위해 내던진 몸. 이게 된다고? 사모님의 아찔한 요구가 끊이질 않는다..!",
+    content: `"주인공 은행원 박하주.
+돈많고 물많은(?) 사모님들께 은행 상품을 팔기 위해 내던진 몸.
+이게 된다고? 사모님의 아찔한 요구가 끊이질 않는다..!"`,
     hashtags: "#유부녀 #불륜 #육체쾌락",
     author: "MCHALO/여우",
   },
   {
-    id: 79,
-    image: How,
+    id: 80,
+    image: 어쩌다이지경,
     url: "https://www.toomics.com/webtoon/episode/toon/7461",
     title: "어쩌다 이지경",
-    content:
-      "거리두기가 해제되고 첫 등교를 한 남태현. 학교의 여신 박세련을 만나 한 눈에 반하고 만다. 상사병을 앓는 태현을 보다못한 친구 이지경, 인싸였던 지경은 태현에게 강도 높은 연애훈련을 실시하는데!",
+    content: `"거리두기가 해제되고 첫 등교를 한 남태현.
+학교의 여신 박세련을 만나 한 눈에 반하고 만다.
+상사병을 앓는 태현을 보다못한 친구 이지경, 인싸였던 지경은 태현에게 강도 높은 연애훈련을 실시하는데!"`,
     hashtags: "#캠퍼스 #여대생 #존예",
     author: "오투린/싸또",
   },
@@ -958,46 +975,51 @@ function HomePage() {
 
   const text = textContent[language];
 
-
   return (
     <div className="flex flex-col">
       <div className="h-16">
         <Header />
       </div>
       <Side />
-      <div className="main_image" data-aos="fade-up">
+      <div className="main_image relative w-full h-[35rem]" data-aos="fade-up">
+      <div className="relative w-full h-full">
         <Image
           src={MainTop}
           alt="Main background"
-          className="brightness-50 w-full h-[35rem]"
+          fill
+          objectFit="cover"
+          className="brightness-50 sm:object-cover object-contain"
         />
-        <div className="main_image_text justify-center items-center content-center">
-          <div className="text-center">
-            <span>{text.leading}</span>
-            <span className="font-semibold">{text.globalStudio}</span>
-          </div>
-          <div className="text-5xl font-bold hidden sm:flex">
-            WEBTOON&nbsp; <br className="" />{" "}
-            <span className="te text-orange-700">KOI CONTENT</span>
-          </div>
+      </div>
 
-          <div className="sm:hidden text-3xl font-bold justify-center items-center text-center">
-            WEBTOON
-            <br className="" />{" "}
-            <span className="te text-orange-700">KOI CONTENT</span>
-          </div>
+      <div className="main_image_text absolute inset-0 flex flex-col justify-center items-center text-center">
+        <div>
+          <span>{text.leading}</span>
+          <span className="font-semibold">{text.globalStudio}</span>
+        </div>
+        <div className="text-5xl font-bold hidden sm:flex">
+          WEBTOON&nbsp; <br className="" />{" "}
+          <span className="te text-[#EE511F]">KOI CONTENT</span>
+        </div>
 
-          <div className="flex justify-center mt-8">
-            <Link href="/about/company">
-              <button className="btn text-white rounded-3xl w-[13rem] hover:bg-[#EE511F] bg-inherit">
-                {text.goToWorks} &nbsp; &nbsp; &gt;{" "}
-              </button>
-            </Link>
-          </div>
+        <div className="sm:hidden text-3xl font-bold">
+          WEBTOON
+          <br className="" />{" "}
+          <span className="te text-[#EE511F]">KOI CONTENT</span>
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <Link href="/about/company">
+            <button className="btn text-white rounded-3xl w-[13rem] hover:bg-[#EE511F] bg-inherit">
+              {text.goToWorks} &nbsp; &nbsp; <ArrowR />
+            </button>
+          </Link>
         </div>
       </div>
+    </div>
+
       <div
-        className="flex flex-row min-h-screen w-screen my-[1rem] mb-[15rem]"
+        className="flex flex-row min-h-screen w-screen my-[1rem] mb-[10rem]"
         data-aos="fade-up"
       >
         <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
@@ -1010,12 +1032,7 @@ function HomePage() {
             </div>
             <div className="font-medium flex justify-center items-center cursor-pointer">
               <Link href="/webtoon" className="flex">
-                {text.more} &nbsp;{" "}
-                <Image
-                  src={Arrow}
-                  alt="Arrow"
-                  className="h-[1.5rem] w-[1.5rem]"
-                />
+                {text.more} &nbsp; <ArrowLong />
               </Link>
             </div>
           </div>
@@ -1099,16 +1116,11 @@ function HomePage() {
               </svg>
             </button>
           </div>
-          <div className="flex text-center items-center justify-between mt-[12rem] mb-8">
+          <div className="flex text-center items-center justify-between mt-[7rem] mb-8">
             <div className="text-4xl ss:text-2xl font-bold">{text.recruit}</div>
             <div className="font-medium flex justify-center items-center cursor-pointer">
               <Link href="/news/recruitment" className="flex">
-                {text.more} &nbsp;{" "}
-                <Image
-                  src={Arrow}
-                  alt="Arrow"
-                  className="h-[1.5rem] w-[1.5rem]"
-                />
+                {text.more} &nbsp; <ArrowLong />
               </Link>
             </div>
           </div>

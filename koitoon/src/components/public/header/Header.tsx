@@ -147,7 +147,7 @@ export default function App() {
                 <ul className="menu bg-base-200 w-56 rounded-box">
                   {Object.keys(data[language as "KO" | "EN"]).map(
                     (menuKey, index) => (
-                      <li key={index} className="hover:text-[#EE511F]">
+                      <li key={index} >
                         {data[language as "KO" | "EN"][menuKey].subMenus ? (
                           <details key={index}>
                             <summary key={index}>{menuKey}</summary>
@@ -155,7 +155,7 @@ export default function App() {
                               menuKey
                             ].subMenus!.map((menuItem, index) => (
                               <ul key={index}>
-                                <li key={index}>
+                                <li key={index} className="hover:text-[#EE511F]">
                                   <Link key={index} href={menuItem.url}>
                                     {menuItem.label}
                                   </Link>
