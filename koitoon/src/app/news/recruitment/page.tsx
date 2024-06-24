@@ -54,9 +54,6 @@ const textContent = {
       "다양한 종류의 간식 및 음료 상시 제공",
       "전직원 듀얼모니터 및 맥무릎 장비 지원",
       "도서 구매 비용 지원",
-      "고양이 있음",
-      "고양이 귀여움",
-      "고양이 털빠짐",
     ],
     applicationInstructions: [
       "E-mail 지원: kocontent@kocontent.com",
@@ -91,9 +88,6 @@ const textContent = {
       "Various snacks and drinks provided at all times",
       "Support for dual monitors and MacBook equipment for all employees",
       "Support for book purchases",
-      "There is a cat",
-      "The cat is cute",
-      "The cat sheds hair",
     ],
     applicationInstructions: [
       "E-mail Application: kocontent@kocontent.com",
@@ -140,8 +134,11 @@ const EmailForm: React.FC = () => {
   return (
     <RootLayout>
       <>
-        <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
-          <ul className="ss:hidden">
+        <div
+          className="text-sm sm:breadcrumbs pad:breadcrumbs"
+          data-aos="fade-up"
+        >
+          <ul className="hidden sm:flex pad:flex">
             <li>
               <Link href="/">{text.home}</Link>
             </li>
@@ -155,9 +152,7 @@ const EmailForm: React.FC = () => {
           <div className="text-4xl mt-[4rem] mb-[1rem] font-bold ss:text-center">
             {text.recruitment}
           </div>
-          <div className="font-light ss:text-center">
-            {text.welcomeMessage}
-          </div>
+          <div className="font-light ss:text-center">{text.welcomeMessage}</div>
         </div>
 
         <div className="container mx-auto mb-[7rem]" data-aos="fade-up  ">
@@ -170,7 +165,7 @@ const EmailForm: React.FC = () => {
           </div>
 
           {/* 모바일 */}
-          <div className="p-8 border border-violet-200 rounded-lg bg-violet-50 sm:hidden">
+          <div className="p-8 border border-violet-200 rounded-lg bg-violet-50 sm:hidden pad:hidden">
             <h2 className="text-2xl font-bold mb-12 flex items-center ss:text-center">
               <span className="inline-block bg-orange-600 h-4 w-4 mr-2 ss:text-center"></span>
               <span className="ss:text-center"> {text.webtoonPart}</span>
@@ -210,13 +205,95 @@ const EmailForm: React.FC = () => {
                     |
                   </span>
                   {text.applicationMethod}
-                  <Image src={Focus} className={`ml-4 w-8 ${language === "EN" ? "mr-12" : ""}`} alt={""} />
+                  <Image
+                    src={Focus}
+                    className={`ml-4 w-8 ${language === "EN" ? "mr-12" : ""}`}
+                    alt={""}
+                  />
                 </h3>
                 <ul className="list-disc ml-8">
-                  {text.applicationInstructions.map((instruction, index) => (
-                    <li key={index}>{instruction}</li>
+                {text.applicationInstructions.map((instruction, index) =>
+                  index != 2 ? <li key={index}>{instruction}</li> : ""
+                )}
+              </ul>
+              <span className="text-[#EE511F] text-xs">
+                {text.applicationInstructions[2]}
+              </span>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center w-full">
+                  <span className="font-bold text-xl w-2 mr-2">|</span>{" "}
+                  {text.benefits}
+                  <Image
+                    src={Hand}
+                    className={`ml-4 w-8 ${language === "EN" ? "mr-16" : ""}`}
+                    alt={""}
+                  />
+                </h3>
+                <ul className="list-disc ml-8">
+                  {text.benefitsContent.map((benefit, index) => (
+                    <li key={index}>{benefit}</li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* pad */}
+          <div className="p-8 border border-violet-200 rounded-lg bg-violet-50 sm:hidden ss:hidden">
+            <h2 className="text-2xl font-bold mb-12 flex items-center ss:text-center">
+              <span className="inline-block bg-orange-600 h-4 w-4 mr-2 ss:text-center"></span>
+              <span className=""> {text.webtoonPart}</span>
+            </h2>
+            <div className="grid grid-cols-1 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                  <span className="font-bold w-2 text-xl mr-2">|</span>{" "}
+                  {text.recruitmentTitle}
+                  <Image
+                    src={Hourglass}
+                    className={`ml-4 w-6 ${language === "EN" ? "mr-20" : ""}`}
+                    alt={""}
+                  />
+                </h3>
+                <ul className="list-disc ml-8">
+                  <li>{text.recruitmentContent}</li>
+                  <li>{text.backgroundArtist}</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 flex items-center">
+                  <span className="font-bold text-xl w-2 mr-2">|</span>{" "}
+                  {text.qualification}
+                  <Image src={Paper} className="ml-4 w-7" alt={""} />
+                </h3>
+                <ul className="list-disc ml-8">
+                  {text.requirements.map((requirement, index) => (
+                    <li key={index}>{requirement}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold mb-2 flex items-center w-full">
+                  <span className="font-extrabold text-xl tracking-widest w-4 mr-2">
+                    |
+                  </span>
+                  {text.applicationMethod}
+                  <Image
+                    src={Focus}
+                    className={`ml-4 w-8 ${language === "EN" ? "mr-12" : ""}`}
+                    alt={""}
+                  />
+                </h3>
+                <ul className="list-disc ml-8">
+                {text.applicationInstructions.map((instruction, index) =>
+                  index != 2 ? <li key={index}>{instruction}</li> : ""
+                )}
+              </ul>
+              <span className="text-[#EE511F] text-xs mr-[10rem] ml-[0.75rem]">
+                {text.applicationInstructions[2]}
+              </span>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center w-full">
@@ -239,7 +316,7 @@ const EmailForm: React.FC = () => {
 
           {/* PC화면  */}
           <div
-            className="p-8 border border-violet-200 rounded-lg bg-violet-50 ss:hidden"
+            className="p-8 border border-violet-200 rounded-lg bg-violet-50 ss:hidden pad:hidden"
             data-aos="fade-up"
           >
             <h2 className="text-2xl font-bold mb-12 flex items-center ss:text-center">
@@ -293,14 +370,12 @@ const EmailForm: React.FC = () => {
               </h3>
               <ul className="list-disc ml-8">
                 {text.applicationInstructions.map((instruction, index) =>
-                  index != 2 ? (
-                    <li key={index}>{instruction}</li>
-                  ) : (
-                    ""
-                  )                  
+                  index != 2 ? <li key={index}>{instruction}</li> : ""
                 )}
               </ul>
-              <span className="text-[#EE511F] text-xs mr-[10rem] ml-[0.75rem]" >{text.applicationInstructions[2]}</span>
+              <span className="text-[#EE511F] text-xs mr-[10rem] ml-[0.75rem]">
+                {text.applicationInstructions[2]}
+              </span>
             </div>
           </div>
         </div>

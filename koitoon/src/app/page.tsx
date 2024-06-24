@@ -952,7 +952,7 @@ function HomePage() {
 
   const handleNext = () => {
     const isMobile = window.innerWidth < 768;
-    const imagesPerSlide = isMobile ? 2 : 4;
+    const imagesPerSlide = isMobile ? 2 : window.innerWidth < 1024 ? 3 : 4;
     if (currentIndex + imagesPerSlide >= totalImages) {
       setCurrentIndex(totalImages - imagesPerSlide);
     } else {
@@ -962,7 +962,7 @@ function HomePage() {
 
   const handlePrev = () => {
     const isMobile = window.innerWidth < 768;
-    const imagesPerSlide = isMobile ? 2 : 4;
+    const imagesPerSlide = isMobile ? 2 : window.innerWidth < 1024 ? 3 : 4;
     if (currentIndex - imagesPerSlide < 0) {
       setCurrentIndex(0);
     } else {
@@ -971,7 +971,7 @@ function HomePage() {
   };
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  const imagesPerSlide = isMobile ? 2 : 4;
+  const imagesPerSlide = isMobile ? 2 : window.innerWidth < 1024 ? 3 : 4;
 
   const text = textContent[language];
 
@@ -982,41 +982,46 @@ function HomePage() {
       </div>
       <Side />
       <div className="main_image relative w-full h-[35rem]" data-aos="fade-up">
-      <div className="relative w-full h-full">
-        <Image
-          src={MainTop}
-          alt="Main background"
-          fill
-          objectFit="cover"
-          className="brightness-50 sm:object-cover object-contain"
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src={MainTop}
+            alt="Main background"
+            fill
+            objectFit="cover"
+            className="brightness-50 sm:object-cover object-contain"
+          />
+        </div>
+
+        <div className="main_image_text absolute inset-0 flex flex-col justify-center items-center text-center">
+          <div className="">
+            <span className="font-thin text-left">{text.leading}</span>
+            <span className="font-bold"> {text.globalStudio}</span>
+          </div>
+          <div className="text-5xl font-bold hidden sm:flex">
+            WEBTOON&nbsp; <br className="" />{" "}
+            <span className="te text-[#EE511F]">KOI CONTENT</span>
+          </div>
+
+          <div className="text-3xl font-bold hidden pad:flex">
+            WEBTOON&nbsp; <br className="" />{" "}
+            <span className="te text-[#EE511F]">KOI CONTENT</span>
+          </div>
+
+          <div className="hidden ss:flex text-2xl font-bold">
+            WEBTOON
+            <br className="" />{" "}
+            <span className="te text-[#EE511F]">KOI CONTENT</span>
+          </div>
+
+          <div className="flex justify-center mt-8">
+            <Link href="/about/company">
+              <button className="btn text-white rounded-3xl w-[13rem] hover:bg-[#EE511F] bg-inherit">
+                {text.goToWorks} &nbsp; &nbsp; <ArrowR />
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
-
-      <div className="main_image_text absolute inset-0 flex flex-col justify-center items-center text-center">
-        <div>
-          <span>{text.leading}</span>
-          <span className="font-semibold">{text.globalStudio}</span>
-        </div>
-        <div className="text-5xl font-bold hidden sm:flex">
-          WEBTOON&nbsp; <br className="" />{" "}
-          <span className="te text-[#EE511F]">KOI CONTENT</span>
-        </div>
-
-        <div className="sm:hidden text-3xl font-bold">
-          WEBTOON
-          <br className="" />{" "}
-          <span className="te text-[#EE511F]">KOI CONTENT</span>
-        </div>
-
-        <div className="flex justify-center mt-8">
-          <Link href="/about/company">
-            <button className="btn text-white rounded-3xl w-[13rem] hover:bg-[#EE511F] bg-inherit">
-              {text.goToWorks} &nbsp; &nbsp; <ArrowR />
-            </button>
-          </Link>
-        </div>
-      </div>
-    </div>
 
       <div
         className="flex flex-row min-h-screen w-screen my-[1rem] mb-[10rem]"
@@ -1036,7 +1041,7 @@ function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="grid ss:grid-cols-2 sm:grid-cols-4 gap-8 mb-[2rem] ">
+          <div className="grid ss:grid-cols-2 sm:grid-cols-4 pad:grid-cols-3 gap-8 mb-[2rem] ">
             {allCardsData
               .slice(currentIndex, currentIndex + imagesPerSlide)
               .map((card) => (

@@ -112,7 +112,7 @@ export default function App() {
 
   return (
     <>
-      <div className="hidden ss:navbar bg-base-100 fixed z-50">
+      <div className="hidden ss:navbar pad:navbar bg-base-100 fixed z-50">
         <div className="navbar-start ml-8">
           <div className="drawer">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
@@ -215,7 +215,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="ss:hidden navbar bg-base-100 items-center justify-center fixed z-40">
+      <div className="hidden sm:navbar bg-base-100 items-center justify-center fixed z-40">
         <div className="navbar-start">
           <a href="/" className="w-12 md:ml-[5rem]">
             <Image

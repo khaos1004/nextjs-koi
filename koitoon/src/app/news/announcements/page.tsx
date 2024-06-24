@@ -98,13 +98,13 @@ const HomePage: React.FC = () => {
   return (
     <RootLayout>
       {/* PC 화면용 */}
-      <div className="hidden sm:block">
+      <div className="hidden sm:block pad:block">
         <div className="main_image">
           {/* <Image width={100} height={50} layout="intrinsic" objectFit="cover" src={bg} width='5000' alt="bg" />
           <div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
         </div>
 
-        <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
+        <div className="text-sm sm:breadcrumbs pad:breadcrumbs" data-aos="fade-up">
           <ul className="ss:hidden">
             <li>
               <a href="/">{text.home}</a>
@@ -163,8 +163,8 @@ const HomePage: React.FC = () => {
           filteredCards.slice(0, visibleCount).map((card) => (
             <div key={card.id} onClick={() => handleCardClick(card)}>
               <div className="flex mb-4 cursor-pointer" data-aos="fade-up">
-                <div className="w-1/4 relative" style={{ height: "170px" }}>
-                  <Image src={card.imageUrl} alt={card.title} layout="fill" objectFit="cover"/>
+              <div className="relative sm:h-[170px] sm:w-[350px] pad:h-[200px] pad:w-[500px]">
+                  <Image src={card.imageUrl} alt={card.title} fill objectFit="cover"/>
                 </div>
                 <div className="w-3/4 p-4">
                   <h2 className="text-xl font-semibold">{card.title}</h2>
@@ -189,13 +189,13 @@ const HomePage: React.FC = () => {
       </div>
 
       {/* 모바일 화면용 */}
-      <div className="ss:block sm:hidden">
+      <div className="ss:block sm:hidden pad:hidden">
         <div className="main_image">
           {/* <Image width={100} height={50} layout="intrinsic" objectFit="cover" src={bg} width='5000' alt="bg" />
           <div className="main_image_text font-bold">대체 이미지 파일 요청</div> */}
         </div>
 
-        <div className="text-sm sm:breadcrumbs" data-aos="fade-up">
+        <div className="text-sm sm:breadcrumbs pad:breadcrumbs" data-aos="fade-up">
           <ul className="ss:hidden">
             <li>
               <a href="/">{text.home}</a>
@@ -255,7 +255,7 @@ const HomePage: React.FC = () => {
             <div key={card.id} onClick={() => handleCardClick(card)}>
               <div className="flex flex-col mb-4 cursor-pointer" data-aos="fade-up">
                 <div className="relative w-full" style={{ height: "250px" }}>
-                  <Image src={card.imageUrl} alt={card.title} layout="fill" objectFit="cover" />
+                  <Image src={card.imageUrl} alt={card.title} fill objectFit="cover" />
                 </div>
                 <div className="p-4">
                   <h2 className="text-xl font-semibold">{card.title}</h2>

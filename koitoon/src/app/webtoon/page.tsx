@@ -963,8 +963,8 @@ const HomePage: React.FC = () => {
       <div className="main_image">
       </div>
 
-      <div className="text-sm sm:breadcrumbs">
-        <ul className="ss:hidden">
+      <div className="text-sm sm:breadcrumbs pad:breadcrumbs">
+        <ul className="hidden sm:flex pad:flex">
           <li>
             <a href="/">{text.home}</a>
           </li>
@@ -998,7 +998,7 @@ const HomePage: React.FC = () => {
         </button>
       </div>
 
-      <div className="grid ss:grid-cols-2 sm:grid-cols-4 gap-8 mb-[7.5rem] ">
+      <div className="grid ss:grid-cols-2 sm:grid-cols-4 pad:grid-cols-3 gap-8 mb-[7.5rem] ">
         {filteredCards.map((card) => (
           <div key={card.id} className="flex flex-col items-center mb-8">
             <div className="relative group overflow-hidden rounded-lg w-full h-[20rem]">
