@@ -98,12 +98,8 @@ const textContent: Record<string, TextContent> = {
       {
         year: "2024",
         events: [
-          { month: "07월", event: "2차 저작물 업무 협약(에브리웨어/챗툰)" },
-          { month: "05월", event: "국가공인기술평가 우수기업 인증" },
-          {
-            month: "04월",
-            event: "노블 코믹스 작품연재 계약 완료 및 런칭 예정",
-          },
+          { month: "03월", event: "비비온 JP 웹툰코이컨텐츠 자체 AI작품 계약(예정)" },
+          { month: "02월", event: "에브리웨이 MOU업무 협약식 오름미디어 US계약체결 및 유럽 진출(9작품)" },         
         ],
       },
       {
@@ -214,45 +210,40 @@ const textContent: Record<string, TextContent> = {
         year: "2024",
         events: [
           {
-            month: "July",
-            event: "Secondary Copyright Agreement (Everywhere/Chattoon)",
+            month: "Feb",
+            event: "Vivion JP Webtoon Koy Content's own AI work contract (scheduled)",
           },
           {
-            month: "May",
+            month: "Mar",
             event:
-              "Certified Excellent Company in National Technology Evaluation",
-          },
-          {
-            month: "April",
-            event:
-              "Completed Noble Comics Serialization Contract and Planned Launch",
-          },
+              "Everyway MOU business agreement ceremony Oreum Media US contract signing and entering Europe (9 works)",
+          },         
         ],
       },
       {
         year: "2023",
         events: [
           {
-            month: "December",
+            month: "Dec",
             event: "Establishment of Webtoon Koi Content Co., Ltd.",
           },
           {
-            month: "October",
+            month: "Oct",
             event: "Contract with Vivion JP and entry into Japan (20 works)",
           },
-          { month: "July", event: "Secondary Copyright Agreement (Everyway)" },
+          { month: "Jul", event: "Secondary Copyright Agreement (Everyway)" },
           {
             month: "May",
             event:
               "Certified Excellent Company in National Technology Evaluation",
           },
           {
-            month: "April",
+            month: "Apr",
             event:
               "Completed serialization contract and planned launch of Noble Comics works (AniToon Noble Comics/PinerToon/Sun and Moon)",
           },
           {
-            month: "February",
+            month: "Feb",
             event:
               "Contract with Orum Media US and entry into Europe (7 works)",
           },
@@ -261,20 +252,20 @@ const textContent: Record<string, TextContent> = {
       {
         year: "2022",
         events: [
-          { month: "December", event: "Surpassed sales of 2.3 billion won" },
+          { month: "Dec", event: "Surpassed sales of 2.3 billion won" },
           {
-            month: "November",
+            month: "Nov",
             event:
               "Completed serialization contract for Blue Pick Noble Comics",
           },
           { month: "", event: "Establishment of Toon Koi Co., Ltd." },
-          { month: "July", event: "Achieved 90 serialized works" },
+          { month: "Jul", event: "Achieved 90 serialized works" },
           {
-            month: "February",
+            month: "Feb",
             event: "Contract with Vivion JP and entry into Japan (11 works)",
           },
           {
-            month: "January",
+            month: "Jan",
             event: "Contract with Lezhin US Global (15 works)",
           },
         ],
@@ -282,16 +273,16 @@ const textContent: Record<string, TextContent> = {
       {
         year: "2021",
         events: [
-          { month: "November", event: "Achieved 70 serialized works" },
-          { month: "July", event: "Entry into US Global market (25 works)" },
-          { month: "June", event: "MOU with Atube Platform" },
+          { month: "Nov", event: "Achieved 70 serialized works" },
+          { month: "Jul", event: "Entry into US Global market (25 works)" },
+          { month: "Jun", event: "MOU with Atube Platform" },
         ],
       },
       {
         year: "2020",
         events: [
           {
-            month: "March",
+            month: "Mar",
             event:
               "Launch of own IP content services with 10 domestic companies",
           },
@@ -300,8 +291,8 @@ const textContent: Record<string, TextContent> = {
       {
         year: "2019",
         events: [
-          { month: "October", event: "Achieved 50 serialized works" },
-          { month: "February", event: "Contract and launch of AniToon works" },
+          { month: "Oct", event: "Achieved 50 serialized works" },
+          { month: "Feb", event: "Contract and launch of AniToon works" },
         ],
       },
       {
@@ -312,7 +303,7 @@ const textContent: Record<string, TextContent> = {
         year: "2016",
         events: [
           {
-            month: "December",
+            month: "Dec",
             event: "Achieved 750 million won in settlement amount",
           },
           { month: "May", event: "Contract and launch of TopToon works" },
@@ -322,10 +313,10 @@ const textContent: Record<string, TextContent> = {
         year: "2015",
         events: [
           {
-            month: "November",
+            month: "Nov",
             event: "Contract and launch of 12 works with Toomics",
           },
-          { month: "October", event: "Establishment of Webtoon Koi Content" },
+          { month: "Oct", event: "Establishment of Webtoon Koi Content" },
         ],
       },
     ],
@@ -805,15 +796,7 @@ const HomePage: React.FC = () => {
                   <div className="flex-1">
                     {text.historyData[0].events[1].event}
                   </div>
-                </div>
-                <div className="flex">
-                  <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    {text.historyData[0].events[2].month}
-                  </div>
-                  <div className="flex-1">
-                    {text.historyData[0].events[2].event}
-                  </div>
-                </div>
+                </div>          
               </span>
               <hr className="bg-[#EE511F] w-full h-[1px]" />
             </li>
@@ -1260,25 +1243,19 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2024</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[10.5rem] mr-8 text-right">
+              <span className="timeline-start sm:text-end mb-[12.5rem] mr-8 text-right">
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[0].events[0].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">07월</div>
+                  <div className="text-lg font-black ml-4 flex-none">02월</div>
                 </div>
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[0].events[1].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">05월</div>
-                </div>
-                <div className="flex">
-                  <div className="flex-1">
-                    {text.historyData[0].events[2].event}
-                  </div>
-                  <div className="text-lg font-black ml-4 flex-none">04월</div>
-                </div>
+                  <div className="text-lg font-black ml-4 flex-none">03월</div>
+                </div>             
               </span>
               <hr className="bg-[#EE511F] w-full h-full" />
             </li>
@@ -1305,7 +1282,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[7rem] mr-8 text-left">
+              <span className="timeline-end sm:text-start mb-[8.5rem] mr-8 text-left">
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     12월
@@ -1494,7 +1471,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2020</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[17rem] mr-8 text-right">
+              <span className="timeline-start sm:text-end mb-[17.5rem] mr-8 text-right">
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[4].events[0].event}
@@ -1669,7 +1646,7 @@ const HomePage: React.FC = () => {
           {/* pad연혁 */}
           {/* pad연혁 */}
           {/* pad연혁 */}
-          <ul className="flex timeline timeline-snap-icon max-sm:timeline-compact timeline-vertical">
+          <ul className="hidden pad:flex timeline timeline-snap-icon max-sm:timeline-compact timeline-vertical">
             <li className="h-[20rem]">
               <div className="timeline-middle">
                 <svg
@@ -1694,7 +1671,7 @@ const HomePage: React.FC = () => {
               <span className="timeline-end sm:text-start mb-[8.5rem] mr-8 text-left">
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    7월
+                    2월
                   </div>
                   <div className="flex-1">
                     {text.historyData[0].events[0].event}
@@ -1702,21 +1679,12 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    5월
+                    3월
                   </div>
                   <div className="flex-1">
                     {text.historyData[0].events[1].event}
                   </div>
-                </div>
-                <div className="flex">
-                  <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    4월
-                  </div>
-                  <div className="flex-1">
-                    {text.historyData[0].events[2].event}
-                  </div>
-                </div>
-
+                </div>               
               </span>
               <hr className="bg-[#EE511F] mt-[-10px] mb-[-20px]" />
             </li>
