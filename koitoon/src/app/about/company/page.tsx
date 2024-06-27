@@ -921,9 +921,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    {text.historyData[2].events[2].month}
+                  &nbsp; &nbsp;
+                  &nbsp;
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 text-orange-600">
                     {text.historyData[2].events[2].event}
                   </div>
                 </div>
@@ -1243,18 +1244,18 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2024</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[12.5rem] mr-8 text-right">
+              <span className={`timeline-start sm:text-end mr-8 text-right ${language === "EN" ? "mb-[11.5rem]" : "mb-[12.5rem]"}`}>
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[0].events[0].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">02월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[0].events[0].month}</div>
                 </div>
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[0].events[1].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">03월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[0].events[1].month}</div>
                 </div>             
               </span>
               <hr className="bg-[#EE511F] w-full h-full" />
@@ -1281,11 +1282,12 @@ const HomePage: React.FC = () => {
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
-              </span>
-              <span className="timeline-end sm:text-start mb-[8.5rem] mr-8 text-left">
+              </span>              
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[7.5rem]" : "mb-[8.5rem]"}`}>
+
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    12월
+                  {text.historyData[1].events[0].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[1].events[0].event}
@@ -1293,7 +1295,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    10월
+                  {text.historyData[1].events[1].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[1].events[1].event}
@@ -1301,7 +1303,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    07월
+                  {text.historyData[1].events[2].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[1].events[2].event}
@@ -1309,7 +1311,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    05월
+                  {text.historyData[1].events[3].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[1].events[3].event}
@@ -1317,7 +1319,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    04월
+                  {text.historyData[1].events[4].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[1].events[4].event}
@@ -1325,7 +1327,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    02월
+                  {text.historyData[1].events[5].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[1].events[5].event}
@@ -1357,42 +1359,42 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2022</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[8.5rem] mr-8 text-right">
+              <span className="timeline-start sm:text-end mb-[9rem] mr-8 text-right">
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[2].events[0].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">12월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[2].events[0].month}</div>
                 </div>
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[2].events[1].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">11월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[2].events[1].month}</div>
                 </div>
                 <div className="flex">
                   <div className="flex-1 text-orange-600">
                     {text.historyData[2].events[2].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none"></div>
+                  <div className="text-lg font-black ml-4 flex-none">&nbsp; &nbsp; &nbsp;</div>
                 </div>
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[2].events[3].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">07월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[2].events[3].month}</div>
                 </div>
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[2].events[4].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">02월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[2].events[4].month}</div>
                 </div>
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[2].events[5].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">01월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[2].events[5].month}</div>
                 </div>
               </span>
               <hr className="bg-[#EE511F] w-full h-full" />
@@ -1420,10 +1422,10 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[13.5rem] mr-8 text-left">
+              <span className="timeline-end sm:text-start mb-[14rem] mr-8 text-left">
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    11월
+                  {text.historyData[3].events[0].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[3].events[0].event}
@@ -1431,7 +1433,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    07월
+                  {text.historyData[3].events[1].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[3].events[1].event}
@@ -1439,7 +1441,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    06월
+                  {text.historyData[3].events[2].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[3].events[2].event}
@@ -1476,7 +1478,7 @@ const HomePage: React.FC = () => {
                   <div className="flex-1">
                     {text.historyData[4].events[0].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">03월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[4].events[0].month}</div>
                 </div>
               </span>
               <hr className="bg-[#EE511F] w-full h-full" />
@@ -1507,7 +1509,7 @@ const HomePage: React.FC = () => {
               <span className="timeline-end sm:text-start mb-[15.5rem] mr-8 text-left">
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    10월
+                  {text.historyData[5].events[0].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[5].events[0].event}
@@ -1515,7 +1517,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    02월
+                  {text.historyData[5].events[1].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[5].events[1].event}
@@ -1552,7 +1554,7 @@ const HomePage: React.FC = () => {
                   <div className="flex-1">
                     {text.historyData[6].events[0].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">05월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[6].events[0].month}</div>
                 </div>
               </span>
               <hr className="bg-[#EE511F] w-full h-full" />
@@ -1583,7 +1585,7 @@ const HomePage: React.FC = () => {
               <span className="timeline-end sm:text-start mb-[15.5rem] mr-8 text-left">
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    12월
+                  {text.historyData[7].events[0].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[7].events[0].event}
@@ -1591,7 +1593,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    05월
+                  {text.historyData[7].events[1].month}
                   </div>
                   <div className="flex-1">
                     {text.historyData[7].events[1].event}
@@ -1628,13 +1630,13 @@ const HomePage: React.FC = () => {
                   <div className="flex-1">
                     {text.historyData[8].events[0].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">11월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[8].events[0].month}</div>
                 </div>
                 <div className="flex">
                   <div className="flex-1 text-orange-600">
                     {text.historyData[8].events[1].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">10월</div>
+                  <div className="text-lg font-black ml-4 flex-none">{text.historyData[8].events[1].month}</div>
                 </div>
               </span>
               <hr className="bg-[#EE511F] w-full h-[0.25rem]" />
@@ -1667,8 +1669,8 @@ const HomePage: React.FC = () => {
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
-              </span>
-              <span className="timeline-end sm:text-start mb-[8.5rem] mr-8 text-left">
+              </span>              
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[2.5rem]" : "mb-[8.5rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     2월
@@ -1689,7 +1691,7 @@ const HomePage: React.FC = () => {
               <hr className="bg-[#EE511F] mt-[-10px] mb-[-20px]" />
             </li>
 
-            <li className="h-[30rem]">
+            <li className="h-[45rem]">
               <div className="timeline-middle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1703,14 +1705,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[27.5rem] items-center">
+              <span className="flex timeline-start mb-[42.5rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2023</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[3.5rem] mr-8 text-left">
+              <span className={`timeline-end sm:text-start  mr-8 text-left  ${language === "EN" ? "mb-[3.5rem]" : "mb-[18.5rem]"}`}>              
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     12월
@@ -1784,7 +1786,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[7.5rem] mr-8 text-left">
+              <span className={`timeline-end sm:text-start  mr-8 text-left ${language === "EN" ? "mb-[3rem]" : "mb-[7.5rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     12월
@@ -1850,7 +1852,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[10rem] mr-8 text-left">
+              <span className={`timeline-end sm:text-start  mr-8 text-left ${language === "EN" ? "mb-[8.5rem]" : "mb-[10rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     11월
@@ -1900,7 +1902,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[14.5rem] mr-8 text-left">
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[13rem]" : "mb-[14.5rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     03월
@@ -1934,7 +1936,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[13rem] mr-8 text-left">
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[11.5rem]" : "mb-[13rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     10월
@@ -2010,7 +2012,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[13rem] mr-8 text-left">
+              <span className={`timeline-end sm:text-start mb-[13rem] mr-8 text-left ${language === "EN" ? "mb-[8.5rem]" : "mb-[13rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     12월
@@ -2052,7 +2054,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[11.5rem] mr-8 text-left">
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[8.5rem]" : "mb-[11.5rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     11월
