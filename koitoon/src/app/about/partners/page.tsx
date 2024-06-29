@@ -89,7 +89,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={ridy}
               alt="Partner Logo 1"
             />
@@ -103,7 +103,7 @@ const HomePage: React.FC = () => {
               width={170}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={naver}
               alt="Partner Logo 1"
             />
@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={kaka}
               alt="Partner Logo 1"
             />
@@ -131,7 +131,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={bom}
               alt="Partner Logo 1"
             />
@@ -145,7 +145,7 @@ const HomePage: React.FC = () => {
               width={70}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={nhn}
               alt="Partner Logo 1"
             />
@@ -159,7 +159,7 @@ const HomePage: React.FC = () => {
               width={150}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={topco}
               alt="Partner Logo 1"
             />
@@ -190,7 +190,7 @@ const HomePage: React.FC = () => {
               width={180}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={every}
               alt="Partner Logo 1"
             />
@@ -204,7 +204,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={piner}
               alt="Partner Logo 1"
             />
@@ -232,7 +232,7 @@ const HomePage: React.FC = () => {
               width={70}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={legin}
               alt="Partner Logo 1"
             />
@@ -246,7 +246,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={wiz}
               alt="Partner Logo 1"
             />
@@ -274,7 +274,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={tapas}
               alt="Partner Logo 1"
             />
@@ -288,7 +288,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={one}
               alt="Partner Logo 1"
             />
@@ -302,7 +302,7 @@ const HomePage: React.FC = () => {
               width={35}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={lala}
               alt="Partner Logo 1"
             />
@@ -316,7 +316,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={me}
               alt="Partner Logo 1"
             />
@@ -330,7 +330,7 @@ const HomePage: React.FC = () => {
               width={80}
               height={50}
               layout="contain"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={blue}
               alt="Partner Logo 1"
             />
@@ -344,7 +344,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={bookpal}
               alt="Partner Logo 1"
             />
@@ -358,7 +358,7 @@ const HomePage: React.FC = () => {
               width={50}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={orm}
               alt="Partner Logo 1"
             />
@@ -372,7 +372,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={onestore}
               alt="Partner Logo 1"
             />
@@ -386,7 +386,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={book}
               alt="Partner Logo 1"
             />
@@ -400,7 +400,7 @@ const HomePage: React.FC = () => {
               width={35}
               height={20}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={ma}
               alt="Partner Logo 1"
             />
@@ -414,7 +414,7 @@ const HomePage: React.FC = () => {
               width={150}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={any}
               alt="Partner Logo 1"
             />
@@ -440,7 +440,7 @@ const HomePage: React.FC = () => {
               width={120}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={ridy}
               alt="Partner Logo 1"
             />
@@ -454,7 +454,7 @@ const HomePage: React.FC = () => {
               width={170}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={naver}
               alt="Partner Logo 1"
             />
@@ -468,7 +468,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={kaka}
               alt="Partner Logo 1"
             />
@@ -482,7 +482,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={bom}
               alt="Partner Logo 1"
             />
@@ -496,7 +496,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={nhn}
               alt="Partner Logo 1"
             />
@@ -510,7 +510,7 @@ const HomePage: React.FC = () => {
               width={150}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={topco}
               alt="Partner Logo 1"
             />
@@ -538,7 +538,7 @@ const HomePage: React.FC = () => {
               width={180}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={every}
               alt="Partner Logo 1"
             />
@@ -552,7 +552,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={piner}
               alt="Partner Logo 1"
             />
@@ -582,7 +582,7 @@ const HomePage: React.FC = () => {
               width={140}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={legin}
               alt="Partner Logo 1"
             />
@@ -596,7 +596,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={wiz}
               alt="Partner Logo 1"
             />
@@ -624,7 +624,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={tapas}
               alt="Partner Logo 1"
             />
@@ -638,7 +638,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={one}
               alt="Partner Logo 1"
             />
@@ -652,7 +652,7 @@ const HomePage: React.FC = () => {
               width={55}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={lala}
               alt="Partner Logo 1"
             />
@@ -666,7 +666,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={me}
               alt="Partner Logo 1"
             />
@@ -680,7 +680,7 @@ const HomePage: React.FC = () => {
               width={80}
               height={50}
               layout="contain"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={blue}
               alt="Partner Logo 1"
             />
@@ -694,7 +694,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={bookpal}
               alt="Partner Logo 1"
             />
@@ -708,7 +708,7 @@ const HomePage: React.FC = () => {
               width={80}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={orm}
               alt="Partner Logo 1"
             />
@@ -722,7 +722,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={onestore}
               alt="Partner Logo 1"
             />
@@ -736,7 +736,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={book}
               alt="Partner Logo 1"
             />
@@ -750,7 +750,7 @@ const HomePage: React.FC = () => {
               width={55}
               height={20}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={ma}
               alt="Partner Logo 1"
             />
@@ -764,7 +764,7 @@ const HomePage: React.FC = () => {
               width={150}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={any}
               alt="Partner Logo 1"
             />
@@ -790,7 +790,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={ridy}
               alt="Partner Logo 1"
             />
@@ -804,7 +804,7 @@ const HomePage: React.FC = () => {
               width={170}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={naver}
               alt="Partner Logo 1"
             />
@@ -818,7 +818,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={kaka}
               alt="Partner Logo 1"
             />
@@ -832,7 +832,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={bom}
               alt="Partner Logo 1"
             />
@@ -846,7 +846,7 @@ const HomePage: React.FC = () => {
               width={110}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={nhn}
               alt="Partner Logo 1"
             />
@@ -860,7 +860,7 @@ const HomePage: React.FC = () => {
               width={150}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={topco}
               alt="Partner Logo 1"
             />
@@ -891,7 +891,7 @@ const HomePage: React.FC = () => {
               width={180}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={every}
               alt="Partner Logo 1"
             />
@@ -905,7 +905,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={piner}
               alt="Partner Logo 1"
             />
@@ -933,7 +933,7 @@ const HomePage: React.FC = () => {
               width={90}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={legin}
               alt="Partner Logo 1"
             />
@@ -947,7 +947,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={wiz}
               alt="Partner Logo 1"
             />
@@ -975,7 +975,7 @@ const HomePage: React.FC = () => {
               width={100}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={tapas}
               alt="Partner Logo 1"
             />
@@ -989,7 +989,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={one}
               alt="Partner Logo 1"
             />
@@ -1003,7 +1003,7 @@ const HomePage: React.FC = () => {
               width={35}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={lala}
               alt="Partner Logo 1"
             />
@@ -1017,7 +1017,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={me}
               alt="Partner Logo 1"
             />
@@ -1031,7 +1031,7 @@ const HomePage: React.FC = () => {
               width={80}
               height={50}
               layout="contain"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={blue}
               alt="Partner Logo 1"
             />
@@ -1045,7 +1045,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={bookpal}
               alt="Partner Logo 1"
             />
@@ -1059,7 +1059,7 @@ const HomePage: React.FC = () => {
               width={50}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={orm}
               alt="Partner Logo 1"
             />
@@ -1073,7 +1073,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={onestore}
               alt="Partner Logo 1"
             />
@@ -1087,7 +1087,7 @@ const HomePage: React.FC = () => {
               width={190}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={book}
               alt="Partner Logo 1"
             />
@@ -1101,7 +1101,7 @@ const HomePage: React.FC = () => {
               width={35}
               height={20}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={ma}
               alt="Partner Logo 1"
             />
@@ -1115,7 +1115,7 @@ const HomePage: React.FC = () => {
               width={150}
               height={50}
               layout="intrinsic"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               src={any}
               alt="Partner Logo 1"
             />

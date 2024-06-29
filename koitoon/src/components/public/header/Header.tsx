@@ -112,7 +112,7 @@ export default function App() {
 
   return (
     <>
-      <div className="hidden ss:navbar pad:navbar bg-base-100 fixed z-50">
+      <div className="hidden ss:navbar pad:navbar bg-base-100 fixed z-[500]">
         <div className="navbar-start ml-8">
           <div className="drawer">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
@@ -143,8 +143,8 @@ export default function App() {
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-                <ul className="menu bg-base-200 w-56 rounded-box">
+              <ul className="menu p-4 w-[13rem] min-h-full bg-base-200 text-base-content">
+                <ul className="menu bg-base-200 w-auto rounded-box">
                   {Object.keys(data[language as "KO" | "EN"]).map(
                     (menuKey, index) => (
                       <li key={index} >
@@ -215,7 +215,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="hidden sm:navbar bg-base-100 items-center justify-center fixed z-40">
+      <div className="hidden sm:navbar bg-base-100 items-center justify-center fixed z-[200]">
         <div className="navbar-start">
           <a href="/" className="w-12 md:ml-[5rem]">
             <Image

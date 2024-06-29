@@ -700,7 +700,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 여덟 번째 아이템 */}
-            <li className="h-[10rem]">
+            <li className="h-[8rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -720,14 +720,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[6.7rem] items-center">
+              <span className="flex timeline-start mb-[6.2rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2016</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[4.7rem] mr-8 text-left">
+              <span className="timeline-end sm:text-start mb-[4rem] mr-8 text-left">
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     {text.historyData[7].events[0].month}
@@ -746,7 +746,7 @@ const HomePage: React.FC = () => {
                 </div>
               </span>
               <hr
-                className="bg-[#EE511F] mt-[-10px] mb-[-20px]"
+                className="bg-[#EE511F]"
                 style={{ width: "1px" }}
               />
             </li>
