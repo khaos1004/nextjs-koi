@@ -1,13 +1,17 @@
-import React, { createContext, useState, useContext } from 'react';
+// src/context/MenuContext.tsx
+
+"use client";
+
+import React, { createContext, useState, ReactNode, useContext } from "react";
 
 interface MenuContextProps {
   selectedMenu: string | null;
-  setSelectedMenu: React.Dispatch<React.SetStateAction<string | null>>;
+  setSelectedMenu: (menu: string | null) => void;
 }
 
 const MenuContext = createContext<MenuContextProps | undefined>(undefined);
 
-export const MenuProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const MenuProvider = ({ children }: { children: ReactNode }) => {
   const [selectedMenu, setSelectedMenu] = useState<string | null>(null);
 
   return (
@@ -19,8 +23,10 @@ export const MenuProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
 export const useMenu = () => {
   const context = useContext(MenuContext);
-  if (!context) {
-    throw new Error('useMenu must be used within a MenuProvider');
+  if (context === undefined) {
+    throw new Error("useMenu must be used within a MenuProvider");
   }
   return context;
 };
+
+export default MenuContext;

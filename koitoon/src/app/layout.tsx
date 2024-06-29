@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "./aos.css";
 import { LanguageProvider } from "@/context/Language";
+import { MenuProvider } from "@/context/MenuContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <LanguageProvider>
+        <MenuProvider>
         <head>
           <link
             rel="stylesheet"
@@ -64,6 +66,7 @@ export default function RootLayout({
           <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
           <script></script>
         </body>
+        </MenuProvider>
       </LanguageProvider>
     </html>
   );

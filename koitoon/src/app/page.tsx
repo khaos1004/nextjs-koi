@@ -105,31 +105,31 @@ function HomePage() {
           />
         </div>
 
-        <div className="main_image_text absolute inset-0 flex flex-col justify-center items-center text-center">
+        <div className="main_image_text w-full absolute inset-0 flex flex-col justify-center items-center text-center">
           <div className="">
             <span className="font-thin text-left">{text.leading}</span>
             <span className="font-bold"> {text.globalStudio}</span>
           </div>
-          <div className="text-5xl font-bold hidden sm:flex">
-            WEBTOON&nbsp; <br className="" />{" "}
-            <span className="te text-[#EE511F]">KOI CONTENT</span>
+          <div className="text-5xl font-bold hidden sm:block">
+            WEBTOON&nbsp;
+            <span className=" text-[#EE511F]">KOI CONTENT</span>
           </div>
 
-          <div className="text-3xl font-bold hidden pad:flex">
-            WEBTOON&nbsp; <br className="" />{" "}
-            <span className="te text-[#EE511F]">KOI CONTENT</span>
+          <div className="text-3xl font-bold hidden pad:block">
+            WEBTOON&nbsp;
+            <span className=" text-[#EE511F]">KOI CONTENT</span>
           </div>
 
-          <div className="hidden ss:flex text-2xl font-bold">
+          <div className="hidden ss:block text-2xl font-bold">
             WEBTOON
-            <br className="" />{" "}
-            <span className="te text-[#EE511F]">KOI CONTENT</span>
+            <br className="" />
+            <span className=" text-[#EE511F]">KOI CONTENT</span>
           </div>
 
           <div className="flex justify-center mt-8">
             <Link href="/about/company">
               <button className="btn text-white rounded-3xl sm:w-[10rem] hover:bg-[#EE511F] bg-inherit">
-                {text.goToWorks} &nbsp; &nbsp; <ArrowR />
+                {text.goToWorks} &nbsp; <ArrowR />
               </button>
             </Link>
           </div>

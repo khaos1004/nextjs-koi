@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useContext } from "react";
 import LanguageContext from "@/context/Language";
+import { MenuProvider, useMenu } from "@/context/MenuContext";
 import MainLogoBlack from "@/../public/images/logo_웹툰코이컨텐츠(B).png";
 import Image from "next/image";
 import Link from "next/link";
@@ -60,18 +61,15 @@ const data: DataMenu = {
   },
 };
 
-export default function App() {
-  
+const App = () => {
   const { language, setLanguage } = useContext<any>(LanguageContext);
-  const [hoveredMenu, setHoveredMenu] = useState<string>();
+  const { selectedMenu, setSelectedMenu } = useMenu();
+  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const [focusHover, setFocusHover] = useState(false);
-  // const [colorChange, setColorChange] = useState(language);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [selectedMenu, setSelectedMenu] = useState<string | null>(null);
   const [menuHovered, setMenuHovered] = useState(false);
 
   const handleButtonClick = (menuType: string) => {
-    // setColorChange(menuType);
     setLanguage(menuType);
   };
 
@@ -102,12 +100,14 @@ export default function App() {
   };
 
   const hoverMenuLeave = () => {
-    setHoveredMenu("");
+    setHoveredMenu(null);
     setFocusHover(false);
   };
 
   const handleMenuClick = (menuKey: string) => {
     setSelectedMenu(menuKey);
+    console.log("select 메뉴 " + selectedMenu);
+    console.log("메뉴컨텍스트  " + useMenu);
   };
 
   return (
@@ -147,7 +147,7 @@ export default function App() {
                 <ul className="menu bg-base-200 w-auto rounded-box">
                   {Object.keys(data[language as "KO" | "EN"]).map(
                     (menuKey, index) => (
-                      <li key={index} >
+                      <li key={index}>
                         {data[language as "KO" | "EN"][menuKey].subMenus ? (
                           <details key={index}>
                             <summary key={index}>{menuKey}</summary>
@@ -155,25 +155,34 @@ export default function App() {
                               menuKey
                             ].subMenus!.map((menuItem, index) => (
                               <ul key={index}>
-                                <li key={index} className="hover:text-[#EE511F]">
-                                  <Link key={index} href={menuItem.url}>
+                                <li
+                                  key={index}
+                                  className={`hover:text-[#EE511F]`}
+                                >
+                                  <Link
+                                    key={index}
+                                    href={menuItem.url}
+                                    onClick={() => handleMenuClick(menuKey)}
+                                  >
                                     {menuItem.label}
                                   </Link>
                                 </li>
+                                <hr className="w-full"/>
                               </ul>
                             ))}
                           </details>
                         ) : (
                           <Link
                             key={index}
-                            href={data[language as "KO" | "EN"][menuKey].url}
+                            href={data[language as "KO" | "EN"][menuKey].url}                     
+                            className={`hover:text-[#EE511F]`}
                           >
                             {menuKey}
                           </Link>
                         )}
-                      </li>
-                    )
-                  )}
+                      </li>                                          
+                    )                    
+                  )}                 
                 </ul>
               </ul>
             </div>
@@ -194,7 +203,9 @@ export default function App() {
               <button
                 onClick={() => handleButtonClick("KO")}
                 className={`text-gray-600 text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                  language === "KO" ? "font-bold underline text-black" : "opacity-25"
+                  language === "KO"
+                    ? "font-bold underline text-black"
+                    : "opacity-25"
                 }`}
               >
                 KO
@@ -205,7 +216,9 @@ export default function App() {
               <button
                 onClick={() => handleButtonClick("EN")}
                 className={`text-gray-600 text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                  language === "EN" ? "font-bold underline text-black" : "opacity-25"
+                  language === "EN"
+                    ? "font-bold underline text-black"
+                    : "opacity-25"
                 }`}
               >
                 EN
@@ -263,7 +276,7 @@ export default function App() {
                             onMouseOver={() => hoveredMenuIn(menuKey)}
                             onMouseLeave={hoverMenuLeave}
                             onFocus={handleFocus}
-                            onClick={() => handleMenuClick(menuItem.url)}
+                            onClick={() => handleMenuClick(menuKey)}
                           >
                             {menuItem.label}
                           </Link>
@@ -274,7 +287,7 @@ export default function App() {
                 )}
             </li>
           ))}
-        </ul>       
+        </ul>
         <div className="navbar-end mr-[5rem]">
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
@@ -302,4 +315,7 @@ export default function App() {
       <hr className="bg-gray-600 mt-[4.2rem] ss:mt-[0.3rem]" />
     </>
   );
-}
+};
+
+
+export default App;

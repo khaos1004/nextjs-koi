@@ -407,7 +407,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 세 번째 아이템 */}
-            <li className="h-[17rem]">
+            <li className="h-[15rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -427,14 +427,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[15rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[13rem] items-center">
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2022</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[6rem] mr-8 text-right">
+              <span className="timeline-start sm:text-end mb-[4rem] mr-8 text-right">
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[2].events[0].event}
@@ -452,11 +452,10 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex">
-                  <div className="flex-1 text-orange-600">
+                  <div className="flex-1 text-orange-600 mr-[2.5rem]">
                     {text.historyData[2].events[2].event}
                   </div>
-                  <div className="text-lg font-black ml-4 flex-none">
-                    &nbsp; &nbsp; &nbsp;
+                  <div className="text-lg font-black ml-4 flex-none">                  
                   </div>
                 </div>
                 <div className="flex">
