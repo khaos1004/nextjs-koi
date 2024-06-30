@@ -6,7 +6,7 @@ import {
   LanguageProvider,
   default as LanguageContext,
 } from "@/context/Language";
-import useFont from '@/app/hooks/UseFont';
+import useFont from "@/app/hooks/UseFont";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
@@ -21,7 +21,7 @@ interface CardData {
   content: string;
   hashtags: string;
   author: string;
-  startDate?: string;
+  startDate: string;
   type: "연재작" | "완결작";
 }
 
@@ -30,15 +30,15 @@ const textContent = {
     type1: "연재작",
     type2: "완결작",
     home: "홈",
-    work: "작품"
+    work: "작품",
   },
   EN: {
     type1: "Serial Work",
     type2: "A Completed Work",
     home: "Home",
-    work: "WORK"
-  }
-}
+    work: "WORK",
+  },
+};
 
 const HomePage: React.FC = () => {
   const { language } = useContext(LanguageContext);
@@ -49,17 +49,21 @@ const HomePage: React.FC = () => {
   }, []);
 
   const text = textContent[language];
-  console.log(text.type1);
 
   const [selectedType, setSelectedType] = useState<"연재작" | "완결작">("연재작");
   const [filteredCards, setFilteredCards] = useState<CardData[]>([]);
 
   useEffect(() => {
     const sortedCards = allCardsData
-      .filter((card) => card.type === selectedType)
-      .sort((a, b) => new Date(b.startDate!).getTime() - new Date(a.startDate!).getTime());
+      .filter((card) => card.type === selectedType && isValidDate(card.startDate))
+      .sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
     setFilteredCards(sortedCards);
   }, [selectedType]);
+
+  const isValidDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return !isNaN(date.getTime());
+  };
 
   return (
     <RootLayout>
