@@ -348,7 +348,7 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left ${
-                  language === "EN" ? "mb-[7.5rem]" : "mb-[5.3rem]"
+                  language === "EN" ? "mb-[7.5rem]" : "mb-[4rem]"
                 }`}
               >
                 <div className="flex">
