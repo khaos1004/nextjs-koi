@@ -100,35 +100,35 @@ const HomePage: React.FC = () => {
         </button>
       </div>
 
-      <div className="grid ss:grid-cols-2 sm:grid-cols-4 pad:grid-cols-3 gap-8 mb-[7.5rem]">
+      <div className="grid ss:grid-cols-2 sm:grid-cols-4 pad:grid-cols-3 gap-4 ss:gap-2 sm:gap-5 pad:gap-5 mb-[7.5rem]">
         {filteredCards.map((card) => (
           <div key={card.id} className="flex flex-col items-center mb-8">
-            <div className="relative group overflow-hidden rounded-lg w-full h-[20rem]">
+            <div className="relative group overflow-hidden rounded-lg w-full" style={{ paddingBottom: "130%" }}>
               <Image
                 src={card.image}
                 alt="작품 이미지"
-                fill
+                layout="fill"
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
-                <div className="text-white font-semibold text-sm mb-2">
+                <div className="text-white font-semibold text-sm mb-2 ss:text-[10px]">
                   {card.hashtags}
                 </div>
-                <div className="text-white font-bold text-sm">
+                <div className="text-white font-bold text-sm ss:text-[7px]">
                   {card.author}
                 </div>
-                <div className="text-lg text-white">ㅡ</div>
-                <div className="text-white text-xs mb-4">
+                <div className="text-lg ss:text-xs text-white">ㅡ</div>
+                <div className="text-white text-xs mb-4 ss:mb-0 ss:font-thin ss:text-[7px]">
                   {card.content.length > 20 ? card.content.substring(0, 20) + "..." : card.content}
                 </div>
                 <Link href={card.url} target="_blank">
-                  <button className="ss:text-xs min-w-[5rem] bg-transparent text-white px-4 py-2 rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-black ss: text-xs">
+                  <button className="ss:text-[8px] ss:min-w-[3rem] min-w-[5rem] bg-transparent text-white ss:px-1 px-4 ss:py-1 py-2 rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-black">
                     View +
                   </button>
                 </Link>
               </div>
             </div>
-            <div className="text-lg font-medium mt-4">{card.title}</div>
+            <div className="text-lg font-medium mt-4 ss:text-sm">{card.title}</div>
           </div>
         ))}
       </div>
