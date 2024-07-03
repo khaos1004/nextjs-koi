@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
 
   const text = textContent[language];
   console.log(text);
-  const clientId = "oygjgwg355"; // 네이버 지도 API 클라이언트 ID
+  const clientId = "56dbq7r4x6"; // 네이버 지도 API 클라이언트 ID
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
