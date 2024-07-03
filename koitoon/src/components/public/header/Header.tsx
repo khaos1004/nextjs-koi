@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import LanguageContext from "@/context/Language";
 import { MenuProvider, useMenu } from "@/context/MenuContext";
-import MainLogoBlack from "@/../public/images/logo_웹툰코이컨텐츠(B).png";
+import MainLogoBlack from "@/../public/images/logo_B.png";
 import Image from "next/image";
 import Link from "next/link";
 
