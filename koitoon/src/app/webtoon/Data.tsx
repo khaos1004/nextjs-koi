@@ -1,85 +1,87 @@
-import 로열블루로즈 from "@/../../public/images/webtoon/image0.png";
-import 퍼펙트 from "@/../../public/images/webtoon/image1.jpeg";
-import 위클리28년 from "@/../../public/images/webtoon/image2.jpeg";
-import 별빛이내린다 from "@/../../public/images/webtoon/image3.jpeg";
-import 투투데이 from "@/../../public/images/webtoon/image4.jpeg";
-import 투맨 from "@/../../public/images/webtoon/image06.jpeg";
-import 격투몬스터 from "@/../../public/images/webtoon/image5.jpeg";
-import 용마전 from "@/../../public/images/webtoon/image6.png";
-import 대남 from "@/../../public/images/webtoon/image7.jpeg";
-import 불가사리 from "@/../../public/images/webtoon/image8.jpeg";
-import 소원을말해봐 from "@/../../public/images/webtoon/image9.jpeg";
-import 자드락비 from "@/../../public/images/webtoon/image10.png";
-import 얼굴값 from "@/../../public/images/webtoon/image11.jpeg";
-import 성상담소 from "@/../../public/images/webtoon/image12.jpeg";
-import 못된여자 from "@/../../public/images/webtoon/image13.jpeg";
-import 쌍녀 from "@/../../public/images/webtoon/image14.png";
-import 암캐처제 from "@/../../public/images/webtoon/image15.png";
-import 쪼여줄께 from "@/../../public/images/webtoon/image16.png";
-import 혼밥하는여자 from "@/../../public/images/webtoon/image17.jpeg";
-import 그런남자 from "@/../../public/images/webtoon/image18.jpeg";
-import 덫 from "@/../../public/images/webtoon/image19.png";
-import 여직원들 from "@/../../public/images/webtoon/image20.jpeg";
-import 붉은벽 from "@/../../public/images/webtoon/image21.png";
-import 성적취향 from "@/../../public/images/webtoon/image22.jpeg";
-import 부도덕한배구부 from "@/../../public/images/webtoon/image23.png";
-import 부도덕한수영부 from "@/../../public/images/webtoon/image24.jpeg";
-import 벌거벗은방송국 from "@/../../public/images/webtoon/image25.jpeg";
-import 노예클럽 from "@/../../public/images/webtoon/image26.jpeg";
-import 소녀표류기 from "@/../../public/images/webtoon/image27.jpeg";
-import 그놈은갱신중 from "@/../../public/images/webtoon/image28.png";
-import 호구들 from "@/../../public/images/webtoon/image29.jpeg";
-import 아내의섹파 from "@/../../public/images/webtoon/image30.png";
-import 아빠는출근중 from "@/../../public/images/webtoon/image31.jpeg";
-import 내로남불 from "@/../../public/images/webtoon/image32.jpeg";
-import 친구아빠 from "@/../../public/images/webtoon/image33.jpeg";
-import 섹시백 from "@/../../public/images/webtoon/image34.jpeg";
-import 질좋은여자 from "@/../../public/images/webtoon/image35.jpeg";
-import 잠재적연애구간 from "@/../../public/images/webtoon/image36.jpeg";
-import 그런여자 from "@/../../public/images/webtoon/image37.jpeg";
-import 첫사랑의딸 from "@/../../public/images/webtoon/image38.jpeg";
-import 캐슬 from "@/../../public/images/webtoon/image39.jpeg";
-import 파라다이스 from "@/../../public/images/webtoon/image40.jpeg";
-import 아이돌키우기 from "@/../../public/images/webtoon/image41.jpeg";
-import 친구아내 from "@/../../public/images/webtoon/image42.jpeg";
-import 분양녀 from "@/../../public/images/webtoon/image43.jpeg";
-import 처제 from "@/../../public/images/webtoon/image44.png";
-import 엄마실격 from "@/../../public/images/webtoon/image45.jpeg";
-import 해녀 from "@/../../public/images/webtoon/image46.jpeg";
-import 불륜주의보 from "@/../../public/images/webtoon/image47.jpeg";
-import 도우미 from "@/../../public/images/webtoon/image48.jpeg";
-import 은밀한거래 from "@/../../public/images/webtoon/image49.jpeg";
-import 숙모 from "@/../../public/images/webtoon/image50.jpeg";
-import 노출교사 from "@/../../public/images/webtoon/image51.jpeg";
-import 버린남자 from "@/../../public/images/webtoon/image52.jpeg";
-import 슈가대디 from "@/../../public/images/webtoon/image53.jpeg";
-import 딱풀이안빠져요 from "@/../../public/images/webtoon/image54.jpeg";
-import 어린여자 from "@/../../public/images/webtoon/image55.png";
-import 이쁘니 from "@/../../public/images/webtoon/image56.jpeg";
-import 원룸텔 from "@/../../public/images/webtoon/image57.jpeg";
-import 며느리 from "@/../../public/images/webtoon/image58.jpeg";
-import 이혼녀 from "@/../../public/images/webtoon/image59.png";
-import 조카딸 from "@/../../public/images/webtoon/image60.jpeg";
-import 부녀회장 from "@/../../public/images/webtoon/image61.png";
-import 이모 from "@/../../public/images/webtoon/image62.png";
-import 두자매 from "@/../../public/images/webtoon/image63.png";
-import 엄마는여대생 from "@/../../public/images/webtoon/image64.png";
-import 새엄마는내여친 from "@/../../public/images/webtoon/image65.png";
-import 돌싱녀 from "@/../../public/images/webtoon/image67.jpeg";
-import 데릴아빠 from "@/../../public/images/webtoon/image68.jpeg";
-import 찐한친구 from "@/../../public/images/webtoon/image69.jpeg";
-import 빌라 from "@/../../public/images/webtoon/image70.jpeg";
-import 이웃의맛 from "@/../../public/images/webtoon/image71.png";
-import sex오피스 from "@/../../public/images/webtoon/image72.jpeg";
-import 아랫집아줌마 from "@/../../public/images/webtoon/image74.png";
-import 택배요 from "@/../../public/images/webtoon/image75.png";
-import 몸캠퍼스 from "@/../../public/images/webtoon/image76.png";
-import 택시 from "@/../../public/images/webtoon/image78.png";
-import 내딸을부탁해 from "@/../../public/images/webtoon/image77.jpeg";
-import 은행원 from "@/../../public/images/webtoon/image79.jpeg";
-import 어쩌다이지경 from "@/../../public/images/webtoon/image80.jpeg";
-import 우리집으로오세요 from "@/../../public/images/webtoon/image81.jpeg";
-import 고모 from "@/../../public/images/webtoon/image82.jpeg";
+import 로열블루로즈 from "@/../../public/images/webtoon/로열블루로즈_썸네일_저수위_홈페이지용.jpg";
+import 퍼펙트 from "@/../../public/images/webtoon/퍼펙트_썸네일_저수위_홈페이지용.jpg";
+import 위클리28년 from "@/../../public/images/webtoon/위클리28년_썸네일_저수위_홈페이지용.jpg";
+import 별빛이내린다 from "@/../../public/images/webtoon/별빛이내린다_썸네일_저수위_홈페이지용.jpg";
+import 투투데이 from "@/../../public/images/webtoon/투투데이_썸네일_저수위_홈페이지용.jpg";
+import 투맨 from "@/../../public/images/webtoon/투맨_썸네일_저수위_홈페이지용.jpg";
+import 격투몬스터 from "@/../../public/images/webtoon/격투몬스터_썸네일_저수위_홈페이지용.jpg";
+import 용마전 from "@/../../public/images/webtoon/용마전_썸네일_저수위_홈페이지용.jpg";
+import 대남 from "@/../../public/images/webtoon/대남_썸네일_저수위_홈페이지용.jpg";
+import 불가사리 from "@/../../public/images/webtoon/불가사리_썸네일_저수위_홈페이지용.jpg";
+import 소원을말해봐 from "@/../../public/images/webtoon/소원을말해봐_썸네일_저수위_홈페이지용.jpg";
+import 자드락비 from "@/../../public/images/webtoon/자드락비_썸네일_저수위_홈페이지용.jpg";
+import 얼굴값 from "@/../../public/images/webtoon/얼굴값_썸네일_저수위_홈페이지용.jpg";
+import 성상담소 from "@/../../public/images/webtoon/성상담소_썸네일_저수위_홈페이지용.jpg";
+import 못된여자 from "@/../../public/images/webtoon/못된여자_썸네일_저수위_홈페이지용.jpg";
+import 쌍녀 from "@/../../public/images/webtoon/쌍녀_썸네일_저수위_홈페이지용.jpg";
+import 암캐처제 from "@/../../public/images/webtoon/암캐처제_썸네일_저수위_홈페이지용.jpg";
+import 쪼여줄께 from "@/../../public/images/webtoon/쪼여줄게_썸네일_저수위_홈페이지용.jpg";
+import 혼밥하는여자 from "@/../../public/images/webtoon/혼밥하는여자_썸네일_저수위_홈페이지용.jpg";
+import 그런남자 from "@/../../public/images/webtoon/그런남자_썸네일_저수위_홈페이지용.jpg";
+import 덫 from "@/../../public/images/webtoon/덫_썸네일_저수위_홈페이지용.jpg";
+import 여직원들 from "@/../../public/images/webtoon/여직원들_썸네일_저수위_홈페이지용.jpg";
+import 붉은벽 from "@/../../public/images/webtoon/붉은벽_썸네일_저수위_홈페이지용.jpg";
+import 성적취향 from "@/../../public/images/webtoon/성적취향_썸네일_저수위_홈페이지용.jpg";
+import 부도덕한배구부 from "@/../../public/images/webtoon/부도덕한배구부_썸네일_저수위_홈페이지용.jpg";
+import 부도덕한수영부 from "@/../../public/images/webtoon/부도덕한수영부_썸네일_저수위_홈페이지용.jpg";
+import 벌거벗은방송국 from "@/../../public/images/webtoon/벌거벗은방송국_썸네일_저수위_홈페이지용.jpg";
+import 노예클럽 from "@/../../public/images/webtoon/노예클럽_썸네일_저수위_홈페이지용.jpg";
+import 소녀표류기 from "@/../../public/images/webtoon/15소녀표류기_썸네일_저수위_홈페이지용.jpg";
+import 그놈은갱신중 from "@/../../public/images/webtoon/그놈은갱신중_썸네일_저수위_홈페이지용.jpg";
+import 호구들 from "@/../../public/images/webtoon/호구들_썸네일_저수위_홈페이지용.jpg";
+import 아내의섹파 from "@/../../public/images/webtoon/아내의섹파_썸네일_저수위_홈페이지용.jpg";
+import 아빠는출근중 from "@/../../public/images/webtoon/아빠는출근중_썸네일_저수위_홈페이지용.jpg";
+import 내로남불 from "@/../../public/images/webtoon/내로남불_썸네일_저수위_홈페이지용1.jpg";
+import 친구아빠 from "@/../../public/images/webtoon/친구아빠_썸네일_저수위_홈페이지용.jpg";
+import 섹시백 from "@/../../public/images/webtoon/섹시백_썸네일_저수위_홈페이지용.jpg";
+import 질좋은여자 from "@/../../public/images/webtoon/질좋은여자_썸네일_저수위_홈페이지용.jpg";
+import 잠재적연애구간 from "@/../../public/images/webtoon/잠재적연애구간_썸네일_저수위_홈페이지용.jpg";
+import 그런여자 from "@/../../public/images/webtoon/그런여자_썸네일_저수위_홈페이지용.jpg";
+import 첫사랑의딸 from "@/../../public/images/webtoon/첫사랑의딸_썸네일_저수위_홈페이지용.jpg";
+import 캐슬 from "@/../../public/images/webtoon/캐슬_썸네일_저수위_홈페이지용.jpg";
+import 파라다이스 from "@/../../public/images/webtoon/파라다이스_썸네일_저수위_홈페이지용.jpg";
+import 아이돌키우기 from "@/../../public/images/webtoon/아이돌키우기_썸네일_저수위_홈페이지용.jpg";
+import 친구아내 from "@/../../public/images/webtoon/친구아내_썸네일_저수위_홈페이지용.jpg";
+import 분양녀 from "@/../../public/images/webtoon/분양녀_썸네일_저수위_홈페이지용2.jpg";
+import 처제 from "@/../../public/images/webtoon/처제_썸네일_저수위_홈페이지용.jpg";
+import 엄마실격 from "@/../../public/images/webtoon/엄마실격_썸네일_저수위_홈페이지용.jpg";
+import 해녀 from "@/../../public/images/webtoon/해녀_썸네일_저수위_홈페이지용.jpg";
+import 불륜주의보 from "@/../../public/images/webtoon/불륜주의보_썸네일_저수위_홈페이지용.jpg";
+import 도우미 from "@/../../public/images/webtoon/도우미_썸네일_저수위_홈페이지용.jpg";
+import 은밀한거래 from "@/../../public/images/webtoon/은밀한 거래_썸네일_저수위_홈페이지용.jpg";
+import 숙모 from "@/../../public/images/webtoon/숙모_썸네일_저수위_홈페이지용.jpg";
+import 노출교사 from "@/../../public/images/webtoon/노출교사_썸네일_저수위_홈페이지용.jpg";
+import 버린남자 from "@/../../public/images/webtoon/버린남자_썸네일_저수위_홈페이지용.jpg";
+import 슈가대디 from "@/../../public/images/webtoon/슈가대디_썸네일_저수위_홈페이지용.jpg";
+import 딱풀이안빠져요 from "@/../../public/images/webtoon/딱풀이안빠져요_썸네일_저수위_홈페이지용.jpg";
+import 어린여자 from "@/../../public/images/webtoon/어린여자_썸네일_저수위_홈페이지용1.jpg";
+import 이쁘니 from "@/../../public/images/webtoon/이쁘니_썸네일_저수위_홈페이지용.jpg";
+import 원룸텔 from "@/../../public/images/webtoon/원룸텔_썸네일_저수위_홈페이지용.jpg";
+import 며느리 from "@/../../public/images/webtoon/며느리_썸네일_저수위_홈페이지용.jpg";
+import 이혼녀 from "@/../../public/images/webtoon/이혼녀_썸네일_저수위_홈페이지용.jpg";
+import 조카딸 from "@/../../public/images/webtoon/조카딸_썸네일_저수위_홈페이지용.jpg";
+import 부녀회장 from "@/../../public/images/webtoon/부녀회장_썸네일_저수위_홈페이지용.jpg";
+import 이모 from "@/../../public/images/webtoon/이모_썸네일_저수위_홈페이지용.jpg";
+import 두자매 from "@/../../public/images/webtoon/두자매_썸네일_저수위_홈페이지용.jpg";
+import 엄마는여대생 from "@/../../public/images/webtoon/엄마는여대생_썸네일_저수위_홈페이지용.jpg";
+import 새엄마는내여친 from "@/../../public/images/webtoon/새엄마는내여친_썸네일_저수위_홈페이지용.jpg";
+import 돌싱녀 from "@/../../public/images/webtoon/돌싱녀_썸네일_저수위_홈페이지용.jpg";
+import 데릴아빠 from "@/../../public/images/webtoon/데릴아빠_썸네일_저수위_홈페이지용.jpg";
+import 찐한친구 from "@/../../public/images/webtoon/찐한친구_썸네일_저수위_홈페이지용.jpg";
+import 빌라 from "@/../../public/images/webtoon/69빌라_썸네일_저수위_홈페이지용.jpg";
+import 이웃의맛 from "@/../../public/images/webtoon/이웃의맛_썸네일_저수위_홈페이지용.jpg";
+import sex오피스 from "@/../../public/images/webtoon/sex오피스_썸네일_저수위_홈페이지용.jpg";
+import 아랫집아줌마 from "@/../../public/images/webtoon/아랫집아줌마_썸네일_저수위_홈페이지용.jpg";
+import 택배요 from "@/../../public/images/webtoon/택배요_썸네일_저수위_홈페이지용.jpg";
+import 몸캠퍼스 from "@/../../public/images/webtoon/몸cam퍼스_썸네일_저수위_홈페이지용.jpg";
+import 택시 from "@/../../public/images/webtoon/택시_썸네일_저수위_홈페이지용.jpg";
+import 내딸을부탁해 from "@/../../public/images/webtoon/내딸을부탁해_썸네일_저수위_홈페이지용.jpg";
+import 은행원 from "@/../../public/images/webtoon/은행원_썸네일_저수위_홈페이지용.jpg";
+import 어쩌다이지경 from "@/../../public/images/webtoon/어쩌다이지경_썸네일_저수위_홈페이지용.jpg";
+import 우리집으로오세요 from "@/../../public/images/webtoon/우리집으로오세요_썸네일_저수위_홈페이지용.jpg";
+import 고모 from "@/../../public/images/webtoon/고모_썸네일_저수위_홈페이지용.jpg";
+import 리스물셋 from "@/../../public/images/webtoon/RE스물셋_썸네일_저수위_홈페이지용.jpg";
+import 굵은펜선생님 from "@/../../public/images/webtoon/굵은펜선생님_썸네일_저수위_홈페이지용.jpg";
 
 interface CardData {
   id: number;
@@ -1081,5 +1083,30 @@ export const allCardsData: CardData[] = [
     author: "비아그라/쎅시봉",
     type: "연재작",
     startDate: "2024-04-19",
+  },
+  {
+    id: 83,
+    image: 리스물셋,
+    url: "https://www.toomics.com/webtoon/episode/toon/7551",
+    title: "RE:스물셋",
+    content: `"굳이 다시 한번 인생을 살아 볼 수 있다면?
+섹스도 실컷 할 수 있을까? 이번에말로 제대로 살아주겠어!
+코인 풀매수 드가즈아아아!!"`,
+    hashtags: "#드라마 #육체쾌락 #첫사랑",
+    author: "싸또/타비치",
+    type: "연재작",
+    startDate: "2024-05-04",
+  },
+  {
+    id: 84,
+    image: 굵은펜선생님,
+    url: "https://www.toomics.com/webtoon/episode/toon/6678",
+    title: "굵은펜선생님",
+    content: `"방문 미술 교사로 취업한 ‘상태’의 출근지는 신도시.
+큰 기대 없이 궁여지책으로 선택한 일이었건만, 일상이 지루한 신도시녀들이 바라는 수업은 따로 있었으니!"`,
+    hashtags: "#유부녀 #불륜 #성적취향",
+    author: "IYZ/도능",
+    type: "완결작",
+    startDate: "2023-07-06",
   },
 ];

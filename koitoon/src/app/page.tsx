@@ -155,42 +155,42 @@ function HomePage() {
             </div>
           </div>
           <div className="grid ss:grid-cols-2 sm:grid-cols-4 pad:grid-cols-3 gap-8 mb-[2rem] ">
-            {allCardsData
-              .slice(currentIndex, currentIndex + imagesPerSlide)
-              .map((card) => (
-                <div key={card.id} className="flex flex-col items-center mb-8">
-                  <div className="relative group overflow-hidden rounded-lg w-full h-[20rem]">
-                    <Image
-                      src={card.image}
-                      alt="작품 이미지"
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
-                      <div className="text-white font-semibold text-sm mb-2">
-                        {card.hashtags}
-                      </div>
-                      <div className="text-white font-bold text-sm">
-                        {card.author}
-                      </div>
-                      <div className="text-lg text-white">ㅡ</div>
-                      <div className="text-white text-xs mb-4">
-                        {card.content.length > 25
-                          ? card.content.substring(0, 25) + "..."
-                          : card.content}
-                      </div>
-                      <Link href={card.url} target="_blank">
-                        <button className="bg-transparent text-white px-4 py-2 rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-black">
-                          View +
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="text-lg font-medium mt-4">{card.title}</div>
-                </div>
-              ))}
+  {allCardsData
+    .slice(currentIndex, currentIndex + imagesPerSlide)
+    .map((card) => (
+      <div key={card.id} className="flex flex-col items-center ss:mb-2 sm:mb-5 pad:mb-5">
+        <div className="relative group overflow-hidden rounded-lg w-full" style={{ paddingBottom: "130%" }}>
+          <Image
+            src={card.image}
+            alt="작품 이미지"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
+            <div className="text-white font-semibold text-sm mb-2">
+              {card.hashtags}
+            </div>
+            <div className="text-white font-bold text-sm">
+              {card.author}
+            </div>
+            <div className="text-lg text-white">ㅡ</div>
+            <div className="text-white text-xs mb-4">
+              {card.content.length > 25
+                ? card.content.substring(0, 25) + "..."
+                : card.content}
+            </div>
+            <Link href={card.url} target="_blank">
+              <button className="bg-transparent text-white px-4 py-2 rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-black">
+                View +
+              </button>
+            </Link>
           </div>
+        </div>
+        <div className="text-lg font-medium mt-4">{card.title}</div>
+      </div>
+    ))}
+</div>
+
           <div className="flex justify-center mt-8 items-center">
             <button
               onClick={handlePrev}
