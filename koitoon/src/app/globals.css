@@ -1,54 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 
 /* styles/globals.css */
-@font-face {
-  font-family: 'Pretendard';
-  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF; /* 한글 범위 */
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  src: url('/fonts/Pretendard-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF; /* 한글 범위 */
-}
-
-@font-face {
-  font-family: 'MADE Tommy';
-  src: url('/fonts/MADETommy-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007F; /* 기본 라틴 문자 및 숫자 */
-}
-
-@font-face {
-  font-family: 'MADE Tommy';
-  src: url('/fonts/MADETommy-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007F; /* 기본 라틴 문자 및 숫자 */
-}
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/jgthms/fonts@master/MADETommy/MADETommy.css');
 
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Pretendard', 'MADE Tommy', sans-serif; /* 기본 폰트를 설정, Pretendard를 우선 적용 */
+  font-family: 'Pretendard', sans-serif; /* 기본 폰트를 Pretendard로 설정 */
 }
 
-* {
-  font-family: 'Pretendard', 'MADE Tommy', sans-serif; /* 모든 텍스트에 기본 폰트를 설정 */
+.font-english {
+  font-family: 'MADE Tommy', sans-serif; /* 영어 텍스트에 MADE Tommy 폰트 적용 */
+}
+
+.font-korean {
+  font-family: 'Pretendard', sans-serif; /* 한글 텍스트에 Pretendard 폰트 적용 */
 }
 
 .font-tommy {
@@ -58,6 +27,7 @@ html, body {
 .font-pretendard {
   font-family: 'Pretendard', sans-serif;
 }
+
 
 .textRainbow {
   background-image: linear-gradient(90deg, red, orange, yellow, green, blue, navy, purple);
