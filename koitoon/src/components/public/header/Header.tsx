@@ -123,17 +123,12 @@ const App = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#000000"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h7"
-                  />
+                  <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                 </svg>
               </label>
             </div>
@@ -167,22 +162,22 @@ const App = () => {
                                     {menuItem.label}
                                   </Link>
                                 </li>
-                                <hr className="w-full"/>
+                                <hr className="w-full" />
                               </ul>
                             ))}
                           </details>
                         ) : (
                           <Link
                             key={index}
-                            href={data[language as "KO" | "EN"][menuKey].url}                     
+                            href={data[language as "KO" | "EN"][menuKey].url}
                             className={`hover:text-[#EE511F]`}
                           >
                             {menuKey}
                           </Link>
                         )}
-                      </li>                                          
-                    )                    
-                  )}                 
+                      </li>
+                    )
+                  )}
                 </ul>
               </ul>
             </div>
@@ -293,7 +288,9 @@ const App = () => {
             <button
               onClick={() => handleButtonClick("KO")}
               className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                language === "KO" ? "font-bold underline text-black" : "opacity-25"
+                language === "KO"
+                  ? "font-bold underline text-black"
+                  : "opacity-25"
               }`}
             >
               KO
@@ -304,7 +301,9 @@ const App = () => {
             <button
               onClick={() => handleButtonClick("EN")}
               className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
-                language === "EN" ? "font-bold underline text-black" : "opacity-25"
+                language === "EN"
+                  ? "font-bold underline text-black"
+                  : "opacity-25"
               }`}
             >
               EN
@@ -316,6 +315,5 @@ const App = () => {
     </>
   );
 };
-
 
 export default App;

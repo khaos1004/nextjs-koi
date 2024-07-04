@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import "./aos.css";
 import { LanguageProvider } from "@/context/Language";
 import { MenuProvider } from "@/context/MenuContext";
 import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "WebToon Koi Content",
@@ -63,7 +60,7 @@ export default function RootLayout({
               crossOrigin="anonymous"
             />
           </Head>
-          <body className={inter.className}>
+          <body>
             {children}
             <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js"></script>
             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
