@@ -128,7 +128,7 @@ const HomePage: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <div className="text-lg font-medium mt-4 ss:text-sm">{card.title}</div>
+            <div className="text-lg font-medium mt-4 ss:text-sm font-korean">{card.title}</div>
           </div>
         ))}
       </div>
