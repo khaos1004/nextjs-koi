@@ -1,3 +1,5 @@
+'use client'
+
 import Pc from "@/components/view/main/Pc";
 import Pad from "@/components/view/main/Pad";
 import Mobile from "@/components/view/main/Mobile";
@@ -6,12 +8,14 @@ import {
   default as LanguageContext,
 } from "@/context/Language";
 
+
 function HomePage() {
+
   return (
     <>
       <div className="hidden sm:block">
         <Pc />
-      </div >
+      </div>
 
       <div className="hidden pad:block">
         <Pad />

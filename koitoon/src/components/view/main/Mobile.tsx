@@ -55,12 +55,13 @@ interface CardData {
   type: "연재작" | "완결작";
 }
 
-function HomePage() {
+const HomePage: React.FC = () => {
   const { language } = useContext(LanguageContext);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [imagesPerSlide, setImagesPerSlide] = useState(4);
   const [filteredCards, setFilteredCards] = useState<CardData[]>([]);
+  
 
   const totalImages = allCardsData.length;
 

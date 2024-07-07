@@ -9,7 +9,6 @@ import t2 from "@/../public/images/about/icon_about/worldwide.png";
 import t3 from "@/../public/images/about/icon_about/planing.png";
 import MainAbout from "@/../public/images/about/mainabout.jpg";
 import Header from "@/components/public/header/Header";
-import Side from "@/components/public/side/Side";
 import Footer from "@/components/public/footer/Footer";
 import {
   LanguageProvider,
@@ -34,8 +33,7 @@ const HomePage: React.FC = () => {
       <div className="flex flex-col">
         <div className="h-16">
           <Header />
-        </div>
-        <Side />
+        </div>        
         <div
           className="flex flex-row sm:min-h-[50rem] pad:min-h-[40rem] w-screen mt-[1rem]"
           data-aos="fade-up"

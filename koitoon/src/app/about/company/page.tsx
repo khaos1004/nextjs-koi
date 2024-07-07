@@ -17,8 +17,11 @@ const HomePage: React.FC = () => {
   useFont(); // 커스텀 훅 사용
 
   useEffect(() => {
-    AOS.init(); // AOS 초기화
+    AOS.init({
+      duration: 1000,
+    });
   }, []);
+
 
   return (
     <>

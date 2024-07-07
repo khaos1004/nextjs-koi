@@ -1,5 +1,4 @@
 "use client";
-import { MenuProvider } from "@/context/MenuContext";
 import Header from "@/components/public/header/Header";
 import Footer from "@/components/public/footer/Footer";
 import "slick-carousel/slick/slick.css";

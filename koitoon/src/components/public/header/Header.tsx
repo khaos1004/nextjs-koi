@@ -6,6 +6,9 @@ import { MenuProvider, useMenu } from "@/context/MenuContext";
 import MainLogoBlack from "@/../public/images/logo_B.png";
 import Image from "next/image";
 import Link from "next/link";
+import AOS from "aos";
+
+
 
 interface Menu {
   label: string;
@@ -81,6 +84,12 @@ const App = () => {
   const handleMenuLeave = () => {
     setMenuHovered(false);
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
   useEffect(() => {
     if (!menuHovered) {
