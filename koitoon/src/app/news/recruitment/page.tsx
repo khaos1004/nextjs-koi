@@ -56,7 +56,7 @@ const textContent = {
       "도서 구매 비용 지원",
     ],
     applicationInstructions: [
-      "E-mail 지원: kocontent@kocontent.com",
+      "E-mail 지원: koicontent@koicontent.com",
       "지원 서류: 자유 양식 (이력서, 작품 포트폴리오, 기획안 등)",
       "※ 확인 후 최대한 빠르게 연락 드리겠습니다",
     ],
@@ -149,10 +149,14 @@ const EmailForm: React.FC = () => {
               <a>{text.recruitment}</a>
             </li>
           </ul>
-          <div className="text-4xl mt-[4rem] mb-[1rem] font-bold ss:text-center">
+          <div
+            className="font-bold text-[40px] mt-[4rem] mb-[1rem] ss:text-center"
+            style={{ lineHeight: "1.6" }}
+          >
             {text.recruitment}
           </div>
-          <div className="font-light ss:text-center">{text.welcomeMessage}</div>
+
+          <div className="text-[20px] ss:text-center" style={{ lineHeight: "1.6" }}>{text.welcomeMessage}</div>
         </div>
 
         <div className="container mx-auto mb-[7rem]" data-aos="fade-up  ">
@@ -212,13 +216,13 @@ const EmailForm: React.FC = () => {
                   />
                 </h3>
                 <ul className="list-disc ml-8">
-                {text.applicationInstructions.map((instruction, index) =>
-                  index != 2 ? <li key={index}>{instruction}</li> : ""
-                )}
-              </ul>
-              <span className="text-[#EE511F] text-xs">
-                {text.applicationInstructions[2]}
-              </span>
+                  {text.applicationInstructions.map((instruction, index) =>
+                    index != 2 ? <li key={index}>{instruction}</li> : ""
+                  )}
+                </ul>
+                <span className="text-[#EE511F] text-xs">
+                  {text.applicationInstructions[2]}
+                </span>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center w-full">
@@ -287,13 +291,13 @@ const EmailForm: React.FC = () => {
                   />
                 </h3>
                 <ul className="list-disc ml-8">
-                {text.applicationInstructions.map((instruction, index) =>
-                  index != 2 ? <li key={index}>{instruction}</li> : ""
-                )}
-              </ul>
-              <span className="text-[#EE511F] text-xs mr-[10rem] ml-[0.75rem]">
-                {text.applicationInstructions[2]}
-              </span>
+                  {text.applicationInstructions.map((instruction, index) =>
+                    index != 2 ? <li key={index}>{instruction}</li> : ""
+                  )}
+                </ul>
+                <span className="text-[#EE511F] text-xs mr-[10rem] ml-[0.75rem]">
+                  {text.applicationInstructions[2]}
+                </span>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 flex items-center w-full">

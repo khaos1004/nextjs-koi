@@ -20,6 +20,9 @@ const config: Config = {
       boxShadow: {
         'custom-up': '-60px -80px 30px -30px rgba(255, 155, 0, 0), 0 0px 0px -50px rgba(255, 165, 0, 0.5)', // 예시 값입니다.
       },
+      boxShadowCu: {
+        'custom-black': '0 4px 6px rgba(0, 0, 0, 0.6)',
+      },
       fontFamily: {
         custom: ['RubikPuddles-Regular', 'sans'], // YourFontName을 폰트 패밀리 이름으로 대체하세요.
       }, 

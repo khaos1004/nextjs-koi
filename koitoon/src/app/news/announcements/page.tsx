@@ -114,7 +114,10 @@ const HomePage: React.FC = () => {
             </li>
             <li>{text.notice}</li>
           </ul>
-          <div className="text-4xl my-[4rem] ss:text-center font-bold">
+          <div
+            className="font-bold text-[40px] mt-[4rem] mb-[1rem] ss:text-center"
+            style={{ lineHeight: "1.6" }}
+          >
             {text.notice}
           </div>
         </div>

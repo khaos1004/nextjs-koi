@@ -78,7 +78,10 @@ const HomePage: React.FC = () => {
             <a>WEBTOON</a>
           </li>
         </ul>
-        <div className="text-4xl my-[4rem] ss:text-center font-bold">{text.work}</div>
+        <div
+            className="font-bold text-[40px] mt-[4rem] mb-[1rem] ss:text-center"
+            style={{ lineHeight: "1.6" }}
+          >{text.work}</div>
       </div>
 
       <div className="flex justify-center items-center mb-[3rem]">

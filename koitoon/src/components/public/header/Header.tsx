@@ -115,8 +115,6 @@ const App = () => {
 
   const handleMenuClick = (menuKey: string) => {
     setSelectedMenu(menuKey);
-    console.log("select 메뉴 " + selectedMenu);
-    console.log("메뉴컨텍스트  " + useMenu);
   };
 
   return (
@@ -206,23 +204,23 @@ const App = () => {
             <div className="flex w-[30%]">
               <button
                 onClick={() => handleButtonClick("KO")}
-                className={`text-gray-600 text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+                className={`text-center text-sm font-semibold w-auto transition ease-in-out delay-50 hover:scale-10 ${
                   language === "KO"
-                    ? "font-bold underline text-black"
-                    : "opacity-25"
+                    ? "font-bold text-[#222222] text-[14px]"
+                    : "text-[#BDBDBD]"
                 }`}
               >
                 KO
               </button>
-              <p className="text-gray-600 text-center text-sm font-bold w-auto px-2">
+              <p className="text-center text-sm font-bold w-auto px-2 h-[14px] text-[#D9D9D9]">
                 |
               </p>
               <button
                 onClick={() => handleButtonClick("EN")}
-                className={`text-gray-600 text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+                className={`text-center text-sm w-auto font-semibold transition ease-in-out delay-50 hover:scale-10 ${
                   language === "EN"
-                    ? "font-bold underline text-black"
-                    : "opacity-25"
+                    ? "font-bold text-[#222222] text-[14px]"
+                    : "text-[#BDBDBD]"
                 }`}
               >
                 EN
@@ -296,23 +294,23 @@ const App = () => {
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               onClick={() => handleButtonClick("KO")}
-              className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+              className={` text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:scale-10 ${
                 language === "KO"
-                  ? "font-bold underline text-black"
-                  : "opacity-25"
+                  ? "font-bold text-[#222222] text-[16px]"
+                  : "text-[#BDBDBD]"
               }`}
             >
               KO
             </button>
-            <p className="text-gray-600 text-center text-lg font-bold w-auto px-2 ">
+            <p className="text-[#D9D9D9] text-center text-lg font-bold w-auto px-2 ">
               |
             </p>
             <button
               onClick={() => handleButtonClick("EN")}
-              className={`text-gray-600 text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 ${
+              className={` text-center text-lg w-auto font-semibold transition ease-in-out delay-50 hover:scale-10 ${
                 language === "EN"
-                  ? "font-bold underline text-black"
-                  : "opacity-25"
+                  ? "font-bold text-[#222222] text-[16px]"
+                  : "text-[#BDBDBD]"
               }`}
             >
               EN

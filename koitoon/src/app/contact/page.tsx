@@ -88,7 +88,7 @@ const HomePage: React.FC = () => {
       // 정보 창 생성 및 설정
       const infoWindow = new window.naver.maps.InfoWindow({
         content:
-          `<a target="_blank" href="https://map.naver.com/p/entry/place/1303772060?c=18.98,0,0,0,dh" class="bounce"><div class="textMap bounce">${text.map}</div></a>`, // 여기에 회사 이름을 넣으세요.
+          `<a target="_blank" href="https://map.naver.com/p/entry/place/1303772060?c=20.00,0,0,0,dh" class="bounce"><div class="textMap bounce">${text.map}</div></a>`, // 여기에 회사 이름을 넣으세요.
         anchorSize: new window.naver.maps.Size(0, 0),
       });
   
