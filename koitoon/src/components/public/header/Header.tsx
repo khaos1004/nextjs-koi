@@ -86,6 +86,19 @@ const App = () => {
   };
 
   useEffect(() => {
+    const elements = document.querySelectorAll('body *');
+    elements.forEach((element) => {
+      // 텍스트 컨텐츠에서 HTML 주석과 공백 문자를 제거
+      const textContent = (element.textContent?.replace(/<!--.*?-->/g, '').trim()) || '';
+      if (/^[\x00-\x7F]*$/.test(textContent)) {
+        element.classList.add('font-english');
+      } else {
+        element.classList.add('font-korean');
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     AOS.init({
       duration: 1000,
     });
