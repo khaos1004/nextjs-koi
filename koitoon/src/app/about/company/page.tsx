@@ -261,7 +261,11 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-row min-h-screen w-screen my-[1rem] relative ">
+     
+      {/* <div className="flex flex-row min-h-screen w-screen my-[1rem] relative "> */}
+      <div className= {`flex flex-row min-h-screen w-screen my-[1rem] relative  ${
+                  language === "EN" ? "gh h-full" : ""
+                }`}>
         <div className="flex-1"></div> {/* 왼쪽 여백 (1/5) */}
         <div className="flex-3 w-4/6">
           {" "}
@@ -298,7 +302,7 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-start sm:text-end mr-8 text-right ${
-                  language === "EN" ? "mb-[11.5rem]" : "mb-[5rem]"
+                  language === "EN" ? "mb-[4rem]" : "mb-[5rem]"
                 }`}
               >
                 <div className="flex">
@@ -359,7 +363,7 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left ${
-                  language === "EN" ? "mb-[7.5rem]" : "mb-[4rem]"
+                  language === "EN" ? "mb-[4rem]" : "mb-[5rem]"
                 }`}
               >
                 <div className="flex">
@@ -444,8 +448,11 @@ const HomePage: React.FC = () => {
                   <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2022</div>
-              </span>
-              <span className="timeline-start sm:text-end mb-[4rem] mr-8 text-right">
+              </span>        
+              {/* <span className="timeline-start sm:text-end mb-[4rem] mr-8 text-right"> */}
+              <span className= {`timeline-start sm:text-end mb-[4rem] mr-8 text-right ${
+                  language === "EN" ? "mb-[5rem]" : ""
+                }`}>
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[2].events[0].event}
