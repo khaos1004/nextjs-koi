@@ -161,7 +161,7 @@ const HomePage: React.FC = () => {
       </div>
 
       <div
-        className="ss:flex hidden main_image relative w-full h-[35rem]"
+        className="ss:flex hidden main_image relative w-full h-[23rem]"
         data-aos="fade-up"
       >
         <div className="relative w-full ss:h-[440px]">
@@ -175,7 +175,7 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="flex main_image_text w-full absolute inset-0 flex-col justify-center items-center text-center">
-          <div className="mb-[7rem]">
+          <div className="mt-[2rem]">
             <div className="flex flex-col">
               <span className="text-[16px] text-[#ffffff]">
                 {text2.leading}
@@ -204,7 +204,44 @@ const HomePage: React.FC = () => {
       </div>
 
       <div
-        className="sm:flex main_image relative w-full h-[35rem]"
+        className="hidden sm:flex main_image relative w-full h-[35rem]"
+        data-aos="fade-up"
+      >
+        <div className="relative w-full sm:h-[660px]">
+          <Image
+            src={Main4}
+            alt="Main background"
+            fill
+            style={{ objectFit: "cover" }}
+            className="brightness-50 sm:object-cover object-contain custom-black"
+          />
+        </div>
+        <div className="flex main_image_text w-full absolute inset-0 flex-col justify-center items-center text-center">
+          <div className="">
+            <span className="font-thin text-left">{text.leading}</span>
+            <span className="font-bold"> {text.globalStudio}</span>
+          </div>
+          <div className="text-5xl font-bold hidden sm:block">
+            WEBTOON&nbsp;
+            <span className=" text-[#EE511F]">KOI CONTENT</span>
+          </div>
+
+          <div className="text-3xl font-bold hidden pad:block">
+            WEBTOON&nbsp;
+            <span className=" text-[#EE511F]">KOI CONTENT</span>
+          </div>
+          <div className="flex justify-center mt-8">
+            <Link href="/about/company">
+              <button className="btn text-white rounded-3xl sm:w-[10rem] hover:bg-[#EE511F] bg-inherit">
+                {text.goToWorks} &nbsp; <ArrowR />
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="hidden pad:flex main_image relative w-full h-[35rem]"
         data-aos="fade-up"
       >
         <div className="relative w-full sm:h-[660px]">
