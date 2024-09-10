@@ -210,10 +210,12 @@ const HomePage: React.FC = () => {
                         height={40}
                       />
                     </div>
-                    <div className="flex items-center text-sm mt-2">
+                    <div className={`flex text-sm mt-2 relative ${
+                          language === "EN" ? "items-start" : "items-center"
+                        }`}>
                       <span
                         className={`bg-orange-500 w-3 h-3 rounded-full  ${
-                          language === "EN" ? "w-4 mt-1 " : "mr-1"
+                          language === "EN" ? "w-3.4 mt-1 absolute ml-1" : "mr-1"
                         }`}
                         style={{ marginBottom: "-0.25rem" }}
                       ></span>
@@ -224,28 +226,32 @@ const HomePage: React.FC = () => {
                     <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
                       <Image src={t2} alt="Worldwide" width={60} height={40} />
                     </div>
-                    <div className="flex items-center text-sm mt-2">
+                    <div className={`flex text-sm mt-2 relative ${
+                          language === "EN" ? "items-start " : "items-center"
+                        }`}>
                       <span
                         className={`bg-orange-500 w-3 h-3 rounded-full  ${
-                          language === "EN" ? "w-4 mt-1 " : "mr-1"
+                          language === "EN" ? "w-3 mt-1 absolute ml-4" : "mr-1"
                         }`}
                         style={{ marginBottom: "-0.25rem" }}
                       ></span>
-                      <span className="font-bold">
+                      <span className="font-bold ">
                         {text.globalDistribution}
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-center w-3/1">
+                <div className="flex justify-center">
                   <div className="flex flex-col items-center">
                     <div className="flex items-center justify-center rounded-full h-16 w-16 border border-orange-500">
                       <Image src={t3} alt="AI Webtoon" width={50} height={32} />
                     </div>
-                    <div className="flex items-center text-sm mt-2">
+                    <div className={`flex text-sm mt-2 relative ${
+                          language === "EN" ? "items-start " : "items-center"
+                        }`}>
                       <span
                         className={`bg-orange-500 w-3 h-3 rounded-full  ${
-                          language === "EN" ? "w-4 mt-1 " : "mr-1"
+                          language === "EN" ? "w-3.4 mt-1 absolute ml-6" : "mr-1"
                         }`}
                         style={{ marginBottom: "-0.25rem" }}
                       ></span>
@@ -279,7 +285,7 @@ const HomePage: React.FC = () => {
           {/* ---------------------------------------------------------------------------------------------- */}
           <ul className="timeline timeline-compact timeline-snap-icon max-sm:timeline-compact timeline-vertical flex">
             {/* 2024 */}
-            <li className="h-[15rem]">
+            <li className="h-[25rem]">
               <div className="timeline-middle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -290,14 +296,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[13rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[23rem] items-center">
                 <div className="text-2xl font-bold text-black ml-2">
                   {text.historyData[0].year}
                 </div>
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left text-sm ${
-                  language == "EN" ? "mb-[1rem]" : "mb-[-0.5rem]"
+                  language == "EN" ? "mb-[7rem]" : "mb-[10rem]"
                 }`}
               >
                 <div className="flex items-baseline">
@@ -329,7 +335,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 2023 */}
-            <li className="h-[28rem]">
+            <li className="h-[45rem]">
               <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -349,14 +355,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[26rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[43rem] items-center">
                 <div className="text-2xl font-bold text-black ml-2">
                   {text.historyData[1].year}
                 </div>
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left text-sm ${
-                  language == "EN" ? "mb-[3rem]" : "mb-[-1.5rem]"
+                  language == "EN" ? "mb-[10rem]" : "mb-[17rem]"
                 }`}
               >
                 <div className="flex items-baseline">
@@ -420,7 +426,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 2022 */}
-            <li className="h-[22rem]">
+            <li className="h-[30rem]">
               <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -440,14 +446,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[20rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[28rem] items-center">
                 <div className="text-2xl font-bold text-black ml-2">
                   {text.historyData[2].year}
                 </div>
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left text-sm ${
-                  language == "EN" ? "mb-[6rem]" : "mb-[-1rem]"
+                  language == "EN" ? "mb-[4rem]" : "mb-[9.7rem]"
                 }`}
               >
                 <div className="flex items-baseline">
@@ -510,7 +516,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 2021 */}
-            <li className="h-[14rem]">
+            <li className="h-[20rem]">
               <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -530,14 +536,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[12rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[18rem] items-center">
                 <div className="text-2xl font-bold text-black ml-2">
                   {text.historyData[3].year}
                 </div>
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left text-sm ${
-                  language == "EN" ? "mb-[5rem]" : "mb-[-0.5rem]"
+                  language == "EN" ? "mb-[6rem]" : "mb-[7rem]"
                 }`}
               >
                 <div className="flex items-baseline">
@@ -577,7 +583,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 2020 */}
-            <li className="h-[8rem]">
+            <li className="h-[15rem]">
               <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -597,14 +603,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[6rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[13rem] items-center">
                 <div className="text-2xl font-bold text-black ml-2">
                   {text.historyData[4].year}
                 </div>
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left text-sm ${
-                  language == "EN" ? "mb-[9rem]" : "mb-[-2rem]"
+                  language == "EN" ? "mb-[4rem]" : "mb-[5rem]"
                 }`}
               >
                 <div className="flex items-baseline">
@@ -628,7 +634,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 2019 */}
-            <li className="h-[12rem]">
+            <li className="h-[15rem]">
               <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -648,14 +654,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[10rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[13rem] items-center">
                 <div className="text-2xl font-bold text-black ml-2">
                   {text.historyData[5].year}
                 </div>
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left text-sm ${
-                  language == "EN" ? "mb-[8rem]" : "mb-[0rem]"
+                  language == "EN" ? "mb-[4.2rem]" : "mb-[5rem]"
                 }`}
               >
                 <div className="flex items-baseline">
@@ -712,7 +718,7 @@ const HomePage: React.FC = () => {
                   {text.historyData[6].year}
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mr-8 text-left text-sm mb-[-0.5rem]">
+              <span className="timeline-end sm:text-start mr-8 text-left text-sm mb-[-0.8rem]">
                 <div className="flex items-baseline">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     {text.historyData[6].events[0].month}
@@ -735,7 +741,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 2016 */}
-            <li className="h-[10rem]">
+            <li className="h-[15rem]">
               <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -755,14 +761,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[8.1rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[13.1rem] items-center">
                 <div className="text-2xl font-bold text-black ml-2">
                   {text.historyData[7].year}
                 </div>
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left text-sm ${
-                  language == "EN" ? "mb-[6rem]" : "mb-[-1.5rem]"
+                  language == "EN" ? "mb-[2.7rem]" : "mb-[5rem]"
                 }`}
               >
                 <div className="flex items-baseline">
@@ -794,7 +800,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 2015 */}
-            <li className="h-[10rem]">
+            <li className="h-[13rem]">
               <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -814,14 +820,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[8.1rem]">
+              <span className="flex timeline-end sm:text-end mb-[11.1rem]">
                 <div className="text-2xl font-bold text-black ml-2">
                   {text.historyData[8].year}
                 </div>
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left text-sm ${
-                  language == "EN" ? "mb-[5rem]" : "mb-[-2.5rem]"
+                  language == "EN" ? "mb-[1rem]" : "mb-[2.7rem]"
                 }`}
               >
                 <div className="flex items-baseline">

@@ -231,8 +231,10 @@ const HomePage: React.FC = () => {
             <span className=" text-[#EE511F]">KOI CONTENT</span>
           </div>
           <div className="flex justify-center mt-8">
-            <Link href="/about/company">
-              <button className="btn text-white rounded-3xl sm:w-[10rem] hover:bg-[#EE511F] bg-inherit">
+            <Link href="/about/company">         
+              <button className={`btn text-white rounded-3xl hover:bg-[#EE511F] bg-inherit ${
+                  language === "EN" ? "w-[15rem]" : "w-[10rem]"
+                }`}>
                 {text.goToWorks} &nbsp; <ArrowR />
               </button>
             </Link>

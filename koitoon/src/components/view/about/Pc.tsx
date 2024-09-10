@@ -298,7 +298,7 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-start sm:text-end mr-8 text-right ${
-                  language === "EN" ? "mb-[4.5rem]" : "mb-[6.8rem]"
+                  language === "EN" ? "mb-[7rem]" : "mb-[8rem]"
                 }`}
               >
                 <div className="flex ">
@@ -359,7 +359,7 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left ${
-                  language === "EN" ? "mb-[2.8rem]" : "mb-[8rem]"
+                  language === "EN" ? "mb-[7.8rem]" : "mb-[9rem]"
                 }`}
               >
                 <div className="flex">
@@ -447,7 +447,7 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-start sm:text-end mr-8 text-right ${
-                  language === "EN" ? "mb-[7rem]" : "mb-[7.5rem]"
+                  language === "EN" ? "mb-[8rem]" : "mb-[7.5rem]"
                 }`}
               >
               
@@ -597,7 +597,7 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-start sm:text-end mr-8 text-right ${
-                  language === "EN" ? "mb-[6.2rem]" : "mb-[7rem]"
+                  language === "EN" ? "mb-[7.2rem]" : "mb-[7rem]"
                 }`}
               >
             
