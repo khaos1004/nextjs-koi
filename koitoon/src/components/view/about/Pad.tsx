@@ -256,7 +256,7 @@ const HomePage: React.FC = () => {
           {/* ---------------------------------------------------------------------------------------------- */}          
           {/* pad연혁 */}
           <ul className="flex timeline timeline-snap-icon max-sm:timeline-compact timeline-vertical">
-            <li className="h-[12rem]">
+            <li className="h-[15rem]">
               <div className="timeline-middle">
                  <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -267,14 +267,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[10rem] items-center">
+              <span className="flex timeline-start mb-[13rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2024</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>              
-              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[2.5rem]" : "mb-[1rem]"}`}>
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[2.5rem]" : "mb-[7.2rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     2월
@@ -330,7 +330,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className={`timeline-end sm:text-start  mr-8 text-left  ${language === "EN" ? "mb-[3.5rem]" : "mb-[4.2rem]"}`}>              
+              <span className={`timeline-end sm:text-start  mr-8 text-left  ${language === "EN" ? "mb-[2.5rem]" : "mb-[11.4rem]"}`}>              
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     12월
@@ -418,7 +418,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className={`timeline-end sm:text-start  mr-8 text-left ${language === "EN" ? "mb-[3rem]" : "mb-[3rem]"}`}>
+              <span className={`timeline-end sm:text-start  mr-8 text-left ${language === "EN" ? "mb-[3.3rem]" : "mb-[8.5rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     12월
@@ -471,7 +471,7 @@ const HomePage: React.FC = () => {
               />
             </li>
 
-            <li className="h-[14rem]">
+            <li className="h-[20rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -491,14 +491,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[12.2rem] items-center">
+              <span className="flex timeline-start mb-[17rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2021</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className={`timeline-end sm:text-start  mr-8 text-left ${language === "EN" ? "mb-[8.5rem]" : "mb-[4.5rem]"}`}>
+              <span className={`timeline-end sm:text-start  mr-8 text-left ${language === "EN" ? "mb-[12rem]" : "mb-[13.2rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     11월
@@ -535,7 +535,7 @@ const HomePage: React.FC = () => {
               />
             </li>
 
-            <li className="h-[8rem]">
+            <li className="h-[12rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -555,14 +555,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[6.2rem] items-center">
+              <span className="flex timeline-start mb-[10rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2020</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className={`timeline-end mr-8 text-left ${language === "EN" ? "mb-[13rem]" : "mb-[3.2rem]"}`}>
+              <span className={`timeline-end mr-8 text-left ${language === "EN" ? "mb-[7.2rem]" : "mb-[8.7rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     03월
@@ -583,7 +583,7 @@ const HomePage: React.FC = () => {
               />
             </li>
 
-            <li className="h-[10rem]">
+            <li className="h-[12rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -603,14 +603,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[8.2rem] items-center">
+              <span className="flex timeline-start mb-[10.2rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2019</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[11.5rem]" : "mb-[3.7rem]"}`}>
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[5.7rem]" : "mb-[7rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     10월
@@ -639,54 +639,6 @@ const HomePage: React.FC = () => {
               />
             </li>
 
-            <li className="h-[8rem]">
-            <hr
-                className="bg-[#EE511F]"
-                style={{
-                  width: "1px",
-                  height: "100%",
-                  margin: "0",
-                  padding: "0",
-                }}
-              />
-              <div className="timeline-middle">
-                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="#EA3323"
-                  className="h-5 w-5"
-                >
-                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
-                </svg>
-              </div>
-              <span className="flex timeline-start mb-[6.2rem] items-center">
-                <div className="text-5xl font-bold text-black mr-2 ">2018</div>
-                <div className="relative items-center">
-                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
-                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
-                </div>
-              </span>
-              <span className="timeline-end sm:text-start mb-[4.7rem] mr-8 text-left">
-                <div className="flex">
-                  <div className="text-lg font-black ml-4 mr-4 flex-none">
-                    05월
-                  </div>
-                  <div className="flex items-baseline">
-                    {text.historyData[6].events[0].event}
-                  </div>
-                </div>
-              </span>
-               <hr
-                className="bg-[#EE511F]"
-                style={{
-                  width: "1px",
-                  height: "100%",
-                  margin: "0",
-                  padding: "0",
-                }}
-              />
-            </li>
-
             <li className="h-[10rem]">
             <hr
                 className="bg-[#EE511F]"
@@ -707,14 +659,63 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[8.1rem] items-center">
+              <span className="flex timeline-start mb-[8.2rem] items-center">
+                <div className="text-5xl font-bold text-black mr-2 ">2018</div>
+                <div className="relative items-center">
+                  <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
+                </div>
+              </span>
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[6.7rem]" : "mb-[7.9rem]"}`}>
+      
+                <div className="flex">
+                  <div className="text-lg font-black ml-4 mr-4 flex-none">
+                    05월
+                  </div>
+                  <div className="flex items-baseline">
+                    {text.historyData[6].events[0].event}
+                  </div>
+                </div>
+              </span>
+               <hr
+                className="bg-[#EE511F]"
+                style={{
+                  width: "1px",
+                  height: "100%",
+                  margin: "0",
+                  padding: "0",
+                }}
+              />
+            </li>
+
+            <li className="h-[12rem]">
+            <hr
+                className="bg-[#EE511F]"
+                style={{
+                  width: "1px",
+                  height: "100%",
+                  margin: "0",
+                  padding: "0",
+                }}
+              />
+              <div className="timeline-middle">
+                 <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#EA3323"
+                  className="h-5 w-5"
+                >
+                  <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
+                </svg>
+              </div>
+              <span className="flex timeline-start mb-[10.1rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2016</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className={`timeline-end sm:text-start mb-[13rem] mr-8 text-left ${language === "EN" ? "mb-[8.5rem]" : "mb-[3.8rem]"}`}>
+              <span className={`timeline-end sm:text-start mb-[13rem] mr-8 text-left ${language === "EN" ? "mb-[5.8rem]" : "mb-[7rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     12월
@@ -743,7 +744,7 @@ const HomePage: React.FC = () => {
               />
             </li>
 
-            <li className="h-[10rem]">
+            <li className="h-[12rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -763,14 +764,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[8.2rem] items-center">
+              <span className="flex timeline-start mb-[10.2rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2015</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[8.5rem]" : "mb-[2.2rem]"}`}>
+              <span className={`timeline-end sm:text-start mr-8 text-left ${language === "EN" ? "mb-[5.8rem]" : "mb-[7rem]"}`}>
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     11월

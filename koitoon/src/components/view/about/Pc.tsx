@@ -275,9 +275,9 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           {/* PC연혁 ---------------------------------------------------------------------------------------------------------------------------------------- */}
-          <ul className="flex timeline timeline-snap-icon max-sm:timeline-compact timeline-vertical">
+          <ul className="flex timeline timeline-snap-icon max-sm:timeline-compact timeline-vertical w-full">
             {/* 첫 번째 아이템 */}
-            <li className="h-[9rem]">
+            <li className="h-[12rem]">
               
               <div className="timeline-middle">
                 <svg
@@ -289,7 +289,7 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end pb-[6.8rem] items-center">
+              <span className="flex timeline-end sm:text-end pb-[9.7rem] items-center">
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
@@ -298,18 +298,18 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-start sm:text-end mr-8 text-right ${
-                  language === "EN" ? "mb-[11.5rem]" : "mb-[5rem]"
+                  language === "EN" ? "mb-[4.5rem]" : "mb-[6.8rem]"
                 }`}
               >
-                <div className="flex">
-                  <div className="flex-1">
+                <div className="flex ">
+                  <div className="flex-1 ">
                     {text.historyData[0].events[0].event}
                   </div>
                   <div className="text-lg font-black ml-4 flex-none">
                     {text.historyData[0].events[0].month}
                   </div>
                 </div>
-                <div className="flex">
+                <div className="flex w-full">
                   <div className="flex-1">
                     {text.historyData[0].events[1].event}
                   </div>
@@ -330,7 +330,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 두 번째 아이템 */}
-            <li className="h-[16rem]">
+            <li className="h-[20rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -350,7 +350,7 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[14.2rem] items-center">
+              <span className="flex timeline-start mb-[18rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2023</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
@@ -359,7 +359,7 @@ const HomePage: React.FC = () => {
               </span>
               <span
                 className={`timeline-end sm:text-start mr-8 text-left ${
-                  language === "EN" ? "mb-[7.5rem]" : "mb-[4rem]"
+                  language === "EN" ? "mb-[2.8rem]" : "mb-[8rem]"
                 }`}
               >
                 <div className="flex">
@@ -418,7 +418,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 세 번째 아이템 */}
-            <li className="h-[15rem]">
+            <li className="h-[18rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -438,14 +438,19 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[13rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[16rem] items-center">
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2022</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[4rem] mr-8 text-right">
+              <span
+                className={`timeline-start sm:text-end mr-8 text-right ${
+                  language === "EN" ? "mb-[7rem]" : "mb-[7.5rem]"
+                }`}
+              >
+              
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[2].events[0].event}
@@ -506,7 +511,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 네 번째 아이템 */}
-            <li className="h-[10rem]">
+            <li className="h-[12rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -526,14 +531,14 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-start mb-[8rem] items-center">
+              <span className="flex timeline-start mb-[10rem] items-center">
                 <div className="text-5xl font-bold text-black mr-2 ">2021</div>
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#EE511F] rounded-full w-1 h-1"></div>
                 </div>
               </span>
-              <span className="timeline-end sm:text-start mb-[4.2rem] mr-8 text-left">
+              <span className="timeline-end sm:text-start mb-[6.2rem] mr-8 text-left">
                 <div className="flex">
                   <div className="text-lg font-black ml-4 mr-4 flex-none">
                     {text.historyData[3].events[0].month}
@@ -563,7 +568,7 @@ const HomePage: React.FC = () => {
             </li>
 
             {/* 다섯 번째 아이템 */}
-            <li className="h-[7rem]">
+            <li className="h-[9rem]">
             <hr
                 className="bg-[#EE511F]"
                 style={{
@@ -583,14 +588,19 @@ const HomePage: React.FC = () => {
                   <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" />
                 </svg>
               </div>
-              <span className="flex timeline-end sm:text-end mb-[5rem] items-center">
+              <span className="flex timeline-end sm:text-end mb-[7rem] items-center">
                 <div className="relative items-center">
                   <div className="border-t border-dotted border-[#EE511F] w-[3rem]"></div>
                   <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full w-1 h-1"></div>
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2020</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[5rem] mr-8 text-right">
+              <span
+                className={`timeline-start sm:text-end mr-8 text-right ${
+                  language === "EN" ? "mb-[6.2rem]" : "mb-[7rem]"
+                }`}
+              >
+            
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[4].events[0].event}
@@ -688,7 +698,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2018</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[5rem] mr-8 text-right">
+              <span className="timeline-start sm:text-end mb-[5.5rem] mr-8 text-right">
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[6].events[0].event}
@@ -789,7 +799,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="text-5xl font-bold text-black ml-2 ">2015</div>
               </span>
-              <span className="timeline-start sm:text-end mb-[6rem] mr-8 text-right">
+              <span className="timeline-start sm:text-end mb-[6.5rem] mr-8 text-right">
                 <div className="flex">
                   <div className="flex-1">
                     {text.historyData[8].events[0].event}
