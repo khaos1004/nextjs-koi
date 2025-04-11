@@ -12,6 +12,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import useFont from '@/app/hooks/UseFont';
+import Image from "next/image";
 
 const textContent = {
   KO: {
@@ -43,6 +44,8 @@ const textContent = {
 const BoardPage: React.FC = () => {
   const [card, setCard] = useState<Card | null>(null);
   const [image, setImage] = useState<string | null>(null);
+  const { language } = useContext(LanguageContext);
+  const text = textContent[language];
   useFont(); // 커스텀 훅 사용
 
   useEffect(() => {
@@ -85,8 +88,7 @@ const BoardPage: React.FC = () => {
   }
 
 
-  const { language } = useContext(LanguageContext);
-  const text = textContent[language];
+  
 
   
   return (
@@ -111,9 +113,11 @@ const BoardPage: React.FC = () => {
       {image && (
         <div className="flex justify-center my-4">
           <div className="min-w-[200px] max-w-[15rem] min-h-[200px] max-h-[15rem]">
-            <img
+            <Image
               src={image}
               alt="게시글 이미지"
+              width={200}
+              height={200}
               className="object-cover w-full h-full"
             />
           </div>

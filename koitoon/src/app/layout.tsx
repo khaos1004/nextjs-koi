@@ -43,9 +43,9 @@ export default function RootLayout({
         <LanguageProvider>
           <MenuProvider>{children}</MenuProvider>
         </LanguageProvider>
-        <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js" async></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js" async></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
       </body>
     </html>
   );

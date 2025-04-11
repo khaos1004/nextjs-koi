@@ -78,6 +78,8 @@ const HomePage: React.FC = () => {
   });
 
   useEffect(() => {
+    const currentRef = loadMoreRef.current;
+  
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -88,18 +90,18 @@ const HomePage: React.FC = () => {
       },
       { threshold: 1.0 }
     );
-
-    if (loadMoreRef.current) {
-      observer.observe(loadMoreRef.current);
+  
+    if (currentRef) {
+      observer.observe(currentRef);
     }
-
+  
     return () => {
-      if (loadMoreRef.current) {
-        observer.unobserve(loadMoreRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [filteredCards.length]);
-
+  
   const handleCardClick = (card: Card) => {
     window.location.href = `/board?id=${card.id}&image=${card.imageUrl}`;
   };
